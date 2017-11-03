@@ -9,7 +9,7 @@ var animationPlayer
 
 var mapa
 
-const SPEED = 1.5
+var speed = 1
 const GRID = 16
 
 func _ready():
@@ -25,35 +25,56 @@ func _fixed_process(delta):
 		var izquierda = mapa.intersect_point(get_pos() + Vector2(-GRID, 0))
 		var derecha = mapa.intersect_point(get_pos() + Vector2(GRID, 0))
 		
-		if Input.is_action_pressed("ui_up"):
+		if Input.is_key_pressed(KEY_W):
 			personaje.set_frame(12)
 			if arriba.empty():
 				moving = true
 				direction = Vector2(0, -1)
 				startPos = get_pos()
 				animationPlayer.play("Andar arriba")
-		elif Input.is_action_pressed("ui_down"):
+				if Input.is_key_pressed(KEY_SHIFT):
+					speed = 2
+					animationPlayer.play("Andar arriba rapido")
+				elif Input.is_key_pressed(KEY_SHIFT) == false:
+					speed = 1
+		elif Input.is_key_pressed(KEY_S):
 			personaje.set_frame(0)
 			if abajo.empty():
 				moving = true
 				direction = Vector2(0, 1)
 				startPos = get_pos()
 				animationPlayer.play("Andar abajo")
-		elif Input.is_action_pressed("ui_left"):
+				if Input.is_key_pressed(KEY_SHIFT):
+					speed = 2
+					animationPlayer.play("Andar abajo rapido")
+				elif Input.is_key_pressed(KEY_SHIFT) == false:
+					speed = 1
+		elif Input.is_key_pressed(KEY_A):
 			personaje.set_frame(4)
 			if izquierda.empty():
 				moving = true
 				direction = Vector2(-1, 0)
 				startPos = get_pos()
 				animationPlayer.play("Andar izquierda")
-		elif Input.is_action_pressed("ui_right"):
+				if Input.is_key_pressed(KEY_SHIFT):
+					speed = 2
+					animationPlayer.play("Andar izquierda rapido")
+				elif Input.is_key_pressed(KEY_SHIFT) == false:
+					speed = 1
+		elif Input.is_key_pressed(KEY_D):
 			personaje.set_frame(8)
 			if derecha.empty():
 				moving = true
 				direction = Vector2(1, 0)
 				startPos = get_pos()
 				animationPlayer.play("Andar derecha")
+				if Input.is_key_pressed(KEY_SHIFT):
+					speed = 2
+					animationPlayer.play("Andar derecha rapido")
+				elif Input.is_key_pressed(KEY_SHIFT) == false:
+					speed = 1
+
 	else:
-		move_to(get_pos() + direction * SPEED)
-		if get_pos() == startPos + Vector2(direction.x * GRID * SPEED, direction.y * GRID * SPEED):
+		move_to(get_pos() + direction * speed)
+		if get_pos() == startPos + Vector2(direction.x * GRID, direction.y * GRID):
 			moving = false
