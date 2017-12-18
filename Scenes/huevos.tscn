@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Tiles/egg.png" type="Texture" id=1]
+
+[node name="Sprite" type="Sprite"]
+
+transform/pos = Vector2( 400, 256 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+

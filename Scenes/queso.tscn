@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Tiles/items_food.png" type="Texture" id=1]
+
+[node name="Sprite" type="Sprite"]
+
+transform/pos = Vector2( 432, 144 )
+transform/scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 535, 6, 35, 35 )
+
+

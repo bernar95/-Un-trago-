@@ -1,13 +1,24 @@
-[gd_scene load_steps=45 format=1]
+[gd_scene load_steps=61 format=1]
 
 [ext_resource path="res://Tiles/house_inside.png" type="Texture" id=1]
 [ext_resource path="res://Tiles/hyptosis_tile-art-batch-3.png" type="Texture" id=2]
 [ext_resource path="res://Tiles/woodland_indoor_x3.png" type="Texture" id=3]
 [ext_resource path="res://Tiles/dungeonex.png" type="Texture" id=4]
-[ext_resource path="res://Tiles/woodland_indoor.png" type="Texture" id=5]
-[ext_resource path="res://Tiles/build_atlas.png" type="Texture" id=6]
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=7]
-[ext_resource path="res://Tiles/steampunk_m2.png" type="Texture" id=8]
+[ext_resource path="res://Tiles/obj_misk_atlas.png" type="Texture" id=5]
+[ext_resource path="res://Tiles/woodland_indoor.png" type="Texture" id=6]
+[ext_resource path="res://Tiles/build_atlas.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=8]
+[ext_resource path="res://Tiles/steampunk_m2.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/Pedidos2.gd" type="Script" id=10]
+[ext_resource path="res://Tiles/spellbookForFlare.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/Suministros.gd" type="Script" id=12]
+[ext_resource path="res://Tiles/barrel.png" type="Texture" id=13]
+[ext_resource path="res://Tiles/egg.png" type="Texture" id=14]
+[ext_resource path="res://Fonts/pedido.fnt" type="BitmapFont" id=15]
+[ext_resource path="res://Tiles/items_food.png" type="Texture" id=16]
+[ext_resource path="res://Tiles/Coin1.png" type="Texture" id=17]
+[ext_resource path="res://Fonts/precio.fnt" type="BitmapFont" id=18]
+[ext_resource path="res://Scripts/LibroSuministros.gd" type="Script" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -76,89 +87,99 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 radius = 10.0
 
-[sub_resource type="RectangleShape2D" id=26]
+[sub_resource type="RectangleShape2D" id=14]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=15]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=16]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 9.8781 )
 
-[sub_resource type="RectangleShape2D" id=27]
+[sub_resource type="RectangleShape2D" id=17]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=28]
+[sub_resource type="RectangleShape2D" id=18]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=29]
+[sub_resource type="RectangleShape2D" id=19]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=20]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=21]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=22]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="CapsuleShape2D" id=23]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id=24]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id=25]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id=26]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id=27]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id=28]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id=29]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
 
 [sub_resource type="RectangleShape2D" id=30]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=31]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="RectangleShape2D" id=32]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
-[sub_resource type="CapsuleShape2D" id=15]
-
-custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
-
-[sub_resource type="CapsuleShape2D" id=16]
-
-custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
-
-[sub_resource type="CapsuleShape2D" id=17]
-
-custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
-
-[sub_resource type="CapsuleShape2D" id=18]
-
-custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
-
-[sub_resource type="CapsuleShape2D" id=19]
-
-custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
-
-[sub_resource type="CapsuleShape2D" id=20]
-
-custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
-
-[sub_resource type="CapsuleShape2D" id=21]
-
-custom_solver_bias = 0.0
-radius = 10.0
-height = 20.0
-
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=31]
 
 length = 0.3
 loop = false
@@ -174,9 +195,8 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 2 ]
 }
 
-[sub_resource type="Animation" id=33]
+[sub_resource type="Animation" id=32]
 
-resource/name = "Andar abajo rapido"
 length = 0.15
 loop = false
 step = 0.05
@@ -191,7 +211,7 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 0 ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=33]
 
 length = 0.3
 loop = false
@@ -209,7 +229,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=34]
 
-resource/name = "Andar arriba rapido"
 length = 0.15
 loop = false
 step = 0.05
@@ -224,7 +243,7 @@ tracks/0/keys = {
 "values": [ 13, 14, 15, 14 ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=35]
 
 length = 0.3
 loop = false
@@ -242,7 +261,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=36]
 
-resource/name = "Andar derecha rapido"
 length = 0.15
 loop = false
 step = 0.05
@@ -257,7 +275,7 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 10 ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=37]
 
 length = 0.3
 loop = false
@@ -273,9 +291,8 @@ tracks/0/keys = {
 "values": [ 5, 6, 7, 6 ]
 }
 
-[sub_resource type="Animation" id=35]
+[sub_resource type="Animation" id=38]
 
-resource/name = "Andar izquierda rapido"
 length = 0.15
 loop = false
 step = 0.05
@@ -289,6 +306,34 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 5, 6, 7, 6 ]
 }
+
+[sub_resource type="GDScript" id=39]
+
+script/source = "extends Button
+
+func _ready():
+	connect(\"pressed\", self, \"_on_pressed\")
+	pass
+
+func _on_pressed():
+	pass
+"
+
+[sub_resource type="GDScript" id=40]
+
+script/source = ""
+
+[sub_resource type="GDScript" id=41]
+
+script/source = "extends Button
+
+func _ready():
+	connect(\"pressed\", self, \"_on_pressed\")
+	pass
+
+func _on_pressed():
+	pass
+"
 
 [node name="Mapa" type="Node"]
 
@@ -4900,7 +4945,7 @@ editor/display_folded = true
 [node name="Barril" type="Sprite" parent="BarraDetras"]
 
 editor/display_folded = true
-transform/pos = Vector2( 368, 32 )
+transform/pos = Vector2( 378, 32 )
 texture = ExtResource( 3 )
 region = true
 region_rect = Rect2( 352, 0, 64, 80 )
@@ -4949,7 +4994,7 @@ max_lines_visible = -1
 
 [node name="EstanteJarras" type="Sprite" parent="BarraDetras"]
 
-transform/pos = Vector2( 304, 32 )
+transform/pos = Vector2( 322, 32 )
 texture = ExtResource( 3 )
 region = true
 region_rect = Rect2( 63.5, 20, 33, 64 )
@@ -4972,7 +5017,7 @@ region_rect = Rect2( 32, -2, 32, 32 )
 
 input/pickable = false
 shapes/0/shape = SubResource( 9 )
-shapes/0/transform = Matrix32( 1.65946, 0, 0, 4.69731, 304, 32 )
+shapes/0/transform = Matrix32( 1.65946, 0, 0, 4.69731, 322, 32 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -4983,7 +5028,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D"]
 
-transform/pos = Vector2( 304, 32 )
+transform/pos = Vector2( 322, 32 )
 transform/scale = Vector2( 1.65946, 4.69731 )
 shape = SubResource( 9 )
 trigger = false
@@ -4993,7 +5038,7 @@ _update_shape_index = 0
 
 input/pickable = false
 shapes/0/shape = SubResource( 10 )
-shapes/0/transform = Matrix32( 2.70098, 0, 0, 2.04612, 368, 32 )
+shapes/0/transform = Matrix32( 2.70098, 0, 0, 2.04612, 378, 32 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -5004,7 +5049,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D 2"]
 
-transform/pos = Vector2( 368, 32 )
+transform/pos = Vector2( 378, 32 )
 transform/scale = Vector2( 2.70098, 2.04612 )
 shape = SubResource( 10 )
 trigger = false
@@ -5073,91 +5118,287 @@ shape = SubResource( 13 )
 trigger = false
 _update_shape_index = 0
 
+[node name="CajaPescado" type="Sprite" parent="BarraDetras"]
+
+transform/pos = Vector2( 640, 48 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 162, 615, 28, 26 )
+
+[node name="CajaCarne" type="Sprite" parent="BarraDetras"]
+
+transform/pos = Vector2( 288, 48 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 162, 615, 28, 26 )
+
+[node name="CajaPan" type="Sprite" parent="BarraDetras"]
+
+transform/pos = Vector2( 512, 32 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 162, 615, 28, 26 )
+
+[node name="CajaHuevos" type="Sprite" parent="BarraDetras"]
+
+transform/pos = Vector2( 544, 32 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 162, 615, 28, 26 )
+
+[node name="CajaQueso" type="Sprite" parent="BarraDetras"]
+
+transform/pos = Vector2( 672, 48 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 162, 615, 28, 26 )
+
+[node name="CajaVerduras" type="Sprite" parent="BarraDetras"]
+
+transform/pos = Vector2( 704, 48 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 162, 615, 28, 26 )
+
+[node name="CajaPatatas" type="Sprite" parent="BarraDetras"]
+
+transform/pos = Vector2( 736, 48 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 162, 615, 28, 26 )
+
+[node name="StaticBody2D 6" type="StaticBody2D" parent="BarraDetras"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( 1.38462, 0, 0, 1.23077, 288, 48 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D 6"]
+
+transform/pos = Vector2( 288, 48 )
+transform/scale = Vector2( 1.38462, 1.23077 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="BarraDetras"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( 1.38462, 0, 0, 1.23077, 512, 32 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D7"]
+
+transform/pos = Vector2( 512, 32 )
+transform/scale = Vector2( 1.38462, 1.23077 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="BarraDetras"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( 1.38462, 0, 0, 1.23077, 544, 32 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D8"]
+
+transform/pos = Vector2( 544, 32 )
+transform/scale = Vector2( 1.38462, 1.23077 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="BarraDetras"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( 1.38462, 0, 0, 1.23077, 640, 48 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D9"]
+
+transform/pos = Vector2( 640, 48 )
+transform/scale = Vector2( 1.38462, 1.23077 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="BarraDetras"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( 1.38462, 0, 0, 1.23077, 672, 48 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D10"]
+
+transform/pos = Vector2( 672, 48 )
+transform/scale = Vector2( 1.38462, 1.23077 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="BarraDetras"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( 1.38462, 0, 0, 1.23077, 704, 48 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D11"]
+
+transform/pos = Vector2( 704, 48 )
+transform/scale = Vector2( 1.38462, 1.23077 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="BarraDetras"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Matrix32( 1.38462, 0, 0, 1.23077, 736, 48 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D12"]
+
+transform/pos = Vector2( 736, 48 )
+transform/scale = Vector2( 1.38462, 1.23077 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
 [node name="Mesas" type="Node" parent="."]
 
 editor/display_folded = true
 
 [node name="Sprite" type="Sprite" parent="Mesas"]
 
-transform/pos = Vector2( 213.728, 509.48 )
-texture = ExtResource( 5 )
+transform/pos = Vector2( 208, 512 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite8" type="Sprite" parent="Mesas"]
 
-transform/pos = Vector2( 794, 272 )
-texture = ExtResource( 5 )
+transform/pos = Vector2( 800, 272 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite6" type="Sprite" parent="Mesas"]
 
-transform/pos = Vector2( 293.088, 509.48 )
-texture = ExtResource( 5 )
+transform/pos = Vector2( 288, 512 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite8 2" type="Sprite" parent="Mesas"]
 
-transform/pos = Vector2( 873.361, 272 )
-texture = ExtResource( 5 )
+transform/pos = Vector2( 880, 272 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite1" type="Sprite" parent="Mesas"]
 
-transform/pos = Vector2( 115.585, 142.788 )
-texture = ExtResource( 5 )
+transform/pos = Vector2( 112, 144 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite2" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 125.026, 302.678 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite7" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 204.026, 302.678 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite3" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 352, 368 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite9" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 688, 496 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite4" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 560, 352 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite5" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 864, 480 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="StaticBody2D 2" type="StaticBody2D" parent="Mesas"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 26 )
+shapes/0/shape = SubResource( 15 )
 shapes/0/transform = Matrix32( -7.95149, 0, 0, -3.2229, 164.476, 302.864 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5171,15 +5412,15 @@ bounce = 0.0
 
 transform/pos = Vector2( 164.476, 302.864 )
 transform/scale = Vector2( -7.95149, -3.2229 )
-shape = SubResource( 26 )
+shape = SubResource( 15 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Mesas"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 14 )
-shapes/0/transform = Matrix32( 4.03056, 0, 0, -3.26368, 115.742, 143.019 )
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 4.03056, 0, 0, -3.26368, 112, 144 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -5190,17 +5431,17 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesas/StaticBody2D"]
 
-transform/pos = Vector2( 115.742, 143.019 )
+transform/pos = Vector2( 112, 144 )
 transform/scale = Vector2( 4.03056, -3.26368 )
-shape = SubResource( 14 )
+shape = SubResource( 16 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D 3" type="StaticBody2D" parent="Mesas"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 27 )
-shapes/0/transform = Matrix32( 7.96945, 0, 0, 3.21859, 253.454, 509.301 )
+shapes/0/shape = SubResource( 17 )
+shapes/0/transform = Matrix32( 8, 0, 0, 3.21859, 248, 512 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -5211,16 +5452,16 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesas/StaticBody2D 3"]
 
-transform/pos = Vector2( 253.454, 509.301 )
-transform/scale = Vector2( 7.96945, 3.21859 )
-shape = SubResource( 27 )
+transform/pos = Vector2( 248, 512 )
+transform/scale = Vector2( 8, 3.21859 )
+shape = SubResource( 17 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D 4" type="StaticBody2D" parent="Mesas"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 28 )
+shapes/0/shape = SubResource( 18 )
 shapes/0/transform = Matrix32( 4.02609, 0, 0, 3.24095, 352, 368 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5234,14 +5475,14 @@ bounce = 0.0
 
 transform/pos = Vector2( 352, 368 )
 transform/scale = Vector2( 4.02609, 3.24095 )
-shape = SubResource( 28 )
+shape = SubResource( 18 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D 5" type="StaticBody2D" parent="Mesas"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 29 )
+shapes/0/shape = SubResource( 19 )
 shapes/0/transform = Matrix32( 4.02477, 0, 0, 3.21982, 560, 352 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5255,15 +5496,15 @@ bounce = 0.0
 
 transform/pos = Vector2( 560, 352 )
 transform/scale = Vector2( 4.02477, 3.21982 )
-shape = SubResource( 29 )
+shape = SubResource( 19 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D 6" type="StaticBody2D" parent="Mesas"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 30 )
-shapes/0/transform = Matrix32( 7.98671, 0, 0, 3.2332, 832, 272 )
+shapes/0/shape = SubResource( 20 )
+shapes/0/transform = Matrix32( 8, 0, 0, 3.2332, 840, 272 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -5274,16 +5515,16 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesas/StaticBody2D 6"]
 
-transform/pos = Vector2( 832, 272 )
-transform/scale = Vector2( 7.98671, 3.2332 )
-shape = SubResource( 30 )
+transform/pos = Vector2( 840, 272 )
+transform/scale = Vector2( 8, 3.2332 )
+shape = SubResource( 20 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D 7" type="StaticBody2D" parent="Mesas"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 31 )
+shapes/0/shape = SubResource( 21 )
 shapes/0/transform = Matrix32( 4.02377, 0, 0, 3.2332, 688, 496 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5297,14 +5538,14 @@ bounce = 0.0
 
 transform/pos = Vector2( 688, 496 )
 transform/scale = Vector2( 4.02377, 3.2332 )
-shape = SubResource( 31 )
+shape = SubResource( 21 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D 8" type="StaticBody2D" parent="Mesas"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 32 )
+shapes/0/shape = SubResource( 22 )
 shapes/0/transform = Matrix32( 4.0158, 0, 0, 3.21115, 864, 480 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5318,7 +5559,7 @@ bounce = 0.0
 
 transform/pos = Vector2( 864, 480 )
 transform/scale = Vector2( 4.0158, 3.21115 )
-shape = SubResource( 32 )
+shape = SubResource( 22 )
 trigger = false
 _update_shape_index = 0
 
@@ -5329,56 +5570,56 @@ editor/display_folded = true
 [node name="Barril" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 112, 416 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril1" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 928, 384 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril2" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 528, 224 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril5" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 384, 256 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril6" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 912, 160 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril3" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 720, 368 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril4" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 496, 480 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="StaticBody2D 7" type="StaticBody2D" parent="Barriles"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 15 )
+shapes/0/shape = SubResource( 23 )
 shapes/0/transform = Matrix32( 1.3869, 0, 0, 0.933216, 928.058, 384.268 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5392,14 +5633,14 @@ bounce = 0.0
 
 transform/pos = Vector2( 928.058, 384.268 )
 transform/scale = Vector2( 1.3869, 0.933216 )
-shape = SubResource( 15 )
+shape = SubResource( 23 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D 6" type="StaticBody2D" parent="Barriles"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 16 )
+shapes/0/shape = SubResource( 24 )
 shapes/0/transform = Matrix32( 1.35599, 0, 0, 0.918027, 719.986, 368.178 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5413,14 +5654,14 @@ bounce = 0.0
 
 transform/pos = Vector2( 719.986, 368.178 )
 transform/scale = Vector2( 1.35599, 0.918027 )
-shape = SubResource( 16 )
+shape = SubResource( 24 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D 5" type="StaticBody2D" parent="Barriles"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 17 )
+shapes/0/shape = SubResource( 25 )
 shapes/0/transform = Matrix32( 1.3881, 0, 0, 0.923534, 495.789, 480.374 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5434,14 +5675,14 @@ bounce = 0.0
 
 transform/pos = Vector2( 495.789, 480.374 )
 transform/scale = Vector2( 1.3881, 0.923534 )
-shape = SubResource( 17 )
+shape = SubResource( 25 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D 4" type="StaticBody2D" parent="Barriles"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 18 )
+shapes/0/shape = SubResource( 26 )
 shapes/0/transform = Matrix32( 1.4038, 0, 0, 0.920402, 112.088, 416.361 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5455,14 +5696,14 @@ bounce = 0.0
 
 transform/pos = Vector2( 112.088, 416.361 )
 transform/scale = Vector2( 1.4038, 0.920402 )
-shape = SubResource( 18 )
+shape = SubResource( 26 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D 3" type="StaticBody2D" parent="Barriles"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 19 )
+shapes/0/shape = SubResource( 27 )
 shapes/0/transform = Matrix32( 1.42081, 0, 0, 0.923958, 912.339, 160.004 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5476,14 +5717,14 @@ bounce = 0.0
 
 transform/pos = Vector2( 912.339, 160.004 )
 transform/scale = Vector2( 1.42081, 0.923958 )
-shape = SubResource( 19 )
+shape = SubResource( 27 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D 2" type="StaticBody2D" parent="Barriles"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 20 )
+shapes/0/shape = SubResource( 28 )
 shapes/0/transform = Matrix32( 1.45995, 0, 0, 0.951924, 528.381, 224.346 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5497,14 +5738,14 @@ bounce = 0.0
 
 transform/pos = Vector2( 528.381, 224.346 )
 transform/scale = Vector2( 1.45995, 0.951924 )
-shape = SubResource( 20 )
+shape = SubResource( 28 )
 trigger = false
 _update_shape_index = 0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Barriles"]
 
 input/pickable = false
-shapes/0/shape = SubResource( 21 )
+shapes/0/shape = SubResource( 29 )
 shapes/0/transform = Matrix32( 1.31858, 0, 0, 0.939179, 383.299, 256.271 )
 shapes/0/trigger = false
 collision/layers = 1
@@ -5518,7 +5759,7 @@ bounce = 0.0
 
 transform/pos = Vector2( 383.299, 256.271 )
 transform/scale = Vector2( 1.31858, 0.939179 )
-shape = SubResource( 21 )
+shape = SubResource( 29 )
 trigger = false
 _update_shape_index = 0
 
@@ -5528,336 +5769,1304 @@ editor/display_folded = true
 
 [node name="Silla" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 774.833, 219.165 )
+transform/pos = Vector2( 784, 224 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla5" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 194.592, 459.009 )
+transform/pos = Vector2( 192, 464 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla4" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 105.666, 250.948 )
+transform/pos = Vector2( 112, 256 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla7" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 333.22, 318.014 )
+transform/pos = Vector2( 336, 320 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla8" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 540.877, 301.355 )
+transform/pos = Vector2( 544, 304 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla9" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 667.321, 443.47 )
+transform/pos = Vector2( 672, 448 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla10" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 844.039, 429.359 )
+transform/pos = Vector2( 848, 432 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla1" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 814.713, 219.605 )
+transform/pos = Vector2( 816, 224 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla5 2" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 233.592, 459.009 )
+transform/pos = Vector2( 224, 464 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla4 2" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 145.666, 250.948 )
+transform/pos = Vector2( 144, 256 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla43" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 136.688, 92.1905 )
+transform/pos = Vector2( 128, 96 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla44" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 373.164, 318.014 )
+transform/pos = Vector2( 368, 320 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla45" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 580.877, 301.355 )
+transform/pos = Vector2( 576, 304 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla46" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 707.321, 444.01 )
+transform/pos = Vector2( 704, 448 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla47" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 884.401, 429.359 )
+transform/pos = Vector2( 880, 432 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla2" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 854.593, 219.605 )
+transform/pos = Vector2( 864, 224 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla5 4" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 272.591, 459.009 )
+transform/pos = Vector2( 272, 464 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla4 4" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 184.666, 250.948 )
+transform/pos = Vector2( 192, 256 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla3" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 894.593, 220.045 )
+transform/pos = Vector2( 896, 224 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla5 3" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 312.591, 459.009 )
+transform/pos = Vector2( 304, 464 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla4 3" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 224.666, 250.948 )
+transform/pos = Vector2( 224, 256 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
 [node name="Silla 2" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 540.299, 391.37 )
+transform/pos = Vector2( 544, 384 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla12 2" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 668.649, 537.803 )
+transform/pos = Vector2( 672, 528 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla123" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 845.204, 524.039 )
+transform/pos = Vector2( 848, 512 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla124" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 333.617, 401.986 )
+transform/pos = Vector2( 336, 400 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla125" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 184.952, 346.547 )
+transform/pos = Vector2( 192, 336 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla126" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 104.952, 346.547 )
+transform/pos = Vector2( 112, 336 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla127" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 194.021, 554.12 )
+transform/pos = Vector2( 192, 544 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla128" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 273.021, 554.12 )
+transform/pos = Vector2( 272, 544 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla129" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 96.0891, 183.324 )
+transform/pos = Vector2( 96, 176 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla130" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 773.434, 311.054 )
+transform/pos = Vector2( 784, 304 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla131" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 853.758, 311.701 )
+transform/pos = Vector2( 864, 304 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla11" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 579.299, 391.37 )
+transform/pos = Vector2( 576, 384 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla12" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 708.189, 538.343 )
+transform/pos = Vector2( 704, 528 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla13" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 886.004, 524.529 )
+transform/pos = Vector2( 880, 512 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla14" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 373.958, 402.383 )
+transform/pos = Vector2( 368, 400 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla15" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 223.952, 346.547 )
+transform/pos = Vector2( 224, 336 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla16" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 143.952, 346.547 )
+transform/pos = Vector2( 144, 336 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla17" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 233.021, 554.12 )
+transform/pos = Vector2( 224, 544 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla18" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 312.021, 554.12 )
+transform/pos = Vector2( 304, 544 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla19" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 135.089, 183.324 )
+transform/pos = Vector2( 128, 176 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla20" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 812.434, 311.701 )
+transform/pos = Vector2( 816, 304 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla21" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 893.729, 311.701 )
+transform/pos = Vector2( 896, 304 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 416, 338, 32, 32 )
 
 [node name="Silla6" type="Sprite" parent="Sillas"]
 
-transform/pos = Vector2( 96.6882, 92.1905 )
+transform/pos = Vector2( 96, 96 )
 transform/scale = Vector2( 1, 0.999998 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 385, 336, 32, 32 )
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Sillas"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 128, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D"]
+
+transform/pos = Vector2( 128, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( -31, 159 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 143, 97 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D8"]
+
+transform/pos = Vector2( 143, 97 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 9, 159 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 135, 97 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D9"]
+
+transform/pos = Vector2( 135, 97 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 48, 159 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 144, 97 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D10"]
+
+transform/pos = Vector2( 144, 97 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 88, 159 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 97 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D11"]
+
+transform/pos = Vector2( 136, 97 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D1" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( -40, 0 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D1"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 199, 224 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D14"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 231, 224 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D15"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D30" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 407, 208 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D30"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D31" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 439, 208 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D31"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D32" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 647, 128 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D32"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D33" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 679, 128 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D33"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D34" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 727, 128 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D34"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D35" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 759, 128 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D35"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D36" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 743, 336 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D36"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D37" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 711, 336 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D37"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D38" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 567, 352 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D38"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D39" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 535, 352 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D39"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D40" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 167, 368 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D40"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D41" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 135, 368 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D41"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D42" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 87, 368 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D42"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D43" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 55, 368 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D43"]
+
+transform/pos = Vector2( 136, 96 )
+transform/scale = Vector2( 1.20165, 1.63964 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( -40, 91 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 136, 85 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D2"]
+
+transform/pos = Vector2( 136, 85 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( -1, 91 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 129, 85 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D3"]
+
+transform/pos = Vector2( 129, 85 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( -31, 254 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D4"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 401, 304 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D16"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 433, 304 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D17"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 641, 224 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D18"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D19" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 673, 224 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D19"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D20" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 721, 224 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D20"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D21" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 753, 224 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D21"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D22" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 737, 432 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D22"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D23" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 705, 432 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D23"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D24" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 561, 448 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D24"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D25" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 529, 448 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D25"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D26" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 161, 464 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D26"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D27" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 129, 464 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D27"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D28" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 81, 464 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D28"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D29" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 49, 464 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D29"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 8, 254 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 136, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D5"]
+
+transform/pos = Vector2( 136, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 49, 254 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D6"]
+
+transform/pos = Vector2( 143, 82 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 32, 288 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 192, 48 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D7"]
+
+transform/pos = Vector2( 192, 48 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 144, 354 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 192, 48 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D12"]
+
+transform/pos = Vector2( 192, 48 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="Sillas"]
+
+transform/pos = Vector2( 176, 354 )
+input/pickable = false
+shapes/0/shape = SubResource( 30 )
+shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 192, 48 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sillas/StaticBody2D13"]
+
+transform/pos = Vector2( 192, 48 )
+transform/scale = Vector2( 1.21669, 1.23534 )
+shape = SubResource( 30 )
+trigger = false
+_update_shape_index = 0
+
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 348.029, 196.829 )
 transform/scale = Vector2( 0.169749, 0.363435 )
 input/pickable = false
 collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
-script/script = ExtResource( 7 )
+script/script = ExtResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-"anims/Andar abajo" = SubResource( 22 )
-"anims/Andar abajo rapido" = SubResource( 33 )
-"anims/Andar arriba" = SubResource( 23 )
+"anims/Andar abajo" = SubResource( 31 )
+"anims/Andar abajo rapido" = SubResource( 32 )
+"anims/Andar arriba" = SubResource( 33 )
 "anims/Andar arriba rapido" = SubResource( 34 )
-"anims/Andar derecha" = SubResource( 24 )
+"anims/Andar derecha" = SubResource( 35 )
 "anims/Andar derecha rapido" = SubResource( 36 )
-"anims/Andar izquierda" = SubResource( 25 )
-"anims/Andar izquierda rapido" = SubResource( 35 )
+"anims/Andar izquierda" = SubResource( 37 )
+"anims/Andar izquierda rapido" = SubResource( 38 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -5867,10 +7076,1708 @@ autoplay = ""
 
 transform/pos = Vector2( -6.06653, -27.0443 )
 transform/scale = Vector2( 5.89107, 2.75153 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 vframes = 4
 hframes = 4
-frame = 9
 region_rect = Rect2( 0, 0, 32, 48 )
+
+[node name="Hud" type="Node" parent="."]
+
+[node name="Pedidos" type="Button" parent="Hud"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 32.0
+margin/top = 576.0
+margin/right = 95.0
+margin/bottom = 596.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Pedidos"
+flat = false
+script/script = SubResource( 39 )
+
+[node name="Container" type="Container" parent="Hud"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1024.0
+margin/bottom = 608.0
+script/script = ExtResource( 10 )
+
+[node name="LibroPedidos" type="Patch9Frame" parent="Hud/Container"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 48.0
+margin/top = 48.0
+margin/right = 976.0
+margin/bottom = 560.0
+texture = ExtResource( 11 )
+script/script = ExtResource( 12 )
+
+[node name="Vino" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+editor/display_folded = true
+transform/pos = Vector2( 160, 80 )
+transform/scale = Vector2( 0.84375, 0.71875 )
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="Hud/Container/LibroPedidos/Vino"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 22.0
+margin/top = -37.0
+margin/right = 62.0
+margin/bottom = -23.0
+custom_colors/font_color = Color( 0.710938, 0, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Vino"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Cerveza" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+editor/display_folded = true
+transform/pos = Vector2( 160, 128 )
+transform/scale = Vector2( 0.84375, 0.71875 )
+texture = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="Hud/Container/LibroPedidos/Cerveza"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 22.0
+margin/top = -37.0
+margin/right = 76.0
+margin/bottom = -22.0
+custom_colors/font_color = Color( 0.898438, 1, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Cerveza"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Carne" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 160, 176 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 0, 625, 32, 32 )
+
+[node name="Pescado" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 160, 208 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 200, 700, 48, 32 )
+
+[node name="Verduras" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 160, 256 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 321, 672, 30, 34 )
+
+[node name="Patatas" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 160, 304 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 385, 672, 30, 34 )
+
+[node name="Huevos" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 160, 345 )
+texture = ExtResource( 14 )
+
+[node name="CerrarPedidos" type="Button" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 640.0
+margin/top = 432.0
+margin/right = 798.0
+margin/bottom = 452.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Cerrar libro de pedidos"
+flat = false
+
+[node name="HacerPedido" type="Button" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 512.0
+margin/top = 432.0
+margin/right = 625.0
+margin/bottom = 452.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Hacer el pedido"
+flat = false
+
+[node name="ComprarVino" type="Button" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 336.0
+margin/top = 66.0
+margin/right = 402.0
+margin/bottom = 86.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="ComprarCerveza" type="Button" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 336.0
+margin/top = 112.0
+margin/right = 402.0
+margin/bottom = 132.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="ComprarCarne" type="Button" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 336.0
+margin/top = 162.0
+margin/right = 402.0
+margin/bottom = 182.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="ComprarPescado" type="Button" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 336.0
+margin/top = 203.0
+margin/right = 402.0
+margin/bottom = 223.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="ComprarVerduras" type="Button" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 336.0
+margin/top = 246.0
+margin/right = 402.0
+margin/bottom = 266.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="ComprarPatatas" type="Button" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 336.0
+margin/top = 293.0
+margin/right = 402.0
+margin/bottom = 313.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="ComprarHuevos" type="Button" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 336.0
+margin/top = 335.0
+margin/right = 402.0
+margin/bottom = 355.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="ComprarPan" type="Button" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 336.0
+margin/top = 373.0
+margin/right = 402.0
+margin/bottom = 393.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="ComprarQueso" type="Button" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 336.0
+margin/top = 405.0
+margin/right = 402.0
+margin/bottom = 425.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="LabelVino" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 65.0
+margin/right = 624.0
+margin/bottom = 100.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadVino" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 638.0
+margin/top = 65.0
+margin/right = 750.0
+margin/bottom = 100.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelCerveza" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 109.0
+margin/right = 624.0
+margin/bottom = 132.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadCerveza" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 639.0
+margin/top = 109.0
+margin/right = 751.0
+margin/bottom = 132.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelCarne" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 160.0
+margin/right = 624.0
+margin/bottom = 183.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadCarne" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 640.0
+margin/top = 160.0
+margin/right = 752.0
+margin/bottom = 183.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelPescado" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 201.0
+margin/right = 624.0
+margin/bottom = 224.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadPescado" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 641.0
+margin/top = 201.0
+margin/right = 753.0
+margin/bottom = 224.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelVerduras" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 244.0
+margin/right = 624.0
+margin/bottom = 267.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadVerduras" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 642.0
+margin/top = 244.0
+margin/right = 754.0
+margin/bottom = 267.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelPatatas" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 291.0
+margin/right = 624.0
+margin/bottom = 314.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadPatatas" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 643.0
+margin/top = 291.0
+margin/right = 755.0
+margin/bottom = 314.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelHuevo" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 333.0
+margin/right = 624.0
+margin/bottom = 356.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadHuevo" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 644.0
+margin/top = 333.0
+margin/right = 756.0
+margin/bottom = 356.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelPan" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 369.0
+margin/right = 624.0
+margin/bottom = 392.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadPan" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 644.0
+margin/top = 369.0
+margin/right = 756.0
+margin/bottom = 392.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelQueso" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 400.0
+margin/right = 624.0
+margin/bottom = 423.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadQueso" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 645.0
+margin/top = 400.0
+margin/right = 757.0
+margin/bottom = 423.0
+custom_fonts/font = ExtResource( 15 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="Pan" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 160, 383 )
+transform/scale = Vector2( 0.613636, 0.583333 )
+texture = ExtResource( 16 )
+region = true
+region_rect = Rect2( 626, 2, 44, 48 )
+
+[node name="Queso" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 160, 413 )
+transform/scale = Vector2( 0.613636, 0.583333 )
+texture = ExtResource( 16 )
+region = true
+region_rect = Rect2( 530, 2, 44, 48 )
+
+[node name="Precio" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 313, 75 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="Vino" type="Label" parent="Hud/Container/LibroPedidos/Precio"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -62.0
+margin/top = -18.0
+margin/right = 2.0
+margin/bottom = 17.0
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "30"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Precio1" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 313, 121 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="Cerveza" type="Label" parent="Hud/Container/LibroPedidos/Precio1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -60.0
+margin/top = -18.0
+margin/right = 4.0
+margin/bottom = 17.0
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "45"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Precio2" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 313, 172 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="Carne" type="Label" parent="Hud/Container/LibroPedidos/Precio2"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -52.0
+margin/top = -18.0
+margin/right = 12.0
+margin/bottom = 17.0
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "5"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Precio3" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 313, 212 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="Pescado" type="Label" parent="Hud/Container/LibroPedidos/Precio3"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -52.0
+margin/top = -18.0
+margin/right = 12.0
+margin/bottom = 17.0
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "8"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Precio4" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 313, 255 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="Verduras" type="Label" parent="Hud/Container/LibroPedidos/Precio4"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -62.0
+margin/top = -20.0
+margin/right = 2.0
+margin/bottom = 15.0
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "20"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Precio5" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 313, 302 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="Patatas" type="Label" parent="Hud/Container/LibroPedidos/Precio5"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -62.0
+margin/top = -18.0
+margin/right = 2.0
+margin/bottom = 17.0
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "25"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Precio6" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 313, 344 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="Huevo" type="Label" parent="Hud/Container/LibroPedidos/Precio6"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -52.0
+margin/top = -18.0
+margin/right = 12.0
+margin/bottom = 17.0
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Precio7" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 313, 382 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="Pan" type="Label" parent="Hud/Container/LibroPedidos/Precio7"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -52.0
+margin/top = -20.0
+margin/right = 12.0
+margin/bottom = 15.0
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Precio8" type="Sprite" parent="Hud/Container/LibroPedidos"]
+
+transform/pos = Vector2( 313, 415 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="Queso" type="Label" parent="Hud/Container/LibroPedidos/Precio8"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -52.0
+margin/top = -20.0
+margin/right = 12.0
+margin/bottom = 15.0
+custom_fonts/font = ExtResource( 18 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "2"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="MenosVino" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 69.0
+margin/right = 796.0
+margin/bottom = 89.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosCerveza" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 112.0
+margin/right = 796.0
+margin/bottom = 132.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosCarne" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 164.0
+margin/right = 796.0
+margin/bottom = 184.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosPescado" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 204.0
+margin/right = 796.0
+margin/bottom = 224.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosVerdura" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 247.0
+margin/right = 796.0
+margin/bottom = 267.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosPatatas" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 294.0
+margin/right = 796.0
+margin/bottom = 314.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosHuevos" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 336.0
+margin/right = 796.0
+margin/bottom = 356.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosPan" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 371.0
+margin/right = 796.0
+margin/bottom = 391.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosQueso" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 403.0
+margin/right = 796.0
+margin/bottom = 423.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="TotalPagarLabel" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 704.0
+margin/top = 42.0
+margin/right = 754.0
+margin/bottom = 65.0
+custom_fonts/font = ExtResource( 15 )
+text = "Total:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TotalPagar" type="Label" parent="Hud/Container/LibroPedidos/TotalPagarLabel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 64.0
+margin/top = 0.0
+margin/right = 104.0
+margin/bottom = 23.0
+custom_fonts/font = ExtResource( 15 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="InsuficienteDinero" type="Label" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 576.0
+margin/top = 43.0
+margin/right = 680.0
+margin/bottom = 66.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Insuficiente"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimiteSuperado" type="Label" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 491.0
+margin/top = 42.0
+margin/right = 754.0
+margin/bottom = 65.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Has superado el stock"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimiteVinoSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 28.0
+margin/right = 349.0
+margin/bottom = 51.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimiteCervezaSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 71.0
+margin/right = 349.0
+margin/bottom = 94.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimiteCarneSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 122.0
+margin/right = 349.0
+margin/bottom = 145.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimitePescadoSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 163.0
+margin/right = 349.0
+margin/bottom = 186.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimiteVerdurasSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 206.0
+margin/right = 349.0
+margin/bottom = 229.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimitePatatasSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 253.0
+margin/right = 349.0
+margin/bottom = 276.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimiteHuevosSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 294.0
+margin/right = 349.0
+margin/bottom = 317.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimitePanSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 330.0
+margin/right = 349.0
+margin/bottom = 353.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimiteQuesoSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 362.0
+margin/right = 349.0
+margin/bottom = 385.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Dinero" type="Label" parent="Hud"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 928.0
+margin/top = -3.0
+margin/right = 1019.0
+margin/bottom = 32.0
+custom_fonts/font = ExtResource( 18 )
+text = "200"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+script/script = SubResource( 40 )
+
+[node name="Monedas" type="Sprite" parent="Hud"]
+
+transform/pos = Vector2( 912, 16 )
+texture = ExtResource( 17 )
+
+[node name="LibroSuministros" type="Patch9Frame" parent="Hud"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 48.0
+margin/top = 48.0
+margin/right = 976.0
+margin/bottom = 560.0
+texture = ExtResource( 11 )
+script/script = ExtResource( 19 )
+
+[node name="ContainerVino" type="Container" parent="Hud/LibroSuministros"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 64.0
+margin/top = 80.0
+margin/right = 104.0
+margin/bottom = 120.0
+
+[node name="Vino" type="Sprite" parent="Hud/LibroSuministros/ContainerVino"]
+
+transform/pos = Vector2( 96, 16 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="StockVino" type="Label" parent="Hud/LibroSuministros/ContainerVino"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 128.0
+margin/top = 0.0
+margin/right = 212.0
+margin/bottom = 64.0
+custom_fonts/font = ExtResource( 18 )
+text = "0/90"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="NombreVino" type="Label" parent="Hud/LibroSuministros/ContainerVino"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 80.0
+margin/top = -32.0
+margin/right = 120.0
+margin/bottom = -9.0
+custom_fonts/font = ExtResource( 15 )
+text = "Vino"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ContainerCerveza" type="Container" parent="Hud/LibroSuministros"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 704.0
+margin/right = 40.0
+margin/bottom = 744.0
+
+[node name="Cerveza" type="Sprite" parent="Hud/LibroSuministros/ContainerCerveza"]
+
+transform/pos = Vector2( 160.625, -527 )
+transform/scale = Vector2( 1.6625, 1.63125 )
+texture = ExtResource( 6 )
+region = true
+region_rect = Rect2( 230, 363, 20, 20 )
+
+[node name="StockCerveza" type="Label" parent="Hud/LibroSuministros/ContainerCerveza"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 192.0
+margin/top = -544.0
+margin/right = 276.0
+margin/bottom = -509.0
+custom_fonts/font = ExtResource( 18 )
+text = "0/90"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="NombreCerveza" type="Label" parent="Hud/LibroSuministros/ContainerCerveza"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 144.0
+margin/top = -576.0
+margin/right = 217.0
+margin/bottom = -553.0
+custom_fonts/font = ExtResource( 15 )
+text = "Cerveza"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="CerrarSuministros" type="Button" parent="Hud/LibroSuministros"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 672.0
+margin/top = 400.0
+margin/right = 802.0
+margin/bottom = 420.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Cerrar suministros"
+flat = false
+
+[node name="ContainerCarne" type="Container" parent="Hud/LibroSuministros"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 80.0
+margin/right = 40.0
+margin/bottom = 120.0
+
+[node name="Carne" type="Sprite" parent="Hud/LibroSuministros/ContainerCarne"]
+
+transform/pos = Vector2( 160, 176 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 0, 625, 32, 32 )
+
+[node name="StockCarne" type="Label" parent="Hud/LibroSuministros/ContainerCarne"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 192.0
+margin/top = 160.0
+margin/right = 276.0
+margin/bottom = 195.0
+custom_fonts/font = ExtResource( 18 )
+text = "0/10"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="NombreCarne" type="Label" parent="Hud/LibroSuministros/ContainerCarne"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 144.0
+margin/top = 128.0
+margin/right = 217.0
+margin/bottom = 151.0
+custom_fonts/font = ExtResource( 15 )
+text = "Carne"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ContainerPescado" type="Container" parent="Hud/LibroSuministros"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 160.0
+margin/right = 40.0
+margin/bottom = 200.0
+
+[node name="Pescado" type="Sprite" parent="Hud/LibroSuministros/ContainerPescado"]
+
+transform/pos = Vector2( 160, 176 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 200, 700, 48, 32 )
+
+[node name="StockPescado" type="Label" parent="Hud/LibroSuministros/ContainerPescado"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 192.0
+margin/top = 160.0
+margin/right = 276.0
+margin/bottom = 195.0
+custom_fonts/font = ExtResource( 18 )
+text = "0/10"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="NombrePescado" type="Label" parent="Hud/LibroSuministros/ContainerPescado"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 144.0
+margin/top = 128.0
+margin/right = 217.0
+margin/bottom = 151.0
+custom_fonts/font = ExtResource( 15 )
+text = "Pescado"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ContainerVerduras" type="Container" parent="Hud/LibroSuministros"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 240.0
+margin/right = 40.0
+margin/bottom = 280.0
+
+[node name="Verduras" type="Sprite" parent="Hud/LibroSuministros/ContainerVerduras"]
+
+transform/pos = Vector2( 160, 176 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 321, 672, 30, 34 )
+
+[node name="StockVerduras" type="Label" parent="Hud/LibroSuministros/ContainerVerduras"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 192.0
+margin/top = 160.0
+margin/right = 276.0
+margin/bottom = 195.0
+custom_fonts/font = ExtResource( 18 )
+text = "0/60"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="NombreVerduras" type="Label" parent="Hud/LibroSuministros/ContainerVerduras"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 144.0
+margin/top = 128.0
+margin/right = 217.0
+margin/bottom = 151.0
+custom_fonts/font = ExtResource( 15 )
+text = "Verduras"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ContainerPatatas" type="Container" parent="Hud/LibroSuministros"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 352.0
+margin/top = -80.0
+margin/right = 392.0
+margin/bottom = -40.0
+
+[node name="Patatas" type="Sprite" parent="Hud/LibroSuministros/ContainerPatatas"]
+
+transform/pos = Vector2( 160, 176 )
+texture = ExtResource( 5 )
+region = true
+region_rect = Rect2( 385, 672, 30, 34 )
+
+[node name="StockPatatas" type="Label" parent="Hud/LibroSuministros/ContainerPatatas"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 192.0
+margin/top = 160.0
+margin/right = 276.0
+margin/bottom = 195.0
+custom_fonts/font = ExtResource( 18 )
+text = "0/80"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="NombrePatatas" type="Label" parent="Hud/LibroSuministros/ContainerPatatas"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 144.0
+margin/top = 128.0
+margin/right = 217.0
+margin/bottom = 151.0
+custom_fonts/font = ExtResource( 15 )
+text = "Patatas"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ContainerHuevos" type="Container" parent="Hud/LibroSuministros"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 352.0
+margin/top = 0.0
+margin/right = 392.0
+margin/bottom = 40.0
+
+[node name="Huevos" type="Sprite" parent="Hud/LibroSuministros/ContainerHuevos"]
+
+transform/pos = Vector2( 160, 176 )
+texture = ExtResource( 14 )
+
+[node name="StockHuevos" type="Label" parent="Hud/LibroSuministros/ContainerHuevos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 192.0
+margin/top = 160.0
+margin/right = 276.0
+margin/bottom = 195.0
+custom_fonts/font = ExtResource( 18 )
+text = "0/24"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="NombreHuevos" type="Label" parent="Hud/LibroSuministros/ContainerHuevos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 144.0
+margin/top = 128.0
+margin/right = 217.0
+margin/bottom = 151.0
+custom_fonts/font = ExtResource( 15 )
+text = "Huevos"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ContainerPan" type="Container" parent="Hud/LibroSuministros"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 352.0
+margin/top = 80.0
+margin/right = 392.0
+margin/bottom = 120.0
+
+[node name="Pan" type="Sprite" parent="Hud/LibroSuministros/ContainerPan"]
+
+transform/pos = Vector2( 160, 176 )
+transform/scale = Vector2( 0.613636, 0.583333 )
+texture = ExtResource( 16 )
+region = true
+region_rect = Rect2( 626, 2, 44, 48 )
+
+[node name="StockPan" type="Label" parent="Hud/LibroSuministros/ContainerPan"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 192.0
+margin/top = 160.0
+margin/right = 276.0
+margin/bottom = 195.0
+custom_fonts/font = ExtResource( 18 )
+text = "0/20"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="NombrePan" type="Label" parent="Hud/LibroSuministros/ContainerPan"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 144.0
+margin/top = 128.0
+margin/right = 217.0
+margin/bottom = 151.0
+custom_fonts/font = ExtResource( 15 )
+text = "Pan"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ContainerQueso" type="Container" parent="Hud/LibroSuministros"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 352.0
+margin/top = 160.0
+margin/right = 392.0
+margin/bottom = 200.0
+
+[node name="Queso" type="Sprite" parent="Hud/LibroSuministros/ContainerQueso"]
+
+transform/pos = Vector2( 160, 176 )
+transform/scale = Vector2( 0.613636, 0.583333 )
+texture = ExtResource( 16 )
+region = true
+region_rect = Rect2( 530, 2, 44, 48 )
+
+[node name="StockQueso" type="Label" parent="Hud/LibroSuministros/ContainerQueso"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 192.0
+margin/top = 160.0
+margin/right = 276.0
+margin/bottom = 195.0
+custom_fonts/font = ExtResource( 18 )
+text = "0/20"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="NombreQueso" type="Label" parent="Hud/LibroSuministros/ContainerQueso"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 144.0
+margin/top = 128.0
+margin/right = 217.0
+margin/bottom = 151.0
+custom_fonts/font = ExtResource( 15 )
+text = "Queso"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Suministros" type="Button" parent="Hud"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 112.0
+margin/top = 576.0
+margin/right = 200.0
+margin/bottom = 596.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Suministros"
+flat = false
+script/script = SubResource( 41 )
+
+[node name="Alimentos" type="Node" parent="."]
 
 
