@@ -208,6 +208,7 @@ func _menos_vino():
 		label_cantidad_vino.set_text("")
 		cantidad_vino = 0
 		get_node("MenosVino").hide()
+		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteVinoSuperado").hide()
 	pass
 
 func _menos_cerveza():
@@ -224,6 +225,7 @@ func _menos_cerveza():
 		label_cantidad_cerveza.set_text("")
 		cantidad_cerveza = 0
 		get_node("MenosCerveza").hide()
+		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteCervezaSuperado").hide()
 	pass
 
 func _menos_carne():
@@ -240,6 +242,7 @@ func _menos_carne():
 		label_cantidad_carne.set_text("")
 		cantidad_carne = 0
 		get_node("MenosCarne").hide()
+		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteCarneSuperado").hide()
 	pass
 
 func _menos_pescado():
@@ -256,6 +259,7 @@ func _menos_pescado():
 		label_cantidad_pescado.set_text("")
 		cantidad_pescado = 0
 		get_node("MenosPescado").hide()
+		get_parent().get_node("LibroPedidos/LimiteSuperado/LimitePescadoSuperado").hide()
 	pass
 	
 func _menos_verdura():
@@ -272,6 +276,7 @@ func _menos_verdura():
 		label_cantidad_verdura.set_text("")
 		cantidad_verduras = 0
 		get_node("MenosVerdura").hide()
+		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteVerdurasSuperado").hide()
 	pass
 
 func _menos_patatas():
@@ -288,6 +293,7 @@ func _menos_patatas():
 		label_cantidad_patatas.set_text("")
 		cantidad_patatas = 0
 		get_node("MenosPatatas").hide()
+		get_parent().get_node("LibroPedidos/LimiteSuperado/LimitePatatasSuperado").hide()
 	pass
 
 func _menos_huevos():
@@ -304,6 +310,7 @@ func _menos_huevos():
 		label_cantidad_huevos.set_text("")
 		cantidad_huevos = 0
 		get_node("MenosHuevos").hide()
+		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteHuevosSuperado").hide()
 	pass
 
 func _menos_pan():
@@ -320,6 +327,7 @@ func _menos_pan():
 		label_cantidad_pan.set_text("")
 		cantidad_pan = 0
 		get_node("MenosPan").hide()
+		get_parent().get_node("LibroPedidos/LimiteSuperado/LimitePanSuperado").hide()
 	pass
 
 func _menos_queso():
@@ -336,6 +344,7 @@ func _menos_queso():
 		label_cantidad_queso.set_text("")
 		cantidad_queso = 0
 		get_node("MenosQueso").hide()
+		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteQuesoSuperado").hide()
 	pass
 	
 	

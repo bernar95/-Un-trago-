@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Tiles/woodland_indoor.png" type="Texture" id=1]
+
+[node name="Sprite" type="Sprite"]
+
+transform/pos = Vector2( 491.313, 288.404 )
+texture = ExtResource( 1 )
+
+

@@ -19,6 +19,7 @@
 [ext_resource path="res://Tiles/Coin1.png" type="Texture" id=17]
 [ext_resource path="res://Fonts/precio.fnt" type="BitmapFont" id=18]
 [ext_resource path="res://Scripts/LibroSuministros.gd" type="Script" id=19]
+[ext_resource path="res://Scripts/notificaciones.gd" type="Script" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -63,7 +64,7 @@ extents = Vector2( 10, 10 )
 [sub_resource type="RectangleShape2D" id=9]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 6.71578 )
+extents = Vector2( 9.64168, 6.71578 )
 
 [sub_resource type="CapsuleShape2D" id=10]
 
@@ -181,6 +182,7 @@ extents = Vector2( 10, 10 )
 
 [sub_resource type="Animation" id=31]
 
+resource/name = "Andar abajo"
 length = 0.3
 loop = false
 step = 0.1
@@ -197,6 +199,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=32]
 
+resource/name = "Andar abajo rapido"
 length = 0.15
 loop = false
 step = 0.05
@@ -208,11 +211,12 @@ tracks/0/keys = {
 "times": FloatArray( 0, 0.05, 0.1, 0.15 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 1, 2, 3, 0 ]
+"values": [ 1, 2, 3, 2 ]
 }
 
 [sub_resource type="Animation" id=33]
 
+resource/name = "Andar arriba"
 length = 0.3
 loop = false
 step = 0.1
@@ -229,6 +233,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=34]
 
+resource/name = "Andar arriba rapido"
 length = 0.15
 loop = false
 step = 0.05
@@ -245,6 +250,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=35]
 
+resource/name = "Andar derecha"
 length = 0.3
 loop = false
 step = 0.1
@@ -261,6 +267,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=36]
 
+resource/name = "Andar derecha rapido"
 length = 0.15
 loop = false
 step = 0.05
@@ -277,6 +284,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=37]
 
+resource/name = "Andar izquierda"
 length = 0.3
 loop = false
 step = 0.1
@@ -293,6 +301,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=38]
 
+resource/name = "Andar izquierda rapido"
 length = 0.15
 loop = false
 step = 0.05
@@ -322,18 +331,6 @@ func _on_pressed():
 [sub_resource type="GDScript" id=40]
 
 script/source = ""
-
-[sub_resource type="GDScript" id=41]
-
-script/source = "extends Button
-
-func _ready():
-	connect(\"pressed\", self, \"_on_pressed\")
-	pass
-
-func _on_pressed():
-	pass
-"
 
 [node name="Mapa" type="Node"]
 
@@ -4940,11 +4937,8 @@ _update_shape_index = 0
 
 [node name="BarraDetras" type="Node" parent="."]
 
-editor/display_folded = true
-
 [node name="Barril" type="Sprite" parent="BarraDetras"]
 
-editor/display_folded = true
 transform/pos = Vector2( 378, 32 )
 texture = ExtResource( 3 )
 region = true
@@ -4969,7 +4963,6 @@ max_lines_visible = -1
 
 [node name="Barril1" type="Sprite" parent="BarraDetras"]
 
-editor/display_folded = true
 transform/pos = Vector2( 448, 32 )
 texture = ExtResource( 3 )
 region = true
@@ -5017,7 +5010,7 @@ region_rect = Rect2( 32, -2, 32, 32 )
 
 input/pickable = false
 shapes/0/shape = SubResource( 9 )
-shapes/0/transform = Matrix32( 1.65946, 0, 0, 4.69731, 322, 32 )
+shapes/0/transform = Matrix32( 1.65946, 0, 0, 4.69731, 320, 32 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -5028,11 +5021,16 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D"]
 
-transform/pos = Vector2( 322, 32 )
+transform/pos = Vector2( 320, 32 )
 transform/scale = Vector2( 1.65946, 4.69731 )
 shape = SubResource( 9 )
 trigger = false
 _update_shape_index = 0
+
+[node name="EstanteInteraccion" type="Node2D" parent="BarraDetras/StaticBody2D"]
+
+transform/pos = Vector2( 322.509, 40.4718 )
+transform/scale = Vector2( 0.5, 1.25 )
 
 [node name="StaticBody2D 2" type="StaticBody2D" parent="BarraDetras"]
 
@@ -5055,6 +5053,11 @@ shape = SubResource( 10 )
 trigger = false
 _update_shape_index = 0
 
+[node name="BarrilVinoInteraccion" type="Node2D" parent="BarraDetras/StaticBody2D 2"]
+
+transform/pos = Vector2( 377.971, 42.1468 )
+transform/scale = Vector2( 0.848597, 1.30122 )
+
 [node name="StaticBody2D 3" type="StaticBody2D" parent="BarraDetras"]
 
 input/pickable = false
@@ -5075,6 +5078,11 @@ transform/scale = Vector2( 2.69602, 2.01078 )
 shape = SubResource( 11 )
 trigger = false
 _update_shape_index = 0
+
+[node name="BarrilCervezaInteraccion" type="Node2D" parent="BarraDetras/StaticBody2D 3"]
+
+transform/pos = Vector2( 447.889, 36.8644 )
+transform/scale = Vector2( 0.856496, 1.4337 )
 
 [node name="StaticBody2D 4" type="StaticBody2D" parent="BarraDetras"]
 
@@ -7046,7 +7054,7 @@ _update_shape_index = 0
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
 editor/display_folded = true
-transform/pos = Vector2( 348.029, 196.829 )
+transform/pos = Vector2( 328.029, 97.829 )
 transform/scale = Vector2( 0.169749, 0.363435 )
 input/pickable = false
 collision/layers = 1
@@ -7083,6 +7091,8 @@ region_rect = Rect2( 0, 0, 32, 48 )
 
 [node name="Hud" type="Node" parent="."]
 
+editor/display_folded = true
+
 [node name="Pedidos" type="Button" parent="Hud"]
 
 focus/ignore_mouse = false
@@ -7102,6 +7112,7 @@ script/script = SubResource( 39 )
 
 [node name="Container" type="Container" parent="Hud"]
 
+visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -8776,7 +8787,51 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Suministros"
 flat = false
-script/script = SubResource( 41 )
+
+[node name="Notificaciones" type="PanelContainer" parent="Hud"]
+
+visibility/opacity = 0.88
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 682.0
+margin/top = 537.0
+margin/right = 980.0
+margin/bottom = 574.0
+script/script = ExtResource( 20 )
+
+[node name="Notificacion" type="Label" parent="Hud/Notificaciones"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 7.0
+margin/top = 7.0
+margin/right = 291.0
+margin/bottom = 30.0
+custom_fonts/font = ExtResource( 15 )
+custom_colors/font_color = Color( 1, 0, 0, 0.894118 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Cerrar" type="Button" parent="Hud"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 933.0
+margin/top = 544.0
+margin/right = 973.0
+margin/bottom = 567.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "X"
+flat = false
 
 [node name="Alimentos" type="Node" parent="."]
 

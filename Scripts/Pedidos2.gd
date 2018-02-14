@@ -225,7 +225,6 @@ func _hacer_pedido():
 				get_node("LibroPedidos/MenosCerveza").hide()
 				get_node("LibroPedidos/LabelCerveza").set_text("")
 				get_node("LibroPedidos/CantidadCerveza").set_text("")
-				stock_cerveza += 50
 		else:
 			get_node("LibroPedidos/InsuficienteDinero").show()
 			var t = Timer.new()
