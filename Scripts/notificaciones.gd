@@ -13,4 +13,5 @@ func _ready():
 func _cerrar_notificaciones():
 	hide()
 	get_parent().get_node("Cerrar").hide()
+	get_parent().get_parent().get_node("KinematicBody2D").timer.stop()
 	pass

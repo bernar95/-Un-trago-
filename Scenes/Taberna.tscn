@@ -4937,6 +4937,8 @@ _update_shape_index = 0
 
 [node name="BarraDetras" type="Node" parent="."]
 
+editor/display_folded = true
+
 [node name="Barril" type="Sprite" parent="BarraDetras"]
 
 transform/pos = Vector2( 378, 32 )
@@ -7091,8 +7093,6 @@ region_rect = Rect2( 0, 0, 32, 48 )
 
 [node name="Hud" type="Node" parent="."]
 
-editor/display_folded = true
-
 [node name="Pedidos" type="Button" parent="Hud"]
 
 focus/ignore_mouse = false
@@ -7112,6 +7112,7 @@ script/script = SubResource( 39 )
 
 [node name="Container" type="Container" parent="Hud"]
 
+editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -7125,6 +7126,7 @@ script/script = ExtResource( 10 )
 
 [node name="LibroPedidos" type="Patch9Frame" parent="Hud/Container"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
