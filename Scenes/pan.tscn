@@ -4,8 +4,8 @@
 
 [node name="Sprite" type="Sprite"]
 
-transform/pos = Vector2( 608, 240 )
-transform/scale = Vector2( 0.5, 0.5 )
+transform/pos = Vector2( 604.348, 236.569 )
+transform/scale = Vector2( 0.333996, 0.336599 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 626, 4, 44, 42 )

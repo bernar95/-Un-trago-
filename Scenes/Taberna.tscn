@@ -20,6 +20,7 @@
 [ext_resource path="res://Fonts/precio.fnt" type="BitmapFont" id=18]
 [ext_resource path="res://Scripts/LibroSuministros.gd" type="Script" id=19]
 [ext_resource path="res://Scripts/notificaciones.gd" type="Script" id=20]
+[ext_resource path="res://Fonts/tiempo.fnt" type="BitmapFont" id=21]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -318,25 +319,11 @@ tracks/0/keys = {
 
 [sub_resource type="GDScript" id=39]
 
-script/source = "extends Button
-
-func _ready():
-	connect(\"pressed\", self, \"_on_pressed\")
-	pass
-
-func _on_pressed():
-	pass
-"
-
-[sub_resource type="GDScript" id=40]
-
 script/source = ""
 
 [node name="Mapa" type="Node"]
 
 [node name="Suelo " type="Node" parent="."]
-
-editor/display_folded = true
 
 [node name="Suelo" type="Sprite" parent="Suelo "]
 
@@ -4937,10 +4924,9 @@ _update_shape_index = 0
 
 [node name="BarraDetras" type="Node" parent="."]
 
-editor/display_folded = true
-
 [node name="Barril" type="Sprite" parent="BarraDetras"]
 
+editor/display_folded = true
 transform/pos = Vector2( 378, 32 )
 texture = ExtResource( 3 )
 region = true
@@ -4965,6 +4951,7 @@ max_lines_visible = -1
 
 [node name="Barril1" type="Sprite" parent="BarraDetras"]
 
+editor/display_folded = true
 transform/pos = Vector2( 448, 32 )
 texture = ExtResource( 3 )
 region = true
@@ -5010,6 +4997,7 @@ region_rect = Rect2( 32, -2, 32, 32 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="BarraDetras"]
 
+editor/display_folded = true
 input/pickable = false
 shapes/0/shape = SubResource( 9 )
 shapes/0/transform = Matrix32( 1.65946, 0, 0, 4.69731, 320, 32 )
@@ -5090,7 +5078,7 @@ transform/scale = Vector2( 0.856496, 1.4337 )
 
 input/pickable = false
 shapes/0/shape = SubResource( 12 )
-shapes/0/transform = Matrix32( 3.19301, 0, 0, 2.01663, 528, 48 )
+shapes/0/transform = Matrix32( 3.19301, 0, 0, 1.6237, 528, 42.8919 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -5101,8 +5089,8 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D 4"]
 
-transform/pos = Vector2( 528, 48 )
-transform/scale = Vector2( 3.19301, 2.01663 )
+transform/pos = Vector2( 528, 42.8919 )
+transform/scale = Vector2( 3.19301, 1.6237 )
 shape = SubResource( 12 )
 trigger = false
 _update_shape_index = 0
@@ -5127,6 +5115,11 @@ transform/scale = Vector2( 1.53046, 1.4891 )
 shape = SubResource( 13 )
 trigger = false
 _update_shape_index = 0
+
+[node name="CalderoInteraccion" type="Node2D" parent="BarraDetras/StaticBody2D 5"]
+
+transform/pos = Vector2( 593.012, 47.5527 )
+transform/scale = Vector2( 0.365558, 0.409156 )
 
 [node name="CajaPescado" type="Sprite" parent="BarraDetras"]
 
@@ -5198,11 +5191,16 @@ shape = SubResource( 14 )
 trigger = false
 _update_shape_index = 0
 
+[node name="CajaCarneInteraccion" type="Node2D" parent="BarraDetras/StaticBody2D 6"]
+
+transform/pos = Vector2( 287.345, 51.2842 )
+transform/scale = Vector2( 0.438482, 0.508898 )
+
 [node name="StaticBody2D7" type="StaticBody2D" parent="BarraDetras"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 14 )
-shapes/0/transform = Matrix32( 1.38462, 0, 0, 1.23077, 512, 32 )
+shapes/0/transform = Matrix32( 1.38462, 0, 0, 2.46154, 512, 48 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -5213,17 +5211,22 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D7"]
 
-transform/pos = Vector2( 512, 32 )
-transform/scale = Vector2( 1.38462, 1.23077 )
+transform/pos = Vector2( 512, 48 )
+transform/scale = Vector2( 1.38462, 2.46154 )
 shape = SubResource( 14 )
 trigger = false
 _update_shape_index = 0
+
+[node name="CajaPanInteraccion" type="Node2D" parent="BarraDetras/StaticBody2D7"]
+
+transform/pos = Vector2( 512.04, 32.5432 )
+transform/scale = Vector2( 0.420645, 0.418179 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="BarraDetras"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 14 )
-shapes/0/transform = Matrix32( 1.38462, 0, 0, 1.23077, 544, 32 )
+shapes/0/transform = Matrix32( 1.38462, 0, 0, 2.46154, 544, 48 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -5234,11 +5237,16 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BarraDetras/StaticBody2D8"]
 
-transform/pos = Vector2( 544, 32 )
-transform/scale = Vector2( 1.38462, 1.23077 )
+transform/pos = Vector2( 544, 48 )
+transform/scale = Vector2( 1.38462, 2.46154 )
 shape = SubResource( 14 )
 trigger = false
 _update_shape_index = 0
+
+[node name="CajaHuevosInteraccion" type="Node2D" parent="BarraDetras/StaticBody2D8"]
+
+transform/pos = Vector2( 543.855, 31.803 )
+transform/scale = Vector2( 0.436148, 0.403887 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="BarraDetras"]
 
@@ -5261,6 +5269,11 @@ shape = SubResource( 14 )
 trigger = false
 _update_shape_index = 0
 
+[node name="CajaPescadoInteraccion" type="Node2D" parent="BarraDetras/StaticBody2D9"]
+
+transform/pos = Vector2( 639.981, 51.3461 )
+transform/scale = Vector2( 0.425926, 0.503061 )
+
 [node name="StaticBody2D10" type="StaticBody2D" parent="BarraDetras"]
 
 input/pickable = false
@@ -5281,6 +5294,11 @@ transform/scale = Vector2( 1.38462, 1.23077 )
 shape = SubResource( 14 )
 trigger = false
 _update_shape_index = 0
+
+[node name="CajaQuesoInteraccion" type="Node2D" parent="BarraDetras/StaticBody2D10"]
+
+transform/pos = Vector2( 672.152, 52.193 )
+transform/scale = Vector2( 0.417895, 0.510578 )
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="BarraDetras"]
 
@@ -5303,6 +5321,11 @@ shape = SubResource( 14 )
 trigger = false
 _update_shape_index = 0
 
+[node name="CajaVerdurasInteraccion" type="Node2D" parent="BarraDetras/StaticBody2D11"]
+
+transform/pos = Vector2( 703.828, 51.4199 )
+transform/scale = Vector2( 0.425704, 0.509724 )
+
 [node name="StaticBody2D12" type="StaticBody2D" parent="BarraDetras"]
 
 input/pickable = false
@@ -5323,6 +5346,27 @@ transform/scale = Vector2( 1.38462, 1.23077 )
 shape = SubResource( 14 )
 trigger = false
 _update_shape_index = 0
+
+[node name="CajaPatatasInteraccion" type="Node2D" parent="BarraDetras/StaticBody2D12"]
+
+transform/pos = Vector2( 736.031, 51.7548 )
+transform/scale = Vector2( 0.442548, 0.504706 )
+
+[node name="Alimentos" type="Node" parent="BarraDetras"]
+
+[node name="Carne" type="Node2D" parent="BarraDetras/Alimentos"]
+
+[node name="Pescado" type="Node2D" parent="BarraDetras/Alimentos"]
+
+[node name="Verduras" type="Node2D" parent="BarraDetras/Alimentos"]
+
+[node name="Patatas" type="Node2D" parent="BarraDetras/Alimentos"]
+
+[node name="Pan" type="Node2D" parent="BarraDetras/Alimentos"]
+
+[node name="Queso" type="Node2D" parent="BarraDetras/Alimentos"]
+
+[node name="Huevos" type="Node2D" parent="BarraDetras/Alimentos"]
 
 [node name="Mesas" type="Node" parent="."]
 
@@ -7108,7 +7152,6 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Pedidos"
 flat = false
-script/script = SubResource( 39 )
 
 [node name="Container" type="Container" parent="Hud"]
 
@@ -8286,7 +8329,7 @@ text = "200"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-script/script = SubResource( 40 )
+script/script = SubResource( 39 )
 
 [node name="Monedas" type="Sprite" parent="Hud"]
 
@@ -8797,7 +8840,7 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 682.0
+margin/left = 550.0
 margin/top = 537.0
 margin/right = 980.0
 margin/bottom = 574.0
@@ -8811,7 +8854,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 7.0
 margin/top = 7.0
-margin/right = 291.0
+margin/right = 423.0
 margin/bottom = 30.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color = Color( 1, 0, 0, 0.894118 )
@@ -8835,6 +8878,38 @@ shortcut = null
 text = "X"
 flat = false
 
-[node name="Alimentos" type="Node" parent="."]
+[node name="Cocina" type="Label" parent="Hud"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 587.0
+margin/top = 16.0
+margin/right = 627.0
+margin/bottom = 30.0
+custom_fonts/font = ExtResource( 21 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Raciones" type="Label" parent="Hud"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 574.0
+margin/top = 16.0
+margin/right = 614.0
+margin/bottom = 30.0
+custom_fonts/font = ExtResource( 21 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 

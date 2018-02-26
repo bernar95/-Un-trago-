@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=1]
 
-[ext_resource path="res://Tiles/obj_misk_atlas.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/comida.png" type="Texture" id=1]
 
 [node name="Sprite" type="Sprite"]
 
-transform/pos = Vector2( 423.726, 349.179 )
+transform/pos = Vector2( 505.147, 236.257 )
 transform/scale = Vector2( 0.521904, 0.523653 )
 texture = ExtResource( 1 )
 region = true

@@ -116,7 +116,7 @@ func _hacer_pedido():
 				var spriteCarne = preload("res://Scenes/carne.tscn")
 				var carne = spriteCarne.instance()
 				carne.set_pos(Vector2(290, 42))
-				get_parent().get_parent().get_node("Alimentos").add_child(carne)
+				get_parent().get_parent().get_node("BarraDetras/Alimentos/Carne").add_child(carne)
 				get_node("LibroPedidos").cantidad_carne = 0
 				get_node("LibroPedidos/MenosCarne").hide()
 				get_node("LibroPedidos/LabelCarne").set_text("")
@@ -130,7 +130,7 @@ func _hacer_pedido():
 				var spritePescado = preload("res://Scenes/pescado.tscn")
 				var pescado = spritePescado.instance()
 				pescado.set_pos(Vector2(640, 42))
-				get_parent().get_parent().get_node("Alimentos").add_child(pescado)
+				get_parent().get_parent().get_node("BarraDetras/Alimentos/Pescado").add_child(pescado)
 				get_node("LibroPedidos").cantidad_pescado = 0
 				get_node("LibroPedidos/MenosPescado").hide()
 				get_node("LibroPedidos/LabelPescado").set_text("")
@@ -144,7 +144,7 @@ func _hacer_pedido():
 				var spriteQueso = preload("res://Scenes/queso.tscn")
 				var queso = spriteQueso.instance()
 				queso.set_pos(Vector2(672, 42))
-				get_parent().get_parent().get_node("Alimentos").add_child(queso)
+				get_parent().get_parent().get_node("BarraDetras/Alimentos/Queso").add_child(queso)
 				get_node("LibroPedidos").cantidad_queso = 0
 				get_node("LibroPedidos/MenosQueso").hide()
 				get_node("LibroPedidos/LabelQueso").set_text("")
@@ -158,7 +158,7 @@ func _hacer_pedido():
 				var spriteVerduras = preload("res://Scenes/verduras.tscn")
 				var verduras = spriteVerduras.instance()
 				verduras.set_pos(Vector2(704, 42))
-				get_parent().get_parent().get_node("Alimentos").add_child(verduras)
+				get_parent().get_parent().get_node("BarraDetras/Alimentos/Verduras").add_child(verduras)
 				get_node("LibroPedidos").cantidad_verduras = 0
 				get_node("LibroPedidos/MenosVerdura").hide()
 				get_node("LibroPedidos/LabelVerduras").set_text("")
@@ -172,7 +172,7 @@ func _hacer_pedido():
 				var spritePatatas = preload("res://Scenes/patatas.tscn")
 				var patatas = spritePatatas.instance()
 				patatas.set_pos(Vector2(736, 42))
-				get_parent().get_parent().get_node("Alimentos").add_child(patatas)
+				get_parent().get_parent().get_node("BarraDetras/Alimentos/Patatas").add_child(patatas)
 				get_node("LibroPedidos").cantidad_patatas = 0
 				get_node("LibroPedidos/MenosPatatas").hide()
 				get_node("LibroPedidos/LabelPatatas").set_text("")
@@ -186,7 +186,7 @@ func _hacer_pedido():
 				var spritePan = preload("res://Scenes/pan.tscn")
 				var pan = spritePan.instance()
 				pan.set_pos(Vector2(512, 26))
-				get_parent().get_parent().get_node("Alimentos").add_child(pan)
+				get_parent().get_parent().get_node("BarraDetras/Alimentos/Pan").add_child(pan)
 				get_node("LibroPedidos").cantidad_pan = 0
 				get_node("LibroPedidos/MenosPan").hide()
 				get_node("LibroPedidos/LabelPan").set_text("")
@@ -200,7 +200,7 @@ func _hacer_pedido():
 				var spriteHuevos = preload("res://Scenes/huevos.tscn")
 				var huevos = spriteHuevos.instance()
 				huevos.set_pos(Vector2(544, 26))
-				get_parent().get_parent().get_node("Alimentos").add_child(huevos)
+				get_parent().get_parent().get_node("BarraDetras/Alimentos/Huevos").add_child(huevos)
 				get_node("LibroPedidos").cantidad_huevos = 0
 				get_node("LibroPedidos/MenosHuevos").hide()
 				get_node("LibroPedidos/LabelHuevo").set_text("")
@@ -228,7 +228,7 @@ func _hacer_pedido():
 		else:
 			get_node("LibroPedidos/InsuficienteDinero").show()
 			var t = Timer.new()
-			t.set_wait_time(3)
+			t.set_wait_time(5)
 			t.set_one_shot(true)
 			self.add_child(t)
 			t.start()
