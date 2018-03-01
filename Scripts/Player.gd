@@ -210,10 +210,8 @@ func interaccion(result):
 	if typeof(result[0].collider) == TYPE_OBJECT:
 		if result[0].collider.has_node("EstanteInteraccion"):
 			if personaje.get_child_count() == 0:
-				print("Jarra")
 				personaje.add_child(jarra)
 			elif personaje.get_child_count() == 1:
-				print("Jarra2")
 				if personaje.get_child(0).get_pos() == mano_derecha:
 					personaje.add_child(jarra2)
 				else:
@@ -766,7 +764,6 @@ func soltar(result):
 			if personaje.get_child_count() == 0:
 				notificaciones("No tienes nada que soltar")
 			elif (personaje.get_child_count() == 1 or personaje.get_child_count() == 2) and personaje.get_child(0).get_filename() == spriteJarra.get_path():
-				print("Soltar")
 				if personaje.get_child(0).get_pos() == mano_derecha:
 					personaje.get_child(0).free()
 					instanciar_jarras("Jarra")
@@ -774,7 +771,6 @@ func soltar(result):
 					personaje.get_child(0).free()
 					instanciar_jarras("Jarra2")
 			elif personaje.get_child_count() == 2 and personaje.get_child(1).get_filename() == spriteJarra.get_path():
-				print("Soltar2")
 				if personaje.get_child(1).get_pos() == mano_derecha:
 					personaje.get_child(1).free()
 					instanciar_jarras("Jarra")

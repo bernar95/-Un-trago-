@@ -20,12 +20,20 @@ var limite_huevos = 24
 var limite_pan = 20
 var limite_queso = 20
 
+var suministros
+var pedidos
+var recetas
+var compras
+
 func _ready():
 	hide()
 
-	var pedidos = get_parent().get_node("Pedidos")
+	pedidos = get_parent().get_node("Pedidos")
 	var cerrar = get_node("LibroPedidos/CerrarPedidos")
 	var hacer_pedido = get_node("LibroPedidos/HacerPedido")
+	suministros = get_parent().get_node("Suministros")
+	recetas = get_parent().get_node("Recetas")
+	compras = get_parent().get_node("Compras")
 	
 	if pedidos:
 		pedidos.connect("pressed", self, "_mostrar_pedidos")
@@ -35,11 +43,21 @@ func _ready():
 		hacer_pedido.connect("pressed", self, "_hacer_pedido")
 
 func _mostrar_pedidos():
+	get_tree().set_pause(true)
 	show()
+	recetas.hide()
+	pedidos.hide()
+	suministros.hide()
+	compras.hide()
 	pass
 
 func _cerrar_pedidos():
+	get_tree().set_pause(false)
 	hide()
+	recetas.show()
+	pedidos.show()
+	suministros.show()
+	compras.show()
 	pass
 
 func _hacer_pedido():

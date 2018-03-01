@@ -17,25 +17,25 @@ func _ready():
 	var cerveza = get_node("ComprarCerveza")
 	if cerveza:
 		cerveza.connect("pressed", self, "_comprar_cerveza")
-	var carne = get_node("ComprarCarne")
+	var carne = get_node("Carne/ComprarCarne")
 	if carne:
 		carne.connect("pressed", self, "_comprar_carne")
-	var pescado = get_node("ComprarPescado")
+	var pescado = get_node("Pescado/ComprarPescado")
 	if pescado:
 		pescado.connect("pressed", self, "_comprar_pescado")
-	var verduras = get_node("ComprarVerduras")
+	var verduras = get_node("Verduras/ComprarVerduras")
 	if verduras:
 		verduras.connect("pressed", self, "_comprar_verduras")
-	var patatas = get_node("ComprarPatatas")
+	var patatas = get_node("Patatas/ComprarPatatas")
 	if patatas:
 		patatas.connect("pressed", self, "_comprar_patatas")
-	var huevo = get_node("ComprarHuevos")
+	var huevo = get_node("Huevos/ComprarHuevos")
 	if huevo:
 		huevo.connect("pressed", self, "_comprar_huevos")
-	var pan = get_node("ComprarPan")
+	var pan = get_node("Pan/ComprarPan")
 	if pan:
 		pan.connect("pressed", self, "_comprar_pan")
-	var queso = get_node("ComprarQueso")
+	var queso = get_node("Queso/ComprarQueso")
 	if queso:
 		queso.connect("pressed", self, "_comprar_queso")
 	var menos_vino = get_node("MenosVino")
@@ -65,6 +65,15 @@ func _ready():
 	var menos_queso = get_node("MenosQueso")
 	if menos_queso:
 		menos_queso.connect("pressed", self, "_menos_queso")
+		
+	get_node("Carne").hide()
+	get_node("Pescado").hide()
+	get_node("Verduras").hide()
+	get_node("Patatas").hide()
+	get_node("Pan").hide()
+	get_node("Queso").hide()
+	get_node("Huevos").hide()
+	
 	pass
 	
 
@@ -101,7 +110,7 @@ func _comprar_carne():
 	var carne_label = get_node("LabelCarne")
 	var label_cantidad_carne = get_node("CantidadCarne")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_carne = int(get_node("Precio2/Carne").get_text())
+	var precio_carne = int(get_node("Carne/Precio2/Carne").get_text())
 	carne_label.set_text(text)
 	cantidad_carne += 1
 	label_cantidad_carne.set_text(str(cantidad_carne))
@@ -115,7 +124,7 @@ func _comprar_pescado():
 	var pescado_label = get_node("LabelPescado")
 	var label_cantidad_pescado = get_node("CantidadPescado")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_pescado = int(get_node("Precio3/Pescado").get_text())
+	var precio_pescado = int(get_node("Pescado/Precio3/Pescado").get_text())
 	pescado_label.set_text(text)
 	cantidad_pescado += 1
 	label_cantidad_pescado.set_text(str(cantidad_pescado))
@@ -129,7 +138,7 @@ func _comprar_verduras():
 	var verduras_label = get_node("LabelVerduras")
 	var label_cantidad_verduras = get_node("CantidadVerduras")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_verduras = int(get_node("Precio4/Verduras").get_text())
+	var precio_verduras = int(get_node("Verduras/Precio4/Verduras").get_text())
 	verduras_label.set_text(text)
 	cantidad_verduras += 1
 	label_cantidad_verduras.set_text(str(cantidad_verduras))
@@ -143,7 +152,7 @@ func _comprar_patatas():
 	var patatas_label = get_node("LabelPatatas")
 	var label_cantidad_patatas = get_node("CantidadPatatas")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_patatas = int(get_node("Precio5/Patatas").get_text())
+	var precio_patatas = int(get_node("Patatas/Precio5/Patatas").get_text())
 	patatas_label.set_text(text)
 	cantidad_patatas += 1
 	label_cantidad_patatas.set_text(str(cantidad_patatas))
@@ -157,7 +166,7 @@ func _comprar_huevos():
 	var huevos_label = get_node("LabelHuevo")
 	var label_cantidad_huevos = get_node("CantidadHuevo")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_huevos = int(get_node("Precio6/Huevo").get_text())
+	var precio_huevos = int(get_node("Huevos/Precio6/Huevo").get_text())
 	huevos_label.set_text(text)
 	cantidad_huevos += 1
 	label_cantidad_huevos.set_text(str(cantidad_huevos))
@@ -171,7 +180,7 @@ func _comprar_pan():
 	var pan_label = get_node("LabelPan")
 	var label_cantidad_pan = get_node("CantidadPan")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_pan = int(get_node("Precio7/Pan").get_text())
+	var precio_pan = int(get_node("Pan/Precio7/Pan").get_text())
 	pan_label.set_text(text)
 	cantidad_pan += 1
 	label_cantidad_pan.set_text(str(cantidad_pan))
@@ -185,7 +194,7 @@ func _comprar_queso():
 	var queso_label = get_node("LabelQueso")
 	var label_cantidad_queso = get_node("CantidadQueso")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_queso = int(get_node("Precio8/Queso").get_text())
+	var precio_queso = int(get_node("Queso/Precio8/Queso").get_text())
 	queso_label.set_text(text)
 	cantidad_queso += 1
 	label_cantidad_queso.set_text(str(cantidad_queso))
@@ -232,7 +241,7 @@ func _menos_carne():
 	var carne_label = get_node("LabelCarne")
 	var label_cantidad_carne = get_node("CantidadCarne")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_carne = int(get_node("Precio2/Carne").get_text())
+	var precio_carne = int(get_node("Carne/Precio2/Carne").get_text())
 	cantidad_carne -= 1
 	label_cantidad_carne.set_text(str(cantidad_carne))
 	total_pagar -= precio_carne
@@ -249,7 +258,7 @@ func _menos_pescado():
 	var pescado_label = get_node("LabelPescado")
 	var label_cantidad_pescado = get_node("CantidadPescado")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_pescado = int(get_node("Precio3/Pescado").get_text())
+	var precio_pescado = int(get_node("Pescado/Precio3/Pescado").get_text())
 	cantidad_pescado -= 1
 	label_cantidad_pescado.set_text(str(cantidad_pescado))
 	total_pagar -= precio_pescado
@@ -266,7 +275,7 @@ func _menos_verdura():
 	var verdura_label = get_node("LabelVerduras")
 	var label_cantidad_verdura = get_node("CantidadVerduras")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_verdura = int(get_node("Precio4/Verduras").get_text())
+	var precio_verdura = int(get_node("Verduras/Precio4/Verduras").get_text())
 	cantidad_verduras -= 1
 	label_cantidad_verdura.set_text(str(cantidad_verduras))
 	total_pagar -= precio_verdura
@@ -283,7 +292,7 @@ func _menos_patatas():
 	var patatas_label = get_node("LabelPatatas")
 	var label_cantidad_patatas = get_node("CantidadPatatas")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_patatas = int(get_node("Precio5/Patatas").get_text())
+	var precio_patatas = int(get_node("Patatas/Precio5/Patatas").get_text())
 	cantidad_patatas -= 1
 	label_cantidad_patatas.set_text(str(cantidad_patatas))
 	total_pagar -= precio_patatas
@@ -300,7 +309,7 @@ func _menos_huevos():
 	var huevos_label = get_node("LabelHuevo")
 	var label_cantidad_huevos = get_node("CantidadHuevo")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_huevos = int(get_node("Precio6/Huevo").get_text())
+	var precio_huevos = int(get_node("Huevos/Precio6/Huevo").get_text())
 	cantidad_huevos -= 1
 	label_cantidad_huevos.set_text(str(cantidad_huevos))
 	total_pagar -= precio_huevos
@@ -317,7 +326,7 @@ func _menos_pan():
 	var pan_label = get_node("LabelPan")
 	var label_cantidad_pan = get_node("CantidadPan")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_pan = int(get_node("Precio7/Pan").get_text())
+	var precio_pan = int(get_node("Pan/Precio7/Pan").get_text())
 	cantidad_pan -= 1
 	label_cantidad_pan.set_text(str(cantidad_pan))
 	total_pagar -= precio_pan
@@ -334,7 +343,7 @@ func _menos_queso():
 	var queso_label = get_node("LabelQueso")
 	var label_cantidad_queso = get_node("CantidadQueso")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_queso = int(get_node("Precio8/Queso").get_text())
+	var precio_queso = int(get_node("Queso/Precio8/Queso").get_text())
 	cantidad_queso -= 1
 	label_cantidad_queso.set_text(str(cantidad_queso))
 	total_pagar -= precio_queso
