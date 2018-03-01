@@ -7099,7 +7099,6 @@ _update_shape_index = 0
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 328.029, 97.829 )
 transform/scale = Vector2( 0.169749, 0.363435 )
 input/pickable = false
@@ -7133,6 +7132,7 @@ transform/scale = Vector2( 5.89107, 2.75153 )
 texture = ExtResource( 9 )
 vframes = 4
 hframes = 4
+frame = 2
 region_rect = Rect2( 0, 0, 32, 48 )
 
 [node name="Hud" type="Node" parent="."]

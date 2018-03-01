@@ -53,8 +53,8 @@ func _hacer_pedido():
 	var cantidad_verduras = 10 * get_node("LibroPedidos").cantidad_verduras + stock_verduras
 	var cantidad_patatas = 20 * get_node("LibroPedidos").cantidad_patatas + stock_patatas
 	var cantidad_huevos = get_node("LibroPedidos").cantidad_huevos + stock_huevos
-	var cantidad_pan = get_node("LibroPedidos").cantidad_pan + stock_pan
-	var cantidad_queso = get_node("LibroPedidos").cantidad_queso + stock_queso
+	var cantidad_pan = 4 * get_node("LibroPedidos").cantidad_pan + stock_pan
+	var cantidad_queso = 4 * get_node("LibroPedidos").cantidad_queso + stock_queso
 	if cantidad_vino > limite_vino:
 		get_node("LibroPedidos/LimiteSuperado").show()
 		get_node("LibroPedidos/LimiteSuperado/LimiteVinoSuperado").show()
@@ -137,7 +137,7 @@ func _hacer_pedido():
 				get_node("LibroPedidos/CantidadPescado").set_text("")
 		
 			if get_node("LibroPedidos").cantidad_queso > 0:
-				var cantidad = get_node("LibroPedidos").cantidad_queso
+				var cantidad = 4 * get_node("LibroPedidos").cantidad_queso
 				stock_queso += cantidad
 				var text = str(stock_queso) + "/20"
 				get_parent().get_node("LibroSuministros/ContainerQueso/StockQueso").set_text(text)
@@ -179,7 +179,7 @@ func _hacer_pedido():
 				get_node("LibroPedidos/CantidadPatatas").set_text("")
 		
 			if get_node("LibroPedidos").cantidad_pan > 0:
-				var cantidad = get_node("LibroPedidos").cantidad_pan
+				var cantidad = 4 * get_node("LibroPedidos").cantidad_pan
 				stock_pan += cantidad
 				var text = str(stock_pan) + "/20"
 				get_parent().get_node("LibroSuministros/ContainerPan/StockPan").set_text(text)
