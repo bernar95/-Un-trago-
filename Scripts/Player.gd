@@ -7,6 +7,7 @@ var cocina = false
 var comidaCocinada = false
 var mano_derecha = Vector2(8.841199, 5.105545)
 var mano_izquierda= Vector2(-8.841199, 5.105545)
+var pos_caldero = Vector2(592, 48)
 var timer = Timer.new()
 var timer2 = Timer.new()
 var contadorCarne = 0
@@ -59,6 +60,9 @@ var spriteOlla = preload("res://Scenes/olla.tscn")
 var spriteSopa = preload("res://Scenes/sopa.tscn")
 var spriteEstofado = preload("res://Scenes/estofado.tscn")
 
+var spriteCaldero = preload("res://Scenes/Caldero.tscn")
+var calderoAnimado = spriteCaldero.instance()
+
 var personaje
 var animationPlayer
 var notificaciones 
@@ -108,6 +112,7 @@ func _ready():
 	pan3.set_pos(Vector2(512, 26))
 	queso3.set_pos(Vector2(672, 42))
 	huevo3.set_pos(Vector2(544, 26))
+	calderoAnimado.set_pos(pos_caldero)
 	
 	get_parent().get_node("Hud/Cocina").hide()
 	get_parent().get_node("Hud/Raciones").hide()
@@ -1005,6 +1010,8 @@ func echarIngrediente(ingrediente):
 	ingrediente.hide()
 
 func cocina(receta):
+	var texture = caldero.get_texture()
+	var mytexture = preload("res://tiles/boil.png")
 	for i in range(0, caldero.get_child_count()):
 		caldero.get_child(i).queue_free()
 
@@ -1022,6 +1029,9 @@ func cocina(receta):
 	cocina = true
 	notificaciones("La comida se está cocinando")
 	get_parent().get_node("Hud/Cocina").show()
+	get_parent().get_node("BarraDetras").remove_child(caldero)
+	get_parent().get_node("BarraDetras").add_child(calderoAnimado)
+	calderoAnimado.get_node("AnimationPlayer").play("Hervir")
 	timer2.set_one_shot(true)
 	self.add_child(timer2)
 	timer2.start()
@@ -1066,6 +1076,10 @@ func cocina(receta):
 	get_parent().get_node("Hud/Cocina").hide()
 	get_parent().get_node("Hud/Raciones").show()
 	comidaCocinada = true
+	calderoAnimado.get_node("AnimationPlayer").stop()
+	get_parent().get_node("BarraDetras").remove_child(calderoAnimado)
+	instanciar_caldero()
+	get_parent().get_node("BarraDetras").add_child(caldero)
 
 func cogerComidaCocinada(comida, mano):
 	caldero.get_child(0).free()
@@ -1221,3 +1235,7 @@ func dejarComida(comida, hijo):
 	elif comida == "Estofado":
 		comidaCocinada = spriteEstofado.instance()
 		caldero.add_child(comidaCocinada)
+
+func instanciar_caldero():
+	calderoAnimado = spriteCaldero.instance()
+	calderoAnimado.set_pos(pos_caldero)
