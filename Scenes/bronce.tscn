@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Tiles/Stars_01_128x128_001.png" type="Texture" id=1]
+
+[node name="Sprite" type="Sprite"]
+
+transform/pos = Vector2( 460, 330 )
+transform/scale = Vector2( 0.22461, 0.214355 )
+texture = ExtResource( 1 )
+
+
