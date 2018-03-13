@@ -38,22 +38,22 @@ func tiempo():
 	
 	labelMomento.set_text("Hora de hacer pedidos")
 	aparecer = true
-	tiempo.set_wait_time(11)
+	tiempo.set_wait_time(10)
 	tiempo.start()
 	yield(tiempo, "timeout")
 	
 	labelMomento.set_text("Mañana")
-	tiempo.set_wait_time(15)
+	tiempo.set_wait_time(10)
 	tiempo.start()
 	yield(tiempo, "timeout")
 	
 	labelMomento.set_text("Tarde")
-	tiempo.set_wait_time(12)
+	tiempo.set_wait_time(10)
 	tiempo.start()
 	yield(tiempo, "timeout")
 	
 	labelMomento.set_text("Noche")
-	tiempo.set_wait_time(14)
+	tiempo.set_wait_time(10)
 	tiempo.start()
 	yield(tiempo, "timeout")
 	
@@ -62,9 +62,3 @@ func tiempo():
 	labelMomento.set_text("")
 	aparecer = false
 	tiempo()
-	
-	
-	
-	
-	
-	

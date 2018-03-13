@@ -4,6 +4,8 @@ var suministros
 var pedidos
 var recetas
 var compras
+var precios
+var mostrarSuministros = false
 
 func _ready():
 	hide()
@@ -13,6 +15,7 @@ func _ready():
 	pedidos = get_parent().get_node("Pedidos")
 	recetas = get_parent().get_node("Recetas")
 	compras = get_parent().get_node("Compras")
+	precios = get_parent().get_node("Precios")
 	
 	if suministros:
 		suministros.connect("pressed", self, "_mostrar_suministros")
@@ -21,21 +24,24 @@ func _ready():
 	pass
 
 func _mostrar_suministros():
-	get_tree().set_pause(true)
+	mostrarSuministros = true
 	show()
+	get_parent().get_node("Dia").set_text("")
 	recetas.hide()
 	pedidos.hide()
 	suministros.hide()
 	compras.hide()
+	precios.hide()
 	pass
 
 func _cerrar_suministros():
-	get_tree().set_pause(false)
+	mostrarSuministros = false
 	hide()
 	recetas.show()
 	pedidos.show()
 	suministros.show()
 	compras.show()
+	precios.show()
 	pass
 
 

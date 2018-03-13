@@ -14,7 +14,7 @@ func _ready():
 	var vino = get_node("ComprarVino")
 	if vino:
 		vino.connect("pressed", self, "_comprar_vino")
-	var cerveza = get_node("ComprarCerveza")
+	var cerveza = get_node("Cerveza/ComprarCerveza")
 	if cerveza:
 		cerveza.connect("pressed", self, "_comprar_cerveza")
 	var carne = get_node("Carne/ComprarCarne")
@@ -66,6 +66,7 @@ func _ready():
 	if menos_queso:
 		menos_queso.connect("pressed", self, "_menos_queso")
 		
+	get_node("Cerveza").hide()
 	get_node("Carne").hide()
 	get_node("Pescado").hide()
 	get_node("Verduras").hide()
@@ -76,7 +77,6 @@ func _ready():
 	
 	pass
 	
-
 func _comprar_vino():
 	var text = "Vino"
 	var vino_label = get_node("LabelVino")
@@ -96,7 +96,7 @@ func _comprar_cerveza():
 	var cerveza_label = get_node("LabelCerveza")
 	var label_cantidad_cerveza = get_node("CantidadCerveza")
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_cerveza = int(get_node("Precio1/Cerveza").get_text())
+	var precio_cerveza = int(get_node("Cerveza/Precio1/Cerveza").get_text())
 	cerveza_label.set_text(text)
 	cantidad_cerveza += 1
 	label_cantidad_cerveza.set_text(str(cantidad_cerveza))

@@ -114,6 +114,9 @@ func _ready():
 	huevo3.set_pos(Vector2(544, 26))
 	calderoAnimado.set_pos(pos_caldero)
 	
+	timer.set_one_shot(true)
+	self.add_child(timer)
+	
 	get_parent().get_node("Hud/Cocina").hide()
 	get_parent().get_node("Hud/Raciones").hide()
 	
@@ -128,66 +131,66 @@ func _fixed_process(delta):
 		if caldero.get_child(i).get_filename() == spriteCarneCocinada.get_path() or caldero.get_child(i).get_filename() == spritePescadoCocinado.get_path() or caldero.get_child(i).get_filename() == spriteQuebrantos.get_path() or caldero.get_child(i).get_filename() == spriteSopa.get_path() or caldero.get_child(i).get_filename() == spriteOlla.get_path() or caldero.get_child(i).get_filename() == spriteEstofado.get_path():
 			get_parent().get_node("Hud/Raciones").show()
 			comidaCocinada = true
-	
-	if !moving:
-		arriba = mapa.intersect_point(get_pos() + Vector2(0, -GRID))
-		abajo = mapa.intersect_point(get_pos() + Vector2(0, GRID))
-		izquierda = mapa.intersect_point(get_pos() + Vector2(-GRID, 0))
-		derecha = mapa.intersect_point(get_pos() + Vector2(GRID, 0))
+	if get_parent().get_node("Hud/Container").mostrarPedidos == false and get_parent().get_node("Hud/LibroSuministros").mostrarSuministros == false and get_parent().get_node("Hud/LibroRecetas").mostrarRecetas == false and get_parent().get_node("Hud/LibroCompras").mostrarCompras == false and get_parent().get_node("Hud/LibroPrecios").mostrarPrecios == false:
+		if !moving:
+			arriba = mapa.intersect_point(get_pos() + Vector2(0, -GRID))
+			abajo = mapa.intersect_point(get_pos() + Vector2(0, GRID))
+			izquierda = mapa.intersect_point(get_pos() + Vector2(-GRID, 0))
+			derecha = mapa.intersect_point(get_pos() + Vector2(GRID, 0))
 		
-		if Input.is_key_pressed(KEY_W):
-			personaje.set_frame(12)
-			if arriba.empty():
-				moving = true
-				direction = Vector2(0, -1)
-				startPos = get_pos()
-				animationPlayer.play("Andar arriba")
-				if Input.is_key_pressed(KEY_SHIFT):
-					speed = 4
-					animationPlayer.play("Andar arriba rapido")
-				elif Input.is_key_pressed(KEY_SHIFT) == false:
-					speed = 1
-		elif Input.is_key_pressed(KEY_S):
-			personaje.set_frame(0)
-			if abajo.empty():
-				moving = true
-				direction = Vector2(0, 1)
-				startPos = get_pos()
-				animationPlayer.play("Andar abajo")
-				if Input.is_key_pressed(KEY_SHIFT):
-					speed = 4
-					animationPlayer.play("Andar abajo rapido")
-				elif Input.is_key_pressed(KEY_SHIFT) == false:
-					speed = 1
-		elif Input.is_key_pressed(KEY_A):
-			personaje.set_frame(4)
-			if izquierda.empty():
-				moving = true
-				direction = Vector2(-1, 0)
-				startPos = get_pos()
-				animationPlayer.play("Andar izquierda")
-				if Input.is_key_pressed(KEY_SHIFT):
-					speed = 4
-					animationPlayer.play("Andar izquierda rapido")
-				elif Input.is_key_pressed(KEY_SHIFT) == false:
-					speed = 1
-		elif Input.is_key_pressed(KEY_D):
-			personaje.set_frame(8)
-			if derecha.empty():
-				moving = true
-				direction = Vector2(1, 0)
-				startPos = get_pos()
-				animationPlayer.play("Andar derecha")
-				if Input.is_key_pressed(KEY_SHIFT):
-					speed = 4
-					animationPlayer.play("Andar derecha rapido")
-				elif Input.is_key_pressed(KEY_SHIFT) == false:
-					speed = 1
+			if Input.is_key_pressed(KEY_W):
+				personaje.set_frame(12)
+				if arriba.empty():
+					moving = true
+					direction = Vector2(0, -1)
+					startPos = get_pos()
+					animationPlayer.play("Andar arriba")
+					if Input.is_key_pressed(KEY_SHIFT):
+						speed = 4
+						animationPlayer.play("Andar arriba rapido")
+					elif Input.is_key_pressed(KEY_SHIFT) == false:
+						speed = 1
+			elif Input.is_key_pressed(KEY_S):
+				personaje.set_frame(0)
+				if abajo.empty():
+					moving = true
+					direction = Vector2(0, 1)
+					startPos = get_pos()
+					animationPlayer.play("Andar abajo")
+					if Input.is_key_pressed(KEY_SHIFT):
+						speed = 4
+						animationPlayer.play("Andar abajo rapido")
+					elif Input.is_key_pressed(KEY_SHIFT) == false:
+						speed = 1
+			elif Input.is_key_pressed(KEY_A):
+				personaje.set_frame(4)
+				if izquierda.empty():
+					moving = true
+					direction = Vector2(-1, 0)
+					startPos = get_pos()
+					animationPlayer.play("Andar izquierda")
+					if Input.is_key_pressed(KEY_SHIFT):
+						speed = 4
+						animationPlayer.play("Andar izquierda rapido")
+					elif Input.is_key_pressed(KEY_SHIFT) == false:
+						speed = 1
+			elif Input.is_key_pressed(KEY_D):
+				personaje.set_frame(8)
+				if derecha.empty():
+					moving = true
+					direction = Vector2(1, 0)
+					startPos = get_pos()
+					animationPlayer.play("Andar derecha")
+					if Input.is_key_pressed(KEY_SHIFT):
+						speed = 4
+						animationPlayer.play("Andar derecha rapido")
+					elif Input.is_key_pressed(KEY_SHIFT) == false:
+						speed = 1
 					
-	else:
-		move_to(get_pos() + direction * speed)
-		if get_pos() == startPos + Vector2(direction.x * GRID, direction.y * GRID):
-			moving = false
+		else:
+			move_to(get_pos() + direction * speed)
+			if get_pos() == startPos + Vector2(direction.x * GRID, direction.y * GRID):
+				moving = false
 
 func _input(event):
 	if event.type == InputEvent.KEY:
@@ -950,8 +953,6 @@ func notificaciones(text):
 	get_parent().get_node("Hud/Cerrar").show()
 	notificaciones.get_node("Notificacion").set_text(text)
 	timer.set_wait_time(10)
-	timer.set_one_shot(true)
-	self.add_child(timer)
 	timer.start()
 	yield(timer, "timeout")
 	notificaciones.hide()

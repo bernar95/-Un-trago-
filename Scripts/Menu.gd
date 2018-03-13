@@ -10,5 +10,3 @@ func _ready():
 
 func _nueva_partida():
 	get_tree().change_scene("res://Scenes/Taberna.tscn")
-	
-	

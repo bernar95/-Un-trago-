@@ -4,7 +4,7 @@
 
 [node name="Sprite" type="Sprite"]
 
-transform/pos = Vector2( 491.313, 288.404 )
+transform/pos = Vector2( 340, 200 )
 texture = ExtResource( 1 )
 region = true
 region_rect = Rect2( 197, 337, 20, 20 )

@@ -1,16 +1,16 @@
-[gd_scene load_steps=67 format=1]
+[gd_scene load_steps=69 format=1]
 
 [ext_resource path="res://Scripts/Tiempo.gd" type="Script" id=1]
 [ext_resource path="res://Tiles/house_inside.png" type="Texture" id=2]
 [ext_resource path="res://Tiles/hyptosis_tile-art-batch-3.png" type="Texture" id=3]
 [ext_resource path="res://Tiles/woodland_indoor_x3.png" type="Texture" id=4]
-[ext_resource path="res://Tiles/dungeonex.png" type="Texture" id=5]
-[ext_resource path="res://Tiles/obj_misk_atlas.png" type="Texture" id=6]
-[ext_resource path="res://Tiles/woodland_indoor.png" type="Texture" id=7]
-[ext_resource path="res://Tiles/build_atlas.png" type="Texture" id=8]
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=9]
-[ext_resource path="res://Tiles/steampunk_m2.png" type="Texture" id=10]
-[ext_resource path="res://Fonts/tiempo.fnt" type="BitmapFont" id=11]
+[ext_resource path="res://Fonts/tiempo.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://Tiles/dungeonex.png" type="Texture" id=6]
+[ext_resource path="res://Tiles/obj_misk_atlas.png" type="Texture" id=7]
+[ext_resource path="res://Tiles/woodland_indoor.png" type="Texture" id=8]
+[ext_resource path="res://Tiles/build_atlas.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=10]
+[ext_resource path="res://Tiles/steampunk_m2.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/Pedidos2.gd" type="Script" id=12]
 [ext_resource path="res://Tiles/spellbookForFlare.png" type="Texture" id=13]
 [ext_resource path="res://Scripts/Suministros.gd" type="Script" id=14]
@@ -28,6 +28,8 @@
 [ext_resource path="res://Scripts/LibroCompras.gd" type="Script" id=26]
 [ext_resource path="res://Tiles/documentopen.png" type="Texture" id=27]
 [ext_resource path="res://Fonts/titulo.fnt" type="BitmapFont" id=28]
+[ext_resource path="res://Scripts/Reputacion.gd" type="Script" id=29]
+[ext_resource path="res://Scripts/LibroPrecios.gd" type="Script" id=30]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -4952,6 +4954,7 @@ margin/left = -14.0
 margin/top = 10.0
 margin/right = 28.0
 margin/bottom = 27.0
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Vino"
 percent_visible = 1.0
@@ -4977,6 +4980,7 @@ margin/left = -17.0
 margin/top = 11.0
 margin/right = 33.0
 margin/bottom = 25.0
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Rubia"
 percent_visible = 1.0
@@ -5000,7 +5004,7 @@ region_rect = Rect2( 96, 12, 64, 40 )
 [node name="Caldero" type="Sprite" parent="BarraDetras"]
 
 transform/pos = Vector2( 592, 48 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 region = true
 region_rect = Rect2( 32, -2, 32, 32 )
 
@@ -5133,49 +5137,49 @@ transform/scale = Vector2( 0.365558, 0.409156 )
 [node name="CajaPescado" type="Sprite" parent="BarraDetras"]
 
 transform/pos = Vector2( 640, 48 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
 
 [node name="CajaCarne" type="Sprite" parent="BarraDetras"]
 
 transform/pos = Vector2( 288, 48 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
 
 [node name="CajaPan" type="Sprite" parent="BarraDetras"]
 
 transform/pos = Vector2( 512, 32 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
 
 [node name="CajaHuevos" type="Sprite" parent="BarraDetras"]
 
 transform/pos = Vector2( 544, 32 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
 
 [node name="CajaQueso" type="Sprite" parent="BarraDetras"]
 
 transform/pos = Vector2( 672, 48 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
 
 [node name="CajaVerduras" type="Sprite" parent="BarraDetras"]
 
 transform/pos = Vector2( 704, 48 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
 
 [node name="CajaPatatas" type="Sprite" parent="BarraDetras"]
 
 transform/pos = Vector2( 736, 48 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
 
@@ -5384,77 +5388,77 @@ editor/display_folded = true
 [node name="Sprite" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 208, 512 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite8" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 800, 272 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite6" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 288, 512 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite8 2" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 880, 272 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite1" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 112, 144 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite2" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 125.026, 302.678 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite7" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 204.026, 302.678 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite3" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 352, 368 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite9" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 688, 496 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite4" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 560, 352 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite5" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 864, 480 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
@@ -5633,49 +5637,49 @@ editor/display_folded = true
 [node name="Barril" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 112, 416 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril1" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 928, 384 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril2" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 528, 224 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril5" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 384, 256 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril6" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 912, 160 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril3" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 720, 368 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril4" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 496, 480 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
@@ -7115,7 +7119,7 @@ input/pickable = false
 collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
-script/script = ExtResource( 9 )
+script/script = ExtResource( 10 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 
@@ -7139,7 +7143,7 @@ autoplay = ""
 
 transform/pos = Vector2( -6.06653, -27.0443 )
 transform/scale = Vector2( 5.89107, 2.75153 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 vframes = 4
 hframes = 4
 frame = 2
@@ -7153,11 +7157,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 32.0
+margin/left = 33.0
 margin/top = 576.0
-margin/right = 95.0
+margin/right = 96.0
 margin/bottom = 599.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -7192,8 +7196,78 @@ margin/bottom = 560.0
 texture = ExtResource( 13 )
 script/script = ExtResource( 14 )
 
+[node name="Cerveza" type="Node2D" parent="Hud/Container/LibroPedidos"]
+
+editor/display_folded = true
+
+[node name="Cerveza" type="Sprite" parent="Hud/Container/LibroPedidos/Cerveza"]
+
+editor/display_folded = true
+transform/pos = Vector2( 160, 128 )
+transform/scale = Vector2( 0.84375, 0.71875 )
+texture = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="Hud/Container/LibroPedidos/Cerveza/Cerveza"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 22.0
+margin/top = -37.0
+margin/right = 76.0
+margin/bottom = -22.0
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.898438, 1, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Cerveza"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ComprarCerveza" type="Button" parent="Hud/Container/LibroPedidos/Cerveza"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 336.0
+margin/top = 112.0
+margin/right = 405.0
+margin/bottom = 135.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="Precio1" type="Sprite" parent="Hud/Container/LibroPedidos/Cerveza"]
+
+transform/pos = Vector2( 313, 121 )
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="Cerveza" type="Label" parent="Hud/Container/LibroPedidos/Cerveza/Precio1"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -60.0
+margin/top = -18.0
+margin/right = 4.0
+margin/bottom = 17.0
+custom_fonts/font = ExtResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "45"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="Vino" type="Sprite" parent="Hud/Container/LibroPedidos"]
 
+editor/display_folded = true
 transform/pos = Vector2( 160, 80 )
 transform/scale = Vector2( 0.84375, 0.71875 )
 texture = ExtResource( 15 )
@@ -7208,6 +7282,7 @@ margin/left = 22.0
 margin/top = -37.0
 margin/right = 62.0
 margin/bottom = -23.0
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.710938, 0, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Vino"
@@ -7215,38 +7290,15 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Cerveza" type="Sprite" parent="Hud/Container/LibroPedidos"]
-
-editor/display_folded = true
-transform/pos = Vector2( 160, 128 )
-transform/scale = Vector2( 0.84375, 0.71875 )
-texture = ExtResource( 15 )
-
-[node name="Label" type="Label" parent="Hud/Container/LibroPedidos/Cerveza"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 22.0
-margin/top = -37.0
-margin/right = 76.0
-margin/bottom = -22.0
-custom_colors/font_color = Color( 0.898438, 1, 0, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "Cerveza"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
 [node name="Carne" type="Node2D" parent="Hud/Container/LibroPedidos"]
 
 editor/display_folded = true
+transform/pos = Vector2( 0, 76 )
 
 [node name="Carne" type="Sprite" parent="Hud/Container/LibroPedidos/Carne"]
 
-transform/pos = Vector2( 160, 176 )
-texture = ExtResource( 6 )
+transform/pos = Vector2( 160, 168 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 0, 625, 32, 32 )
 
@@ -7260,7 +7312,7 @@ margin/left = 336.0
 margin/top = 160.0
 margin/right = 405.0
 margin/bottom = 183.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -7293,11 +7345,12 @@ max_lines_visible = -1
 [node name="Pescado" type="Node2D" parent="Hud/Container/LibroPedidos"]
 
 editor/display_folded = true
+transform/pos = Vector2( 0, 72 )
 
 [node name="Pescado" type="Sprite" parent="Hud/Container/LibroPedidos/Pescado"]
 
 transform/pos = Vector2( 160, 208 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 200, 700, 48, 32 )
 
@@ -7311,7 +7364,7 @@ margin/left = 336.0
 margin/top = 203.0
 margin/right = 405.0
 margin/bottom = 226.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -7344,11 +7397,12 @@ max_lines_visible = -1
 [node name="Verduras" type="Node2D" parent="Hud/Container/LibroPedidos"]
 
 editor/display_folded = true
+transform/pos = Vector2( 0, 75 )
 
 [node name="Verduras" type="Sprite" parent="Hud/Container/LibroPedidos/Verduras"]
 
 transform/pos = Vector2( 160, 256 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 321, 672, 30, 34 )
 
@@ -7362,7 +7416,7 @@ margin/left = 336.0
 margin/top = 240.0
 margin/right = 405.0
 margin/bottom = 263.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -7395,11 +7449,12 @@ max_lines_visible = -1
 [node name="Patatas" type="Node2D" parent="Hud/Container/LibroPedidos"]
 
 editor/display_folded = true
+transform/pos = Vector2( 0, 69 )
 
 [node name="Patatas" type="Sprite" parent="Hud/Container/LibroPedidos/Patatas"]
 
 transform/pos = Vector2( 160, 304 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 385, 672, 30, 34 )
 
@@ -7413,7 +7468,7 @@ margin/left = 336.0
 margin/top = 288.0
 margin/right = 405.0
 margin/bottom = 311.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -7446,6 +7501,7 @@ max_lines_visible = -1
 [node name="Huevos" type="Node2D" parent="Hud/Container/LibroPedidos"]
 
 editor/display_folded = true
+transform/pos = Vector2( 0, 67 )
 
 [node name="Huevos" type="Sprite" parent="Hud/Container/LibroPedidos/Huevos"]
 
@@ -7462,7 +7518,7 @@ margin/left = 336.0
 margin/top = 336.0
 margin/right = 405.0
 margin/bottom = 359.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -7495,6 +7551,7 @@ max_lines_visible = -1
 [node name="Pan" type="Node2D" parent="Hud/Container/LibroPedidos"]
 
 editor/display_folded = true
+transform/pos = Vector2( 0, -209 )
 
 [node name="Pan" type="Sprite" parent="Hud/Container/LibroPedidos/Pan"]
 
@@ -7514,7 +7571,7 @@ margin/left = 336.0
 margin/top = 368.0
 margin/right = 405.0
 margin/bottom = 391.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -7547,6 +7604,7 @@ max_lines_visible = -1
 [node name="Queso" type="Node2D" parent="Hud/Container/LibroPedidos"]
 
 editor/display_folded = true
+transform/pos = Vector2( 0, -203 )
 
 [node name="Queso" type="Sprite" parent="Hud/Container/LibroPedidos/Queso"]
 
@@ -7566,7 +7624,7 @@ margin/left = 336.0
 margin/top = 400.0
 margin/right = 405.0
 margin/bottom = 423.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -7606,7 +7664,7 @@ margin/left = 640.0
 margin/top = 432.0
 margin/right = 801.0
 margin/bottom = 455.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -7623,7 +7681,7 @@ margin/left = 512.0
 margin/top = 432.0
 margin/right = 625.0
 margin/bottom = 455.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -7640,24 +7698,7 @@ margin/left = 336.0
 margin/top = 64.0
 margin/right = 405.0
 margin/bottom = 87.0
-custom_fonts/font = ExtResource( 11 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Comprar"
-flat = false
-
-[node name="ComprarCerveza" type="Button" parent="Hud/Container/LibroPedidos"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 336.0
-margin/top = 112.0
-margin/right = 405.0
-margin/bottom = 135.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -7671,9 +7712,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 512.0
-margin/top = 65.0
+margin/top = 64.0
 margin/right = 624.0
-margin/bottom = 100.0
+margin/bottom = 99.0
 custom_fonts/font = ExtResource( 20 )
 percent_visible = 1.0
 lines_skipped = 0
@@ -7685,10 +7726,10 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 638.0
-margin/top = 65.0
-margin/right = 750.0
-margin/bottom = 100.0
+margin/left = 642.0
+margin/top = 64.0
+margin/right = 754.0
+margin/bottom = 99.0
 custom_fonts/font = ExtResource( 20 )
 percent_visible = 1.0
 lines_skipped = 0
@@ -7701,9 +7742,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 512.0
-margin/top = 109.0
+margin/top = 112.0
 margin/right = 624.0
-margin/bottom = 132.0
+margin/bottom = 135.0
 custom_fonts/font = ExtResource( 20 )
 percent_visible = 1.0
 lines_skipped = 0
@@ -7715,160 +7756,10 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 639.0
-margin/top = 109.0
-margin/right = 751.0
-margin/bottom = 132.0
-custom_fonts/font = ExtResource( 20 )
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = 1
-
-[node name="LabelCarne" type="Label" parent="Hud/Container/LibroPedidos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 512.0
-margin/top = 160.0
-margin/right = 624.0
-margin/bottom = 183.0
-custom_fonts/font = ExtResource( 20 )
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = 1
-
-[node name="CantidadCarne" type="Label" parent="Hud/Container/LibroPedidos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 640.0
-margin/top = 160.0
-margin/right = 752.0
-margin/bottom = 183.0
-custom_fonts/font = ExtResource( 20 )
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = 1
-
-[node name="LabelPescado" type="Label" parent="Hud/Container/LibroPedidos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 512.0
-margin/top = 201.0
-margin/right = 624.0
-margin/bottom = 224.0
-custom_fonts/font = ExtResource( 20 )
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = 1
-
-[node name="CantidadPescado" type="Label" parent="Hud/Container/LibroPedidos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 641.0
-margin/top = 201.0
-margin/right = 753.0
-margin/bottom = 224.0
-custom_fonts/font = ExtResource( 20 )
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = 1
-
-[node name="LabelVerduras" type="Label" parent="Hud/Container/LibroPedidos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 512.0
-margin/top = 244.0
-margin/right = 624.0
-margin/bottom = 267.0
-custom_fonts/font = ExtResource( 20 )
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = 1
-
-[node name="CantidadVerduras" type="Label" parent="Hud/Container/LibroPedidos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
 margin/left = 642.0
-margin/top = 244.0
+margin/top = 112.0
 margin/right = 754.0
-margin/bottom = 267.0
-custom_fonts/font = ExtResource( 20 )
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = 1
-
-[node name="LabelPatatas" type="Label" parent="Hud/Container/LibroPedidos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 512.0
-margin/top = 291.0
-margin/right = 624.0
-margin/bottom = 314.0
-custom_fonts/font = ExtResource( 20 )
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = 1
-
-[node name="CantidadPatatas" type="Label" parent="Hud/Container/LibroPedidos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 643.0
-margin/top = 291.0
-margin/right = 755.0
-margin/bottom = 314.0
-custom_fonts/font = ExtResource( 20 )
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = 1
-
-[node name="LabelHuevo" type="Label" parent="Hud/Container/LibroPedidos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 512.0
-margin/top = 333.0
-margin/right = 624.0
-margin/bottom = 356.0
-custom_fonts/font = ExtResource( 20 )
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = 1
-
-[node name="CantidadHuevo" type="Label" parent="Hud/Container/LibroPedidos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 644.0
-margin/top = 333.0
-margin/right = 756.0
-margin/bottom = 356.0
+margin/bottom = 135.0
 custom_fonts/font = ExtResource( 20 )
 percent_visible = 1.0
 lines_skipped = 0
@@ -7881,9 +7772,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 512.0
-margin/top = 369.0
+margin/top = 160.0
 margin/right = 624.0
-margin/bottom = 392.0
+margin/bottom = 183.0
 custom_fonts/font = ExtResource( 20 )
 percent_visible = 1.0
 lines_skipped = 0
@@ -7895,16 +7786,166 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 644.0
-margin/top = 369.0
-margin/right = 756.0
-margin/bottom = 392.0
+margin/left = 642.0
+margin/top = 160.0
+margin/right = 754.0
+margin/bottom = 183.0
 custom_fonts/font = ExtResource( 20 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
 
 [node name="LabelQueso" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 197.0
+margin/right = 624.0
+margin/bottom = 220.0
+custom_fonts/font = ExtResource( 20 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadQueso" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 642.0
+margin/top = 197.0
+margin/right = 754.0
+margin/bottom = 220.0
+custom_fonts/font = ExtResource( 20 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelCarne" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 235.0
+margin/right = 624.0
+margin/bottom = 258.0
+custom_fonts/font = ExtResource( 20 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadCarne" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 642.0
+margin/top = 235.0
+margin/right = 754.0
+margin/bottom = 258.0
+custom_fonts/font = ExtResource( 20 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelPescado" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 276.0
+margin/right = 624.0
+margin/bottom = 299.0
+custom_fonts/font = ExtResource( 20 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadPescado" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 642.0
+margin/top = 276.0
+margin/right = 754.0
+margin/bottom = 299.0
+custom_fonts/font = ExtResource( 20 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelVerduras" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 317.0
+margin/right = 624.0
+margin/bottom = 340.0
+custom_fonts/font = ExtResource( 20 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadVerduras" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 642.0
+margin/top = 317.0
+margin/right = 754.0
+margin/bottom = 340.0
+custom_fonts/font = ExtResource( 20 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelPatatas" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 512.0
+margin/top = 358.0
+margin/right = 624.0
+margin/bottom = 381.0
+custom_fonts/font = ExtResource( 20 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="CantidadPatatas" type="Label" parent="Hud/Container/LibroPedidos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 642.0
+margin/top = 358.0
+margin/right = 754.0
+margin/bottom = 381.0
+custom_fonts/font = ExtResource( 20 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 1
+
+[node name="LabelHuevo" type="Label" parent="Hud/Container/LibroPedidos"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -7919,15 +7960,15 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
 
-[node name="CantidadQueso" type="Label" parent="Hud/Container/LibroPedidos"]
+[node name="CantidadHuevo" type="Label" parent="Hud/Container/LibroPedidos"]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 645.0
+margin/left = 642.0
 margin/top = 400.0
-margin/right = 757.0
+margin/right = 754.0
 margin/bottom = 423.0
 custom_fonts/font = ExtResource( 20 )
 percent_visible = 1.0
@@ -7936,6 +7977,7 @@ max_lines_visible = 1
 
 [node name="Precio" type="Sprite" parent="Hud/Container/LibroPedidos"]
 
+editor/display_folded = true
 transform/pos = Vector2( 313, 75 )
 transform/scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 16 )
@@ -7957,29 +7999,6 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Precio1" type="Sprite" parent="Hud/Container/LibroPedidos"]
-
-transform/pos = Vector2( 313, 121 )
-transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 16 )
-
-[node name="Cerveza" type="Label" parent="Hud/Container/LibroPedidos/Precio1"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = -60.0
-margin/top = -18.0
-margin/right = 4.0
-margin/bottom = 17.0
-custom_fonts/font = ExtResource( 17 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "45"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
 [node name="MenosVino" type="Button" parent="Hud/Container/LibroPedidos"]
 
 visibility/visible = false
@@ -7988,9 +8007,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 741.0
-margin/top = 69.0
+margin/top = 66.0
 margin/right = 796.0
 margin/bottom = 89.0
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -8005,94 +8025,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 741.0
-margin/top = 112.0
+margin/top = 113.0
 margin/right = 796.0
-margin/bottom = 132.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Menos"
-flat = false
-
-[node name="MenosCarne" type="Button" parent="Hud/Container/LibroPedidos"]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 741.0
-margin/top = 164.0
-margin/right = 796.0
-margin/bottom = 184.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Menos"
-flat = false
-
-[node name="MenosPescado" type="Button" parent="Hud/Container/LibroPedidos"]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 741.0
-margin/top = 204.0
-margin/right = 796.0
-margin/bottom = 224.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Menos"
-flat = false
-
-[node name="MenosVerdura" type="Button" parent="Hud/Container/LibroPedidos"]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 741.0
-margin/top = 247.0
-margin/right = 796.0
-margin/bottom = 267.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Menos"
-flat = false
-
-[node name="MenosPatatas" type="Button" parent="Hud/Container/LibroPedidos"]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 741.0
-margin/top = 294.0
-margin/right = 796.0
-margin/bottom = 314.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Menos"
-flat = false
-
-[node name="MenosHuevos" type="Button" parent="Hud/Container/LibroPedidos"]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 741.0
-margin/top = 336.0
-margin/right = 796.0
-margin/bottom = 356.0
+margin/bottom = 136.0
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -8106,10 +8042,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 741.0
-margin/top = 371.0
-margin/right = 796.0
-margin/bottom = 391.0
+margin/left = 742.0
+margin/top = 162.0
+margin/right = 797.0
+margin/bottom = 185.0
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -8124,9 +8061,100 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 741.0
-margin/top = 403.0
+margin/top = 199.0
 margin/right = 796.0
+margin/bottom = 222.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosCarne" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 236.0
+margin/right = 796.0
+margin/bottom = 259.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosPescado" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 276.0
+margin/right = 796.0
+margin/bottom = 299.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosVerdura" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 317.0
+margin/right = 796.0
+margin/bottom = 340.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosPatatas" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 741.0
+margin/top = 358.0
+margin/right = 796.0
+margin/bottom = 381.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Menos"
+flat = false
+
+[node name="MenosHuevos" type="Button" parent="Hud/Container/LibroPedidos"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 742.0
+margin/top = 400.0
+margin/right = 797.0
 margin/bottom = 423.0
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -8135,6 +8163,7 @@ flat = false
 
 [node name="TotalPagarLabel" type="Label" parent="Hud/Container/LibroPedidos"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -8185,6 +8214,7 @@ max_lines_visible = -1
 
 [node name="LimiteSuperado" type="Label" parent="Hud/Container/LibroPedidos"]
 
+editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -8209,9 +8239,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 309.0
-margin/top = 28.0
+margin/top = 25.0
 margin/right = 349.0
-margin/bottom = 51.0
+margin/bottom = 48.0
 custom_fonts/font = ExtResource( 20 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
@@ -8227,99 +8257,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 309.0
-margin/top = 71.0
+margin/top = 72.0
 margin/right = 349.0
-margin/bottom = 94.0
-custom_fonts/font = ExtResource( 20 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
-text = "*"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="LimiteCarneSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
-
-visibility/visible = false
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 309.0
-margin/top = 122.0
-margin/right = 349.0
-margin/bottom = 145.0
-custom_fonts/font = ExtResource( 20 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
-text = "*"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="LimitePescadoSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
-
-visibility/visible = false
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 309.0
-margin/top = 163.0
-margin/right = 349.0
-margin/bottom = 186.0
-custom_fonts/font = ExtResource( 20 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
-text = "*"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="LimiteVerdurasSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
-
-visibility/visible = false
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 309.0
-margin/top = 206.0
-margin/right = 349.0
-margin/bottom = 229.0
-custom_fonts/font = ExtResource( 20 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
-text = "*"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="LimitePatatasSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
-
-visibility/visible = false
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 309.0
-margin/top = 253.0
-margin/right = 349.0
-margin/bottom = 276.0
-custom_fonts/font = ExtResource( 20 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
-text = "*"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="LimiteHuevosSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
-
-visibility/visible = false
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 309.0
-margin/top = 294.0
-margin/right = 349.0
-margin/bottom = 317.0
+margin/bottom = 95.0
 custom_fonts/font = ExtResource( 20 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
@@ -8335,9 +8275,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 309.0
-margin/top = 330.0
+margin/top = 118.0
 margin/right = 349.0
-margin/bottom = 353.0
+margin/bottom = 141.0
 custom_fonts/font = ExtResource( 20 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
@@ -8353,9 +8293,99 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 309.0
-margin/top = 362.0
+margin/top = 158.0
 margin/right = 349.0
-margin/bottom = 385.0
+margin/bottom = 181.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimiteCarneSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 193.0
+margin/right = 349.0
+margin/bottom = 216.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimitePescadoSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 235.0
+margin/right = 349.0
+margin/bottom = 258.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimiteVerdurasSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 274.0
+margin/right = 349.0
+margin/bottom = 297.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimitePatatasSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 316.0
+margin/right = 349.0
+margin/bottom = 339.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "*"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LimiteHuevosSuperado" type="Label" parent="Hud/Container/LibroPedidos/LimiteSuperado"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 309.0
+margin/top = 358.0
+margin/right = 349.0
+margin/bottom = 381.0
 custom_fonts/font = ExtResource( 20 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
@@ -8374,7 +8404,7 @@ margin/top = -3.0
 margin/right = 1019.0
 margin/bottom = 32.0
 custom_fonts/font = ExtResource( 17 )
-text = "800"
+text = "2000"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -8427,7 +8457,7 @@ margin/left = 128.0
 margin/top = 0.0
 margin/right = 212.0
 margin/bottom = 64.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 20 )
 text = "0/90"
 percent_visible = 1.0
 lines_skipped = 0
@@ -8464,7 +8494,7 @@ margin/bottom = 744.0
 
 transform/pos = Vector2( 160.625, -527 )
 transform/scale = Vector2( 1.6625, 1.63125 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 region = true
 region_rect = Rect2( 230, 363, 20, 20 )
 
@@ -8478,7 +8508,7 @@ margin/left = 192.0
 margin/top = -544.0
 margin/right = 276.0
 margin/bottom = -509.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 20 )
 text = "0/90"
 percent_visible = 1.0
 lines_skipped = 0
@@ -8507,10 +8537,10 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 672.0
-margin/top = 400.0
+margin/top = 402.0
 margin/right = 805.0
-margin/bottom = 423.0
-custom_fonts/font = ExtResource( 11 )
+margin/bottom = 425.0
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -8531,7 +8561,7 @@ margin/bottom = 120.0
 [node name="Carne" type="Sprite" parent="Hud/LibroSuministros/ContainerCarne"]
 
 transform/pos = Vector2( 160, 176 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 0, 625, 32, 32 )
 
@@ -8545,7 +8575,7 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 20 )
 text = "0/10"
 percent_visible = 1.0
 lines_skipped = 0
@@ -8581,7 +8611,7 @@ margin/bottom = 200.0
 [node name="Pescado" type="Sprite" parent="Hud/LibroSuministros/ContainerPescado"]
 
 transform/pos = Vector2( 160, 176 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 200, 700, 48, 32 )
 
@@ -8595,7 +8625,7 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 20 )
 text = "0/10"
 percent_visible = 1.0
 lines_skipped = 0
@@ -8631,7 +8661,7 @@ margin/bottom = 280.0
 [node name="Verduras" type="Sprite" parent="Hud/LibroSuministros/ContainerVerduras"]
 
 transform/pos = Vector2( 160, 176 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 321, 672, 30, 34 )
 
@@ -8645,7 +8675,7 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 20 )
 text = "0/60"
 percent_visible = 1.0
 lines_skipped = 0
@@ -8681,7 +8711,7 @@ margin/bottom = -40.0
 [node name="Patatas" type="Sprite" parent="Hud/LibroSuministros/ContainerPatatas"]
 
 transform/pos = Vector2( 160, 176 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 385, 672, 30, 34 )
 
@@ -8695,7 +8725,7 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 20 )
 text = "0/80"
 percent_visible = 1.0
 lines_skipped = 0
@@ -8743,7 +8773,7 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 20 )
 text = "0/24"
 percent_visible = 1.0
 lines_skipped = 0
@@ -8794,7 +8824,7 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 20 )
 text = "0/20"
 percent_visible = 1.0
 lines_skipped = 0
@@ -8845,7 +8875,7 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 17 )
+custom_fonts/font = ExtResource( 20 )
 text = "0/20"
 percent_visible = 1.0
 lines_skipped = 0
@@ -8877,7 +8907,7 @@ margin/left = 112.0
 margin/top = 576.0
 margin/right = 200.0
 margin/bottom = 599.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -8940,7 +8970,7 @@ margin/left = 587.0
 margin/top = 16.0
 margin/right = 627.0
 margin/bottom = 30.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 percent_visible = 1.0
@@ -8957,7 +8987,7 @@ margin/left = 574.0
 margin/top = 16.0
 margin/right = 614.0
 margin/bottom = 30.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 1, 0.914063, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 percent_visible = 1.0
@@ -8974,7 +9004,7 @@ margin/left = 304.0
 margin/top = 576.0
 margin/right = 366.0
 margin/bottom = 599.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -9007,7 +9037,7 @@ margin/left = 656.0
 margin/top = 400.0
 margin/right = 815.0
 margin/bottom = 423.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -9016,7 +9046,6 @@ flat = false
 
 [node name="Chuletas" type="Node2D" parent="Hud/LibroRecetas"]
 
-editor/display_folded = true
 transform/pos = Vector2( 192, 96 )
 
 [node name="Nombre" type="Label" parent="Hud/LibroRecetas/Chuletas"]
@@ -9027,7 +9056,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = -64.0
 margin/top = -32.0
-margin/right = -24.0
+margin/right = -9.0
 margin/bottom = -18.0
 custom_fonts/font = ExtResource( 20 )
 text = "Chuletas"
@@ -9054,7 +9083,7 @@ max_lines_visible = -1
 [node name="Ingrediente" type="Sprite" parent="Hud/LibroRecetas/Chuletas/Nombre/Receta"]
 
 transform/pos = Vector2( 50.1512, 10.3269 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 50, 610, 32, 32 )
 
@@ -9067,7 +9096,6 @@ region_rect = Rect2( 50, 610, 32, 32 )
 
 [node name="Bacalao" type="Node2D" parent="Hud/LibroRecetas"]
 
-editor/display_folded = true
 transform/pos = Vector2( 192, 177 )
 
 [node name="Nombre" type="Label" parent="Hud/LibroRecetas/Bacalao"]
@@ -9078,7 +9106,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = -64.0
 margin/top = -32.0
-margin/right = -24.0
+margin/right = -15.0
 margin/bottom = -18.0
 custom_fonts/font = ExtResource( 20 )
 text = "Bacalao"
@@ -9105,7 +9133,7 @@ max_lines_visible = -1
 [node name="Ingrediente" type="Sprite" parent="Hud/LibroRecetas/Bacalao/Nombre/Receta"]
 
 transform/pos = Vector2( 51.9117, 10.3269 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 200, 702, 48, 32 )
 
@@ -9118,7 +9146,6 @@ region_rect = Rect2( 200, 702, 48, 32 )
 
 [node name="Quebrantos" type="Node2D" parent="Hud/LibroRecetas"]
 
-editor/display_folded = true
 transform/pos = Vector2( 192, 269 )
 
 [node name="Nombre" type="Label" parent="Hud/LibroRecetas/Quebrantos"]
@@ -9129,7 +9156,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = -64.0
 margin/top = -32.0
-margin/right = -24.0
+margin/right = 11.0
 margin/bottom = -18.0
 custom_fonts/font = ExtResource( 20 )
 text = "Quebrantos"
@@ -9156,7 +9183,7 @@ max_lines_visible = -1
 [node name="Ingrediente" type="Sprite" parent="Hud/LibroRecetas/Quebrantos/Nombre/Receta"]
 
 transform/pos = Vector2( 45.1175, 10.3268 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 50, 610, 32, 32 )
 
@@ -9213,7 +9240,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 46.6248, 11.912 )
 transform/scale = Vector2( 0.891999, 0.8362 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 320, 640, 32, 32 )
 
@@ -9221,7 +9248,7 @@ region_rect = Rect2( 320, 640, 32, 32 )
 
 transform/pos = Vector2( 137.715, 9.21375 )
 transform/scale = Vector2( 0.832105, 0.866355 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 385, 640, 32, 32 )
 
@@ -9244,7 +9271,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = -64.0
 margin/top = -32.0
-margin/right = -24.0
+margin/right = 14.0
 margin/bottom = -18.0
 custom_fonts/font = ExtResource( 20 )
 text = "Olla podrida"
@@ -9272,7 +9299,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 46.6248, 11.912 )
 transform/scale = Vector2( 0.891999, 0.8362 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 320, 640, 32, 32 )
 
@@ -9280,7 +9307,7 @@ region_rect = Rect2( 320, 640, 32, 32 )
 
 transform/pos = Vector2( 139.467, 10.6737 )
 transform/scale = Vector2( 0.832105, 0.866355 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 50, 610, 32, 32 )
 
@@ -9303,7 +9330,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = -64.0
 margin/top = -32.0
-margin/right = -24.0
+margin/right = -10.0
 margin/bottom = -18.0
 custom_fonts/font = ExtResource( 20 )
 text = "Estofado"
@@ -9331,7 +9358,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 46.6248, 11.912 )
 transform/scale = Vector2( 0.891999, 0.8362 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 385, 640, 32, 32 )
 
@@ -9339,7 +9366,7 @@ region_rect = Rect2( 385, 640, 32, 32 )
 
 transform/pos = Vector2( 139.467, 10.6737 )
 transform/scale = Vector2( 0.832105, 0.866355 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 region = true
 region_rect = Rect2( 50, 610, 32, 32 )
 
@@ -9376,17 +9403,99 @@ margin/left = 640.0
 margin/top = 400.0
 margin/right = 807.0
 margin/bottom = 423.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Cerrar libro de compras"
 flat = false
 
-[node name="PermisoAperitivos" type="Node2D" parent="Hud/LibroCompras"]
+[node name="PermisoCerveceria" type="Node2D" parent="Hud/LibroCompras"]
 
 editor/display_folded = true
 transform/pos = Vector2( 192, 96 )
+
+[node name="Pergamino" type="Sprite" parent="Hud/LibroCompras/PermisoCerveceria"]
+
+transform/pos = Vector2( -32, -16 )
+transform/scale = Vector2( 0.138333, 0.125 )
+texture = ExtResource( 27 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroCompras/PermisoCerveceria"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -48.0
+margin/top = 16.0
+margin/right = 234.0
+margin/bottom = 33.0
+custom_fonts/font = ExtResource( 5 )
+text = "Permiso para vender cerveza"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Precio" type="Label" parent="Hud/LibroCompras/PermisoCerveceria"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 16.0
+margin/top = -32.0
+margin/right = 75.0
+margin/bottom = 3.0
+custom_fonts/font = ExtResource( 20 )
+text = "100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Moneda" type="Sprite" parent="Hud/LibroCompras/PermisoCerveceria"]
+
+transform/pos = Vector2( 67.0216, -20.2535 )
+transform/scale = Vector2( 0.576334, 0.542691 )
+texture = ExtResource( 16 )
+
+[node name="Comprar" type="Button" parent="Hud/LibroCompras/PermisoCerveceria"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 115.0
+margin/top = -30.0
+margin/right = 185.0
+margin/bottom = -7.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="Comprado" type="Label" parent="Hud/LibroCompras/PermisoCerveceria"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 112.0
+margin/top = -32.0
+margin/right = 208.0
+margin/bottom = -9.0
+custom_fonts/font = ExtResource( 20 )
+text = "Comprado"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="PermisoAperitivos" type="Node2D" parent="Hud/LibroCompras"]
+
+editor/display_folded = true
+transform/pos = Vector2( 192, 192 )
 
 [node name="Pergamino" type="Sprite" parent="Hud/LibroCompras/PermisoAperitivos"]
 
@@ -9404,7 +9513,7 @@ margin/left = -48.0
 margin/top = 16.0
 margin/right = 234.0
 margin/bottom = 33.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 text = "Permiso para vender aperitivos (pan, queso)"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9442,7 +9551,7 @@ margin/left = 115.0
 margin/top = -30.0
 margin/right = 185.0
 margin/bottom = -7.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -9468,7 +9577,7 @@ max_lines_visible = -1
 [node name="PermisoComidas" type="Node2D" parent="Hud/LibroCompras"]
 
 editor/display_folded = true
-transform/pos = Vector2( 192, 187 )
+transform/pos = Vector2( 192, 272 )
 
 [node name="Pergamino" type="Sprite" parent="Hud/LibroCompras/PermisoComidas"]
 
@@ -9486,7 +9595,7 @@ margin/left = -48.0
 margin/top = 16.0
 margin/right = 234.0
 margin/bottom = 33.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 text = "Permiso para vender comida cocinada"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9524,7 +9633,7 @@ margin/left = 115.0
 margin/top = -30.0
 margin/right = 185.0
 margin/bottom = -7.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -9547,91 +9656,10 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="RecetaQuebrantos" type="Node2D" parent="Hud/LibroCompras"]
-
-transform/pos = Vector2( 192, 276 )
-
-[node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaQuebrantos"]
-
-transform/pos = Vector2( -32, -20 )
-texture = ExtResource( 25 )
-region = true
-region_rect = Rect2( 340, 34, 32, 32 )
-
-[node name="Descripcion" type="Label" parent="Hud/LibroCompras/RecetaQuebrantos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = -48.0
-margin/top = 16.0
-margin/right = 234.0
-margin/bottom = 33.0
-custom_fonts/font = ExtResource( 11 )
-text = "Receta para poder cocinar quebrantos"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Precio" type="Label" parent="Hud/LibroCompras/RecetaQuebrantos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 16.0
-margin/top = -30.0
-margin/right = 75.0
-margin/bottom = 5.0
-custom_fonts/font = ExtResource( 20 )
-text = "50"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Moneda" type="Sprite" parent="Hud/LibroCompras/RecetaQuebrantos"]
-
-transform/pos = Vector2( 55.0403, -18.4189 )
-transform/scale = Vector2( 0.576334, 0.542691 )
-texture = ExtResource( 16 )
-
-[node name="Comprar" type="Button" parent="Hud/LibroCompras/RecetaQuebrantos"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 115.0
-margin/top = -30.0
-margin/right = 185.0
-margin/bottom = -7.0
-custom_fonts/font = ExtResource( 11 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Comprar"
-flat = false
-
-[node name="Comprado" type="Label" parent="Hud/LibroCompras/RecetaQuebrantos"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 112.0
-margin/top = -31.0
-margin/right = 208.0
-margin/bottom = -8.0
-custom_fonts/font = ExtResource( 20 )
-text = "Comprado"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
 [node name="RecetaSopa" type="Node2D" parent="Hud/LibroCompras"]
 
-transform/pos = Vector2( 192, 368 )
+editor/display_folded = true
+transform/pos = Vector2( 192, 369 )
 
 [node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaSopa"]
 
@@ -9650,7 +9678,7 @@ margin/left = -48.0
 margin/top = 16.0
 margin/right = 234.0
 margin/bottom = 33.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 text = "Receta para poder cocinar sopa"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9667,14 +9695,14 @@ margin/top = -30.0
 margin/right = 75.0
 margin/bottom = 5.0
 custom_fonts/font = ExtResource( 20 )
-text = "100"
+text = "50"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
 [node name="Moneda" type="Sprite" parent="Hud/LibroCompras/RecetaSopa"]
 
-transform/pos = Vector2( 63.6478, -17.7005 )
+transform/pos = Vector2( 53.6478, -18.7005 )
 transform/scale = Vector2( 0.576334, 0.542691 )
 texture = ExtResource( 16 )
 
@@ -9688,7 +9716,7 @@ margin/left = 115.0
 margin/top = -30.0
 margin/right = 185.0
 margin/bottom = -7.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -9711,8 +9739,92 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="RecetaQuebrantos" type="Node2D" parent="Hud/LibroCompras"]
+
+editor/display_folded = true
+transform/pos = Vector2( 549, 96 )
+
+[node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaQuebrantos"]
+
+transform/pos = Vector2( -32, -20 )
+texture = ExtResource( 25 )
+region = true
+region_rect = Rect2( 340, 34, 32, 32 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroCompras/RecetaQuebrantos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -48.0
+margin/top = 16.0
+margin/right = 234.0
+margin/bottom = 33.0
+custom_fonts/font = ExtResource( 5 )
+text = "Receta para poder cocinar quebrantos"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Precio" type="Label" parent="Hud/LibroCompras/RecetaQuebrantos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 16.0
+margin/top = -30.0
+margin/right = 75.0
+margin/bottom = 5.0
+custom_fonts/font = ExtResource( 20 )
+text = "100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Moneda" type="Sprite" parent="Hud/LibroCompras/RecetaQuebrantos"]
+
+transform/pos = Vector2( 62.0403, -18.4189 )
+transform/scale = Vector2( 0.576334, 0.542691 )
+texture = ExtResource( 16 )
+
+[node name="Comprar" type="Button" parent="Hud/LibroCompras/RecetaQuebrantos"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 115.0
+margin/top = -30.0
+margin/right = 185.0
+margin/bottom = -7.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="Comprado" type="Label" parent="Hud/LibroCompras/RecetaQuebrantos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 112.0
+margin/top = -31.0
+margin/right = 208.0
+margin/bottom = -8.0
+custom_fonts/font = ExtResource( 20 )
+text = "Comprado"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="RecetaOlla" type="Node2D" parent="Hud/LibroCompras"]
 
+editor/display_folded = true
 transform/pos = Vector2( 552, 187 )
 
 [node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaOlla"]
@@ -9732,7 +9844,7 @@ margin/left = -48.0
 margin/top = 16.0
 margin/right = 234.0
 margin/bottom = 33.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 text = "Receta para poder cocinar olla podrida"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9770,7 +9882,7 @@ margin/left = 115.0
 margin/top = -30.0
 margin/right = 185.0
 margin/bottom = -7.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -9795,6 +9907,7 @@ max_lines_visible = -1
 
 [node name="RecetaEstofado" type="Node2D" parent="Hud/LibroCompras"]
 
+editor/display_folded = true
 transform/pos = Vector2( 552, 275 )
 
 [node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaEstofado"]
@@ -9814,7 +9927,7 @@ margin/left = -48.0
 margin/top = 16.0
 margin/right = 234.0
 margin/bottom = 33.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 text = "Receta para poder cocinar estofado"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9852,7 +9965,7 @@ margin/left = 115.0
 margin/top = -30.0
 margin/right = 185.0
 margin/bottom = -7.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -9898,11 +10011,11 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 224.0
+margin/left = 218.0
 margin/top = 576.0
-margin/right = 292.0
+margin/right = 286.0
 margin/bottom = 599.0
-custom_fonts/font = ExtResource( 11 )
+custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -9915,9 +10028,9 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 480.0
+margin/left = 448.0
 margin/top = 240.0
-margin/right = 570.0
+margin/right = 560.0
 margin/bottom = 297.0
 custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
@@ -9952,6 +10065,386 @@ margin/right = 56.0
 margin/bottom = 23.0
 custom_fonts/font = ExtResource( 20 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Reputacion" type="Node2D" parent="Hud"]
+
+script/script = ExtResource( 29 )
+
+[node name="Reputacion" type="Label" parent="Hud/Reputacion"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 840.0
+margin/top = -2.0
+margin/right = 880.0
+margin/bottom = 33.0
+custom_fonts/font = ExtResource( 17 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Experiencia" type="ProgressBar" parent="Hud/Reputacion"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 704.0
+margin/top = 0.0
+margin/right = 800.0
+margin/bottom = 32.0
+custom_fonts/font = ExtResource( 20 )
+custom_colors/font_color = Color( 0.03125, 1, 0, 1 )
+range/min = 0.0
+range/max = 100.0
+range/step = 1.0
+range/page = 0.0
+range/value = 0.0
+range/exp_edit = false
+range/rounded = false
+percent/visible = true
+
+[node name="Precios" type="Button" parent="Hud"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 390.0
+margin/top = 576.0
+margin/right = 449.0
+margin/bottom = 599.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Precios"
+flat = false
+
+[node name="LibroPrecios" type="Patch9Frame" parent="Hud"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 48.0
+margin/top = 48.0
+margin/right = 976.0
+margin/bottom = 560.0
+texture = ExtResource( 13 )
+script/script = ExtResource( 30 )
+
+[node name="CerrarPrecios" type="Button" parent="Hud/LibroPrecios"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 656.0
+margin/top = 400.0
+margin/right = 815.0
+margin/bottom = 423.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Cerrar libro de precios"
+flat = false
+
+[node name="Vino" type="Node2D" parent="Hud/LibroPrecios"]
+
+editor/display_folded = true
+transform/pos = Vector2( -23, -22 )
+
+[node name="Vino" type="Sprite" parent="Hud/LibroPrecios/Vino"]
+
+transform/pos = Vector2( 171, 100 )
+transform/scale = Vector2( 2.1, 2.1 )
+texture = ExtResource( 8 )
+region = true
+region_rect = Rect2( 197, 337, 20, 20 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroPrecios/Vino"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 160.0
+margin/top = 112.0
+margin/right = 404.0
+margin/bottom = 129.0
+custom_fonts/font = ExtResource( 5 )
+text = "Una jarra de vino cuesta 2 maravedíes"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Cerveza" type="Node2D" parent="Hud/LibroPrecios"]
+
+editor/display_folded = true
+transform/pos = Vector2( -23, 38 )
+
+[node name="Cerveza" type="Sprite" parent="Hud/LibroPrecios/Cerveza"]
+
+transform/pos = Vector2( 171, 91 )
+transform/scale = Vector2( 2.1, 2.1 )
+texture = ExtResource( 8 )
+region = true
+region_rect = Rect2( 230, 363, 20, 20 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroPrecios/Cerveza"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 160.0
+margin/top = 112.0
+margin/right = 430.0
+margin/bottom = 129.0
+custom_fonts/font = ExtResource( 5 )
+text = "Una jarra de cerveza cuesta 3 maravedíes "
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Pan" type="Node2D" parent="Hud/LibroPrecios"]
+
+editor/display_folded = true
+transform/pos = Vector2( -23, 105 )
+
+[node name="Pan" type="Sprite" parent="Hud/LibroPrecios/Pan"]
+
+transform/pos = Vector2( 176, 94 )
+transform/scale = Vector2( 0.763636, 0.761905 )
+texture = ExtResource( 19 )
+region = true
+region_rect = Rect2( 626, 4, 44, 42 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroPrecios/Pan"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 160.0
+margin/top = 112.0
+margin/right = 404.0
+margin/bottom = 129.0
+custom_fonts/font = ExtResource( 5 )
+text = "Un trozo de pan cuesta 1 maravedí"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Queso" type="Node2D" parent="Hud/LibroPrecios"]
+
+editor/display_folded = true
+transform/pos = Vector2( -23, 167 )
+
+[node name="Queso" type="Sprite" parent="Hud/LibroPrecios/Queso"]
+
+transform/pos = Vector2( 176, 94 )
+transform/scale = Vector2( 0.763636, 0.761905 )
+texture = ExtResource( 19 )
+region = true
+region_rect = Rect2( 535, 6, 35, 35 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroPrecios/Queso"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 160.0
+margin/top = 112.0
+margin/right = 404.0
+margin/bottom = 129.0
+custom_fonts/font = ExtResource( 5 )
+text = "Una cuña de queso cuesta 1 maravedí"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Carne" type="Node2D" parent="Hud/LibroPrecios"]
+
+editor/display_folded = true
+transform/pos = Vector2( -23, 228 )
+
+[node name="Carne" type="Sprite" parent="Hud/LibroPrecios/Carne"]
+
+transform/pos = Vector2( 181, 91 )
+transform/scale = Vector2( 1.19091, 1.23735 )
+texture = ExtResource( 24 )
+region = true
+region_rect = Rect2( 50, 610, 32, 32 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroPrecios/Carne"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 160.0
+margin/top = 112.0
+margin/right = 442.0
+margin/bottom = 129.0
+custom_fonts/font = ExtResource( 5 )
+text = "Una ración de chuletas cuesta 2 maravedíes"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Pescado" type="Node2D" parent="Hud/LibroPrecios"]
+
+editor/display_folded = true
+transform/pos = Vector2( -23, 287 )
+
+[node name="Pescado" type="Sprite" parent="Hud/LibroPrecios/Pescado"]
+
+transform/pos = Vector2( 183.605, 94.8006 )
+transform/scale = Vector2( 1.01648, 0.949962 )
+texture = ExtResource( 24 )
+region = true
+region_rect = Rect2( 200, 702, 48, 32 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroPrecios/Pescado"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 160.0
+margin/top = 112.0
+margin/right = 436.0
+margin/bottom = 129.0
+custom_fonts/font = ExtResource( 5 )
+text = "Una ración de bacalao cuesta 3 maravedíes"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sopa" type="Node2D" parent="Hud/LibroPrecios"]
+
+editor/display_folded = true
+transform/pos = Vector2( 346, -22 )
+
+[node name="Sopa" type="Sprite" parent="Hud/LibroPrecios/Sopa"]
+
+transform/pos = Vector2( 176, 96 )
+transform/scale = Vector2( 1.4581, 1.69996 )
+texture = ExtResource( 25 )
+region = true
+region_rect = Rect2( 70, 68, 32, 32 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroPrecios/Sopa"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 160.0
+margin/top = 112.0
+margin/right = 418.0
+margin/bottom = 129.0
+custom_fonts/font = ExtResource( 5 )
+text = "Una racion de sopa cuesta 2 maravedíes"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Quebrantos" type="Node2D" parent="Hud/LibroPrecios"]
+
+editor/display_folded = true
+transform/pos = Vector2( 347, 39 )
+
+[node name="Quebrantos" type="Sprite" parent="Hud/LibroPrecios/Quebrantos"]
+
+transform/pos = Vector2( 176, 96 )
+transform/scale = Vector2( 1.4581, 1.69996 )
+texture = ExtResource( 25 )
+region = true
+region_rect = Rect2( 340, 34, 32, 32 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroPrecios/Quebrantos"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 160.0
+margin/top = 112.0
+margin/right = 460.0
+margin/bottom = 129.0
+custom_fonts/font = ExtResource( 5 )
+text = "Una ración de quebrantos cuesta 5 maravedíes"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Olla" type="Node2D" parent="Hud/LibroPrecios"]
+
+editor/display_folded = true
+transform/pos = Vector2( 347, 103 )
+
+[node name="Olla" type="Sprite" parent="Hud/LibroPrecios/Olla"]
+
+transform/pos = Vector2( 176, 96 )
+transform/scale = Vector2( 1.4581, 1.69996 )
+texture = ExtResource( 25 )
+region = true
+region_rect = Rect2( 273, 238, 32, 32 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroPrecios/Olla"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 160.0
+margin/top = 112.0
+margin/right = 463.0
+margin/bottom = 129.0
+custom_fonts/font = ExtResource( 5 )
+text = "Una ración de olla podrida cuesta 4 maravedíes"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Estofado" type="Node2D" parent="Hud/LibroPrecios"]
+
+editor/display_folded = true
+transform/pos = Vector2( 347, 169 )
+
+[node name="Estofado" type="Sprite" parent="Hud/LibroPrecios/Estofado"]
+
+transform/pos = Vector2( 176, 96 )
+transform/scale = Vector2( 1.4581, 1.69996 )
+texture = ExtResource( 25 )
+region = true
+region_rect = Rect2( 374, 238, 32, 32 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroPrecios/Estofado"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 160.0
+margin/top = 112.0
+margin/right = 443.0
+margin/bottom = 129.0
+custom_fonts/font = ExtResource( 5 )
+text = "Una ración de estofado cuesta 5 maravedíes"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
