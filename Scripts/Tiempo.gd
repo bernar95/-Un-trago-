@@ -31,6 +31,7 @@ func _fixed_process(delta):
 func tiempo():
 	labelDia.set_text("Día" + " " + str(diasAbierto))
 	labelDia.show()
+	aparecer_npcs()
 	tiempo.set_wait_time(5)
 	tiempo.start()
 	yield(tiempo, "timeout")
@@ -62,3 +63,18 @@ func tiempo():
 	labelMomento.set_text("")
 	aparecer = false
 	tiempo()
+
+func aparecer_npcs():
+	var spriteNpc = preload("res://Scenes/NPC1.tscn")
+	var npc = spriteNpc.instance()
+	var npc2 = spriteNpc.instance()
+	npc.set_pos(get_node("Navegacion/Navigation2D/Spawn").get_pos())
+	npc2.set_pos(get_node("Navegacion/Navigation2D/Spawn").get_pos())
+	get_node("Navegacion/Navigation2D").add_child(npc)
+	get_node("Navegacion/Navigation2D").add_child(npc2)
+	npc.get_node("Sprite").destino = get_node("Navegacion/Navigation2D/Destinos/NodeBarril/Barril7").get_pos()
+	npc.get_node("Sprite").navegacion = get_node("Navegacion/Navigation2D")
+	npc.get_node("Sprite").andar = true
+	npc2.get_node("Sprite").destino = get_node("Navegacion/Navigation2D/Destinos/NodeBarra/Barra9").get_pos()
+	npc2.get_node("Sprite").navegacion = get_node("Navegacion/Navigation2D")
+	npc2.get_node("Sprite").andar = true

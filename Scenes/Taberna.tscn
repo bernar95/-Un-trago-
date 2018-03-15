@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=1]
+[gd_scene load_steps=70 format=1]
 
 [ext_resource path="res://Scripts/Tiempo.gd" type="Script" id=1]
 [ext_resource path="res://Tiles/house_inside.png" type="Texture" id=2]
@@ -325,6 +325,12 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 5, 6, 7, 6 ]
 }
+
+[sub_resource type="NavigationPolygon" id=39]
+
+vertices = Vector2Array( 426.557, 388.236, 479.97, 384.275, 506.498, 383.455, 622.861, 388.113, 617.602, 428.024, 577.943, 450.595, 521.216, 445.384, 424.854, 415.927, 462.414, 384.275, 524.775, 503.62, 548.481, 498.996, 617.602, 495.419, 716.398, 518.656, 716.398, 538.683, 648.359, 538.33, 579.145, 526.065, 472.542, 460.508, 435.145, 441.655, 883.66, 380.927, 921.361, 351.269, 909.128, 423.185, 760.211, 318.97, 690.073, 329.425, 820.224, 424.619, 852.788, 396.922, 827.539, 396.922, 448.586, 262.361, 415.174, 283.315, 403.29, 221.257, 569.375, 260.121, 567.384, 192.452, 652.453, 222.891, 652.741, 310.399, 610.978, 299.207, 687.741, 223.399, 744.568, 219.306, 723.507, 293.977, 411.899, 314.049, 696.069, 385.506, 732.294, 439.393, 720.464, 441.186, 685.691, 441.544, 526.918, 693.864, 491.309, 697.761, 498.017, 552.715, 528.719, 537.412, 457.963, 534.475, 470.556, 502.215, 330.12, 533.812, 180.091, 558.79, 179.492, 533.044, 327.904, 460.972, 179.281, 458.636, 177.56, 447.852, 314.392, 447.182, 328.316, 460.929, 355.317, 285.956, 287.839, 318.692, 330.131, 533.673, 153.073, 71.1135, 213.548, 66.3361, 212.356, 162.462, 159.031, 89.7825, 100.369, 250.842, 99.6518, 234.71, 244.838, 237.22, 252.367, 249.05, 859, 153.888, 906.103, 157.868, 910.199, 218.177, 799.42, 162.16, 821.903, 514.93, 892.166, 518.515, 891.446, 527.901, 798.287, 526.969, 80.7804, 88.5909, 81.5748, 69.1275, 179.169, 163.156, 421.901, 485.126, 372.154, 442.138, 234.779, 349.947, 100.105, 349.947, 100.105, 326.727, 258.266, 325.592, 138.222, 189.857, 83.7369, 189.857, 83.7369, 164.71, 908.624, 294.593, 908.624, 318.97, 519.977, 300.146, 498.014, 250.165, 507.065, 303.045, 455.586, 261.382, 287.246, 422.996, 302.434, 406.927, 365.467, 415.151, 636.96, 447.382, 592.508, 489.325, 353.556, 273.632, 503.033, 190.462, 352.676, 219.497, 259.078, 374.948, 159.721, 393.816, 118.012, 375.421, 115.991, 429.608, 166.206, 416.511, 167.287, 422.996 )
+polygons = [ IntArray( 0, 1, 2, 3, 4, 5, 6, 7 ), IntArray( 8, 1, 0 ), IntArray( 9, 10, 11, 12, 13, 14, 15 ), IntArray( 6, 16, 17, 7 ), IntArray( 18, 19, 20 ), IntArray( 21, 19, 18, 22 ), IntArray( 18, 20, 23, 24 ), IntArray( 25, 24, 23 ), IntArray( 26, 8, 27, 28 ), IntArray( 29, 30, 31, 32, 33 ), IntArray( 32, 34, 35, 36, 22 ), IntArray( 27, 8, 0, 37 ), IntArray( 4, 3, 38, 25, 23, 39, 40, 41 ), IntArray( 42, 43, 44, 45 ), IntArray( 9, 45, 44, 46, 47 ), IntArray( 48, 46, 44, 49, 50 ), IntArray( 51, 52, 53, 54, 55 ), IntArray( 56, 27, 37, 57 ), IntArray( 48, 50, 58 ), IntArray( 59, 60, 61, 62 ), IntArray( 22, 38, 3, 33, 32 ), IntArray( 63, 64, 65, 66 ), IntArray( 67, 68, 69, 35, 70 ), IntArray( 71, 72, 73, 74 ), IntArray( 62, 75, 76, 59 ), IntArray( 77, 62, 61, 65 ), IntArray( 9, 15, 45 ), IntArray( 16, 47, 46, 78, 17 ), IntArray( 79, 17, 78, 55, 54 ), IntArray( 80, 81, 82, 83 ), IntArray( 84, 85, 86, 77 ), IntArray( 65, 84, 77 ), IntArray( 87, 88, 21, 36 ), IntArray( 36, 21, 22 ), IntArray( 29, 33, 89, 90 ), IntArray( 90, 89, 91, 92 ), IntArray( 91, 2, 1, 92 ), IntArray( 93, 94, 95, 79, 54 ), IntArray( 71, 74, 39, 23 ), IntArray( 4, 41, 96 ), IntArray( 97, 4, 96, 11 ), IntArray( 98, 56, 57 ), IntArray( 28, 99, 90, 92, 26 ), IntArray( 66, 100, 98, 57, 83 ), IntArray( 70, 35, 34, 31, 30 ), IntArray( 61, 70, 30, 99 ), IntArray( 61, 99, 28, 100 ), IntArray( 65, 61, 100, 66 ), IntArray( 80, 83, 57, 94, 101 ), IntArray( 10, 97, 11 ), IntArray( 10, 9, 6, 5 ), IntArray( 94, 0, 7, 95 ), IntArray( 94, 93, 101 ), IntArray( 80, 101, 102, 103 ), IntArray( 104, 103, 102, 105, 106 ), IntArray( 54, 104, 106, 93 ), IntArray( 51, 55, 48 ), IntArray( 48, 58, 51 ) ]
+outlines = [ Vector2Array( 491.309, 697.761, 498.017, 552.715, 180.091, 558.79, 179.492, 533.044, 330.131, 533.673, 327.904, 460.972, 179.281, 458.636, 177.56, 447.852, 314.392, 447.182, 115.991, 429.608, 118.012, 375.421, 234.779, 349.947, 100.105, 349.947, 100.105, 326.727, 258.266, 325.592, 252.367, 249.05, 100.369, 250.842, 99.6518, 234.71, 244.838, 237.22, 138.222, 189.857, 83.7369, 189.857, 83.7369, 164.71, 179.169, 163.156, 159.031, 89.7825, 80.7804, 88.5909, 81.5748, 69.1275, 153.073, 71.1135, 213.548, 66.3361, 212.356, 162.462, 799.42, 162.16, 859, 153.888, 906.103, 157.868, 910.199, 218.177, 744.568, 219.306, 723.507, 293.977, 908.624, 294.593, 908.624, 318.97, 760.211, 318.97, 921.361, 351.269, 909.128, 423.185, 820.224, 424.619, 821.903, 514.93, 892.166, 518.515, 891.446, 527.901, 798.287, 526.969, 732.294, 439.393, 720.464, 441.186, 685.691, 441.544, 636.96, 447.382, 617.602, 495.419, 716.398, 518.656, 716.398, 538.683, 648.359, 538.33, 579.145, 526.065, 528.719, 537.412, 526.918, 693.864 ), Vector2Array( 328.316, 460.929, 421.901, 485.126, 457.963, 534.475, 330.12, 533.812 ), Vector2Array( 287.839, 318.692, 411.899, 314.049, 426.557, 388.236, 302.434, 406.927 ), Vector2Array( 166.206, 416.511, 159.721, 393.816, 259.078, 374.948, 287.246, 422.996, 167.287, 422.996 ), Vector2Array( 372.154, 442.138, 365.467, 415.151, 424.854, 415.927, 435.145, 441.655 ), Vector2Array( 548.481, 498.996, 577.943, 450.595, 617.602, 428.024, 592.508, 489.325 ), Vector2Array( 696.069, 385.506, 690.073, 329.425, 883.66, 380.927, 852.788, 396.922, 827.539, 396.922 ), Vector2Array( 448.586, 262.361, 455.586, 261.382, 479.97, 384.275, 462.414, 384.275 ), Vector2Array( 652.741, 310.399, 652.453, 222.891, 687.741, 223.399 ), Vector2Array( 472.542, 460.508, 521.216, 445.384, 524.775, 503.62, 470.556, 502.215 ), Vector2Array( 519.977, 300.146, 610.978, 299.207, 622.861, 388.113, 506.498, 383.455, 507.065, 303.045 ), Vector2Array( 353.556, 273.632, 352.676, 219.497, 403.29, 221.257, 415.174, 283.315, 355.317, 285.956 ), Vector2Array( 503.033, 190.462, 567.384, 192.452, 569.375, 260.121, 498.014, 250.165 ) ]
 
 [node name="Mapa" type="Node"]
 
@@ -6149,8 +6155,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 128, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6171,8 +6177,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 143, 97 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6193,8 +6199,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 135, 97 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6215,8 +6221,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 144, 97 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6237,8 +6243,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 97 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6259,8 +6265,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6281,8 +6287,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6303,8 +6309,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6325,8 +6331,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6347,8 +6353,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6369,8 +6375,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6391,8 +6397,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6413,8 +6419,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6435,8 +6441,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6457,8 +6463,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6479,8 +6485,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6501,8 +6507,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6523,8 +6529,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6545,8 +6551,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6567,8 +6573,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6589,8 +6595,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6611,8 +6617,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.20165, 0, 0, 1.63964, 136, 96 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6633,8 +6639,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 136, 85 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6655,8 +6661,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 129, 85 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6677,8 +6683,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6699,8 +6705,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6721,8 +6727,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6743,8 +6749,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6765,8 +6771,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6787,8 +6793,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6809,8 +6815,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6831,8 +6837,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6853,8 +6859,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6875,8 +6881,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6897,8 +6903,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6919,8 +6925,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6941,8 +6947,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6963,8 +6969,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -6985,8 +6991,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -7007,8 +7013,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 136, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -7029,8 +7035,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 143, 82 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -7051,8 +7057,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 192, 48 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -7073,8 +7079,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 192, 48 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -7095,8 +7101,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 30 )
 shapes/0/transform = Matrix32( 1.21669, 0, 0, 1.23534, 192, 48 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -7112,7 +7118,6 @@ _update_shape_index = 0
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 328.029, 97.829 )
 transform/scale = Vector2( 0.169749, 0.363435 )
 input/pickable = false
@@ -7146,10 +7151,390 @@ transform/scale = Vector2( 5.89107, 2.75153 )
 texture = ExtResource( 11 )
 vframes = 4
 hframes = 4
-frame = 2
+frame = 1
 region_rect = Rect2( 0, 0, 32, 48 )
 
+[node name="Navegacion" type="Node" parent="."]
+
+[node name="Navigation2D" type="Navigation2D" parent="Navegacion"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navegacion/Navigation2D"]
+
+navpoly = SubResource( 39 )
+enabled = true
+
+[node name="Spawn" type="Node2D" parent="Navegacion/Navigation2D"]
+
+transform/pos = Vector2( 511.214, 652.043 )
+transform/scale = Vector2( 0.882584, 0.738347 )
+
+[node name="Destinos" type="Node2D" parent="Navegacion/Navigation2D"]
+
+[node name="NodeBarra" type="Node2D" parent="Navegacion/Navigation2D/Destinos"]
+
+editor/display_folded = true
+
+[node name="Barra1" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 279.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra2" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 310.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra3" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 342.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra4" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 373.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra5" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 405.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra6" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 436.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra7" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 468.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra8" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 499.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra9" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 531.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra10" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 562.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra11" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 593.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra12" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 625.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra13" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 657.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra14" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 688.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra15" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 720.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra16" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 752.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra17" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 783.943, 172.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra18" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 214.943, 111.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="Barra19" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
+
+transform/pos = Vector2( 214.943, 68.426 )
+transform/scale = Vector2( 0.493013, 0.329915 )
+
+[node name="NodeSilla" type="Node2D" parent="Navegacion/Navigation2D/Destinos"]
+
+editor/display_folded = true
+
+[node name="Silla" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 784.308, 306.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla1" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 816.308, 306.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla2" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 864.308, 306.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla3" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 896.308, 306.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla4" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 894.94, 224.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
+[node name="Silla5" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 862.94, 224.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
+[node name="Silla6" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 814.94, 224.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
+[node name="Silla7" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 782.94, 224.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
+[node name="Silla8" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 574.94, 304.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
+[node name="Silla9" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 542.94, 304.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
+[node name="Silla10" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 366.94, 320.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
+[node name="Silla11" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 334.94, 320.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
+[node name="Silla12" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 222.94, 255.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla13" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 191.94, 255.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla14" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 142.94, 255.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla15" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 110.94, 255.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla16" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 127.94, 97.3261 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla17" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 95.94, 97.0357 )
+transform/scale = Vector2( 0.37532, 0.523652 )
+
+[node name="Silla18" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 190.94, 464.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla19" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 222.94, 464.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla20" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 271.94, 464.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla21" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 302.94, 464.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla22" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 670.94, 448.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla23" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 702.94, 448.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla24" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 846.94, 432.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla25" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 878.94, 432.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
+[node name="Silla26" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 576.308, 386.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla27" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 544.308, 386.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla28" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 368.308, 403.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla29" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 336.308, 403.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla30" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 224.308, 338.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla31" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 192.308, 338.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla32" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 144.308, 338.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla33" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 112.308, 338.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla34" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 128.308, 178.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla35" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 96.308, 178.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla36" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 192.308, 546.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla37" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 224.308, 546.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla38" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 272.308, 546.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla39" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 304.308, 546.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla40" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 672.308, 530.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla41" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 704.308, 530.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla42" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 848.308, 514.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Silla43" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
+
+transform/pos = Vector2( 880.308, 514.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="NodeBarril" type="Node2D" parent="Navegacion/Navigation2D/Destinos"]
+
+editor/display_folded = true
+
+[node name="Barril1" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
+
+transform/pos = Vector2( 139.056, 422.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
+
+[node name="Barril2" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
+
+transform/pos = Vector2( 411.056, 264.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
+
+[node name="Barril3" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
+
+transform/pos = Vector2( 501.056, 235.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
+
+[node name="Barril4" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
+
+transform/pos = Vector2( 692.056, 378.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
+
+[node name="Barril5" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
+
+transform/pos = Vector2( 523.056, 490.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
+
+[node name="Barril6" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
+
+transform/pos = Vector2( 900.056, 394.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
+
+[node name="Barril7" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
+
+transform/pos = Vector2( 885.056, 172.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
+
 [node name="Hud" type="Node" parent="."]
+
+editor/display_folded = true
 
 [node name="Pedidos" type="Button" parent="Hud"]
 
@@ -10071,6 +10456,7 @@ max_lines_visible = -1
 
 [node name="Reputacion" type="Node2D" parent="Hud"]
 
+editor/display_folded = true
 script/script = ExtResource( 29 )
 
 [node name="Reputacion" type="Label" parent="Hud/Reputacion"]
