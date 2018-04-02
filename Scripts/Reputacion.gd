@@ -31,6 +31,13 @@ func _ready():
 	insOro.set_pos(pos)
 	insPlatino.set_pos(pos)
 	pass
+
+func _input(event):
+	if event.type == InputEvent.KEY:
+		if event.is_action_pressed("ui_interact"):
+			masExperiencia()
+		elif event.is_action_pressed("ui_drop"):
+			menosExperiencia()
 	
 func _fixed_process(delta):
 	if reputacion == 5 and cerveceria == false:
@@ -64,13 +71,6 @@ func _fixed_process(delta):
 		get_node("Reputacion").add_child(insPlatino)
 		get_parent().get_parent().get_node("KinematicBody2D").notificaciones("Has ganado la medalla de platino")
 		medallaPlatino = true
-
-func _input(event):
-	if event.type == InputEvent.KEY:
-		if event.is_action_pressed("ui_interact"):
-			masExperiencia()
-		elif event.is_action_pressed("ui_drop"):
-			menosExperiencia()
 
 func masExperiencia():
 	experienciaActual += 1

@@ -215,7 +215,9 @@ func _input(event):
 	
 
 func interaccion(result):
-	if typeof(result[0].collider) == TYPE_OBJECT:
+	if result.empty():
+		pass
+	elif typeof(result[0].collider) == TYPE_OBJECT:
 		if result[0].collider.has_node("EstanteInteraccion"):
 			if personaje.get_child_count() == 0:
 				personaje.add_child(jarra)
@@ -765,9 +767,37 @@ func interaccion(result):
 						notificaciones("Tienes las manos ocupadas")
 				else:
 					notificaciones("Aun no ha terminado")
+		elif result[0].collider.has_node("InteraccionCliente"):
+			print("barril")
+			var barra = result[0].collider.get_child(1).get_child(0).get_name()
+			if get_parent().destinos[barra].get_npc() != null:
+				var npc = get_parent().destinos[barra].get_npc().get_node("NPC")
+				if personaje.get_child_count() == 1 and personaje.get_child(0).get_pos() == mano_derecha and personaje.get_child(0).get_filename() == npc.pedidoRuta:
+					var objeto = personaje.get_child(0)
+					servir(npc, objeto, "derecha")
+				elif personaje.get_child_count() == 1 and personaje.get_child(0).get_pos() == mano_izquierda and personaje.get_child(0).get_filename() == npc.pedidoRuta:
+					var objeto = personaje.get_child(0)
+					servir(npc, objeto, "izquierda")
+				elif personaje.get_child_count() == 2:
+					if personaje.get_child(0).get_pos() == mano_derecha and personaje.get_child(0).get_filename() == npc.pedidoRuta:
+						var objeto = personaje.get_child(0)
+						servir(npc, objeto, "derecha")
+					elif personaje.get_child(1).get_pos() == mano_derecha and personaje.get_child(1).get_filename() == npc.pedidoRuta:
+						var objeto = personaje.get_child(1)
+						servir(npc, objeto, "derecha")
+					elif personaje.get_child(0).get_pos() == mano_izquierda and personaje.get_child(0).get_filename() == npc.pedidoRuta:
+						var objeto = personaje.get_child(0)
+						servir(npc, objeto, "izquierda")
+					elif personaje.get_child(1).get_pos() == mano_izquierda and personaje.get_child(1).get_filename() == npc.pedidoRuta:
+						var objeto = personaje.get_child(1)
+						servir(npc, objeto, "izquierda")
+				else:
+					notificaciones("Esto no es lo que he pedido")
 
 func soltar(result):
-	if typeof(result[0].collider) == TYPE_OBJECT:
+	if result.empty():
+		pass
+	elif typeof(result[0].collider) == TYPE_OBJECT:
 		if result[0].collider.has_node("EstanteInteraccion"):
 			if personaje.get_child_count() == 0:
 				notificaciones("No tienes nada que soltar")
@@ -1110,6 +1140,18 @@ func instanciar_jarras(recipiente):
 	elif recipiente == "Jarra2":
 		jarra2 = spriteJarra.instance()
 		jarra2.set_pos(mano_izquierda)
+	elif recipiente == "JarraVino":
+		vino = spriteVino.instance()
+		vino.set_pos(mano_derecha)
+	elif recipiente == "JarraVino2":
+		vino2 = spriteVino.instance()
+		vino2.set_pos(mano_izquierda)
+	elif recipiente == "JarraCerveza":
+		cerveza = spriteCerveza.instance()
+		cerveza.set_pos(mano_derecha)
+	elif recipiente == "JarraCerveza2":
+		cerveza2 = spriteCerveza.instance()
+		cerveza2.set_pos(mano_izquierda)
 
 func instanciar_ingredientes(ingrediente):
 	if ingrediente == carne:
@@ -1240,3 +1282,103 @@ func dejarComida(comida, hijo):
 func instanciar_caldero():
 	calderoAnimado = spriteCaldero.instance()
 	calderoAnimado.set_pos(pos_caldero)
+
+func instanciar_comida(comida):
+	var comidaCocinada
+	if comida == "CarneCocinada":
+		comidaCocinada = spriteCarneCocinada.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "CarneCocinada2":
+		comidaCocinada = spriteCarneCocinada.instance()
+		comidaCocinada.set_pos(mano_izquierda)
+	elif comida == "PescadoCocinado":
+		comidaCocinada = spritePescadoCocinado.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "PescadoCocinado2":
+		comidaCocinada = spritePescadoCocinado.instance()
+		comidaCocinada.set_pos(mano_izquierda)
+	elif comida == "Sopa":
+		comidaCocinada = spriteSopa.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "Sopa2":
+		comidaCocinada = spriteSopa.instance()
+		comidaCocinada.set_pos(mano_izquierda)
+	elif comida == "Quebrantos":
+		comidaCocinada = spriteQuebrantos.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "Quebrantos2":
+		comidaCocinada = spriteQuebrantos.instance()
+		comidaCocinada.set_pos(mano_izquierda)
+	elif comida == "Olla":
+		comidaCocinada = spriteOlla.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "Olla2":
+		comidaCocinada = spriteOlla.instance()
+		comidaCocinada.set_pos(mano_izquierda)
+	elif comida == "Estofado":
+		comidaCocinada = spriteEstofado.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "Estofado2":
+		comidaCocinada = spriteEstofado.instance()
+		comidaCocinada.set_pos(mano_izquierda)
+	
+	return comidaCocinada
+
+func servir(npc, objeto, mano):
+	var pedido
+	if mano == "derecha":
+		if objeto.get_filename() == spriteVino.get_path():
+			pedido = spriteVino.instance()
+			instanciar_jarras("JarraVino")
+		elif objeto.get_filename() == spriteCerveza.get_path():
+			pedido = spriteCerveza.instance()
+			instanciar_jarras("JarraCerveza")
+		elif objeto.get_filename() == spritePan.get_path():
+			pedido = spritePan.instance()
+			instanciar_ingredientes(pan)
+		elif objeto.get_filename() == spriteQueso.get_path():
+			pedido = spriteQueso.instance()
+			instanciar_ingredientes(queso)
+		elif objeto.get_filename() == spriteCarneCocinada.get_path():
+			pedido = instanciar_comida("CarneCocinada")
+		elif objeto.get_filename() == spritePescadoCocinado.get_path():
+			pedido = instanciar_comida("PescadoCocinado")
+		elif objeto.get_filename() == spriteSopa.get_path():
+			pedido = instanciar_comida("Sopa")
+		elif objeto.get_filename() == spriteQuebrantos.get_path():
+			pedido = instanciar_comida("Quebrantos")
+		elif objeto.get_filename() == spriteOlla.get_path():
+			pedido = instanciar_comida("Olla")
+		elif objeto.get_filename() == spriteEstofado.get_path():
+			pedido = instanciar_comida("Estofado")
+	else:
+		if objeto.get_filename() == spriteVino.get_path():
+			pedido = spriteVino.instance()
+			instanciar_jarras("JarraVino2")
+		elif objeto.get_filename() == spriteCerveza.get_path():
+			pedido = spriteCerveza.instance()
+			instanciar_jarras("JarraCerveza2")
+		elif objeto.get_filename() == spritePan.get_path():
+			pedido = spritePan.instance()
+			instanciar_ingredientes(pan2)
+		elif objeto.get_filename() == spriteQueso.get_path():
+			pedido = spriteQueso.instance()
+			instanciar_ingredientes(queso2)
+		elif objeto.get_filename() == spriteCarneCocinada.get_path():
+			pedido = instanciar_comida("CarneCocinada2")
+		elif objeto.get_filename() == spritePescadoCocinado.get_path():
+			pedido = instanciar_comida("PescadoCocinado2")
+		elif objeto.get_filename() == spriteSopa.get_path():
+			pedido = instanciar_comida("Sopa2")
+		elif objeto.get_filename() == spriteQuebrantos.get_path():
+			pedido = instanciar_comida("Quebrantos2")
+		elif objeto.get_filename() == spriteOlla.get_path():
+			pedido = instanciar_comida("Olla2")
+		elif objeto.get_filename() == spriteEstofado.get_path():
+			pedido = instanciar_comida("Estofado2")
+	objeto.queue_free()
+	npc.add_child(pedido)
+	npc.objeto = pedido
+	pedido.set_pos(npc.get_node("Mano_derecha").get_pos())
+	npc.get_parent().get_node("Pedido").hide()
+	npc.beber_comer()

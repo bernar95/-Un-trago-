@@ -1,6 +1,6 @@
 [gd_scene load_steps=70 format=1]
 
-[ext_resource path="res://Scripts/Tiempo.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Taberna.gd" type="Script" id=1]
 [ext_resource path="res://Tiles/house_inside.png" type="Texture" id=2]
 [ext_resource path="res://Tiles/hyptosis_tile-art-batch-3.png" type="Texture" id=3]
 [ext_resource path="res://Tiles/woodland_indoor_x3.png" type="Texture" id=4]
@@ -59,12 +59,12 @@ extents = Vector2( 10, 10 )
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10.1353 )
+extents = Vector2( 1.35767, 10.1353 )
 
 [sub_resource type="RectangleShape2D" id=7]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 8.29099, 10 )
 
 [sub_resource type="RectangleShape2D" id=8]
 
@@ -4709,142 +4709,128 @@ _update_shape_index = 0
 
 editor/display_folded = true
 
-[node name="Barra" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 310.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
-[node name="Barra5" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 310.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
-[node name="Barra6" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 247.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
-[node name="Barra4 2" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 562.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
-[node name="Barra3" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 436.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
-[node name="Barra4" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 688.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
-[node name="Barra2" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 373.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
-[node name="Barra4 4" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 625.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
-[node name="Barra3 3" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 499.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
-[node name="Barra34" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 751.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
 [node name="Barra1" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 341.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
-[node name="Barra5 2" type="Sprite" parent="Barra"]
-
-transform/pos = Vector2( 341.655, 143.363 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 159, 15, 33, 37 )
-
-[node name="Barra53" type="Sprite" parent="Barra"]
 
 transform/pos = Vector2( 278.655, 143.363 )
 texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 159, 15, 33, 37 )
 
-[node name="Barra4 3" type="Sprite" parent="Barra"]
+[node name="Barra2" type="Sprite" parent="Barra"]
 
-transform/pos = Vector2( 593.655, 143.363 )
+transform/pos = Vector2( 310.655, 143.363 )
 texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 159, 15, 33, 37 )
 
-[node name="Barra3 2" type="Sprite" parent="Barra"]
+[node name="Barra3" type="Sprite" parent="Barra"]
 
-transform/pos = Vector2( 467.655, 143.363 )
+transform/pos = Vector2( 341.655, 143.363 )
 texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 159, 15, 33, 37 )
 
-[node name="Barra33" type="Sprite" parent="Barra"]
+[node name="Barra4" type="Sprite" parent="Barra"]
 
-transform/pos = Vector2( 719.655, 143.363 )
+transform/pos = Vector2( 373.655, 143.363 )
 texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 159, 15, 33, 37 )
 
-[node name="Barra2 2" type="Sprite" parent="Barra"]
+[node name="Barra5" type="Sprite" parent="Barra"]
 
 transform/pos = Vector2( 404.655, 143.363 )
 texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 159, 15, 33, 37 )
 
-[node name="Barra24 2" type="Sprite" parent="Barra"]
+[node name="Barra6" type="Sprite" parent="Barra"]
 
-transform/pos = Vector2( 656.655, 143.363 )
+transform/pos = Vector2( 436.655, 143.363 )
 texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 159, 15, 33, 37 )
 
-[node name="Barra23" type="Sprite" parent="Barra"]
+[node name="Barra7" type="Sprite" parent="Barra"]
+
+transform/pos = Vector2( 467.655, 143.363 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 159, 15, 33, 37 )
+
+[node name="Barra8" type="Sprite" parent="Barra"]
+
+transform/pos = Vector2( 499.655, 143.363 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 159, 15, 33, 37 )
+
+[node name="Barra9" type="Sprite" parent="Barra"]
 
 transform/pos = Vector2( 530.655, 143.363 )
 texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 159, 15, 33, 37 )
 
-[node name="Barra24" type="Sprite" parent="Barra"]
+[node name="Barra10" type="Sprite" parent="Barra"]
+
+transform/pos = Vector2( 562.655, 143.363 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 159, 15, 33, 37 )
+
+[node name="Barra11" type="Sprite" parent="Barra"]
+
+transform/pos = Vector2( 593.655, 143.363 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 159, 15, 33, 37 )
+
+[node name="Barra12" type="Sprite" parent="Barra"]
+
+transform/pos = Vector2( 625.655, 143.363 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 159, 15, 33, 37 )
+
+[node name="Barra13" type="Sprite" parent="Barra"]
+
+transform/pos = Vector2( 656.655, 143.363 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 159, 15, 33, 37 )
+
+[node name="Barra14" type="Sprite" parent="Barra"]
+
+transform/pos = Vector2( 688.655, 143.363 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 159, 15, 33, 37 )
+
+[node name="Barra15" type="Sprite" parent="Barra"]
+
+transform/pos = Vector2( 719.655, 143.363 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 159, 15, 33, 37 )
+
+[node name="Barra16" type="Sprite" parent="Barra"]
+
+transform/pos = Vector2( 751.655, 143.363 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 159, 15, 33, 37 )
+
+[node name="Barra17" type="Sprite" parent="Barra"]
 
 transform/pos = Vector2( 782.655, 143.363 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 159, 15, 33, 37 )
+
+[node name="Barra" type="Sprite" parent="Barra"]
+
+transform/pos = Vector2( 247.655, 143.363 )
 texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 159, 15, 33, 37 )
@@ -4853,7 +4839,7 @@ region_rect = Rect2( 159, 15, 33, 37 )
 
 input/pickable = false
 shapes/0/shape = SubResource( 6 )
-shapes/0/transform = Matrix32( 28.3821, 0, 0, 2.04201, 514.804, 141.143 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 279.294, 143.411 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -4864,8 +4850,535 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D"]
 
-transform/pos = Vector2( 514.804, 141.143 )
-transform/scale = Vector2( 28.3821, 2.04201 )
+transform/pos = Vector2( 279.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D"]
+
+transform/pos = Vector2( 278.898, 144.214 )
+transform/scale = Vector2( 0.481849, 0.586365 )
+
+[node name="Barra1" type="Node2D" parent="Barra/StaticBody2D/InteraccionCliente"]
+
+transform/pos = Vector2( 2.16925, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D1" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 310.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D1"]
+
+transform/pos = Vector2( 310.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D1"]
+
+transform/pos = Vector2( 310.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra2" type="Node2D" parent="Barra/StaticBody2D1/InteraccionCliente"]
+
+transform/pos = Vector2( 0.0938721, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 341.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D2"]
+
+transform/pos = Vector2( 341.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D2"]
+
+transform/pos = Vector2( 341.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra3" type="Node2D" parent="Barra/StaticBody2D2/InteraccionCliente"]
+
+transform/pos = Vector2( 2.16925, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 373.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D3"]
+
+transform/pos = Vector2( 373.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D3"]
+
+transform/pos = Vector2( 373.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra4" type="Node2D" parent="Barra/StaticBody2D3/InteraccionCliente"]
+
+transform/pos = Vector2( 0.0938721, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 405.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D4"]
+
+transform/pos = Vector2( 405.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D4"]
+
+transform/pos = Vector2( 404.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra5" type="Node2D" parent="Barra/StaticBody2D4/InteraccionCliente"]
+
+transform/pos = Vector2( 2.16919, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 436.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D5"]
+
+transform/pos = Vector2( 436.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D5"]
+
+transform/pos = Vector2( 436.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra6" type="Node2D" parent="Barra/StaticBody2D5/InteraccionCliente"]
+
+transform/pos = Vector2( 0.0938721, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 468.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D6"]
+
+transform/pos = Vector2( 468.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D6"]
+
+transform/pos = Vector2( 467.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra7" type="Node2D" parent="Barra/StaticBody2D6/InteraccionCliente"]
+
+transform/pos = Vector2( 2.16919, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 499.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D7"]
+
+transform/pos = Vector2( 499.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D7"]
+
+transform/pos = Vector2( 499.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra8" type="Node2D" parent="Barra/StaticBody2D7/InteraccionCliente"]
+
+transform/pos = Vector2( 0.0938721, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 531.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D8"]
+
+transform/pos = Vector2( 531.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D8"]
+
+transform/pos = Vector2( 531.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra9" type="Node2D" parent="Barra/StaticBody2D8/InteraccionCliente"]
+
+transform/pos = Vector2( 0.0938721, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 562.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D9"]
+
+transform/pos = Vector2( 562.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D9"]
+
+transform/pos = Vector2( 562.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra10" type="Node2D" parent="Barra/StaticBody2D9/InteraccionCliente"]
+
+transform/pos = Vector2( 0.0938721, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 594.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D10"]
+
+transform/pos = Vector2( 594.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D10"]
+
+transform/pos = Vector2( 593.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra11" type="Node2D" parent="Barra/StaticBody2D10/InteraccionCliente"]
+
+transform/pos = Vector2( 0.09375, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 625.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D11"]
+
+transform/pos = Vector2( 625.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D11"]
+
+transform/pos = Vector2( 625.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra12" type="Node2D" parent="Barra/StaticBody2D11/InteraccionCliente"]
+
+transform/pos = Vector2( 0.0938721, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 657.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D12"]
+
+transform/pos = Vector2( 657.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D12"]
+
+transform/pos = Vector2( 656.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra13" type="Node2D" parent="Barra/StaticBody2D12/InteraccionCliente"]
+
+transform/pos = Vector2( 2.16919, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 688.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D13"]
+
+transform/pos = Vector2( 688.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D13"]
+
+transform/pos = Vector2( 688.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra14" type="Node2D" parent="Barra/StaticBody2D13/InteraccionCliente"]
+
+transform/pos = Vector2( 0.0938721, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 720.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D14"]
+
+transform/pos = Vector2( 720.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D14"]
+
+transform/pos = Vector2( 719.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra15" type="Node2D" parent="Barra/StaticBody2D14/InteraccionCliente"]
+
+transform/pos = Vector2( 2.16931, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 751.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D15"]
+
+transform/pos = Vector2( 751.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D15"]
+
+transform/pos = Vector2( 751.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra16" type="Node2D" parent="Barra/StaticBody2D15/InteraccionCliente"]
+
+transform/pos = Vector2( 2.16919, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 783.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D16"]
+
+transform/pos = Vector2( 783.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra/StaticBody2D16"]
+
+transform/pos = Vector2( 783.898, 144.001 )
+transform/scale = Vector2( 0.481849, 0.593005 )
+
+[node name="Barra17" type="Node2D" parent="Barra/StaticBody2D16/InteraccionCliente"]
+
+transform/pos = Vector2( 0.0938721, 47.9335 )
+transform/scale = Vector2( 1.02317, 0.556345 )
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="Barra"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 247.294, 143.411 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D17"]
+
+transform/pos = Vector2( 247.294, 143.411 )
+transform/scale = Vector2( 11.0826, 1.78231 )
 shape = SubResource( 6 )
 trigger = false
 _update_shape_index = 0
@@ -4874,32 +5387,56 @@ _update_shape_index = 0
 
 editor/display_folded = true
 
-[node name="Sprite" type="Sprite" parent="Barra2"]
+[node name="Barra18" type="Sprite" parent="Barra2"]
 
 transform/pos = Vector2( 245.285, 102.008 )
 texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 126, 80, 30, 47 )
 
-[node name="Sprite2" type="Sprite" parent="Barra2"]
-
-transform/pos = Vector2( 786.285, 56.008 )
-texture = ExtResource( 2 )
-region = true
-region_rect = Rect2( 126, 80, 30, 47 )
-
-[node name="Sprite1" type="Sprite" parent="Barra2"]
+[node name="Barra19" type="Sprite" parent="Barra2"]
 
 transform/pos = Vector2( 245.285, 55.0075 )
 texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 126, 80, 30, 47 )
 
+[node name="StaticBody2D1" type="StaticBody2D" parent="Barra2"]
+
+input/pickable = false
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Matrix32( 1.23212, 0, 0, 2.30769, 244.304, 102 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barra2/StaticBody2D1"]
+
+transform/pos = Vector2( 244.304, 102 )
+transform/scale = Vector2( 1.23212, 2.30769 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra2/StaticBody2D1"]
+
+transform/pos = Vector2( 244.603, 101.877 )
+transform/scale = Vector2( 0.42969, 0.733001 )
+
+[node name="Barra18" type="Node2D" parent="Barra2/StaticBody2D1/InteraccionCliente"]
+
+transform/pos = Vector2( -69.0254, 13.0269 )
+transform/scale = Vector2( 1.14737, 0.450088 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="Barra2"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 7 )
-shapes/0/transform = Matrix32( 1.39257, 0, 0, 5.12168, 244.438, 76.6081 )
+shapes/0/transform = Matrix32( 1.24645, 0, 0, 2.30769, 244.789, 55 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -4910,11 +5447,28 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barra2/StaticBody2D"]
 
-transform/pos = Vector2( 244.438, 76.6081 )
-transform/scale = Vector2( 1.39257, 5.12168 )
+transform/pos = Vector2( 244.789, 55 )
+transform/scale = Vector2( 1.24645, 2.30769 )
 shape = SubResource( 7 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barra2/StaticBody2D"]
+
+transform/pos = Vector2( 244.603, 54.8772 )
+transform/scale = Vector2( 0.42969, 0.733001 )
+
+[node name="Barra19" type="Node2D" parent="Barra2/StaticBody2D/InteraccionCliente"]
+
+transform/pos = Vector2( -69.0254, 18.484 )
+transform/scale = Vector2( 1.14737, 0.450088 )
+
+[node name="Sprite2" type="Sprite" parent="Barra2"]
+
+transform/pos = Vector2( 786.285, 56.008 )
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 126, 80, 30, 47 )
 
 [node name="StaticBody2D 2" type="StaticBody2D" parent="Barra2"]
 
@@ -5691,6 +6245,7 @@ region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="StaticBody2D 7" type="StaticBody2D" parent="Barriles"]
 
+editor/display_folded = true
 input/pickable = false
 shapes/0/shape = SubResource( 23 )
 shapes/0/transform = Matrix32( 1.3869, 0, 0, 0.933216, 928.058, 384.268 )
@@ -5709,6 +6264,13 @@ transform/scale = Vector2( 1.3869, 0.933216 )
 shape = SubResource( 23 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barriles/StaticBody2D 7"]
+
+[node name="Barril6" type="Node2D" parent="Barriles/StaticBody2D 7/InteraccionCliente"]
+
+transform/pos = Vector2( 900.056, 394.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
 
 [node name="StaticBody2D 6" type="StaticBody2D" parent="Barriles"]
 
@@ -5731,6 +6293,13 @@ shape = SubResource( 24 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Barriles/StaticBody2D 6"]
+
+[node name="Barril4" type="Node2D" parent="Barriles/StaticBody2D 6/InteraccionCliente"]
+
+transform/pos = Vector2( 692.056, 378.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
+
 [node name="StaticBody2D 5" type="StaticBody2D" parent="Barriles"]
 
 input/pickable = false
@@ -5751,6 +6320,13 @@ transform/scale = Vector2( 1.3881, 0.923534 )
 shape = SubResource( 25 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barriles/StaticBody2D 5"]
+
+[node name="Barril5" type="Node2D" parent="Barriles/StaticBody2D 5/InteraccionCliente"]
+
+transform/pos = Vector2( 523.056, 490.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
 
 [node name="StaticBody2D 4" type="StaticBody2D" parent="Barriles"]
 
@@ -5773,6 +6349,13 @@ shape = SubResource( 26 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Barriles/StaticBody2D 4"]
+
+[node name="Barril1" type="Node2D" parent="Barriles/StaticBody2D 4/InteraccionCliente"]
+
+transform/pos = Vector2( 139.056, 422.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
+
 [node name="StaticBody2D 3" type="StaticBody2D" parent="Barriles"]
 
 input/pickable = false
@@ -5793,6 +6376,13 @@ transform/scale = Vector2( 1.42081, 0.923958 )
 shape = SubResource( 27 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barriles/StaticBody2D 3"]
+
+[node name="Barril7" type="Node2D" parent="Barriles/StaticBody2D 3/InteraccionCliente"]
+
+transform/pos = Vector2( 885.056, 172.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
 
 [node name="StaticBody2D 2" type="StaticBody2D" parent="Barriles"]
 
@@ -5815,6 +6405,13 @@ shape = SubResource( 28 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Barriles/StaticBody2D 2"]
+
+[node name="Barril3" type="Node2D" parent="Barriles/StaticBody2D 2/InteraccionCliente"]
+
+transform/pos = Vector2( 501.056, 235.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
+
 [node name="StaticBody2D" type="StaticBody2D" parent="Barriles"]
 
 input/pickable = false
@@ -5835,6 +6432,13 @@ transform/scale = Vector2( 1.31858, 0.939179 )
 shape = SubResource( 29 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Barriles/StaticBody2D"]
+
+[node name="Barril2" type="Node2D" parent="Barriles/StaticBody2D/InteraccionCliente"]
+
+transform/pos = Vector2( 411.056, 264.39 )
+transform/scale = Vector2( 0.341997, 0.331556 )
 
 [node name="Sillas" type="Node" parent="."]
 
@@ -6170,6 +6774,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D"]
+
 [node name="StaticBody2D8" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( -31, 159 )
@@ -6191,6 +6797,8 @@ transform/scale = Vector2( 1.20165, 1.63964 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D8"]
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Sillas"]
 
@@ -6214,6 +6822,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D9"]
+
 [node name="StaticBody2D10" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 48, 159 )
@@ -6235,6 +6845,8 @@ transform/scale = Vector2( 1.20165, 1.63964 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D10"]
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="Sillas"]
 
@@ -6258,6 +6870,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D11"]
+
 [node name="StaticBody2D1" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( -40, 0 )
@@ -6279,6 +6893,8 @@ transform/scale = Vector2( 1.20165, 1.63964 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D1"]
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="Sillas"]
 
@@ -6302,6 +6918,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D14"]
+
 [node name="StaticBody2D15" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 231, 224 )
@@ -6323,6 +6941,8 @@ transform/scale = Vector2( 1.20165, 1.63964 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D15"]
 
 [node name="StaticBody2D30" type="StaticBody2D" parent="Sillas"]
 
@@ -6346,6 +6966,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D30"]
+
 [node name="StaticBody2D31" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 439, 208 )
@@ -6367,6 +6989,8 @@ transform/scale = Vector2( 1.20165, 1.63964 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D31"]
 
 [node name="StaticBody2D32" type="StaticBody2D" parent="Sillas"]
 
@@ -6390,6 +7014,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D32"]
+
 [node name="StaticBody2D33" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 679, 128 )
@@ -6411,6 +7037,8 @@ transform/scale = Vector2( 1.20165, 1.63964 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D33"]
 
 [node name="StaticBody2D34" type="StaticBody2D" parent="Sillas"]
 
@@ -6434,6 +7062,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D34"]
+
 [node name="StaticBody2D35" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 759, 128 )
@@ -6455,6 +7085,8 @@ transform/scale = Vector2( 1.20165, 1.63964 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D35"]
 
 [node name="StaticBody2D36" type="StaticBody2D" parent="Sillas"]
 
@@ -6478,6 +7110,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D36"]
+
 [node name="StaticBody2D37" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 711, 336 )
@@ -6499,6 +7133,8 @@ transform/scale = Vector2( 1.20165, 1.63964 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D37"]
 
 [node name="StaticBody2D38" type="StaticBody2D" parent="Sillas"]
 
@@ -6522,6 +7158,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D38"]
+
 [node name="StaticBody2D39" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 535, 352 )
@@ -6543,6 +7181,8 @@ transform/scale = Vector2( 1.20165, 1.63964 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D39"]
 
 [node name="StaticBody2D40" type="StaticBody2D" parent="Sillas"]
 
@@ -6566,6 +7206,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D40"]
+
 [node name="StaticBody2D41" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 135, 368 )
@@ -6587,6 +7229,8 @@ transform/scale = Vector2( 1.20165, 1.63964 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D41"]
 
 [node name="StaticBody2D42" type="StaticBody2D" parent="Sillas"]
 
@@ -6610,6 +7254,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D42"]
+
 [node name="StaticBody2D43" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 55, 368 )
@@ -6631,6 +7277,8 @@ transform/scale = Vector2( 1.20165, 1.63964 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D43"]
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Sillas"]
 
@@ -6654,6 +7302,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D2"]
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( -1, 91 )
@@ -6675,6 +7325,8 @@ transform/scale = Vector2( 1.21669, 1.23534 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D3"]
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Sillas"]
 
@@ -6698,6 +7350,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D4"]
+
 [node name="StaticBody2D16" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 401, 304 )
@@ -6719,6 +7373,8 @@ transform/scale = Vector2( 1.21669, 1.23534 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D16"]
 
 [node name="StaticBody2D17" type="StaticBody2D" parent="Sillas"]
 
@@ -6742,6 +7398,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D17"]
+
 [node name="StaticBody2D18" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 641, 224 )
@@ -6763,6 +7421,8 @@ transform/scale = Vector2( 1.21669, 1.23534 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D18"]
 
 [node name="StaticBody2D19" type="StaticBody2D" parent="Sillas"]
 
@@ -6786,6 +7446,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D19"]
+
 [node name="StaticBody2D20" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 721, 224 )
@@ -6807,6 +7469,8 @@ transform/scale = Vector2( 1.21669, 1.23534 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D20"]
 
 [node name="StaticBody2D21" type="StaticBody2D" parent="Sillas"]
 
@@ -6830,6 +7494,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D21"]
+
 [node name="StaticBody2D22" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 737, 432 )
@@ -6851,6 +7517,8 @@ transform/scale = Vector2( 1.21669, 1.23534 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D22"]
 
 [node name="StaticBody2D23" type="StaticBody2D" parent="Sillas"]
 
@@ -6874,6 +7542,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D23"]
+
 [node name="StaticBody2D24" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 561, 448 )
@@ -6895,6 +7565,8 @@ transform/scale = Vector2( 1.21669, 1.23534 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D24"]
 
 [node name="StaticBody2D25" type="StaticBody2D" parent="Sillas"]
 
@@ -6918,6 +7590,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D25"]
+
 [node name="StaticBody2D26" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 161, 464 )
@@ -6939,6 +7613,8 @@ transform/scale = Vector2( 1.21669, 1.23534 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D26"]
 
 [node name="StaticBody2D27" type="StaticBody2D" parent="Sillas"]
 
@@ -6962,6 +7638,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D27"]
+
 [node name="StaticBody2D28" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 81, 464 )
@@ -6983,6 +7661,8 @@ transform/scale = Vector2( 1.21669, 1.23534 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D28"]
 
 [node name="StaticBody2D29" type="StaticBody2D" parent="Sillas"]
 
@@ -7006,6 +7686,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D29"]
+
 [node name="StaticBody2D5" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 8, 254 )
@@ -7027,6 +7709,8 @@ transform/scale = Vector2( 1.21669, 1.23534 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D5"]
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Sillas"]
 
@@ -7050,6 +7734,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D6"]
+
 [node name="StaticBody2D7" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 32, 288 )
@@ -7071,6 +7757,8 @@ transform/scale = Vector2( 1.21669, 1.23534 )
 shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
+
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D7"]
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="Sillas"]
 
@@ -7094,6 +7782,8 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D12"]
+
 [node name="StaticBody2D13" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 176, 354 )
@@ -7116,8 +7806,11 @@ shape = SubResource( 30 )
 trigger = false
 _update_shape_index = 0
 
+[node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D13"]
+
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 328.029, 97.829 )
 transform/scale = Vector2( 0.169749, 0.363435 )
 input/pickable = false
@@ -7151,7 +7844,6 @@ transform/scale = Vector2( 5.89107, 2.75153 )
 texture = ExtResource( 11 )
 vframes = 4
 hframes = 4
-frame = 1
 region_rect = Rect2( 0, 0, 32, 48 )
 
 [node name="Navegacion" type="Node" parent="."]
@@ -7169,105 +7861,6 @@ transform/pos = Vector2( 511.214, 652.043 )
 transform/scale = Vector2( 0.882584, 0.738347 )
 
 [node name="Destinos" type="Node2D" parent="Navegacion/Navigation2D"]
-
-[node name="NodeBarra" type="Node2D" parent="Navegacion/Navigation2D/Destinos"]
-
-editor/display_folded = true
-
-[node name="Barra1" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 279.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra2" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 310.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra3" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 342.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra4" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 373.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra5" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 405.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra6" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 436.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra7" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 468.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra8" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 499.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra9" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 531.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra10" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 562.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra11" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 593.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra12" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 625.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra13" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 657.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra14" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 688.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra15" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 720.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra16" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 752.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra17" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 783.943, 172.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra18" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 214.943, 111.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
-
-[node name="Barra19" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarra"]
-
-transform/pos = Vector2( 214.943, 68.426 )
-transform/scale = Vector2( 0.493013, 0.329915 )
 
 [node name="NodeSilla" type="Node2D" parent="Navegacion/Navigation2D/Destinos"]
 
@@ -7492,45 +8085,6 @@ transform/scale = Vector2( 0.424638, 0.384196 )
 
 transform/pos = Vector2( 880.308, 514.375 )
 transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="NodeBarril" type="Node2D" parent="Navegacion/Navigation2D/Destinos"]
-
-editor/display_folded = true
-
-[node name="Barril1" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
-
-transform/pos = Vector2( 139.056, 422.39 )
-transform/scale = Vector2( 0.341997, 0.331556 )
-
-[node name="Barril2" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
-
-transform/pos = Vector2( 411.056, 264.39 )
-transform/scale = Vector2( 0.341997, 0.331556 )
-
-[node name="Barril3" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
-
-transform/pos = Vector2( 501.056, 235.39 )
-transform/scale = Vector2( 0.341997, 0.331556 )
-
-[node name="Barril4" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
-
-transform/pos = Vector2( 692.056, 378.39 )
-transform/scale = Vector2( 0.341997, 0.331556 )
-
-[node name="Barril5" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
-
-transform/pos = Vector2( 523.056, 490.39 )
-transform/scale = Vector2( 0.341997, 0.331556 )
-
-[node name="Barril6" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
-
-transform/pos = Vector2( 900.056, 394.39 )
-transform/scale = Vector2( 0.341997, 0.331556 )
-
-[node name="Barril7" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeBarril"]
-
-transform/pos = Vector2( 885.056, 172.39 )
-transform/scale = Vector2( 0.341997, 0.331556 )
 
 [node name="Hud" type="Node" parent="."]
 
@@ -10456,7 +11010,6 @@ max_lines_visible = -1
 
 [node name="Reputacion" type="Node2D" parent="Hud"]
 
-editor/display_folded = true
 script/script = ExtResource( 29 )
 
 [node name="Reputacion" type="Label" parent="Hud/Reputacion"]

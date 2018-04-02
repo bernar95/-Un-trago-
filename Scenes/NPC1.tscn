@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://Tiles/greek_m2.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/NPC.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/tiempo.fnt" type="BitmapFont" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -11,11 +12,11 @@ radius = 7.96871
 [sub_resource type="Animation" id=2]
 
 resource/name = "Andar abajo"
-length = 0.5
+length = 0.3
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("NPC:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
@@ -31,7 +32,7 @@ length = 0.3
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("NPC:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
@@ -48,7 +49,7 @@ length = 0.3
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("NPC:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
@@ -65,7 +66,7 @@ length = 0.3
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("NPC:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
@@ -100,13 +101,23 @@ velocity/angular = 0.0
 damp_override/linear = -1.0
 damp_override/angular = -1.0
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="NPC" type="Sprite" parent="."]
 
 texture = ExtResource( 1 )
 vframes = 4
 hframes = 4
-frame = 15
+frame = 2
 script/script = ExtResource( 2 )
+
+[node name="Mano_izquierda" type="Node2D" parent="NPC"]
+
+transform/pos = Vector2( -12.722, 4.71835 )
+transform/scale = Vector2( 0.154334, 0.15623 )
+
+[node name="Mano_derecha" type="Node2D" parent="NPC"]
+
+transform/pos = Vector2( 12.2918, 5.67084 )
+transform/scale = Vector2( 0.168039, 0.173035 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
@@ -128,5 +139,38 @@ playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
 autoplay = ""
+
+[node name="Pedido" type="Panel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -10.0
+margin/top = -44.0
+margin/right = 11.0
+margin/bottom = -23.0
+
+[node name="Sprite" type="Sprite" parent="Pedido"]
+
+transform/pos = Vector2( 9.84644, 13.2329 )
+transform/scale = Vector2( 1.5, 1.5 )
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -9.0
+margin/top = -28.0
+margin/right = 31.0
+margin/bottom = -11.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
 
 
