@@ -52,9 +52,11 @@ func _ready():
 	tiempo2.set_one_shot(true)
 	self.add_child(tiempo2)
 	set_fixed_process(true)
+	set_process_input(true)
 	labelDia = get_node("Hud/Dia")
 	labelMomento = get_node("Hud/MomentoDia")
 	labelTiempo = get_node("Hud/Tiempo")
+	get_node("Hud/Menu_pausa").hide()
 	
 	menu = {
 	"res://Scenes/JarraVino.tscn": Rect2(Vector2(197, 337), Vector2(20, 20))}
@@ -145,6 +147,12 @@ func _ready():
 	
 	tiempo()
 	pass
+
+func _input(event):
+	if event.type == InputEvent.KEY:
+		if event.is_action_pressed("ui_pause"):
+			get_tree().set_pause(true)
+			get_node("Hud/Menu_pausa").show()
 
 func _fixed_process(delta):
 	labelTiempo.set_text(str(int(tiempo.get_time_left())))

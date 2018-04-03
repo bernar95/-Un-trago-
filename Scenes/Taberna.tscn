@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=1]
+[gd_scene load_steps=72 format=1]
 
 [ext_resource path="res://Scripts/Taberna.gd" type="Script" id=1]
 [ext_resource path="res://Tiles/house_inside.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://Fonts/titulo.fnt" type="BitmapFont" id=28]
 [ext_resource path="res://Scripts/Reputacion.gd" type="Script" id=29]
 [ext_resource path="res://Scripts/LibroPrecios.gd" type="Script" id=30]
+[ext_resource path="res://Scripts/Pausa.gd" type="Script" id=31]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -190,9 +191,14 @@ height = 20.0
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="CapsuleShape2D" id=31]
 
-resource/name = "Andar abajo"
+custom_solver_bias = 0.0
+radius = 10.0
+height = 2.01312
+
+[sub_resource type="Animation" id=32]
+
 length = 0.3
 loop = false
 step = 0.1
@@ -202,23 +208,6 @@ tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
 "times": FloatArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 1, 2, 3, 2 ]
-}
-
-[sub_resource type="Animation" id=32]
-
-resource/name = "Andar abajo rapido"
-length = 0.15
-loop = false
-step = 0.05
-tracks/0/type = "value"
-tracks/0/path = NodePath("Personaje:frame")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 0.05, 0.1, 0.15 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 1, 2, 3, 2 ]
@@ -226,24 +215,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=33]
 
-resource/name = "Andar arriba"
-length = 0.3
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Personaje:frame")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 13, 14, 15, 14 ]
-}
-
-[sub_resource type="Animation" id=34]
-
-resource/name = "Andar arriba rapido"
 length = 0.15
 loop = false
 step = 0.05
@@ -253,6 +224,22 @@ tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
 "times": FloatArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 2 ]
+}
+
+[sub_resource type="Animation" id=34]
+
+length = 0.3
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Personaje:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 13, 14, 15, 14 ]
@@ -260,24 +247,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=35]
 
-resource/name = "Andar derecha"
-length = 0.3
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Personaje:frame")
-tracks/0/interp = 1
-tracks/0/imported = false
-tracks/0/keys = {
-"times": FloatArray( 0, 0.1, 0.2, 0.3 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 9, 10, 11, 10 ]
-}
-
-[sub_resource type="Animation" id=36]
-
-resource/name = "Andar derecha rapido"
 length = 0.15
 loop = false
 step = 0.05
@@ -287,6 +256,22 @@ tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
 "times": FloatArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 13, 14, 15, 14 ]
+}
+
+[sub_resource type="Animation" id=36]
+
+length = 0.3
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Personaje:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 9, 10, 11, 10 ]
@@ -294,7 +279,22 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=37]
 
-resource/name = "Andar izquierda"
+length = 0.15
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Personaje:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": FloatArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 10 ]
+}
+
+[sub_resource type="Animation" id=38]
+
 length = 0.3
 loop = false
 step = 0.1
@@ -309,9 +309,8 @@ tracks/0/keys = {
 "values": [ 5, 6, 7, 6 ]
 }
 
-[sub_resource type="Animation" id=38]
+[sub_resource type="Animation" id=39]
 
-resource/name = "Andar izquierda rapido"
 length = 0.15
 loop = false
 step = 0.05
@@ -326,7 +325,7 @@ tracks/0/keys = {
 "values": [ 5, 6, 7, 6 ]
 }
 
-[sub_resource type="NavigationPolygon" id=39]
+[sub_resource type="NavigationPolygon" id=40]
 
 vertices = Vector2Array( 426.557, 388.236, 479.97, 384.275, 506.498, 383.455, 622.861, 388.113, 617.602, 428.024, 577.943, 450.595, 521.216, 445.384, 424.854, 415.927, 462.414, 384.275, 524.775, 503.62, 548.481, 498.996, 617.602, 495.419, 716.398, 518.656, 716.398, 538.683, 648.359, 538.33, 579.145, 526.065, 472.542, 460.508, 435.145, 441.655, 883.66, 380.927, 921.361, 351.269, 909.128, 423.185, 760.211, 318.97, 690.073, 329.425, 820.224, 424.619, 852.788, 396.922, 827.539, 396.922, 448.586, 262.361, 415.174, 283.315, 403.29, 221.257, 569.375, 260.121, 567.384, 192.452, 652.453, 222.891, 652.741, 310.399, 610.978, 299.207, 687.741, 223.399, 744.568, 219.306, 723.507, 293.977, 411.899, 314.049, 696.069, 385.506, 732.294, 439.393, 720.464, 441.186, 685.691, 441.544, 526.918, 693.864, 491.309, 697.761, 498.017, 552.715, 528.719, 537.412, 457.963, 534.475, 470.556, 502.215, 330.12, 533.812, 180.091, 558.79, 179.492, 533.044, 327.904, 460.972, 179.281, 458.636, 177.56, 447.852, 314.392, 447.182, 328.316, 460.929, 355.317, 285.956, 287.839, 318.692, 330.131, 533.673, 153.073, 71.1135, 213.548, 66.3361, 212.356, 162.462, 159.031, 89.7825, 100.369, 250.842, 99.6518, 234.71, 244.838, 237.22, 252.367, 249.05, 859, 153.888, 906.103, 157.868, 910.199, 218.177, 799.42, 162.16, 821.903, 514.93, 892.166, 518.515, 891.446, 527.901, 798.287, 526.969, 80.7804, 88.5909, 81.5748, 69.1275, 179.169, 163.156, 421.901, 485.126, 372.154, 442.138, 234.779, 349.947, 100.105, 349.947, 100.105, 326.727, 258.266, 325.592, 138.222, 189.857, 83.7369, 189.857, 83.7369, 164.71, 908.624, 294.593, 908.624, 318.97, 519.977, 300.146, 498.014, 250.165, 507.065, 303.045, 455.586, 261.382, 287.246, 422.996, 302.434, 406.927, 365.467, 415.151, 636.96, 447.382, 592.508, 489.325, 353.556, 273.632, 503.033, 190.462, 352.676, 219.497, 259.078, 374.948, 159.721, 393.816, 118.012, 375.421, 115.991, 429.608, 166.206, 416.511, 167.287, 422.996 )
 polygons = [ IntArray( 0, 1, 2, 3, 4, 5, 6, 7 ), IntArray( 8, 1, 0 ), IntArray( 9, 10, 11, 12, 13, 14, 15 ), IntArray( 6, 16, 17, 7 ), IntArray( 18, 19, 20 ), IntArray( 21, 19, 18, 22 ), IntArray( 18, 20, 23, 24 ), IntArray( 25, 24, 23 ), IntArray( 26, 8, 27, 28 ), IntArray( 29, 30, 31, 32, 33 ), IntArray( 32, 34, 35, 36, 22 ), IntArray( 27, 8, 0, 37 ), IntArray( 4, 3, 38, 25, 23, 39, 40, 41 ), IntArray( 42, 43, 44, 45 ), IntArray( 9, 45, 44, 46, 47 ), IntArray( 48, 46, 44, 49, 50 ), IntArray( 51, 52, 53, 54, 55 ), IntArray( 56, 27, 37, 57 ), IntArray( 48, 50, 58 ), IntArray( 59, 60, 61, 62 ), IntArray( 22, 38, 3, 33, 32 ), IntArray( 63, 64, 65, 66 ), IntArray( 67, 68, 69, 35, 70 ), IntArray( 71, 72, 73, 74 ), IntArray( 62, 75, 76, 59 ), IntArray( 77, 62, 61, 65 ), IntArray( 9, 15, 45 ), IntArray( 16, 47, 46, 78, 17 ), IntArray( 79, 17, 78, 55, 54 ), IntArray( 80, 81, 82, 83 ), IntArray( 84, 85, 86, 77 ), IntArray( 65, 84, 77 ), IntArray( 87, 88, 21, 36 ), IntArray( 36, 21, 22 ), IntArray( 29, 33, 89, 90 ), IntArray( 90, 89, 91, 92 ), IntArray( 91, 2, 1, 92 ), IntArray( 93, 94, 95, 79, 54 ), IntArray( 71, 74, 39, 23 ), IntArray( 4, 41, 96 ), IntArray( 97, 4, 96, 11 ), IntArray( 98, 56, 57 ), IntArray( 28, 99, 90, 92, 26 ), IntArray( 66, 100, 98, 57, 83 ), IntArray( 70, 35, 34, 31, 30 ), IntArray( 61, 70, 30, 99 ), IntArray( 61, 99, 28, 100 ), IntArray( 65, 61, 100, 66 ), IntArray( 80, 83, 57, 94, 101 ), IntArray( 10, 97, 11 ), IntArray( 10, 9, 6, 5 ), IntArray( 94, 0, 7, 95 ), IntArray( 94, 93, 101 ), IntArray( 80, 101, 102, 103 ), IntArray( 104, 103, 102, 105, 106 ), IntArray( 54, 104, 106, 93 ), IntArray( 51, 55, 48 ), IntArray( 48, 58, 51 ) ]
@@ -6776,6 +6775,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D"]
 
+[node name="Silla16" type="Node2D" parent="Sillas/StaticBody2D/InteraccionCliente"]
+
+transform/pos = Vector2( 127.94, 97.3261 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
 [node name="StaticBody2D8" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( -31, 159 )
@@ -6799,6 +6803,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D8"]
+
+[node name="Silla15" type="Node2D" parent="Sillas/StaticBody2D8/InteraccionCliente"]
+
+transform/pos = Vector2( 141.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="Sillas"]
 
@@ -6824,6 +6833,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D9"]
 
+[node name="Silla14" type="Node2D" parent="Sillas/StaticBody2D9/InteraccionCliente"]
+
+transform/pos = Vector2( 133.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
 [node name="StaticBody2D10" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 48, 159 )
@@ -6847,6 +6861,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D10"]
+
+[node name="Silla13" type="Node2D" parent="Sillas/StaticBody2D10/InteraccionCliente"]
+
+transform/pos = Vector2( 143.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="Sillas"]
 
@@ -6872,6 +6891,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D11"]
 
+[node name="Silla12" type="Node2D" parent="Sillas/StaticBody2D11/InteraccionCliente"]
+
+transform/pos = Vector2( 134.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
 [node name="StaticBody2D1" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( -40, 0 )
@@ -6895,6 +6919,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D1"]
+
+[node name="Silla17" type="Node2D" parent="Sillas/StaticBody2D1/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 97.0357 )
+transform/scale = Vector2( 0.37532, 0.523652 )
 
 [node name="StaticBody2D14" type="StaticBody2D" parent="Sillas"]
 
@@ -6920,6 +6949,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D14"]
 
+[node name="Silla11" type="Node2D" parent="Sillas/StaticBody2D14/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
 [node name="StaticBody2D15" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 231, 224 )
@@ -6943,6 +6977,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D15"]
+
+[node name="Silla10" type="Node2D" parent="Sillas/StaticBody2D15/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
 
 [node name="StaticBody2D30" type="StaticBody2D" parent="Sillas"]
 
@@ -6968,6 +7007,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D30"]
 
+[node name="Silla9" type="Node2D" parent="Sillas/StaticBody2D30/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
 [node name="StaticBody2D31" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 439, 208 )
@@ -6991,6 +7035,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D31"]
+
+[node name="Silla8" type="Node2D" parent="Sillas/StaticBody2D31/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
 
 [node name="StaticBody2D32" type="StaticBody2D" parent="Sillas"]
 
@@ -7016,6 +7065,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D32"]
 
+[node name="Silla7" type="Node2D" parent="Sillas/StaticBody2D32/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
 [node name="StaticBody2D33" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 679, 128 )
@@ -7039,6 +7093,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D33"]
+
+[node name="Silla6" type="Node2D" parent="Sillas/StaticBody2D33/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
 
 [node name="StaticBody2D34" type="StaticBody2D" parent="Sillas"]
 
@@ -7064,6 +7123,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D34"]
 
+[node name="Silla5" type="Node2D" parent="Sillas/StaticBody2D34/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
+
 [node name="StaticBody2D35" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 759, 128 )
@@ -7087,6 +7151,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D35"]
+
+[node name="Silla4" type="Node2D" parent="Sillas/StaticBody2D35/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.264 )
+transform/scale = Vector2( 0.37532, 0.51265 )
 
 [node name="StaticBody2D36" type="StaticBody2D" parent="Sillas"]
 
@@ -7112,6 +7181,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D36"]
 
+[node name="Silla25" type="Node2D" parent="Sillas/StaticBody2D36/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
 [node name="StaticBody2D37" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 711, 336 )
@@ -7135,6 +7209,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D37"]
+
+[node name="Silla24" type="Node2D" parent="Sillas/StaticBody2D37/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
 
 [node name="StaticBody2D38" type="StaticBody2D" parent="Sillas"]
 
@@ -7160,6 +7239,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D38"]
 
+[node name="Silla23" type="Node2D" parent="Sillas/StaticBody2D38/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
 [node name="StaticBody2D39" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 535, 352 )
@@ -7183,6 +7267,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D39"]
+
+[node name="Silla22" type="Node2D" parent="Sillas/StaticBody2D39/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
 
 [node name="StaticBody2D40" type="StaticBody2D" parent="Sillas"]
 
@@ -7208,6 +7297,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D40"]
 
+[node name="Silla21" type="Node2D" parent="Sillas/StaticBody2D40/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
 [node name="StaticBody2D41" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 135, 368 )
@@ -7231,6 +7325,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D41"]
+
+[node name="Silla20" type="Node2D" parent="Sillas/StaticBody2D41/InteraccionCliente"]
+
+transform/pos = Vector2( 136.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
 
 [node name="StaticBody2D42" type="StaticBody2D" parent="Sillas"]
 
@@ -7256,6 +7355,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D42"]
 
+[node name="Silla19" type="Node2D" parent="Sillas/StaticBody2D42/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
+
 [node name="StaticBody2D43" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 55, 368 )
@@ -7279,6 +7383,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D43"]
+
+[node name="Silla18" type="Node2D" parent="Sillas/StaticBody2D43/InteraccionCliente"]
+
+transform/pos = Vector2( 135.94, 96.326 )
+transform/scale = Vector2( 0.37532, 0.483327 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Sillas"]
 
@@ -7304,6 +7413,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D2"]
 
+[node name="Silla35" type="Node2D" parent="Sillas/StaticBody2D2/InteraccionCliente"]
+
+transform/pos = Vector2( 136.308, 87.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
 [node name="StaticBody2D3" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( -1, 91 )
@@ -7327,6 +7441,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D3"]
+
+[node name="Silla34" type="Node2D" parent="Sillas/StaticBody2D3/InteraccionCliente"]
+
+transform/pos = Vector2( 129.308, 87.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="Sillas"]
 
@@ -7352,6 +7471,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D4"]
 
+[node name="Silla33" type="Node2D" parent="Sillas/StaticBody2D4/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 84.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
 [node name="StaticBody2D16" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 401, 304 )
@@ -7375,6 +7499,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D16"]
+
+[node name="Silla27" type="Node2D" parent="Sillas/StaticBody2D16/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
 
 [node name="StaticBody2D17" type="StaticBody2D" parent="Sillas"]
 
@@ -7400,6 +7529,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D17"]
 
+[node name="Silla26" type="Node2D" parent="Sillas/StaticBody2D17/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
 [node name="StaticBody2D18" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 641, 224 )
@@ -7423,6 +7557,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D18"]
+
+[node name="Silla" type="Node2D" parent="Sillas/StaticBody2D18/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
 
 [node name="StaticBody2D19" type="StaticBody2D" parent="Sillas"]
 
@@ -7448,6 +7587,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D19"]
 
+[node name="Silla1" type="Node2D" parent="Sillas/StaticBody2D19/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
 [node name="StaticBody2D20" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 721, 224 )
@@ -7471,6 +7615,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D20"]
+
+[node name="Silla2" type="Node2D" parent="Sillas/StaticBody2D20/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
 
 [node name="StaticBody2D21" type="StaticBody2D" parent="Sillas"]
 
@@ -7496,6 +7645,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D21"]
 
+[node name="Silla3" type="Node2D" parent="Sillas/StaticBody2D21/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
 [node name="StaticBody2D22" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 737, 432 )
@@ -7519,6 +7673,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D22"]
+
+[node name="Silla43" type="Node2D" parent="Sillas/StaticBody2D22/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
 
 [node name="StaticBody2D23" type="StaticBody2D" parent="Sillas"]
 
@@ -7544,6 +7703,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D23"]
 
+[node name="Silla42" type="Node2D" parent="Sillas/StaticBody2D23/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
 [node name="StaticBody2D24" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 561, 448 )
@@ -7567,6 +7731,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D24"]
+
+[node name="Silla41" type="Node2D" parent="Sillas/StaticBody2D24/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
 
 [node name="StaticBody2D25" type="StaticBody2D" parent="Sillas"]
 
@@ -7592,6 +7761,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D25"]
 
+[node name="Silla40" type="Node2D" parent="Sillas/StaticBody2D25/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
 [node name="StaticBody2D26" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 161, 464 )
@@ -7615,6 +7789,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D26"]
+
+[node name="Silla39" type="Node2D" parent="Sillas/StaticBody2D26/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
 
 [node name="StaticBody2D27" type="StaticBody2D" parent="Sillas"]
 
@@ -7640,6 +7819,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D27"]
 
+[node name="Silla38" type="Node2D" parent="Sillas/StaticBody2D27/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
 [node name="StaticBody2D28" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 81, 464 )
@@ -7663,6 +7847,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D28"]
+
+[node name="Silla37" type="Node2D" parent="Sillas/StaticBody2D28/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
 
 [node name="StaticBody2D29" type="StaticBody2D" parent="Sillas"]
 
@@ -7688,6 +7877,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D29"]
 
+[node name="Silla36" type="Node2D" parent="Sillas/StaticBody2D29/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 82.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
 [node name="StaticBody2D5" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 8, 254 )
@@ -7711,6 +7905,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D5"]
+
+[node name="Silla32" type="Node2D" parent="Sillas/StaticBody2D5/InteraccionCliente"]
+
+transform/pos = Vector2( 136.308, 84.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="Sillas"]
 
@@ -7736,6 +7935,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D6"]
 
+[node name="Silla31" type="Node2D" parent="Sillas/StaticBody2D6/InteraccionCliente"]
+
+transform/pos = Vector2( 143.308, 84.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
 [node name="StaticBody2D7" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 32, 288 )
@@ -7759,6 +7963,11 @@ trigger = false
 _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D7"]
+
+[node name="Silla30" type="Node2D" parent="Sillas/StaticBody2D7/InteraccionCliente"]
+
+transform/pos = Vector2( 192.308, 50.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="Sillas"]
 
@@ -7784,6 +7993,11 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D12"]
 
+[node name="Silla29" type="Node2D" parent="Sillas/StaticBody2D12/InteraccionCliente"]
+
+transform/pos = Vector2( 192.308, 49.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
 [node name="StaticBody2D13" type="StaticBody2D" parent="Sillas"]
 
 transform/pos = Vector2( 176, 354 )
@@ -7808,6 +8022,45 @@ _update_shape_index = 0
 
 [node name="InteraccionCliente" type="Node2D" parent="Sillas/StaticBody2D13"]
 
+[node name="Silla28" type="Node2D" parent="Sillas/StaticBody2D13/InteraccionCliente"]
+
+transform/pos = Vector2( 192.308, 49.375 )
+transform/scale = Vector2( 0.424638, 0.384196 )
+
+[node name="Papelera " type="Node" parent="."]
+
+editor/display_folded = true
+
+[node name="Papelera" type="Sprite" parent="Papelera "]
+
+transform/pos = Vector2( 830.927, 43.0649 )
+texture = ExtResource( 9 )
+region = true
+region_rect = Rect2( 992, 415, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Papelera "]
+
+input/pickable = false
+shapes/0/shape = SubResource( 31 )
+shapes/0/transform = Matrix32( 1.37878, 0, 0, 1.16453, 830.744, 44.4425 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Papelera /StaticBody2D"]
+
+transform/pos = Vector2( 830.744, 44.4425 )
+transform/scale = Vector2( 1.37878, 1.16453 )
+shape = SubResource( 31 )
+trigger = false
+_update_shape_index = 0
+
+[node name="PapeleraInteraccion" type="Node2D" parent="Papelera /StaticBody2D"]
+
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
 editor/display_folded = true
@@ -7824,14 +8077,14 @@ script/script = ExtResource( 10 )
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-"anims/Andar abajo" = SubResource( 31 )
-"anims/Andar abajo rapido" = SubResource( 32 )
-"anims/Andar arriba" = SubResource( 33 )
-"anims/Andar arriba rapido" = SubResource( 34 )
-"anims/Andar derecha" = SubResource( 35 )
-"anims/Andar derecha rapido" = SubResource( 36 )
-"anims/Andar izquierda" = SubResource( 37 )
-"anims/Andar izquierda rapido" = SubResource( 38 )
+"anims/Andar abajo" = SubResource( 32 )
+"anims/Andar abajo rapido" = SubResource( 33 )
+"anims/Andar arriba" = SubResource( 34 )
+"anims/Andar arriba rapido" = SubResource( 35 )
+"anims/Andar derecha" = SubResource( 36 )
+"anims/Andar derecha rapido" = SubResource( 37 )
+"anims/Andar izquierda" = SubResource( 38 )
+"anims/Andar izquierda rapido" = SubResource( 39 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -7848,11 +8101,13 @@ region_rect = Rect2( 0, 0, 32, 48 )
 
 [node name="Navegacion" type="Node" parent="."]
 
+editor/display_folded = true
+
 [node name="Navigation2D" type="Navigation2D" parent="Navegacion"]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navegacion/Navigation2D"]
 
-navpoly = SubResource( 39 )
+navpoly = SubResource( 40 )
 enabled = true
 
 [node name="Spawn" type="Node2D" parent="Navegacion/Navigation2D"]
@@ -7860,235 +8115,7 @@ enabled = true
 transform/pos = Vector2( 511.214, 652.043 )
 transform/scale = Vector2( 0.882584, 0.738347 )
 
-[node name="Destinos" type="Node2D" parent="Navegacion/Navigation2D"]
-
-[node name="NodeSilla" type="Node2D" parent="Navegacion/Navigation2D/Destinos"]
-
-editor/display_folded = true
-
-[node name="Silla" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 784.308, 306.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla1" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 816.308, 306.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla2" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 864.308, 306.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla3" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 896.308, 306.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla4" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 894.94, 224.264 )
-transform/scale = Vector2( 0.37532, 0.51265 )
-
-[node name="Silla5" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 862.94, 224.264 )
-transform/scale = Vector2( 0.37532, 0.51265 )
-
-[node name="Silla6" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 814.94, 224.264 )
-transform/scale = Vector2( 0.37532, 0.51265 )
-
-[node name="Silla7" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 782.94, 224.264 )
-transform/scale = Vector2( 0.37532, 0.51265 )
-
-[node name="Silla8" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 574.94, 304.264 )
-transform/scale = Vector2( 0.37532, 0.51265 )
-
-[node name="Silla9" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 542.94, 304.264 )
-transform/scale = Vector2( 0.37532, 0.51265 )
-
-[node name="Silla10" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 366.94, 320.264 )
-transform/scale = Vector2( 0.37532, 0.51265 )
-
-[node name="Silla11" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 334.94, 320.264 )
-transform/scale = Vector2( 0.37532, 0.51265 )
-
-[node name="Silla12" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 222.94, 255.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla13" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 191.94, 255.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla14" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 142.94, 255.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla15" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 110.94, 255.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla16" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 127.94, 97.3261 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla17" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 95.94, 97.0357 )
-transform/scale = Vector2( 0.37532, 0.523652 )
-
-[node name="Silla18" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 190.94, 464.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla19" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 222.94, 464.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla20" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 271.94, 464.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla21" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 302.94, 464.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla22" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 670.94, 448.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla23" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 702.94, 448.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla24" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 846.94, 432.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla25" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 878.94, 432.326 )
-transform/scale = Vector2( 0.37532, 0.483327 )
-
-[node name="Silla26" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 576.308, 386.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla27" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 544.308, 386.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla28" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 368.308, 403.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla29" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 336.308, 403.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla30" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 224.308, 338.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla31" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 192.308, 338.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla32" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 144.308, 338.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla33" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 112.308, 338.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla34" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 128.308, 178.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla35" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 96.308, 178.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla36" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 192.308, 546.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla37" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 224.308, 546.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla38" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 272.308, 546.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla39" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 304.308, 546.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla40" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 672.308, 530.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla41" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 704.308, 530.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla42" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 848.308, 514.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
-[node name="Silla43" type="Node2D" parent="Navegacion/Navigation2D/Destinos/NodeSilla"]
-
-transform/pos = Vector2( 880.308, 514.375 )
-transform/scale = Vector2( 0.424638, 0.384196 )
-
 [node name="Hud" type="Node" parent="."]
-
-editor/display_folded = true
 
 [node name="Pedidos" type="Button" parent="Hud"]
 
@@ -10595,93 +10622,10 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="RecetaSopa" type="Node2D" parent="Hud/LibroCompras"]
-
-editor/display_folded = true
-transform/pos = Vector2( 192, 369 )
-
-[node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaSopa"]
-
-transform/pos = Vector2( -32, -20 )
-texture = ExtResource( 25 )
-region = true
-region_rect = Rect2( 70, 68, 32, 32 )
-
-[node name="Descripcion" type="Label" parent="Hud/LibroCompras/RecetaSopa"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = -48.0
-margin/top = 16.0
-margin/right = 234.0
-margin/bottom = 33.0
-custom_fonts/font = ExtResource( 5 )
-text = "Receta para poder cocinar sopa"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Precio" type="Label" parent="Hud/LibroCompras/RecetaSopa"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 16.0
-margin/top = -30.0
-margin/right = 75.0
-margin/bottom = 5.0
-custom_fonts/font = ExtResource( 20 )
-text = "50"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-[node name="Moneda" type="Sprite" parent="Hud/LibroCompras/RecetaSopa"]
-
-transform/pos = Vector2( 53.6478, -18.7005 )
-transform/scale = Vector2( 0.576334, 0.542691 )
-texture = ExtResource( 16 )
-
-[node name="Comprar" type="Button" parent="Hud/LibroCompras/RecetaSopa"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 115.0
-margin/top = -30.0
-margin/right = 185.0
-margin/bottom = -7.0
-custom_fonts/font = ExtResource( 5 )
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Comprar"
-flat = false
-
-[node name="Comprado" type="Label" parent="Hud/LibroCompras/RecetaSopa"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 112.0
-margin/top = -32.0
-margin/right = 208.0
-margin/bottom = -9.0
-custom_fonts/font = ExtResource( 20 )
-text = "Comprado"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
 [node name="RecetaQuebrantos" type="Node2D" parent="Hud/LibroCompras"]
 
 editor/display_folded = true
-transform/pos = Vector2( 549, 96 )
+transform/pos = Vector2( 192, 352 )
 
 [node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaQuebrantos"]
 
@@ -10717,14 +10661,14 @@ margin/top = -30.0
 margin/right = 75.0
 margin/bottom = 5.0
 custom_fonts/font = ExtResource( 20 )
-text = "100"
+text = "50"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
 [node name="Moneda" type="Sprite" parent="Hud/LibroCompras/RecetaQuebrantos"]
 
-transform/pos = Vector2( 62.0403, -18.4189 )
+transform/pos = Vector2( 53.0403, -18.4189 )
 transform/scale = Vector2( 0.576334, 0.542691 )
 texture = ExtResource( 16 )
 
@@ -10755,6 +10699,89 @@ margin/left = 112.0
 margin/top = -31.0
 margin/right = 208.0
 margin/bottom = -8.0
+custom_fonts/font = ExtResource( 20 )
+text = "Comprado"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="RecetaSopa" type="Node2D" parent="Hud/LibroCompras"]
+
+editor/display_folded = true
+transform/pos = Vector2( 552, 102 )
+
+[node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaSopa"]
+
+transform/pos = Vector2( -32, -20 )
+texture = ExtResource( 25 )
+region = true
+region_rect = Rect2( 70, 68, 32, 32 )
+
+[node name="Descripcion" type="Label" parent="Hud/LibroCompras/RecetaSopa"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -48.0
+margin/top = 16.0
+margin/right = 234.0
+margin/bottom = 33.0
+custom_fonts/font = ExtResource( 5 )
+text = "Receta para poder cocinar sopa"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Precio" type="Label" parent="Hud/LibroCompras/RecetaSopa"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 16.0
+margin/top = -30.0
+margin/right = 75.0
+margin/bottom = 5.0
+custom_fonts/font = ExtResource( 20 )
+text = "100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Moneda" type="Sprite" parent="Hud/LibroCompras/RecetaSopa"]
+
+transform/pos = Vector2( 62.6478, -18.7005 )
+transform/scale = Vector2( 0.576334, 0.542691 )
+texture = ExtResource( 16 )
+
+[node name="Comprar" type="Button" parent="Hud/LibroCompras/RecetaSopa"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 115.0
+margin/top = -30.0
+margin/right = 185.0
+margin/bottom = -7.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Comprar"
+flat = false
+
+[node name="Comprado" type="Label" parent="Hud/LibroCompras/RecetaSopa"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 112.0
+margin/top = -32.0
+margin/right = 208.0
+margin/bottom = -9.0
 custom_fonts/font = ExtResource( 20 )
 text = "Comprado"
 percent_visible = 1.0
@@ -11387,5 +11414,52 @@ text = "Una ración de estofado cuesta 5 maravedíes"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="Menu_pausa" type="Panel" parent="Hud"]
+
+process/pause_mode = 2
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 420.0
+margin/top = 180.0
+margin/right = 600.0
+margin/bottom = 360.0
+script/script = ExtResource( 31 )
+
+[node name="Label" type="Label" parent="Hud/Menu_pausa"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 21.0
+margin/top = 50.0
+margin/right = 159.0
+margin/bottom = 107.0
+custom_fonts/font = ExtResource( 28 )
+text = "Pausa"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Reanudar" type="Button" parent="Hud/Menu_pausa"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 54.0
+margin/top = 140.0
+margin/right = 127.0
+margin/bottom = 163.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Reanudar"
+flat = false
 
 

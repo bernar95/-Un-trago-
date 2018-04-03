@@ -768,10 +768,9 @@ func interaccion(result):
 				else:
 					notificaciones("Aun no ha terminado")
 		elif result[0].collider.has_node("InteraccionCliente"):
-			print("barril")
-			var barra = result[0].collider.get_child(1).get_child(0).get_name()
-			if get_parent().destinos[barra].get_npc() != null:
-				var npc = get_parent().destinos[barra].get_npc().get_node("NPC")
+			var lugar = result[0].collider.get_child(1).get_child(0).get_name()
+			if get_parent().destinos[lugar].get_npc() != null:
+				var npc = get_parent().destinos[lugar].get_npc().get_node("NPC")
 				if personaje.get_child_count() == 1 and personaje.get_child(0).get_pos() == mano_derecha and personaje.get_child(0).get_filename() == npc.pedidoRuta:
 					var objeto = personaje.get_child(0)
 					servir(npc, objeto, "derecha")
@@ -793,6 +792,44 @@ func interaccion(result):
 						servir(npc, objeto, "izquierda")
 				else:
 					notificaciones("Esto no es lo que he pedido")
+		elif result[0].collider.has_node("PapeleraInteraccion"):
+			if personaje.get_child_count() > 0:
+				for objeto in range(personaje.get_child_count()):
+					personaje.get_child(objeto).queue_free()
+				instanciar_jarras("Jarra")
+				instanciar_jarras("Jarra2")
+				instanciar_jarras("JarraVino")
+				instanciar_jarras("JarraVino2")
+				instanciar_jarras("JarraCerveza")
+				instanciar_jarras("JarraCerveza2")
+				instanciar_ingredientes(carne)
+				instanciar_ingredientes(carne2)
+				instanciar_ingredientes(pescado)
+				instanciar_ingredientes(pescado2)
+				instanciar_ingredientes(verdura)
+				instanciar_ingredientes(verdura2)
+				instanciar_ingredientes(patata)
+				instanciar_ingredientes(patata2)
+				instanciar_ingredientes(huevo)
+				instanciar_ingredientes(huevo2)
+				instanciar_ingredientes(pan)
+				instanciar_ingredientes(pan2)
+				instanciar_ingredientes(queso)
+				instanciar_ingredientes(queso2)
+				instanciar_comida("CarneCocinada")
+				instanciar_comida("CarneCocinada2")
+				instanciar_comida("PescadoCocinado")
+				instanciar_comida("PescadoCocinado2")
+				instanciar_comida("Sopa")
+				instanciar_comida("Sopa2")
+				instanciar_comida("Quebrantos")
+				instanciar_comida("Quebrantos2")
+				instanciar_comida("Olla")
+				instanciar_comida("Olla2")
+				instanciar_comida("Estofado")
+				instanciar_comida("Estofado2")
+			else:
+				notificaciones("No tienes nada que tirar")
 
 func soltar(result):
 	if result.empty():
