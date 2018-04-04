@@ -12,8 +12,10 @@ var aparecer = false
 var destinos
 var menu
 var precios
+var npcDic
+var spriteNpc
 var npcIndex = 0
-var npcs = 5
+var npcs = 15
 var espera = 5
 
 class Destino:
@@ -72,6 +74,18 @@ func _ready():
 	"res://Scenes/quebrantos.tscn":5,
 	"res://Scenes/olla.tscn":4,
 	"res://Scenes/estofado.tscn":5}
+	
+	npcDic = {
+	1:"res://Scenes/NPC1.tscn",
+	2:"res://Scenes/NPC2.tscn",
+	3:"res://Scenes/NPC3.tscn",
+	4:"res://Scenes/NPC4.tscn",
+	5:"res://Scenes/NPC5.tscn",
+	6:"res://Scenes/NPC6.tscn",
+	7:"res://Scenes/NPC7.tscn",
+	8:"res://Scenes/NPC8.tscn",
+	9:"res://Scenes/NPC9.tscn",
+	10:"res://Scenes/NPC10.tscn"}
 	
 	destinos = {
 	"Barril1":Destino.new(false, Vector2(139.056, 422.390015), 4, null),
@@ -200,7 +214,7 @@ func tiempo():
 	tiempo()
 
 func aparecer_npcs():
-	var spriteNpc = preload("res://Scenes/NPC1.tscn")
+	npc_aleatorio()
 	if npcIndex != npcs:
 		var npc = spriteNpc.instance()
 		npc.set_pos(get_node("Navegacion/Navigation2D/Spawn").get_pos())
@@ -219,3 +233,28 @@ func aparecer_npcs():
 		aparecer_npcs()
 	else:
 		npcIndex = 0
+
+func npc_aleatorio():
+	randomize()
+	var npc = randi()%npcDic.keys().size()+1
+	
+	if npcDic[npc] == "res://Scenes/NPC1.tscn":
+		spriteNpc = preload("res://Scenes/NPC1.tscn")
+	elif npcDic[npc] == "res://Scenes/NPC2.tscn":
+		spriteNpc = preload("res://Scenes/NPC2.tscn")
+	elif npcDic[npc] == "res://Scenes/NPC3.tscn":
+		spriteNpc = preload("res://Scenes/NPC3.tscn")
+	elif npcDic[npc] == "res://Scenes/NPC4.tscn":
+		spriteNpc = preload("res://Scenes/NPC4.tscn")
+	elif npcDic[npc] == "res://Scenes/NPC5.tscn":
+		spriteNpc = preload("res://Scenes/NPC5.tscn")
+	elif npcDic[npc] == "res://Scenes/NPC6.tscn":
+		spriteNpc = preload("res://Scenes/NPC6.tscn")
+	elif npcDic[npc] == "res://Scenes/NPC7.tscn":
+		spriteNpc = preload("res://Scenes/NPC7.tscn")
+	elif npcDic[npc] == "res://Scenes/NPC8.tscn":
+		spriteNpc = preload("res://Scenes/NPC8.tscn")
+	elif npcDic[npc] == "res://Scenes/NPC9.tscn":
+		spriteNpc = preload("res://Scenes/NPC9.tscn")
+	elif npcDic[npc] == "res://Scenes/NPC10.tscn":
+		spriteNpc = preload("res://Scenes/NPC10.tscn")
