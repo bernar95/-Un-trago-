@@ -184,7 +184,7 @@ func obtener_destino():
 
 func esperar():
 	get_parent().get_node("Pedido").show()
-	tiempoEspera.set_wait_time(12)
+	tiempoEspera.set_wait_time(30)
 	tiempoEspera.start()
 	yield(tiempoEspera, "timeout")
 	if he_pedido == false:
@@ -195,6 +195,8 @@ func esperar():
 		get_parent().get_node("Pedido").hide()
 		get_parent().get_node("Label").hide()
 		reputacion.menosExperiencia()
+		destinos[destinoRuta].set_ocupado(false)
+		destinos[destinoRuta].set_npc(null)
 		volver = true
 
 func obtener_orientacion():
@@ -207,47 +209,58 @@ func obtener_pedido():
 		sprite = preload("res://Scenes/JarraVino.tscn")
 		get_parent().get_node("Pedido/Sprite")
 		get_parent().get_node("Pedido/Sprite").set_pos(Vector2(10.84644, 13.2329))
+		pedidoRuta = claves[pedido]
+		get_parent().get_node("Pedido/Sprite").set_region_rect(menu[claves[pedido]])
 	elif claves[pedido] == "res://Scenes/JarraCerveza.tscn":
 		sprite = preload("res://Scenes/JarraCerveza.tscn")
 		get_parent().get_node("Pedido/Sprite").set_pos(Vector2(9.84644, 10.2329))
+		pedidoRuta = claves[pedido]
+		get_parent().get_node("Pedido/Sprite").set_region_rect(menu[claves[pedido]])
 	elif claves[pedido] == "res://Scenes/pan.tscn":
 		sprite = preload("res://Scenes/pan.tscn")
 		get_parent().get_node("Pedido/Sprite").set_pos(Vector2(9.84644, 10.2329))
 		get_parent().get_node("Pedido/Sprite").set_scale(Vector2(0.4, 0.4))
+		pedidoRuta = claves[pedido]
+		get_parent().get_node("Pedido/Sprite").set_region_rect(menu[claves[pedido]])
 	elif claves[pedido] == "res://Scenes/queso.tscn":
 		sprite = preload("res://Scenes/queso.tscn")
 		get_parent().get_node("Pedido/Sprite").set_pos(Vector2(9.84644, 10.2329))
 		get_parent().get_node("Pedido/Sprite").set_scale(Vector2(0.5, 0.5))
-	elif claves[pedido] == "res://Scenes/carneCocinada.tscn":
-		sprite = preload("res://Scenes/carneCocinada.tscn")
-		get_parent().get_node("Pedido/Sprite").set_pos(Vector2(11.54644, 10.2329))
-		get_parent().get_node("Pedido/Sprite").set_scale(Vector2(0.7, 0.7))
-	elif claves[pedido] == "res://Scenes/pescadoCocinado.tscn":
-		sprite = preload("res://Scenes/pescadoCocinado.tscn")
-		get_parent().get_node("Pedido/Sprite").set_pos(Vector2(9.54644, 10.2329))
-		get_parent().get_node("Pedido/Sprite").set_scale(Vector2(0.45, 0.45))
-	elif claves[pedido] == "res://Scenes/sopa.tscn":
-		sprite = preload("res://Scenes/sopa.tscn")
-		get_parent().get_node("Pedido/Sprite").set_pos(Vector2(11.84644, 10.2329))
-		get_parent().get_node("Pedido/Sprite").set_scale(Vector2(1, 1))
-	elif claves[pedido] == "res://Scenes/quebrantos.tscn":
-		sprite = preload("res://Scenes/quebrantos.tscn")
-		get_parent().get_node("Pedido/Sprite").set_pos(Vector2(9.84644, 10.2329))
-		get_parent().get_node("Pedido/Sprite").set_scale(Vector2(1, 1))
-	elif claves[pedido] == "res://Scenes/olla.tscn":
-		sprite = preload("res://Scenes/olla.tscn")
-		get_parent().get_node("Pedido/Sprite").set_pos(Vector2(10.84644, 10.2329))
-		get_parent().get_node("Pedido/Sprite").set_scale(Vector2(1, 1))
-	elif claves[pedido] == "res://Scenes/estofado.tscn":
-		sprite = preload("res://Scenes/estofado.tscn")
-		get_parent().get_node("Pedido/Sprite").set_pos(Vector2(9.84644, 10.2329))
-		get_parent().get_node("Pedido/Sprite").set_scale(Vector2(1, 1))
-		
-	var instancia = sprite.instance()
-	pedidoRuta = claves[pedido]
-	get_parent().get_node("Pedido/Sprite").set_texture(instancia.get_texture())
-	get_parent().get_node("Pedido/Sprite").set_region(true)
-	get_parent().get_node("Pedido/Sprite").set_region_rect(menu[claves[pedido]])
+		pedidoRuta = claves[pedido]
+		get_parent().get_node("Pedido/Sprite").set_region_rect(menu[claves[pedido]])
+	elif global.plato_hoy != "":
+		if global.plato_hoy == "res://Scenes/carneCocinada.tscn":
+			sprite = preload("res://Scenes/carneCocinada.tscn")
+			get_parent().get_node("Pedido/Sprite").set_pos(Vector2(11.54644, 10.2329))
+			get_parent().get_node("Pedido/Sprite").set_scale(Vector2(0.7, 0.7))
+		elif global.plato_hoy == "res://Scenes/pescadoCocinado.tscn":
+			sprite = preload("res://Scenes/pescadoCocinado.tscn")
+			get_parent().get_node("Pedido/Sprite").set_pos(Vector2(9.54644, 10.2329))
+			get_parent().get_node("Pedido/Sprite").set_scale(Vector2(0.45, 0.45))
+		elif global.plato_hoy == "res://Scenes/sopa.tscn":
+			sprite = preload("res://Scenes/sopa.tscn")
+			get_parent().get_node("Pedido/Sprite").set_pos(Vector2(11.84644, 10.2329))
+			get_parent().get_node("Pedido/Sprite").set_scale(Vector2(1, 1))
+		elif global.plato_hoy == "res://Scenes/quebrantos.tscn":
+			sprite = preload("res://Scenes/quebrantos.tscn")
+			get_parent().get_node("Pedido/Sprite").set_pos(Vector2(9.84644, 10.2329))
+			get_parent().get_node("Pedido/Sprite").set_scale(Vector2(1, 1))
+		elif global.plato_hoy == "res://Scenes/olla.tscn":
+			sprite = preload("res://Scenes/olla.tscn")
+			get_parent().get_node("Pedido/Sprite").set_pos(Vector2(10.84644, 10.2329))
+			get_parent().get_node("Pedido/Sprite").set_scale(Vector2(1, 1))
+		elif global.plato_hoy == "res://Scenes/estofado.tscn":
+			sprite = preload("res://Scenes/estofado.tscn")
+			get_parent().get_node("Pedido/Sprite").set_pos(Vector2(9.84644, 10.2329))
+			get_parent().get_node("Pedido/Sprite").set_scale(Vector2(1, 1))
+		pedidoRuta = global.plato_hoy
+		get_parent().get_node("Pedido/Sprite").set_region_rect(menu[global.plato_hoy])
+	if sprite == null:
+		obtener_pedido()
+	else:
+		var instancia = sprite.instance()
+		get_parent().get_node("Pedido/Sprite").set_texture(instancia.get_texture())
+		get_parent().get_node("Pedido/Sprite").set_region(true)
 
 func beber_comer():
 	tiempoEspera.stop()

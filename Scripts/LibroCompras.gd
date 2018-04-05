@@ -174,6 +174,7 @@ func _comprar_comida():
 		get_parent().get_node("LibroPrecios/Pescado").show()
 		get_parent().get_parent().get_node(".").menu["res://Scenes/carneCocinada.tscn"] = Rect2(Vector2(50, 610), Vector2(32, 32))
 		get_parent().get_parent().get_node(".").menu["res://Scenes/pescadoCocinado.tscn"] = Rect2(Vector2(200, 702), Vector2(48, 32))
+		get_parent().get_parent().servir_comida = true
 	else:
 		temporizador()
 
@@ -188,6 +189,7 @@ func _comprar_sopa():
 		get_parent().get_node("LibroRecetas/Sopa").show()
 		get_parent().get_node("LibroPrecios/Sopa").show()
 		get_parent().get_parent().get_node(".").menu["res://Scenes/sopa.tscn"] = Rect2(Vector2(70, 68), Vector2(32, 32))
+		get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Sopa")
 	else:
 		temporizador()
 
@@ -202,6 +204,7 @@ func _comprar_quebrantos():
 		get_parent().get_node("LibroRecetas/Quebrantos").show()
 		get_parent().get_node("LibroPrecios/Quebrantos").show()
 		get_parent().get_parent().get_node(".").menu["res://Scenes/quebrantos.tscn"] = Rect2(Vector2(340, 34), Vector2(32, 32))
+		get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Quebrantos")
 	else:
 		temporizador()
 		
@@ -216,6 +219,7 @@ func _comprar_olla():
 		get_parent().get_node("LibroRecetas/Olla").show()
 		get_parent().get_node("LibroPrecios/Olla").show()
 		get_parent().get_parent().get_node(".").menu["res://Scenes/olla.tscn"] = Rect2(Vector2(273, 238), Vector2(32, 32))
+		get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Olla podrida")
 	else:
 		temporizador()
 
@@ -230,5 +234,6 @@ func _comprar_estofado():
 		get_parent().get_node("LibroRecetas/Estofado").show()
 		get_parent().get_node("LibroPrecios/Estofado").show()
 		get_parent().get_parent().get_node(".").menu["res://Scenes/estofado.tscn"] = Rect2(Vector2(374, 238), Vector2(32, 32))
+		get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Estofado")
 	else:
 		temporizador()
