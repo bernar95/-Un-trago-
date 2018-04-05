@@ -1,5 +1,5 @@
 extends Patch9Frame
-
+#Este scrip sirve para añadir o quitar items a un pedido
 var cantidad_vino = 0
 var cantidad_cerveza = 0
 var cantidad_carne = 0
@@ -76,7 +76,10 @@ func _ready():
 	get_node("Huevos").hide()
 	
 	pass
-	
+#Todas las funciones de _comprar_"item" sirven para que cada vez que el jugador
+#pulse el botón que las activa, se añada una unidad de dicho item al pedido,
+#y para que se vaya añadiendo a la variable "total_pagar" el valor de cada 
+#unidad de dicho item
 func _comprar_vino():
 	var text = "Vino"
 	var vino_label = get_node("LabelVino")
@@ -202,7 +205,10 @@ func _comprar_queso():
 	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
 	get_node("MenosQueso").show()
 	pass
-
+#Todas las funciones de _menos_"item" sirven para que cada vez que el jugador
+#pulse el botón que las activa, se quite una unidad de dicho item del pedido,
+#y para que se vaya restando a la variable "total_pagar" el valor de cada 
+#unidad de dicho item
 func _menos_vino():
 	var vino_label = get_node("LabelVino")
 	var label_cantidad_vino = get_node("CantidadVino")

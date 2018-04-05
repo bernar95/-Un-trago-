@@ -1,5 +1,5 @@
 extends Panel
-
+#Este script se utiliza para todo lo relacionado con el plato del día
 var botonPlatoDia
 var desplegable
 var plato_seleccionado = ""
@@ -23,12 +23,13 @@ func _abrir_menu():
 
 func _cerrar_menu():
 	hide()
-
+#Esta función se utiliza para cargar en el desplegable los platos iniciales
 func cargarPlatos():
 	desplegable.add_item("Seleccionar plato del día")
 	desplegable.add_item("Chuletas")
 	desplegable.add_item("Bacalao")
-
+#Esta función se utiliza para instanciar la variable global llamada
+#"plato_hoy" con el valor seleccionado del desplegable
 func _seleccionar_plato(id):
 	if str(desplegable.get_item_text(id)) == "Chuletas":
 		plato_seleccionado = "res://Scenes/carneCocinada.tscn"

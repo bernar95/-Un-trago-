@@ -1,5 +1,6 @@
 extends PanelContainer
-
+#Este script se utiliza para cerrar el panel de notificaciones en cuanto
+#éste aparece
 func _ready():
 	get_parent().get_node("Cerrar").hide()
 	hide()

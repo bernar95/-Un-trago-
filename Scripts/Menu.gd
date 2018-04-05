@@ -1,5 +1,6 @@
 extends Node
-
+#Este script alimenta al menú principal del juego, y su funcionalidad se limita 
+#únicamente(de momento) a iniciar una nueva partida
 func _ready():
 	
 	var nuevaPartida = get_node("NuevaPartida")

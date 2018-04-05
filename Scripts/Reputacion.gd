@@ -1,5 +1,6 @@
 extends Node2D
-
+#Este script se utiliza para todo lo relacionado con la reputación
+#de la taberna
 var barraProgresion
 var pos = Vector2(-16, 18)
 var reputacion = 0
@@ -30,7 +31,9 @@ func _ready():
 	insOro.set_pos(pos)
 	insPlatino.set_pos(pos)
 	pass
-	
+#Esta función, que es propia de godot, va comprobado en cada frame del juego
+#todas las condiciones que se le pasan. En mi caso,se utiliza para notificaciones
+#de permisos disponibles y de medallas ganadas
 func _fixed_process(delta):
 	if reputacion == 5 and cerveceria == false:
 		get_parent().get_node("LibroCompras/PermisoCerveceria").show()
@@ -63,7 +66,10 @@ func _fixed_process(delta):
 		get_node("Reputacion").add_child(insPlatino)
 		get_parent().get_parent().get_node("KinematicBody2D").notificaciones("Has ganado la medalla de platino")
 		medallaPlatino = true
-
+#Esta función se utiliza para añadir experiencia a la barra de progresión,
+#que se irá rellenando hasta alcanzar el objetivo del nivel actual. Una
+#vez conseguido el objetivo, se resetean la experiencia y la barra de progresión,
+#y se le añaden una unidad más al nivel de reputación y al objetivo
 func masExperiencia():
 	experienciaActual += 1
 	var progresion = (experienciaActual*100)/experienciaObjetivo
@@ -74,7 +80,7 @@ func masExperiencia():
 		experienciaObjetivo += 1
 		reputacion += 1
 		get_node("Reputacion").set_text(str(reputacion))
-
+#Está función es igual a la anterior, pero restando experiencia
 func menosExperiencia():
 	var progresion 
 	experienciaActual -= 1

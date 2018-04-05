@@ -1,5 +1,5 @@
 extends Sprite
-
+#Este script se utiliza para gestionar la inteligencia artificial de los NPCs
 var speed = 100
 const eps = 1.5
 var points = [] 
@@ -100,7 +100,7 @@ func set_reputacion(reputacion_nueva):
 
 func set_dinero(dinero_nuevo):
 	dinero = dinero_nuevo
-
+#Esta función sirve para mover al NPC hasta un determinado lugar
 func moverNpc():
 	points = navegacion.get_simple_path(rigidBody.get_global_pos(), destino, true)
 	if points.size() > 1:
@@ -134,7 +134,11 @@ func silla_aleatoria():
 func pedido_aleatorio():
 	randomize()
 	pedido = randi()%menu.keys().size()+0
-
+#Esta función sirve para obtener un destino aleatorio en función de lo que
+#el cliente ha pedido. Si pide algo de beber puede ir a cualquier sitio
+#de la taberna, pero si piden cualquier cosa de comer, van directamente a 
+#las mesas. Comprobando previamente que hay sitio libre en la barra, en los
+#barriles o en las sillas
 func obtener_destino():
 	if pedidoRuta ==  "":
 		obtener_pedido()
@@ -181,7 +185,12 @@ func obtener_destino():
 			contador_sillas = 0
 			silla_aleatoria()
 			obtener_destino()
-
+#Esta función sirve para poner al NPC a esperar a ser servido. Consta de dos
+#temporizadores. El primero no aparece en pantalla, y en cuanto éste se acaba
+#y aun no ha sido servido, comienza el segundo, el cual si aparece en pantalla
+#(para infundir un poco de presión al jugador). En cuanto el NPC es atendido,
+#se paran ambos temporizadores. Si se acaba el segundo temporizador, el NPC 
+#se marcha de la taberna y se resta reputación
 func esperar():
 	get_parent().get_node("Pedido").show()
 	tiempoEspera.set_wait_time(30)
@@ -198,10 +207,15 @@ func esperar():
 		destinos[destinoRuta].set_ocupado(false)
 		destinos[destinoRuta].set_npc(null)
 		volver = true
-
+#Esta función sirve para establecer la orientación del NPC en función
+#del lugar donde vaya
 func obtener_orientacion():
 	set_frame(destinos[destinoRuta].get_orientacion())
-
+#Esta función sirve para obtener un pedido aleatorio para el NPC. En cuanto 
+#vayan estando disponibles los distintos productos, podrán ser solicitados
+#(aleatoriamente) por los NPCs, puntualizando una cosa. Si piden algo de comer
+#(a excepción de pan o queso) automáticamente se cambiará por el plato del día
+#establecido como variable global.
 func obtener_pedido():
 	pedido_aleatorio()
 	var claves = menu.keys()
@@ -261,7 +275,9 @@ func obtener_pedido():
 		var instancia = sprite.instance()
 		get_parent().get_node("Pedido/Sprite").set_texture(instancia.get_texture())
 		get_parent().get_node("Pedido/Sprite").set_region(true)
-
+#Esta función simplemente consta de un temporizador, que se utiliza como
+#el tiempo que tarda el NPC en comer o beber, y en cuanto termina, se elimina
+#el objeto que tenía en la mano y se añade la reputación correspondiente
 func beber_comer():
 	tiempoEspera.stop()
 	tiempoEspera2.stop()
@@ -275,7 +291,8 @@ func beber_comer():
 	objeto.free()
 	reputacion.masExperiencia()
 	pagar()
-
+#Esta función sirve para añadir el dinero que cuesta el producto
+#que ha consumido al dinero total
 func pagar():
 	var precio = precios[pedidoRuta]
 	var dinero_actual = int(dinero.get_text())

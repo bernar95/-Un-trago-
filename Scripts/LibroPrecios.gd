@@ -1,5 +1,7 @@
 extends Patch9Frame
-
+#Este script se utiliza para lo relacionado con el libro de precios, que 
+#básicamente se limita a abrirlo, cerrarlo y ocultar su contenido,
+#ya que se irá desbloqueando conforme el jugador avance 
 var precios
 var recetas
 var pedidos

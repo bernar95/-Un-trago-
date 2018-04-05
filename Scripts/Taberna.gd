@@ -1,5 +1,5 @@
 extends Node
-
+#Este script sirve para la gestión del tiempo y el spawn de npcs
 var diasAbierto = 1
 
 var tiempo = Timer.new()
@@ -65,10 +65,12 @@ func _ready():
 	labelTiempo = get_node("Hud/Tiempo")
 	get_node("Hud/Menu_pausa").hide()
 	reputacion = int(get_node("Hud/Reputacion/Reputacion").get_text())
-	
+#Esta variable es un diccionario que se le va pasando a cada uno de los npcs, y
+#que contiene los distintos productos que pueden pedir
 	menu = {
 	"res://Scenes/JarraVino.tscn": Rect2(Vector2(197, 337), Vector2(20, 20))}
-	
+#Esta variable es un diccionario que se le va pasando a cada uno de los npcs, y
+#que contiene los precios de los productos
 	precios = {
 	"res://Scenes/JarraVino.tscn": 2,
 	"res://Scenes/JarraCerveza.tscn":3,
@@ -80,7 +82,8 @@ func _ready():
 	"res://Scenes/quebrantos.tscn":5,
 	"res://Scenes/olla.tscn":4,
 	"res://Scenes/estofado.tscn":5}
-	
+#Esta variable es un diccionario que contiene las rutas de los sprites de los
+#diferentes npcs que se pueden generar
 	npcDic = {
 	1:"res://Scenes/NPC1.tscn",
 	2:"res://Scenes/NPC2.tscn",
@@ -92,7 +95,10 @@ func _ready():
 	8:"res://Scenes/NPC8.tscn",
 	9:"res://Scenes/NPC9.tscn",
 	10:"res://Scenes/NPC10.tscn"}
-	
+#Esta variable es un diccionario que se le va pasando a cada uno de los npcs, y
+#que contiene todos los lugares de la taberna donde pueden ir, con información
+#sobre si el lugar está ocupado, su posición, la orientación que deben tomar los
+#npcs y, en el caso de que haya algún npc en ese lugar, el npc en concreto.
 	destinos = {
 	"Barril1":Destino.new(false, Vector2(139.056, 422.390015), 4, null),
 	"Barril2":Destino.new(false, Vector2(411.056, 264.390015), 4, null),
@@ -167,7 +173,9 @@ func _ready():
 	
 	tiempo()
 	pass
-
+#Esta función es propia de godot, y sirve para comprobar cuando se inserta
+#un determinado evento. En este caso comprueba cuando se pulsa una tecla, la 
+#cual, de ser pulsada, pausa el juego y provoca la aparición del menú de pausa
 func _input(event):
 	if event.type == InputEvent.KEY:
 		if event.is_action_pressed("ui_pause"):
@@ -182,7 +190,14 @@ func _fixed_process(delta):
 	else:
 		labelTiempo.hide()
 	
-
+#Esta función sirve para la gestión del tiempo de la taberna. Al iniciar una 
+#nueva partida, se llama a esta función y comienza mostrando el día actual
+#(el día 1 en este caso), después muestra un tiempo que el jugador dispone
+#para organizarse(hacer pedidos, preparar comidas...), y luego muestra el 
+#tiempo de la mañana, después el de la tarde y por último el de la noche, 
+#durante los mismos van a ir apareciendo los diversos npcs. Cuando se acaba
+#el día se suma una unidad a la variable "diasAbierto" y se vuelve a empezar,
+#siendo esta vez un día distinto, y así sucesivamente
 func tiempo():
 	labelDia.set_text("Día" + " " + str(diasAbierto))
 	labelDia.show()
@@ -230,7 +245,12 @@ func tiempo():
 	labelMomento.set_text("")
 	aparecer = false
 	tiempo()
-
+#Esta función es la que se encarga de hacer aparecer a los npcs, tantos como
+#deje la variable "npcs". Primero se elige el sprite del npc, después se 
+#instancia, se le asignan diferentes propiedades(destinos, menu, precios...)
+#y por último, se le añade una unidad al índice "npcIndex" y se establece un
+#tiempo de espera hasta que aparezca el siguiente npc. Y así sucesivamente
+#hasta que "npcIndex" sea igual que "npcs"
 func aparecer_npcs():
 	npc_aleatorio()
 	if npcIndex != npcs:
@@ -251,7 +271,7 @@ func aparecer_npcs():
 		aparecer_npcs()
 	else:
 		npcIndex = 0
-
+#Esta función es la que se encarga de eegir un sprite de npc aleatorio
 func npc_aleatorio():
 	randomize()
 	var npc = randi()%npcDic.keys().size()+1
@@ -276,7 +296,9 @@ func npc_aleatorio():
 		spriteNpc = preload("res://Scenes/NPC9.tscn")
 	elif npcDic[npc] == "res://Scenes/NPC10.tscn":
 		spriteNpc = preload("res://Scenes/NPC10.tscn")
-
+#Esta función se encarga de asignar el número de npcs(variable "npcs") que 
+#irán apareciendo, en función del momento del día y de la reputación de 
+#la taberna
 func numero_npcs(): 
 	var bonus
 	if labelMomento.get_text() == "Mañana":
@@ -313,6 +335,7 @@ func numero_npcs():
 		elif reputacion >= 64:
 			bonus = 16
 	npcs = abs(reputacion/4) + bonus
-	
+#Esta función sirve para establecer el tiempo de espera de aparición
+#del siguiente npc
 func establecer_espera():
 	espera = abs(180/npcs)

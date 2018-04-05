@@ -1,5 +1,6 @@
 extends KinematicBody2D
-
+#Este script sirve para gestionar todo lo referente al personaje
+#controlado por el jugador
 var direction = Vector2(0,0)
 var startPos = Vector2(0,0)
 var moving = false
@@ -119,7 +120,14 @@ func _ready():
 	
 	get_parent().get_node("Hud/Cocina").hide()
 	get_parent().get_node("Hud/Raciones").hide()
-	
+#Esta función, que es propia de godot y comprueba varias cosas en cada frame
+#del juego, se utiliza para tres cosas. Sirve para mostrar el tiempo que queda
+#para que una determinada comida se termine de cocinar en el caldero, y una
+#vez que haya terminado, para mostrar el número de raciones que hay en dicho 
+#caldero. Pero el uso más importante es el de mover al personaje. Para lo cual 
+#va comprobando si se pulsan las teclas WASD y si además se está pulsando en 
+#conjunto con alguna de dichas teclas, la tecla SHIFT, lo cual provoca que el
+#personaje corra en la dirección correspondiente
 func _fixed_process(delta):
 	
 	get_parent().get_node("Hud/Cocina").set_text(str(int(timer2.get_time_left())))
@@ -212,12 +220,16 @@ func _input(event):
 				soltar(izquierda)
 			elif personaje.get_frame() == 8:
 				soltar(derecha)
-	
-
+#Esta función sirve para gestionar todo lo relacionado a las interacciones
+#del personaje con distintos objetos del entorno
 func interaccion(result):
 	if result.empty():
 		pass
 	elif typeof(result[0].collider) == TYPE_OBJECT:
+		#Esta parte gestiona la interracción con la estantería de jarras, y
+		#básicamente lo que hace es que le aparezcan en las manos del 
+		#personaje las jarras, teniendo en cuenta si las manos están 
+		#ocupadas o no
 		if result[0].collider.has_node("EstanteInteraccion"):
 			if personaje.get_child_count() == 0:
 				personaje.add_child(jarra)
@@ -228,6 +240,10 @@ func interaccion(result):
 					personaje.add_child(jarra)
 			else:
 				notificaciones("Tienes las manos ocupadas")
+		#Esta parte gestiona la interracción con los barriles de vino y cerveza, y
+		#lo que hace es que sustituya las jarras vacías por jarras llenas,
+		#teniendo en cuenta si tienes stock del líquido en cuestión, si lo que
+		#tienes en la mano es una jarra, o si ya tienes las jarras llenas
 		elif result[0].collider.has_node("BarrilCervezaInteraccion") or result[0].collider.has_node("BarrilVinoInteraccion"):
 			if personaje.get_child_count() == 0 or personaje.get_child_count() == 1 and personaje.get_child(0).get_filename() != spriteJarra.get_path() and personaje.get_child(0).get_filename() != spriteCerveza.get_path() and personaje.get_child(0).get_filename() != spriteVino.get_path() :
 				notificaciones("Necesitas una jarra vacía")
@@ -324,6 +340,10 @@ func interaccion(result):
 						notificaciones("No tienes cerveza")
 					elif get_parent().get_node("Hud/Container").stock_vino == 0 and result[0].collider.has_node("BarrilVinoInteraccion"):
 						notificaciones("No tienes vino")
+		#Esta parte gestiona la interracción con las cajas de alimentos, y lo que
+		#hace es que le aparezcan en las manos del personaje los alimentos, 
+		#teniendo en cuenta si las manos están ocupadas o no y si tienes stock
+		#del alimento en cuestión
 		elif result[0].collider.has_node("CajaCarneInteraccion") or result[0].collider.has_node("CajaPescadoInteraccion") or result[0].collider.has_node("CajaPanInteraccion") or result[0].collider.has_node("CajaHuevosInteraccion") or result[0].collider.has_node("CajaQuesoInteraccion") or result[0].collider.has_node("CajaVerdurasInteraccion") or result[0].collider.has_node("CajaPatatasInteraccion"):
 			if personaje.get_child_count() == 0:
 				if get_parent().get_node("Hud/Container").stock_carne == 0 and result[0].collider.has_node("CajaCarneInteraccion"):
@@ -448,6 +468,14 @@ func interaccion(result):
 							get_parent().get_node("BarraDetras/Alimentos/Huevos").get_child(i).queue_free()
 			elif personaje.get_child_count() == 2:
 				notificaciones("Tienes las manos ocupadas")
+		#Esta parte gestiona la interracción con el caldero, y lo que
+		#hace es que el personaje suelte los alimentos y los eche en el caldero, 
+		#teniendo en cuenta si lo que tiene en las manos se puede echar en el caldero
+		#o no. Si tiene las manos vacías, hay alimentos en el caldero, y si lo
+		#que hay dentro se corresponde al patrón de una receta determinada, al
+		#hacer la interacción provoca que se empiece a cocinar todo. Si lo
+		#que hay dentro no corresponde a una receta, el juego te informará a
+		#través de una notificación de que la comida se desperdició
 		elif result[0].collider.has_node("CalderoInteraccion"):
 			if personaje.get_child_count() == 0:
 				if caldero.get_child_count() == 0 and cocina == false:
@@ -767,6 +795,11 @@ func interaccion(result):
 						notificaciones("Tienes las manos ocupadas")
 				else:
 					notificaciones("Aun no ha terminado")
+		#Esta parte gestiona la interracción con los clientes, y lo que
+		#hace es que el personaje le entregue al cliente lo que tiene en las
+		#manos, si es lo que ha pedido dicho cliente. Si no lo es, el juego
+		#te informará a través de una notificación, diciendo que eso no es
+		#lo que ha pedido
 		elif result[0].collider.has_node("InteraccionCliente"):
 			var lugar = result[0].collider.get_child(1).get_child(0).get_name()
 			if get_parent().destinos[lugar].get_npc() != null:
@@ -792,6 +825,9 @@ func interaccion(result):
 						servir(npc, objeto, "izquierda")
 				else:
 					notificaciones("Esto no es lo que he pedido")
+		#Esta parte gestiona la interracción con la papelera, y lo que
+		#hace es que el personaje tire cualquier cosa que tenga en las manos
+		#a dicha papelera
 		elif result[0].collider.has_node("PapeleraInteraccion"):
 			if personaje.get_child_count() > 0:
 				for objeto in range(personaje.get_child_count()):
@@ -830,7 +866,9 @@ func interaccion(result):
 				instanciar_comida("Estofado2")
 			else:
 				notificaciones("No tienes nada que tirar")
-
+#Esta función gestiona todo lo relacionado con las acciones de soltar objetos.
+#Es parecida a la función de interacción, pero en lugar de coger los objetos
+#los vuelve a dejar en su sitio
 func soltar(result):
 	if result.empty():
 		pass
@@ -1014,7 +1052,7 @@ func soltar(result):
 				dejarComida("Estofado", "1")
 			else:
 				notificaciones("Esto no va aquí")
-
+#Esta función gestiona la aparición de notificaciones en pantallas
 func notificaciones(text):
 	notificaciones.show()
 	get_parent().get_node("Hud/Cerrar").show()
@@ -1024,7 +1062,8 @@ func notificaciones(text):
 	yield(timer, "timeout")
 	notificaciones.hide()
 	get_parent().get_node("Hud/Cerrar").hide()
-
+#Esta función sirve para rellenar las jarras, restando una unidad del 
+#stock de la bebida correspondiente 
 func rellenarJarra(bebida, hijo):
 	if hijo == "0":
 		personaje.get_child(0).free()
@@ -1040,7 +1079,7 @@ func rellenarJarra(bebida, hijo):
 		get_parent().get_node("Hud/Container").stock_vino -= 1
 		var text = str(get_parent().get_node("Hud/Container").stock_vino) + "/90"
 		get_parent().get_node("Hud/LibroSuministros/ContainerVino/StockVino").set_text(text)
-
+#Esta función sirve para coger la comida de las cajas
 func cogerComida(comida):
 	personaje.add_child(comida)
 	if comida == carne or comida == carne2:
@@ -1071,12 +1110,16 @@ func cogerComida(comida):
 		get_parent().get_node("Hud/Container").stock_huevos -= 1
 		var text = str(get_parent().get_node("Hud/Container").stock_huevos) + "/24"
 		get_parent().get_node("Hud/LibroSuministros/ContainerHuevos/StockHuevos").set_text(text)
-
+#Esta función sirve para echar un alimento al caldero
 func echarIngrediente(ingrediente):
 	personaje.remove_child(ingrediente)
 	caldero.add_child(ingrediente)
 	ingrediente.hide()
-
+#Esta función sirve para cocinar los alimentos que hay en el caldero, 
+#eliminando primero todo lo que haya dentro del mismo. Después se establece
+#un temporizador(que se visualiza en pantalla) que simula lo que le falta a
+#la comida para que esté lista, y una vez este acabe, se generan las 
+#correspondientes raciones dependiendo de la receta que se haya seguido
 func cocina(receta):
 	var texture = caldero.get_texture()
 	var mytexture = preload("res://tiles/boil.png")
@@ -1148,7 +1191,7 @@ func cocina(receta):
 	get_parent().get_node("BarraDetras").remove_child(calderoAnimado)
 	instanciar_caldero()
 	get_parent().get_node("BarraDetras").add_child(caldero)
-
+#Esta función sirve para coger la comida, una vez cocinada, del caldero
 func cogerComidaCocinada(comida, mano):
 	caldero.get_child(0).free()
 	var comidaCocinada
@@ -1169,7 +1212,12 @@ func cogerComidaCocinada(comida, mano):
 		comidaCocinada.set_pos(mano_derecha)
 	elif mano == "Izquierda":
 		comidaCocinada.set_pos(mano_izquierda)
-
+#Todas las funciones de instanciar se utilizan porque en numerosas partes
+#de este script se eliminan de la memoria diversos items(jarras, ingredientes,
+#comida...), ya sea porque se cambia un sprite por uno nuevo y se elimina el
+#antiguo, o porque un cliente al terminar lo que está tomando, se elimina.
+#En esos casos, y en algunos otros estas funciones son útiles para volver a 
+#instanciar dichos objetos que se pierden
 func instanciar_jarras(recipiente):
 	if recipiente == "Jarra":
 		jarra = spriteJarra.instance()
@@ -1261,7 +1309,53 @@ func instanciar_ingredientes(ingrediente):
 		huevo3 = spriteHuevos.instance()
 		huevo3.set_pos(Vector2(544, 26))
 		get_parent().get_node("BarraDetras/Alimentos/Huevos").add_child(huevo3)
+
+func instanciar_caldero():
+	calderoAnimado = spriteCaldero.instance()
+	calderoAnimado.set_pos(pos_caldero)
+
+func instanciar_comida(comida):
+	var comidaCocinada
+	if comida == "CarneCocinada":
+		comidaCocinada = spriteCarneCocinada.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "CarneCocinada2":
+		comidaCocinada = spriteCarneCocinada.instance()
+		comidaCocinada.set_pos(mano_izquierda)
+	elif comida == "PescadoCocinado":
+		comidaCocinada = spritePescadoCocinado.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "PescadoCocinado2":
+		comidaCocinada = spritePescadoCocinado.instance()
+		comidaCocinada.set_pos(mano_izquierda)
+	elif comida == "Sopa":
+		comidaCocinada = spriteSopa.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "Sopa2":
+		comidaCocinada = spriteSopa.instance()
+		comidaCocinada.set_pos(mano_izquierda)
+	elif comida == "Quebrantos":
+		comidaCocinada = spriteQuebrantos.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "Quebrantos2":
+		comidaCocinada = spriteQuebrantos.instance()
+		comidaCocinada.set_pos(mano_izquierda)
+	elif comida == "Olla":
+		comidaCocinada = spriteOlla.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "Olla2":
+		comidaCocinada = spriteOlla.instance()
+		comidaCocinada.set_pos(mano_izquierda)
+	elif comida == "Estofado":
+		comidaCocinada = spriteEstofado.instance()
+		comidaCocinada.set_pos(mano_derecha)
+	elif comida == "Estofado2":
+		comidaCocinada = spriteEstofado.instance()
+		comidaCocinada.set_pos(mano_izquierda)
 	
+	return comidaCocinada
+#Esta función sirve para volver a dejar un alimento en una caja o para
+#dejar un plato de comida en el caldero
 func dejarComida(comida, hijo):
 	if hijo == "0":
 		personaje.get_child(0).free()
@@ -1315,52 +1409,7 @@ func dejarComida(comida, hijo):
 	elif comida == "Estofado":
 		comidaCocinada = spriteEstofado.instance()
 		caldero.add_child(comidaCocinada)
-
-func instanciar_caldero():
-	calderoAnimado = spriteCaldero.instance()
-	calderoAnimado.set_pos(pos_caldero)
-
-func instanciar_comida(comida):
-	var comidaCocinada
-	if comida == "CarneCocinada":
-		comidaCocinada = spriteCarneCocinada.instance()
-		comidaCocinada.set_pos(mano_derecha)
-	elif comida == "CarneCocinada2":
-		comidaCocinada = spriteCarneCocinada.instance()
-		comidaCocinada.set_pos(mano_izquierda)
-	elif comida == "PescadoCocinado":
-		comidaCocinada = spritePescadoCocinado.instance()
-		comidaCocinada.set_pos(mano_derecha)
-	elif comida == "PescadoCocinado2":
-		comidaCocinada = spritePescadoCocinado.instance()
-		comidaCocinada.set_pos(mano_izquierda)
-	elif comida == "Sopa":
-		comidaCocinada = spriteSopa.instance()
-		comidaCocinada.set_pos(mano_derecha)
-	elif comida == "Sopa2":
-		comidaCocinada = spriteSopa.instance()
-		comidaCocinada.set_pos(mano_izquierda)
-	elif comida == "Quebrantos":
-		comidaCocinada = spriteQuebrantos.instance()
-		comidaCocinada.set_pos(mano_derecha)
-	elif comida == "Quebrantos2":
-		comidaCocinada = spriteQuebrantos.instance()
-		comidaCocinada.set_pos(mano_izquierda)
-	elif comida == "Olla":
-		comidaCocinada = spriteOlla.instance()
-		comidaCocinada.set_pos(mano_derecha)
-	elif comida == "Olla2":
-		comidaCocinada = spriteOlla.instance()
-		comidaCocinada.set_pos(mano_izquierda)
-	elif comida == "Estofado":
-		comidaCocinada = spriteEstofado.instance()
-		comidaCocinada.set_pos(mano_derecha)
-	elif comida == "Estofado2":
-		comidaCocinada = spriteEstofado.instance()
-		comidaCocinada.set_pos(mano_izquierda)
-	
-	return comidaCocinada
-
+#Esta función sirve para entregar un objeto a un npc
 func servir(npc, objeto, mano):
 	var pedido
 	if mano == "derecha":

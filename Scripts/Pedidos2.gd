@@ -1,5 +1,5 @@
 extends Container
-
+#Este script sirve fundamentalmente para hacer los distintos pedidos
 var stock_vino = 0
 var stock_cerveza = 0
 var stock_carne = 0
@@ -65,7 +65,13 @@ func _cerrar_pedidos():
 	compras.show()
 	precios.show()
 	pass
-
+#Esta función sirve para hacer un pedido(como su nombre indica). Tiene en cuenta
+#varias cosas. Comprueba para cada uno de los items que no supera el límite
+#de stock disponible en la taberna. Después comprueba que el valor de los items 
+#a comprar no supera el dinero total del que dispone el jugador, y si se cumple
+#todo eso, va sumando a los determinados stocks de productos la cantidad comprada
+#de cada uno(si se ha comprado algo) y por último resta el valor de la compra
+#al dinero total
 func _hacer_pedido():
 	var dinero = int(get_parent().get_node("Dinero").get_text())
 	var pago = int(get_node("LibroPedidos/TotalPagarLabel/TotalPagar").get_text())

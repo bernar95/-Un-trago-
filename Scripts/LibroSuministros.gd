@@ -1,5 +1,6 @@
 extends Patch9Frame
-
+#Este script se utiliza para lo relacionado con el libro de sumiistros, que 
+#básicamente se limita a abrirlo y cerrarlo  
 var suministros
 var pedidos
 var recetas

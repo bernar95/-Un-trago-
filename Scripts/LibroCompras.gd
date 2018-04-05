@@ -1,5 +1,7 @@
 extends Patch9Frame
-
+#ESte script se utiliza para gestionar todo lo referente al libro de 
+#compras, el cual es el que usa para adquirir los permisos de venta
+#así como las recetas
 var dinero
 var compras
 var recetas
@@ -44,7 +46,7 @@ func _ready():
 	compradoSopa.hide()
 	compradoOlla.hide()
 	compradoEstofado.hide()
-	
+
 	get_node("PermisoCerveceria").hide()
 	get_node("PermisoAperitivos").hide()
 	get_node("PermisoComidas").hide()
@@ -67,7 +69,7 @@ func _ready():
 	comprarSopa = get_node("RecetaSopa/Comprar")
 	comprarOlla = get_node("RecetaOlla/Comprar")
 	comprarEstofado = get_node("RecetaEstofado/Comprar")
-	
+
 	if compras:
 		compras.connect("pressed", self, "_mostrar_compras")
 	if cerrar:
@@ -89,6 +91,9 @@ func _ready():
 	pass
 
 func _mostrar_compras():
+	#Con esta función lo que hago es que al pulsar el botón "Compras" aparezca
+	#el libro de compras, y oculto el resto de botones para que el jugador
+	#no los pulse y se superpongan los demás libros
 	mostrarCompras = true
 	show()
 	get_parent().get_node("Dia").set_text("")
@@ -100,6 +105,7 @@ func _mostrar_compras():
 	pass
 
 func _cerrar_compras():
+	#Esta es igual pero para cerrarlo
 	mostrarCompras = false
 	hide()
 	compras.show()
@@ -110,6 +116,8 @@ func _cerrar_compras():
 	pass
 
 func temporizador():
+	#Esto es un simple temporizador eue hace que aparezca el mensaje de 
+	#no tienes suficiente dinero unos segundos
 	insuficiente.show()
 	var t = Timer.new()
 	t.set_wait_time(5)
@@ -120,6 +128,9 @@ func temporizador():
 	insuficiente.hide()
 
 func _comprar_cerveza():
+	#Esta función se utiliza para hacer la compra del permiso de cervecería,
+	#lo cual desbloqueará la compra de cerveza en el libro de pedidos, y
+	#provocará que los clientes comiencen a pedirla
 	var precio = int(get_node("PermisoCerveceria/Precio").get_text())
 	
 	if precio <= dinero:
@@ -135,6 +146,9 @@ func _comprar_cerveza():
 	
 
 func _comprar_aperitivos():
+	#Esta función se utiliza para hacer la compra del permiso de aperitivos,
+	#lo cual desbloqueará la compra de pan y queso en el libro de pedidos, y
+	#provocará que los clientes comiencen a pedirlos
 	var precio = int(get_node("PermisoAperitivos/Precio").get_text())
 	
 	if precio <= dinero:
@@ -152,6 +166,12 @@ func _comprar_aperitivos():
 		temporizador()
 
 func _comprar_comida():
+	#Esta función se utiliza para hacer la compra del permiso de comidas,
+	#lo cual desbloqueará la compra de carne, pescado, patatas, verduras y huevos
+	#en el libro de pedidos, las recetas de chuletas y bacalao en el libro 
+	#de recetas, y la compra de las recetas de quebrantos, sopa, olla podrida
+	#y estofado en el libro de compras. Además, el jugador podrá comenzar a 
+	#determinar el plato del día, el cual será pedido por los clientes
 	var precio = int(get_node("PermisoComidas/Precio").get_text())
 	
 	if precio <= dinero:
@@ -179,6 +199,9 @@ func _comprar_comida():
 		temporizador()
 
 func _comprar_sopa():
+	#Esta función se utiliza para hacer la compra de la receta de sopa,
+	#lo cual desbloqueará la receta en el libro de recetas, y
+	#podrás asignarla como plato del día
 	var precio = int(get_node("RecetaSopa/Precio").get_text())
 	
 	if precio <= dinero:
@@ -194,6 +217,9 @@ func _comprar_sopa():
 		temporizador()
 
 func _comprar_quebrantos():
+	#Esta función se utiliza para hacer la compra de la receta de quebrantos,
+	#lo cual desbloqueará la receta en el libro de recetas, y
+	#podrás asignarla como plato del día
 	var precio = int(get_node("RecetaQuebrantos/Precio").get_text())
 	
 	if precio <= dinero:
@@ -209,6 +235,9 @@ func _comprar_quebrantos():
 		temporizador()
 		
 func _comprar_olla():
+	#Esta función se utiliza para hacer la compra de la receta de olla podrida,
+	#lo cual desbloqueará la receta en el libro de recetas, y
+	#podrás asignarla como plato del día
 	var precio = int(get_node("RecetaOlla/Precio").get_text())
 	
 	if precio <= dinero:
@@ -224,6 +253,9 @@ func _comprar_olla():
 		temporizador()
 
 func _comprar_estofado():
+	#Esta función se utiliza para hacer la compra de la receta de estofado,
+	#lo cual desbloqueará la receta en el libro de recetas, y
+	#podrás asignarla como plato del día
 	var precio = int(get_node("RecetaEstofado/Precio").get_text())
 	
 	if precio <= dinero:
