@@ -4,19 +4,22 @@ var diasAbierto = 1
 
 var tiempo = Timer.new()
 var tiempo2 = Timer.new()
+var tiempo3 = Timer.new()
 
 var labelDia
 var labelMomento
 var labelTiempo
 var aparecer = false
+var servir_comida = false
 var destinos
 var menu
 var precios
 var npcDic
 var spriteNpc
 var npcIndex = 0
-var npcs = 15
-var espera = 5
+var npcs
+var espera
+var reputacion
 
 class Destino:
 	var ocupado
@@ -53,12 +56,15 @@ func _ready():
 	self.add_child(tiempo)
 	tiempo2.set_one_shot(true)
 	self.add_child(tiempo2)
+	tiempo3.set_one_shot(true)
+	self.add_child(tiempo3)
 	set_fixed_process(true)
 	set_process_input(true)
 	labelDia = get_node("Hud/Dia")
 	labelMomento = get_node("Hud/MomentoDia")
 	labelTiempo = get_node("Hud/Tiempo")
 	get_node("Hud/Menu_pausa").hide()
+	reputacion = int(get_node("Hud/Reputacion/Reputacion").get_text())
 	
 	menu = {
 	"res://Scenes/JarraVino.tscn": Rect2(Vector2(197, 337), Vector2(20, 20))}
@@ -185,26 +191,38 @@ func tiempo():
 	yield(tiempo, "timeout")
 	labelDia.hide()
 	
-	labelMomento.set_text("Hora de hacer pedidos")
+	if servir_comida == true:
+		get_node("Hud/PlatoDia").show()
+	
+	labelMomento.set_text("Organización")
 	aparecer = true
-	tiempo.set_wait_time(10)
-	aparecer_npcs()
+	tiempo.set_wait_time(30)
 	tiempo.start()
 	yield(tiempo, "timeout")
+	get_node("Hud/PlatoDia").hide()
 	
 	labelMomento.set_text("Mañana")
-	tiempo.set_wait_time(10)
+	tiempo.set_wait_time(180)
+	numero_npcs()
+	establecer_espera()
 	tiempo.start()
+	aparecer_npcs()
 	yield(tiempo, "timeout")
 	
 	labelMomento.set_text("Tarde")
-	tiempo.set_wait_time(10)
+	tiempo.set_wait_time(180)
+	numero_npcs()
+	establecer_espera()
 	tiempo.start()
+	aparecer_npcs()
 	yield(tiempo, "timeout")
 	
 	labelMomento.set_text("Noche")
-	tiempo.set_wait_time(10)
+	tiempo.set_wait_time(180)
+	numero_npcs()
+	establecer_espera()
 	tiempo.start()
+	aparecer_npcs()
 	yield(tiempo, "timeout")
 	
 	diasAbierto += 1
@@ -258,3 +276,43 @@ func npc_aleatorio():
 		spriteNpc = preload("res://Scenes/NPC9.tscn")
 	elif npcDic[npc] == "res://Scenes/NPC10.tscn":
 		spriteNpc = preload("res://Scenes/NPC10.tscn")
+
+func numero_npcs(): 
+	var bonus
+	if labelMomento.get_text() == "Mañana":
+		if reputacion >= 0 and reputacion <16:
+			bonus = 4
+		elif reputacion >= 16 and reputacion <32:
+			bonus = 6
+		elif reputacion >= 32 and reputacion <48:
+			bonus = 8
+		elif reputacion >= 48 and reputacion <64:
+			bonus = 10
+		elif reputacion >= 64:
+			bonus = 12
+	elif labelMomento.get_text() == "Tarde":
+		if reputacion >= 0 and reputacion <16:
+			bonus = 6
+		elif reputacion >= 16 and reputacion <32:
+			bonus = 8
+		elif reputacion >= 32 and reputacion <48:
+			bonus = 10
+		elif reputacion >= 48 and reputacion <64:
+			bonus = 12
+		elif reputacion >= 64:
+			bonus = 14
+	elif labelMomento.get_text() == "Noche":
+		if reputacion >= 0 and reputacion <16:
+			bonus = 8
+		elif reputacion >= 16 and reputacion <32:
+			bonus = 10
+		elif reputacion >= 32 and reputacion <48:
+			bonus = 12
+		elif reputacion >= 48 and reputacion <64:
+			bonus = 14
+		elif reputacion >= 64:
+			bonus = 16
+	npcs = abs(reputacion/4) + bonus
+	
+func establecer_espera():
+	espera = abs(180/npcs)
