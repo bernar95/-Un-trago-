@@ -25,19 +25,11 @@ var insPlatino = platino.instance()
 func _ready():
 	barraProgresion = get_node("Experiencia")
 	set_fixed_process(true)
-	set_process_input(true)
 	insBronce.set_pos(pos)
 	insPlata.set_pos(pos)
 	insOro.set_pos(pos)
 	insPlatino.set_pos(pos)
 	pass
-
-func _input(event):
-	if event.type == InputEvent.KEY:
-		if event.is_action_pressed("ui_interact"):
-			masExperiencia()
-		elif event.is_action_pressed("ui_drop"):
-			menosExperiencia()
 	
 func _fixed_process(delta):
 	if reputacion == 5 and cerveceria == false:

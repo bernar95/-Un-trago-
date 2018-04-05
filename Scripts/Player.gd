@@ -454,32 +454,32 @@ func interaccion(result):
 					notificaciones("Necesitas ingredientes")
 				elif caldero.get_child_count() > 0:
 					if contadorCarne == 1 and caldero.get_child_count() == 1:
-						timer2.set_wait_time(5)
+						timer2.set_wait_time(20)
 						cocina("Carne cocinada")
 					elif caldero.get_child(0).get_filename() == spriteCarneCocinada.get_path():
 						cogerComidaCocinada("Carne", "Derecha")
 					elif contadorPescado == 1 and caldero.get_child_count() == 1:
-						timer2.set_wait_time(5)
+						timer2.set_wait_time(20)
 						cocina("Pescado cocinado")
 					elif caldero.get_child(0).get_filename() == spritePescadoCocinado.get_path():
 						cogerComidaCocinada("Pescado", "Derecha")
 					elif contadorCarne == 1 and contadorHuevos == 2:
-						timer2.set_wait_time(5)
+						timer2.set_wait_time(30)
 						cocina("Quebrantos")
 					elif caldero.get_child(0).get_filename() == spriteQuebrantos.get_path():
 						cogerComidaCocinada("Quebrantos", "Derecha")
 					elif contadorPatatas == 5 and contadorVerduras == 5:
-						timer2.set_wait_time(5)
+						timer2.set_wait_time(45)
 						cocina("Sopa")
 					elif caldero.get_child(0).get_filename() == spriteSopa.get_path():
 						cogerComidaCocinada("Sopa", "Derecha")
 					elif contadorVerduras == 5 and contadorCarne == 5:
-						timer2.set_wait_time(5)
+						timer2.set_wait_time(60)
 						cocina("Olla")
 					elif caldero.get_child(0).get_filename() == spriteOlla.get_path():
 						cogerComidaCocinada("Olla", "Derecha")
 					elif contadorPatatas == 5 and contadorCarne == 5:
-						timer2.set_wait_time(5)
+						timer2.set_wait_time(60)
 						cocina("Estofado")
 					elif caldero.get_child(0).get_filename() == spriteEstofado.get_path():
 						cogerComidaCocinada("Estofado", "Derecha")
