@@ -1122,7 +1122,7 @@ func echarIngrediente(ingrediente):
 #correspondientes raciones dependiendo de la receta que se haya seguido
 func cocina(receta):
 	var texture = caldero.get_texture()
-	var mytexture = preload("res://tiles/boil.png")
+	var mytexture = preload("res://Tiles/boil.png")
 	for i in range(0, caldero.get_child_count()):
 		caldero.get_child(i).queue_free()
 

@@ -65,7 +65,7 @@ func _fixed_process(delta):
 		destino = Vector2(511.213989, 652.04303)
 		moverNpc()
 	elif andar == true and volver == true:
-		queue_free()
+		get_parent().queue_free()
 	if animationPlayer.get_current_animation() != "Andar arriba" and rigidBody.get_linear_velocity().y < 0 and abs(rigidBody.get_linear_velocity().y) > abs(rigidBody.get_linear_velocity().x):
 		set_frame(12)
 		get_parent().get_node("AnimationPlayer").play("Andar arriba")
