@@ -1026,17 +1026,17 @@ func soltar(result):
 		elif result[0].collider.has_node("CalderoInteraccion"):
 			if personaje.get_child_count() == 0:
 				notificaciones("No tienes nada que soltar")
-			elif (personaje.get_child_count() == 1 or personaje.get_child_count() == 2) and personaje.get_child(0).get_filename() == spriteCarneCocinada.get_path():
+			elif (personaje.get_child_count() == 1) and personaje.get_child(0).get_filename() == spriteCarneCocinada.get_path():
 				dejarComida("Carne cocinada", "0")
-			elif (personaje.get_child_count() == 1 or personaje.get_child_count() == 2) and personaje.get_child(0).get_filename() == spritePescadoCocinado.get_path():
+			elif (personaje.get_child_count() == 1) and personaje.get_child(0).get_filename() == spritePescadoCocinado.get_path():
 				dejarComida("Pescado cocinado", "0")
-			elif (personaje.get_child_count() == 1 or personaje.get_child_count() == 2) and personaje.get_child(0).get_filename() == spriteQuebrantos.get_path():
+			elif (personaje.get_child_count() == 1) and personaje.get_child(0).get_filename() == spriteQuebrantos.get_path():
 				dejarComida("Quebrantos", "0")
-			elif (personaje.get_child_count() == 1 or personaje.get_child_count() == 2) and personaje.get_child(0).get_filename() == spriteSopa.get_path():
+			elif (personaje.get_child_count() == 1) and personaje.get_child(0).get_filename() == spriteSopa.get_path():
 				dejarComida("Sopa", "0")
-			elif (personaje.get_child_count() == 1 or personaje.get_child_count() == 2) and personaje.get_child(0).get_filename() == spriteOlla.get_path():
+			elif (personaje.get_child_count() == 1) and personaje.get_child(0).get_filename() == spriteOlla.get_path():
 				dejarComida("Olla", "0")
-			elif (personaje.get_child_count() == 1 or personaje.get_child_count() == 2) and personaje.get_child(0).get_filename() == spriteEstofado.get_path():
+			elif (personaje.get_child_count() == 1) and personaje.get_child(0).get_filename() == spriteEstofado.get_path():
 				dejarComida("Estofado", "0")
 			elif  personaje.get_child_count() == 2 and personaje.get_child(1).get_filename() == spriteCarneCocinada.get_path():
 				dejarComida("Carne cocinada", "1")
@@ -1394,21 +1394,27 @@ func dejarComida(comida, hijo):
 	elif comida == "Carne cocinada":
 		comidaCocinada = spriteCarneCocinada.instance()
 		caldero.add_child(comidaCocinada)
+		comidaCocinada.hide()
 	elif comida == "Pescado cocinado":
 		comidaCocinada = spritePescadoCocinado.instance()
 		caldero.add_child(comidaCocinada)
+		comidaCocinada.hide()
 	elif comida == "Quebrantos":
 		comidaCocinada = spriteQuebrantos.instance()
 		caldero.add_child(comidaCocinada)
+		comidaCocinada.hide()
 	elif comida == "Sopa":
 		comidaCocinada = spriteSopa.instance()
 		caldero.add_child(comidaCocinada)
+		comidaCocinada.hide()
 	elif comida == "Olla":
 		comidaCocinada = spriteOlla.instance()
 		caldero.add_child(comidaCocinada)
+		comidaCocinada.hide()
 	elif comida == "Estofado":
 		comidaCocinada = spriteEstofado.instance()
 		caldero.add_child(comidaCocinada)
+		comidaCocinada.hide()
 #Esta función sirve para entregar un objeto a un npc
 func servir(npc, objeto, mano):
 	var pedido
