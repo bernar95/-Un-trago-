@@ -826,44 +826,21 @@ func interaccion(result):
 				else:
 					notificaciones("Esto no es lo que he pedido")
 		#Esta parte gestiona la interracción con la papelera, y lo que
-		#hace es que el personaje tire cualquier cosa que tenga en las manos
-		#a dicha papelera
+		#hace es que el personaje tire cualquier jarra con bebida que tenga
+		#en las manos, ya que son los únicos items del juego que no se 
+		#pueden devolver a su sitio
 		elif result[0].collider.has_node("PapeleraInteraccion"):
 			if personaje.get_child_count() > 0:
 				for objeto in range(personaje.get_child_count()):
-					personaje.get_child(objeto).queue_free()
-				instanciar_jarras("Jarra")
-				instanciar_jarras("Jarra2")
+					var hijo = personaje.get_child(objeto)
+					if hijo.get_filename() == spriteVino.get_path() or hijo.get_filename() == spriteCerveza.get_path():
+						personaje.get_child(objeto).queue_free()
+					else:
+						notificaciones("Esto no se puede tirar aquí")
 				instanciar_jarras("JarraVino")
 				instanciar_jarras("JarraVino2")
 				instanciar_jarras("JarraCerveza")
 				instanciar_jarras("JarraCerveza2")
-				instanciar_ingredientes(carne)
-				instanciar_ingredientes(carne2)
-				instanciar_ingredientes(pescado)
-				instanciar_ingredientes(pescado2)
-				instanciar_ingredientes(verdura)
-				instanciar_ingredientes(verdura2)
-				instanciar_ingredientes(patata)
-				instanciar_ingredientes(patata2)
-				instanciar_ingredientes(huevo)
-				instanciar_ingredientes(huevo2)
-				instanciar_ingredientes(pan)
-				instanciar_ingredientes(pan2)
-				instanciar_ingredientes(queso)
-				instanciar_ingredientes(queso2)
-				instanciar_comida("CarneCocinada")
-				instanciar_comida("CarneCocinada2")
-				instanciar_comida("PescadoCocinado")
-				instanciar_comida("PescadoCocinado2")
-				instanciar_comida("Sopa")
-				instanciar_comida("Sopa2")
-				instanciar_comida("Quebrantos")
-				instanciar_comida("Quebrantos2")
-				instanciar_comida("Olla")
-				instanciar_comida("Olla2")
-				instanciar_comida("Estofado")
-				instanciar_comida("Estofado2")
 			else:
 				notificaciones("No tienes nada que tirar")
 #Esta función gestiona todo lo relacionado con las acciones de soltar objetos.
