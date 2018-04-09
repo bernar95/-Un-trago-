@@ -61,7 +61,7 @@ extents = Vector2( 10, 10 )
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 1.35767, 10.1353 )
+extents = Vector2( 1.40425, 10.1353 )
 
 [sub_resource type="RectangleShape2D" id=7]
 
@@ -4707,8 +4707,6 @@ _update_shape_index = 0
 
 [node name="Barra" type="Node" parent="."]
 
-editor/display_folded = true
-
 [node name="Barra1" type="Sprite" parent="Barra"]
 
 transform/pos = Vector2( 278.655, 143.363 )
@@ -5366,7 +5364,7 @@ transform/scale = Vector2( 1.02317, 0.556345 )
 
 input/pickable = false
 shapes/0/shape = SubResource( 6 )
-shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 247.294, 143.411 )
+shapes/0/transform = Matrix32( 11.0826, 0, 0, 1.78231, 248.483, 143.411 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -5377,7 +5375,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Barra/StaticBody2D17"]
 
-transform/pos = Vector2( 247.294, 143.411 )
+transform/pos = Vector2( 248.483, 143.411 )
 transform/scale = Vector2( 11.0826, 1.78231 )
 shape = SubResource( 6 )
 trigger = false

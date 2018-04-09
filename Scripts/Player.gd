@@ -804,13 +804,13 @@ func interaccion(result):
 			var lugar = result[0].collider.get_child(1).get_child(0).get_name()
 			if get_parent().destinos[lugar].get_npc() != null:
 				var npc = get_parent().destinos[lugar].get_npc().get_node("NPC")
-				if personaje.get_child_count() == 1 and personaje.get_child(0).get_pos() == mano_derecha and personaje.get_child(0).get_filename() == npc.pedidoRuta:
+				if personaje.get_child_count() == 1 and personaje.get_child(0).get_pos() == mano_derecha and personaje.get_child(0).get_filename() == npc.pedidoRuta and npc.get_child_count() == 5:
 					var objeto = personaje.get_child(0)
 					servir(npc, objeto, "derecha")
-				elif personaje.get_child_count() == 1 and personaje.get_child(0).get_pos() == mano_izquierda and personaje.get_child(0).get_filename() == npc.pedidoRuta:
+				elif personaje.get_child_count() == 1 and personaje.get_child(0).get_pos() == mano_izquierda and personaje.get_child(0).get_filename() == npc.pedidoRuta and npc.get_child_count() == 5:
 					var objeto = personaje.get_child(0)
 					servir(npc, objeto, "izquierda")
-				elif personaje.get_child_count() == 2:
+				elif personaje.get_child_count() == 2 and npc.get_child_count() == 5:
 					if personaje.get_child(0).get_pos() == mano_derecha and personaje.get_child(0).get_filename() == npc.pedidoRuta:
 						var objeto = personaje.get_child(0)
 						servir(npc, objeto, "derecha")
@@ -823,6 +823,8 @@ func interaccion(result):
 					elif personaje.get_child(1).get_pos() == mano_izquierda and personaje.get_child(1).get_filename() == npc.pedidoRuta:
 						var objeto = personaje.get_child(1)
 						servir(npc, objeto, "izquierda")
+				elif npc.get_child_count() > 5:
+					notificaciones("Ya estoy servido")
 				else:
 					notificaciones("Esto no es lo que he pedido")
 		#Esta parte gestiona la interracción con la papelera, y lo que
