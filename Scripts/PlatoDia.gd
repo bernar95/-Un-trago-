@@ -46,7 +46,3 @@ func _seleccionar_plato(id):
 	global.plato_hoy = plato_seleccionado
 	hide()
 	botonPlatoDia.hide()
-	
-	
-	
-

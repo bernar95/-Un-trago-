@@ -13,59 +13,59 @@ var cantidad_queso = 0
 func _ready():
 	var vino = get_node("ComprarVino")
 	if vino:
-		vino.connect("pressed", self, "_comprar_vino")
+		vino.connect("pressed", self, "_comprar", ["Vino", get_node("LabelVino"), get_node("CantidadVino"), int(get_node("Precio/Vino").get_text())])
 	var cerveza = get_node("Cerveza/ComprarCerveza")
 	if cerveza:
-		cerveza.connect("pressed", self, "_comprar_cerveza")
+		cerveza.connect("pressed", self, "_comprar", ["Cerveza", get_node("LabelCerveza"), get_node("CantidadCerveza"), int(get_node("Cerveza/Precio1/Cerveza").get_text())])
 	var carne = get_node("Carne/ComprarCarne")
 	if carne:
-		carne.connect("pressed", self, "_comprar_carne")
+		carne.connect("pressed", self, "_comprar", ["Carne", get_node("LabelCarne"), get_node("CantidadCarne"), int(get_node("Carne/Precio2/Carne").get_text())])
 	var pescado = get_node("Pescado/ComprarPescado")
 	if pescado:
-		pescado.connect("pressed", self, "_comprar_pescado")
+		pescado.connect("pressed", self, "_comprar", ["Pescado", get_node("LabelPescado"), get_node("CantidadPescado"), int(get_node("Pescado/Precio3/Pescado").get_text())])
 	var verduras = get_node("Verduras/ComprarVerduras")
 	if verduras:
-		verduras.connect("pressed", self, "_comprar_verduras")
+		verduras.connect("pressed", self, "_comprar", ["Verduras", get_node("LabelVerduras"), get_node("CantidadVerduras"), int(get_node("Verduras/Precio4/Verduras").get_text())])
 	var patatas = get_node("Patatas/ComprarPatatas")
 	if patatas:
-		patatas.connect("pressed", self, "_comprar_patatas")
+		patatas.connect("pressed", self, "_comprar", ["Patatas", get_node("LabelPatatas"), get_node("CantidadPatatas"), int(get_node("Patatas/Precio5/Patatas").get_text())])
 	var huevo = get_node("Huevos/ComprarHuevos")
 	if huevo:
-		huevo.connect("pressed", self, "_comprar_huevos")
+		huevo.connect("pressed", self, "_comprar", ["Huevos", get_node("LabelHuevo"), get_node("CantidadHuevo"), int(get_node("Huevos/Precio6/Huevo").get_text())])
 	var pan = get_node("Pan/ComprarPan")
 	if pan:
-		pan.connect("pressed", self, "_comprar_pan")
+		pan.connect("pressed", self, "_comprar", ["Pan", get_node("LabelPan"), get_node("CantidadPan"), int(get_node("Pan/Precio7/Pan").get_text())])
 	var queso = get_node("Queso/ComprarQueso")
 	if queso:
-		queso.connect("pressed", self, "_comprar_queso")
+		queso.connect("pressed", self, "_comprar", ["Queso", get_node("LabelQueso"), get_node("CantidadQueso"), int(get_node("Queso/Precio8/Queso").get_text())])
 	var menos_vino = get_node("MenosVino")
 	if menos_vino:
-		menos_vino.connect("pressed", self, "_menos_vino")
+		menos_vino.connect("pressed", self, "_menos", ["Vino", get_node("LabelVino"), get_node("CantidadVino"), int(get_node("Precio/Vino").get_text())])
 	var menos_cerveza = get_node("MenosCerveza")
 	if menos_cerveza:
-		menos_cerveza.connect("pressed", self, "_menos_cerveza")
+		menos_cerveza.connect("pressed", self, "_menos", ["Cerveza", get_node("LabelCerveza"), get_node("CantidadCerveza"), int(get_node("Cerveza/Precio1/Cerveza").get_text())])
 	var menos_carne = get_node("MenosCarne")
 	if menos_carne:
-		menos_carne.connect("pressed", self, "_menos_carne")
+		menos_carne.connect("pressed", self, "_menos", ["Carne", get_node("LabelCarne"), get_node("CantidadCarne"), int(get_node("Carne/Precio2/Carne").get_text())])
 	var menos_pescado = get_node("MenosPescado")
 	if menos_pescado:
-		menos_pescado.connect("pressed", self, "_menos_pescado")
+		menos_pescado.connect("pressed", self, "_menos", ["Pescado", get_node("LabelPescado"), get_node("CantidadPescado"), int(get_node("Pescado/Precio3/Pescado").get_text())])
 	var menos_verdura = get_node("MenosVerdura")
 	if menos_verdura:
-		menos_verdura.connect("pressed", self, "_menos_verdura")
+		menos_verdura.connect("pressed", self, "_menos", ["Verduras", get_node("LabelVerduras"), get_node("CantidadVerduras"), int(get_node("Verduras/Precio4/Verduras").get_text())])
 	var menos_patatas = get_node("MenosPatatas")
 	if menos_patatas:
-		menos_patatas.connect("pressed", self, "_menos_patatas")
+		menos_patatas.connect("pressed", self, "_menos", ["Patatas", get_node("LabelPatatas"), get_node("CantidadPatatas"), int(get_node("Patatas/Precio5/Patatas").get_text())])
 	var menos_huevos = get_node("MenosHuevos")
 	if menos_huevos:
-		menos_huevos.connect("pressed", self, "_menos_huevos")
+		menos_huevos.connect("pressed", self, "_menos", ["Huevos", get_node("LabelHuevo"), get_node("CantidadHuevo"), int(get_node("Huevos/Precio6/Huevo").get_text())])
 	var menos_pan = get_node("MenosPan")
 	if menos_pan:
-		menos_pan.connect("pressed", self, "_menos_pan")
+		menos_pan.connect("pressed", self, "_menos", ["Pan", get_node("LabelPan"), get_node("CantidadPan"), int(get_node("Pan/Precio7/Pan").get_text())])
 	var menos_queso = get_node("MenosQueso")
 	if menos_queso:
-		menos_queso.connect("pressed", self, "_menos_queso")
-		
+		menos_queso.connect("pressed", self, "_menos", ["Queso", get_node("LabelQueso"), get_node("CantidadQueso"), int(get_node("Queso/Precio8/Queso").get_text())])
+
 	get_node("Cerveza").hide()
 	get_node("Carne").hide()
 	get_node("Pescado").hide()
@@ -74,292 +74,121 @@ func _ready():
 	get_node("Pan").hide()
 	get_node("Queso").hide()
 	get_node("Huevos").hide()
-	
 	pass
-#Todas las funciones de _comprar_"item" sirven para que cada vez que el jugador
-#pulse el botón que las activa, se añada una unidad de dicho item al pedido,
+#Esta función sirve para que cada vez que el jugador
+#pulse un botón de comprar un ítem, se añada una unidad de dicho item al pedido,
 #y para que se vaya añadiendo a la variable "total_pagar" el valor de cada 
 #unidad de dicho item
-func _comprar_vino():
-	var text = "Vino"
-	var vino_label = get_node("LabelVino")
-	var label_cantidad_vino = get_node("CantidadVino")
+func _comprar(text, label, label_cantidad, precio):
+	var cantidad
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_vino = int(get_node("Precio/Vino").get_text())
-	vino_label.set_text(text)
-	cantidad_vino += 1
-	label_cantidad_vino.set_text(str(cantidad_vino))
-	total_pagar += precio_vino
+	label.set_text(text)
+	if text == "Vino":
+		cantidad_vino += 1
+		cantidad = cantidad_vino
+		get_node("MenosVino").show()
+	elif text == "Cerveza":
+		cantidad_cerveza += 1
+		cantidad = cantidad_cerveza
+		get_node("MenosCerveza").show()
+	elif text == "Carne":
+		cantidad_carne += 1
+		cantidad = cantidad_carne
+		get_node("MenosCarne").show()
+	elif text == "Pescado":
+		cantidad_pescado += 1
+		cantidad = cantidad_pescado
+		get_node("MenosPescado").show()
+	elif text == "Verduras":
+		cantidad_verduras += 1
+		cantidad = cantidad_verduras
+		get_node("MenosVerdura").show()
+	elif text == "Patatas":
+		cantidad_patatas += 1
+		cantidad = cantidad_patatas
+		get_node("MenosPatatas").show()
+	elif text == "Huevos":
+		cantidad_huevos += 1
+		cantidad = cantidad_huevos
+		get_node("MenosHuevos").show()
+	elif text == "Pan":
+		cantidad_pan += 1
+		cantidad = cantidad_pan
+		get_node("MenosPan").show()
+	elif text == "Queso":
+		cantidad_queso += 1
+		cantidad = cantidad_queso
+		get_node("MenosQueso").show()
+	label_cantidad.set_text(str(cantidad))
+	total_pagar += precio
 	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	get_node("MenosVino").show()
 	pass
-	
-func _comprar_cerveza():
-	var text = "Cerveza"
-	var cerveza_label = get_node("LabelCerveza")
-	var label_cantidad_cerveza = get_node("CantidadCerveza")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_cerveza = int(get_node("Cerveza/Precio1/Cerveza").get_text())
-	cerveza_label.set_text(text)
-	cantidad_cerveza += 1
-	label_cantidad_cerveza.set_text(str(cantidad_cerveza))
-	total_pagar += precio_cerveza
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	get_node("MenosCerveza").show()
-	pass
-	
-func _comprar_carne():
-	var text = "Carne"
-	var carne_label = get_node("LabelCarne")
-	var label_cantidad_carne = get_node("CantidadCarne")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_carne = int(get_node("Carne/Precio2/Carne").get_text())
-	carne_label.set_text(text)
-	cantidad_carne += 1
-	label_cantidad_carne.set_text(str(cantidad_carne))
-	total_pagar += precio_carne
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	get_node("MenosCarne").show()
-	pass
-	
-func _comprar_pescado():
-	var text = "Pescado"
-	var pescado_label = get_node("LabelPescado")
-	var label_cantidad_pescado = get_node("CantidadPescado")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_pescado = int(get_node("Pescado/Precio3/Pescado").get_text())
-	pescado_label.set_text(text)
-	cantidad_pescado += 1
-	label_cantidad_pescado.set_text(str(cantidad_pescado))
-	total_pagar += precio_pescado
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	get_node("MenosPescado").show()
-	pass
-
-func _comprar_verduras():
-	var text = "Verduras"
-	var verduras_label = get_node("LabelVerduras")
-	var label_cantidad_verduras = get_node("CantidadVerduras")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_verduras = int(get_node("Verduras/Precio4/Verduras").get_text())
-	verduras_label.set_text(text)
-	cantidad_verduras += 1
-	label_cantidad_verduras.set_text(str(cantidad_verduras))
-	total_pagar += precio_verduras
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	get_node("MenosVerdura").show()
-	pass
-
-func _comprar_patatas():
-	var text = "Patatas"
-	var patatas_label = get_node("LabelPatatas")
-	var label_cantidad_patatas = get_node("CantidadPatatas")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_patatas = int(get_node("Patatas/Precio5/Patatas").get_text())
-	patatas_label.set_text(text)
-	cantidad_patatas += 1
-	label_cantidad_patatas.set_text(str(cantidad_patatas))
-	total_pagar += precio_patatas
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	get_node("MenosPatatas").show()
-	pass
-	
-func _comprar_huevos():
-	var text = "Huevos"
-	var huevos_label = get_node("LabelHuevo")
-	var label_cantidad_huevos = get_node("CantidadHuevo")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_huevos = int(get_node("Huevos/Precio6/Huevo").get_text())
-	huevos_label.set_text(text)
-	cantidad_huevos += 1
-	label_cantidad_huevos.set_text(str(cantidad_huevos))
-	total_pagar += precio_huevos
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	get_node("MenosHuevos").show()
-	pass
-	
-func _comprar_pan():
-	var text = "Pan"
-	var pan_label = get_node("LabelPan")
-	var label_cantidad_pan = get_node("CantidadPan")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_pan = int(get_node("Pan/Precio7/Pan").get_text())
-	pan_label.set_text(text)
-	cantidad_pan += 1
-	label_cantidad_pan.set_text(str(cantidad_pan))
-	total_pagar += precio_pan
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	get_node("MenosPan").show()
-	pass
-
-func _comprar_queso():
-	var text = "Queso"
-	var queso_label = get_node("LabelQueso")
-	var label_cantidad_queso = get_node("CantidadQueso")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_queso = int(get_node("Queso/Precio8/Queso").get_text())
-	queso_label.set_text(text)
-	cantidad_queso += 1
-	label_cantidad_queso.set_text(str(cantidad_queso))
-	total_pagar += precio_queso
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	get_node("MenosQueso").show()
-	pass
-#Todas las funciones de _menos_"item" sirven para que cada vez que el jugador
-#pulse el botón que las activa, se quite una unidad de dicho item del pedido,
+#Esta función sirve para que cada vez que el jugador
+#pulse el botón de quitar un ítem, se quite una unidad de dicho item del pedido,
 #y para que se vaya restando a la variable "total_pagar" el valor de cada 
 #unidad de dicho item
-func _menos_vino():
-	var vino_label = get_node("LabelVino")
-	var label_cantidad_vino = get_node("CantidadVino")
+func _menos(text, label, label_cantidad, precio):
+	var cantidad
 	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_vino = int(get_node("Precio/Vino").get_text())
-	cantidad_vino -= 1
-	label_cantidad_vino.set_text(str(cantidad_vino))
-	total_pagar -= precio_vino
+	if text == "Vino":
+		cantidad_vino -= 1
+		cantidad = cantidad_vino
+	elif text == "Cerveza":
+		cantidad_cerveza -= 1
+		cantidad = cantidad_cerveza
+	elif text == "Carne":
+		cantidad_carne -= 1
+		cantidad = cantidad_carne
+	elif text == "Pescado":
+		cantidad_pescado -= 1
+		cantidad = cantidad_pescado
+	elif text == "Verduras":
+		cantidad_verduras -= 1
+		cantidad = cantidad_verduras
+	elif text == "Patatas":
+		cantidad_patatas -= 1
+		cantidad = cantidad_patatas
+	elif text == "Huevos":
+		cantidad_huevos -= 1
+		cantidad = cantidad_huevos
+	elif text == "Pan":
+		cantidad_pan -= 1
+		cantidad = cantidad_pan
+	elif text == "Queso":
+		cantidad_queso -= 1
+		cantidad = cantidad_queso
+	label_cantidad.set_text(str(cantidad))
+	total_pagar -= precio
 	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	if cantidad_vino < 1:
-		vino_label.set_text("")
-		label_cantidad_vino.set_text("")
-		cantidad_vino = 0
-		get_node("MenosVino").hide()
-		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteVinoSuperado").hide()
+	if cantidad < 1:
+		label.set_text("")
+		label_cantidad.set_text("")
+		cantidad = ""
+		if text == "Vino":
+			get_node("MenosVino").hide()
+			get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteVinoSuperado").hide()
+		elif text == "Cerveza":
+			get_node("MenosCerveza").hide()
+			get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteCervezaSuperado").hide()
+		elif text == "Carne":
+			get_node("MenosCarne").hide()
+			get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteCarneSuperado").hide()
+		elif text == "Pescado":
+			get_node("MenosPescado").hide()
+			get_parent().get_node("LibroPedidos/LimiteSuperado/LimitePescadoSuperado").hide()
+		elif text == "Verduras":
+			get_node("MenosVerdura").hide()
+			get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteVerdurasSuperado").hide()
+		elif text == "Patatas":
+			get_node("MenosPatatas").hide()
+			get_parent().get_node("LibroPedidos/LimiteSuperado/LimitePatatasSuperado").hide()
+		elif text == "Huevos":
+			get_node("MenosHuevos").hide()
+			get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteHuevosSuperado").hide()
+		elif text == "Pan":
+			get_node("MenosPan").hide()
+			get_parent().get_node("LibroPedidos/LimiteSuperado/LimitePanSuperado").hide()
+		elif text == "Queso":
+			get_node("MenosQueso").hide()
+			get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteQuesoSuperado").hide()
 	pass
-
-func _menos_cerveza():
-	var cerveza_label = get_node("LabelCerveza")
-	var label_cantidad_cerveza = get_node("CantidadCerveza")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_cerveza = int(get_node("Precio1/Cerveza").get_text())
-	cantidad_cerveza -= 1
-	label_cantidad_cerveza.set_text(str(cantidad_cerveza))
-	total_pagar -= precio_cerveza
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	if cantidad_cerveza < 1:
-		cerveza_label.set_text("")
-		label_cantidad_cerveza.set_text("")
-		cantidad_cerveza = 0
-		get_node("MenosCerveza").hide()
-		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteCervezaSuperado").hide()
-	pass
-
-func _menos_carne():
-	var carne_label = get_node("LabelCarne")
-	var label_cantidad_carne = get_node("CantidadCarne")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_carne = int(get_node("Carne/Precio2/Carne").get_text())
-	cantidad_carne -= 1
-	label_cantidad_carne.set_text(str(cantidad_carne))
-	total_pagar -= precio_carne
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	if cantidad_carne < 1:
-		carne_label.set_text("")
-		label_cantidad_carne.set_text("")
-		cantidad_carne = 0
-		get_node("MenosCarne").hide()
-		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteCarneSuperado").hide()
-	pass
-
-func _menos_pescado():
-	var pescado_label = get_node("LabelPescado")
-	var label_cantidad_pescado = get_node("CantidadPescado")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_pescado = int(get_node("Pescado/Precio3/Pescado").get_text())
-	cantidad_pescado -= 1
-	label_cantidad_pescado.set_text(str(cantidad_pescado))
-	total_pagar -= precio_pescado
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	if cantidad_pescado < 1:
-		pescado_label.set_text("")
-		label_cantidad_pescado.set_text("")
-		cantidad_pescado = 0
-		get_node("MenosPescado").hide()
-		get_parent().get_node("LibroPedidos/LimiteSuperado/LimitePescadoSuperado").hide()
-	pass
-	
-func _menos_verdura():
-	var verdura_label = get_node("LabelVerduras")
-	var label_cantidad_verdura = get_node("CantidadVerduras")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_verdura = int(get_node("Verduras/Precio4/Verduras").get_text())
-	cantidad_verduras -= 1
-	label_cantidad_verdura.set_text(str(cantidad_verduras))
-	total_pagar -= precio_verdura
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	if cantidad_verduras < 1:
-		verdura_label.set_text("")
-		label_cantidad_verdura.set_text("")
-		cantidad_verduras = 0
-		get_node("MenosVerdura").hide()
-		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteVerdurasSuperado").hide()
-	pass
-
-func _menos_patatas():
-	var patatas_label = get_node("LabelPatatas")
-	var label_cantidad_patatas = get_node("CantidadPatatas")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_patatas = int(get_node("Patatas/Precio5/Patatas").get_text())
-	cantidad_patatas -= 1
-	label_cantidad_patatas.set_text(str(cantidad_patatas))
-	total_pagar -= precio_patatas
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	if cantidad_patatas < 1:
-		patatas_label.set_text("")
-		label_cantidad_patatas.set_text("")
-		cantidad_patatas = 0
-		get_node("MenosPatatas").hide()
-		get_parent().get_node("LibroPedidos/LimiteSuperado/LimitePatatasSuperado").hide()
-	pass
-
-func _menos_huevos():
-	var huevos_label = get_node("LabelHuevo")
-	var label_cantidad_huevos = get_node("CantidadHuevo")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_huevos = int(get_node("Huevos/Precio6/Huevo").get_text())
-	cantidad_huevos -= 1
-	label_cantidad_huevos.set_text(str(cantidad_huevos))
-	total_pagar -= precio_huevos
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	if cantidad_huevos < 1:
-		huevos_label.set_text("")
-		label_cantidad_huevos.set_text("")
-		cantidad_huevos = 0
-		get_node("MenosHuevos").hide()
-		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteHuevosSuperado").hide()
-	pass
-
-func _menos_pan():
-	var pan_label = get_node("LabelPan")
-	var label_cantidad_pan = get_node("CantidadPan")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_pan = int(get_node("Pan/Precio7/Pan").get_text())
-	cantidad_pan -= 1
-	label_cantidad_pan.set_text(str(cantidad_pan))
-	total_pagar -= precio_pan
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	if cantidad_pan < 1:
-		pan_label.set_text("")
-		label_cantidad_pan.set_text("")
-		cantidad_pan = 0
-		get_node("MenosPan").hide()
-		get_parent().get_node("LibroPedidos/LimiteSuperado/LimitePanSuperado").hide()
-	pass
-
-func _menos_queso():
-	var queso_label = get_node("LabelQueso")
-	var label_cantidad_queso = get_node("CantidadQueso")
-	var total_pagar = int(get_node("TotalPagarLabel/TotalPagar").get_text())
-	var precio_queso = int(get_node("Queso/Precio8/Queso").get_text())
-	cantidad_queso -= 1
-	label_cantidad_queso.set_text(str(cantidad_queso))
-	total_pagar -= precio_queso
-	get_node("TotalPagarLabel/TotalPagar").set_text(str(total_pagar))
-	if cantidad_queso < 1:
-		queso_label.set_text("")
-		label_cantidad_queso.set_text("")
-		cantidad_queso = 0
-		get_node("MenosQueso").hide()
-		get_parent().get_node("LibroPedidos/LimiteSuperado/LimiteQuesoSuperado").hide()
-	pass
-	
-	
