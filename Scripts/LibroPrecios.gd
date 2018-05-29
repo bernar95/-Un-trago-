@@ -3,21 +3,15 @@ extends Patch9Frame
 #básicamente se limita a abrirlo, cerrarlo y ocultar su contenido,
 #ya que se irá desbloqueando conforme el jugador avance 
 var precios
-var recetas
-var pedidos
-var suministros
-var compras
 var mostrarPrecios = false
+var mapa
 
 func _ready():
 	hide()
 	
 	precios = get_parent().get_node("Precios")
 	var cerrar = get_node("CerrarPrecios")
-	recetas = get_parent().get_node("Recetas")
-	pedidos = get_parent().get_node("Pedidos")
-	suministros = get_parent().get_node("Suministros")
-	compras = get_parent().get_node("Compras")
+	mapa = get_parent().get_parent()
 	
 	get_node("Cerveza").hide()
 	get_node("Pan").hide()
@@ -39,20 +33,11 @@ func _mostrar_precios():
 	mostrarPrecios = true
 	show()
 	get_parent().get_node("Dia").set_text("")
-	precios.hide()
-	recetas.hide()
-	pedidos.hide()
-	suministros.hide()
-	compras.hide()
+	mapa.cerrar_Botones()
 	pass
 
 func _cerrar_precios():
 	mostrarPrecios = false
 	hide()
-	precios.show()
-	recetas.show()
-	pedidos.show()
-	suministros.show()
-	compras.show()
+	mapa.mostrar_botones()
 	pass
-	

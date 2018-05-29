@@ -3,11 +3,6 @@ extends Patch9Frame
 #compras, el cual es el que usa para adquirir los permisos de venta
 #así como las recetas
 var dinero
-var compras
-var recetas
-var pedidos
-var suministros
-var precios
 var compradoCerveza
 var compradoAperitivos
 var compradoComida
@@ -24,10 +19,13 @@ var comprarSopa
 var comprarOlla
 var comprarEstofado
 var mostrarCompras = false
+var compras
+var mapa
+var t
 
 func _ready():
 	hide()
-	
+
 	dinero = int(get_parent().get_node("Dinero").get_text())
 	compradoCerveza = get_node("PermisoCerveceria/Comprado")
 	compradoAperitivos = get_node("PermisoAperitivos/Comprado")
@@ -55,12 +53,12 @@ func _ready():
 	get_node("RecetaOlla").hide()
 	get_node("RecetaEstofado").hide()
 	
-	compras = get_parent().get_node("Compras")
-	recetas = get_parent().get_node("Recetas")
 	var cerrar = get_node("CerrarCompras")
-	pedidos = get_parent().get_node("Pedidos")
-	suministros = get_parent().get_node("Suministros")
-	precios = get_parent().get_node("Precios")
+	mapa = get_parent().get_parent()
+	compras = get_parent().get_node("Compras")
+	t = Timer.new()
+	t.set_one_shot(true)
+	self.add_child(t)
 	
 	comprarCerveza = get_node("PermisoCerveceria/Comprar")
 	comprarAperitivos = get_node("PermisoAperitivos/Comprar")
@@ -75,19 +73,19 @@ func _ready():
 	if cerrar:
 		cerrar.connect("pressed", self, "_cerrar_compras")
 	if comprarCerveza:
-		comprarCerveza.connect("pressed", self, "_comprar_cerveza")
+		comprarCerveza.connect("pressed", self, "_comprar", ["Cerveza", int(get_node("PermisoCerveceria/Precio").get_text()), compradoCerveza, comprarCerveza])
 	if comprarAperitivos:
-		comprarAperitivos.connect("pressed", self, "_comprar_aperitivos")
+		comprarAperitivos.connect("pressed", self, "_comprar", ["Aperitivos", int(get_node("PermisoAperitivos/Precio").get_text()), compradoAperitivos, comprarAperitivos])
 	if comprarComida:
-		comprarComida.connect("pressed", self, "_comprar_comida")
+		comprarComida.connect("pressed", self, "_comprar", ["Comidas", int(get_node("PermisoComidas/Precio").get_text()), compradoComida, comprarComida])
 	if comprarQuebrantos:
-		comprarQuebrantos.connect("pressed", self, "_comprar_quebrantos")
+		comprarQuebrantos.connect("pressed", self, "_comprar", ["Quebrantos", int(get_node("RecetaQuebrantos/Precio").get_text()), compradoQuebrantos, comprarQuebrantos])
 	if comprarSopa:
-		comprarSopa.connect("pressed", self, "_comprar_sopa")
+		comprarSopa.connect("pressed", self, "_comprar", ["Sopa", int(get_node("RecetaSopa/Precio").get_text()), compradoSopa, comprarSopa])
 	if comprarOlla:
-		comprarOlla.connect("pressed", self, "_comprar_olla")
+		comprarOlla.connect("pressed", self, "_comprar", ["Olla", int(get_node("RecetaOlla/Precio").get_text()), compradoOlla, comprarOlla])
 	if comprarEstofado:
-		comprarEstofado.connect("pressed", self, "_comprar_estofado")
+		comprarEstofado.connect("pressed", self, "_comprar", ["Estofado", int(get_node("RecetaEstofado/Precio").get_text()), compradoEstofado, comprarEstofado])
 	pass
 
 func _mostrar_compras():
@@ -97,175 +95,85 @@ func _mostrar_compras():
 	mostrarCompras = true
 	show()
 	get_parent().get_node("Dia").set_text("")
-	compras.hide()
-	recetas.hide()
-	pedidos.hide()
-	suministros.hide()
-	precios.hide()
+	mapa.cerrar_Botones()
 	pass
 
 func _cerrar_compras():
 	#Esta es igual pero para cerrarlo
 	mostrarCompras = false
 	hide()
-	compras.show()
-	recetas.show()
-	pedidos.show()
-	suministros.show()
-	precios.show()
+	mapa.mostrar_botones()
 	pass
 
-func temporizador():
-	#Esto es un simple temporizador eue hace que aparezca el mensaje de 
-	#no tienes suficiente dinero unos segundos
-	insuficiente.show()
-	var t = Timer.new()
-	t.set_wait_time(5)
-	t.set_one_shot(true)
-	self.add_child(t)
-	t.start()
-	yield(t, "timeout")
-	insuficiente.hide()
-
-func _comprar_cerveza():
-	#Esta función se utiliza para hacer la compra del permiso de cervecería,
-	#lo cual desbloqueará la compra de cerveza en el libro de pedidos, y
-	#provocará que los clientes comiencen a pedirla
-	var precio = int(get_node("PermisoCerveceria/Precio").get_text())
-	
+#Esta función se utiliza para hacer la compra de los permisos
+#y recetas disponibles
+func _comprar(text, precio, comprado, comprar):
 	if precio <= dinero:
 		dinero -= precio
 		get_parent().get_node("Dinero").set_text(str(dinero))
-		compradoCerveza.show()
-		comprarCerveza.hide()
-		get_parent().get_node("Container/LibroPedidos/Cerveza").show()
-		get_parent().get_node("LibroPrecios/Cerveza").show()
-		get_parent().get_parent().get_node(".").menu["res://Scenes/JarraCerveza.tscn"] = Rect2(Vector2(230, 363), Vector2(20, 20))
+		comprado.show()
+		comprar.hide()
+		if text == "Cerveza":
+			get_parent().get_node("Container/LibroPedidos/Cerveza").show()
+			get_parent().get_node("LibroPrecios/Cerveza").show()
+			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/JarraCerveza.tscn"] = Rect2(Vector2(230, 363), Vector2(20, 20))
+			get_parent().get_parent().get_node("BarraDetras/Barriles/Barril1").show()
+		elif text == "Aperitivos":
+			get_parent().get_node("Container/LibroPedidos/Pan").show()
+			get_parent().get_node("Container/LibroPedidos/Queso").show()
+			get_parent().get_node("LibroPrecios/Pan").show()
+			get_parent().get_node("LibroPrecios/Queso").show()
+			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/pan.tscn"] = Rect2(Vector2(626, 4), Vector2(44, 42))
+			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/queso.tscn"] = Rect2(Vector2(535, 6), Vector2(35, 35))
+			get_parent().get_parent().get_node("BarraDetras/Cajas/CajaPan").show()
+			get_parent().get_parent().get_node("BarraDetras/Cajas/CajaQueso").show()
+		elif text == "Comidas":
+			get_parent().get_node("Container/LibroPedidos/Carne").show()
+			get_parent().get_node("Container/LibroPedidos/Pescado").show()
+			get_parent().get_node("Container/LibroPedidos/Verduras").show()
+			get_parent().get_node("Container/LibroPedidos/Patatas").show()
+			get_parent().get_node("Container/LibroPedidos/Huevos").show()
+			get_parent().get_node("LibroRecetas/Chuletas").show()
+			get_parent().get_node("LibroRecetas/Bacalao").show()
+			get_node("RecetaQuebrantos").show()
+			get_node("RecetaSopa").show()
+			get_node("RecetaOlla").show()
+			get_node("RecetaEstofado").show()
+			get_parent().get_node("LibroPrecios/Carne").show()
+			get_parent().get_node("LibroPrecios/Pescado").show()
+			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/carneCocinada.tscn"] = Rect2(Vector2(50, 610), Vector2(32, 32))
+			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/pescadoCocinado.tscn"] = Rect2(Vector2(200, 702), Vector2(48, 32))
+			get_parent().get_parent().servir_comida = true
+			get_parent().get_parent().get_node("BarraDetras/Cajas/CajaCarne").show()
+			get_parent().get_parent().get_node("BarraDetras/Cajas/CajaPescado").show()
+			get_parent().get_parent().get_node("BarraDetras/Cajas/CajaVerduras").show()
+			get_parent().get_parent().get_node("BarraDetras/Cajas/CajaPatatas").show()
+			get_parent().get_parent().get_node("BarraDetras/Cajas/CajaHuevos").show()
+			get_parent().get_parent().get_node("BarraDetras/CalderoNode/Caldero").show()
+		elif text == "Quebrantos":
+			get_parent().get_node("LibroRecetas/Quebrantos").show()
+			get_parent().get_node("LibroPrecios/Quebrantos").show()
+			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/quebrantos.tscn"] = Rect2(Vector2(340, 34), Vector2(32, 32))
+			get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Quebrantos")
+		elif text == "Sopa":
+			get_parent().get_node("LibroRecetas/Sopa").show()
+			get_parent().get_node("LibroPrecios/Sopa").show()
+			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/sopa.tscn"] = Rect2(Vector2(70, 68), Vector2(32, 32))
+			get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Sopa")
+		elif text == "Olla":
+			get_parent().get_node("LibroRecetas/Olla").show()
+			get_parent().get_node("LibroPrecios/Olla").show()
+			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/olla.tscn"] = Rect2(Vector2(273, 238), Vector2(32, 32))
+			get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Olla podrida")
+		elif text == "Estofado":
+			get_parent().get_node("LibroRecetas/Estofado").show()
+			get_parent().get_node("LibroPrecios/Estofado").show()
+			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/estofado.tscn"] = Rect2(Vector2(374, 238), Vector2(32, 32))
+			get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Estofado")
 	else:
-		temporizador()
-	
-
-func _comprar_aperitivos():
-	#Esta función se utiliza para hacer la compra del permiso de aperitivos,
-	#lo cual desbloqueará la compra de pan y queso en el libro de pedidos, y
-	#provocará que los clientes comiencen a pedirlos
-	var precio = int(get_node("PermisoAperitivos/Precio").get_text())
-	
-	if precio <= dinero:
-		dinero -= precio
-		get_parent().get_node("Dinero").set_text(str(dinero))
-		compradoAperitivos.show()
-		comprarAperitivos.hide()
-		get_parent().get_node("Container/LibroPedidos/Pan").show()
-		get_parent().get_node("Container/LibroPedidos/Queso").show()
-		get_parent().get_node("LibroPrecios/Pan").show()
-		get_parent().get_node("LibroPrecios/Queso").show()
-		get_parent().get_parent().get_node(".").menu["res://Scenes/pan.tscn"] = Rect2(Vector2(626, 4), Vector2(44, 42))
-		get_parent().get_parent().get_node(".").menu["res://Scenes/queso.tscn"] = Rect2(Vector2(535, 6), Vector2(35, 35))
-	else:
-		temporizador()
-
-func _comprar_comida():
-	#Esta función se utiliza para hacer la compra del permiso de comidas,
-	#lo cual desbloqueará la compra de carne, pescado, patatas, verduras y huevos
-	#en el libro de pedidos, las recetas de chuletas y bacalao en el libro 
-	#de recetas, y la compra de las recetas de quebrantos, sopa, olla podrida
-	#y estofado en el libro de compras. Además, el jugador podrá comenzar a 
-	#determinar el plato del día, el cual será pedido por los clientes
-	var precio = int(get_node("PermisoComidas/Precio").get_text())
-	
-	if precio <= dinero:
-		dinero -= precio
-		get_parent().get_node("Dinero").set_text(str(dinero))
-		compradoComida.show()
-		comprarComida.hide()
-		get_parent().get_node("Container/LibroPedidos/Carne").show()
-		get_parent().get_node("Container/LibroPedidos/Pescado").show()
-		get_parent().get_node("Container/LibroPedidos/Verduras").show()
-		get_parent().get_node("Container/LibroPedidos/Patatas").show()
-		get_parent().get_node("Container/LibroPedidos/Huevos").show()
-		get_parent().get_node("LibroRecetas/Chuletas").show()
-		get_parent().get_node("LibroRecetas/Bacalao").show()
-		get_node("RecetaQuebrantos").show()
-		get_node("RecetaSopa").show()
-		get_node("RecetaOlla").show()
-		get_node("RecetaEstofado").show()
-		get_parent().get_node("LibroPrecios/Carne").show()
-		get_parent().get_node("LibroPrecios/Pescado").show()
-		get_parent().get_parent().get_node(".").menu["res://Scenes/carneCocinada.tscn"] = Rect2(Vector2(50, 610), Vector2(32, 32))
-		get_parent().get_parent().get_node(".").menu["res://Scenes/pescadoCocinado.tscn"] = Rect2(Vector2(200, 702), Vector2(48, 32))
-		get_parent().get_parent().servir_comida = true
-	else:
-		temporizador()
-
-func _comprar_sopa():
-	#Esta función se utiliza para hacer la compra de la receta de sopa,
-	#lo cual desbloqueará la receta en el libro de recetas, y
-	#podrás asignarla como plato del día
-	var precio = int(get_node("RecetaSopa/Precio").get_text())
-	
-	if precio <= dinero:
-		dinero -= precio
-		get_parent().get_node("Dinero").set_text(str(dinero))
-		compradoSopa.show()
-		comprarSopa.hide()
-		get_parent().get_node("LibroRecetas/Sopa").show()
-		get_parent().get_node("LibroPrecios/Sopa").show()
-		get_parent().get_parent().get_node(".").menu["res://Scenes/sopa.tscn"] = Rect2(Vector2(70, 68), Vector2(32, 32))
-		get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Sopa")
-	else:
-		temporizador()
-
-func _comprar_quebrantos():
-	#Esta función se utiliza para hacer la compra de la receta de quebrantos,
-	#lo cual desbloqueará la receta en el libro de recetas, y
-	#podrás asignarla como plato del día
-	var precio = int(get_node("RecetaQuebrantos/Precio").get_text())
-	
-	if precio <= dinero:
-		dinero -= precio
-		get_parent().get_node("Dinero").set_text(str(dinero))
-		compradoQuebrantos.show()
-		comprarQuebrantos.hide()
-		get_parent().get_node("LibroRecetas/Quebrantos").show()
-		get_parent().get_node("LibroPrecios/Quebrantos").show()
-		get_parent().get_parent().get_node(".").menu["res://Scenes/quebrantos.tscn"] = Rect2(Vector2(340, 34), Vector2(32, 32))
-		get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Quebrantos")
-	else:
-		temporizador()
-		
-func _comprar_olla():
-	#Esta función se utiliza para hacer la compra de la receta de olla podrida,
-	#lo cual desbloqueará la receta en el libro de recetas, y
-	#podrás asignarla como plato del día
-	var precio = int(get_node("RecetaOlla/Precio").get_text())
-	
-	if precio <= dinero:
-		dinero -= precio
-		get_parent().get_node("Dinero").set_text(str(dinero))
-		compradoOlla.show()
-		comprarOlla.hide()
-		get_parent().get_node("LibroRecetas/Olla").show()
-		get_parent().get_node("LibroPrecios/Olla").show()
-		get_parent().get_parent().get_node(".").menu["res://Scenes/olla.tscn"] = Rect2(Vector2(273, 238), Vector2(32, 32))
-		get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Olla podrida")
-	else:
-		temporizador()
-
-func _comprar_estofado():
-	#Esta función se utiliza para hacer la compra de la receta de estofado,
-	#lo cual desbloqueará la receta en el libro de recetas, y
-	#podrás asignarla como plato del día
-	var precio = int(get_node("RecetaEstofado/Precio").get_text())
-	
-	if precio <= dinero:
-		dinero -= precio
-		get_parent().get_node("Dinero").set_text(str(dinero))
-		compradoEstofado.show()
-		comprarEstofado.hide()
-		get_parent().get_node("LibroRecetas/Estofado").show()
-		get_parent().get_node("LibroPrecios/Estofado").show()
-		get_parent().get_parent().get_node(".").menu["res://Scenes/estofado.tscn"] = Rect2(Vector2(374, 238), Vector2(32, 32))
-		get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Estofado")
-	else:
-		temporizador()
+		insuficiente.show()
+		t.set_wait_time(5)
+		t.start()
+		yield(t, "timeout")
+		insuficiente.hide()
+	pass

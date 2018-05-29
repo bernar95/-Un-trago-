@@ -3,10 +3,7 @@ extends Patch9Frame
 #básicamente se limita a abrirlo, cerrarlo y ocultar su contenido,
 #ya que se irá desbloqueando conforme el jugador avance 
 var recetas
-var pedidos
-var suministros
-var compras
-var precios
+var mapa
 var mostrarRecetas = false
 
 func _ready():
@@ -21,10 +18,7 @@ func _ready():
 	
 	recetas = get_parent().get_node("Recetas")
 	var cerrar = get_node("CerrarRecetas")
-	pedidos = get_parent().get_node("Pedidos")
-	suministros = get_parent().get_node("Suministros")
-	compras = get_parent().get_node("Compras")
-	precios = get_parent().get_node("Precios")
+	mapa = get_parent().get_parent()
 	
 	if recetas:
 		recetas.connect("pressed", self, "_mostrar_recetas")
@@ -36,19 +30,11 @@ func _mostrar_recetas():
 	mostrarRecetas = true
 	show()
 	get_parent().get_node("Dia").set_text("")
-	recetas.hide()
-	pedidos.hide()
-	suministros.hide()
-	compras.hide()
-	precios.hide()
+	mapa.cerrar_Botones()
 	pass
 
 func _cerrar_recetas():
 	mostrarRecetas = false
 	hide()
-	recetas.show()
-	pedidos.show()
-	suministros.show()
-	compras.show()
-	precios.show()
+	mapa.mostrar_botones()
 	pass

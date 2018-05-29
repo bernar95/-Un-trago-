@@ -2,10 +2,7 @@ extends Patch9Frame
 #Este script se utiliza para lo relacionado con el libro de sumiistros, que 
 #básicamente se limita a abrirlo y cerrarlo  
 var suministros
-var pedidos
-var recetas
-var compras
-var precios
+var mapa
 var mostrarSuministros = false
 
 func _ready():
@@ -13,10 +10,7 @@ func _ready():
 	
 	suministros = get_parent().get_node("Suministros")
 	var cerrar = get_node("CerrarSuministros")
-	pedidos = get_parent().get_node("Pedidos")
-	recetas = get_parent().get_node("Recetas")
-	compras = get_parent().get_node("Compras")
-	precios = get_parent().get_node("Precios")
+	mapa = get_parent().get_parent()
 	
 	if suministros:
 		suministros.connect("pressed", self, "_mostrar_suministros")
@@ -28,21 +22,11 @@ func _mostrar_suministros():
 	mostrarSuministros = true
 	show()
 	get_parent().get_node("Dia").set_text("")
-	recetas.hide()
-	pedidos.hide()
-	suministros.hide()
-	compras.hide()
-	precios.hide()
+	mapa.cerrar_Botones()
 	pass
 
 func _cerrar_suministros():
 	mostrarSuministros = false
 	hide()
-	recetas.show()
-	pedidos.show()
-	suministros.show()
-	compras.show()
-	precios.show()
+	mapa.mostrar_botones()
 	pass
-
-
