@@ -5,7 +5,6 @@ func _ready():
 	
 	if reanudar:
 		reanudar.connect("pressed", self, "_reanudar")
-	
 	pass
 
 func _reanudar():
