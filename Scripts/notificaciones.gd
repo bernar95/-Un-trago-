@@ -1,18 +1,34 @@
 extends PanelContainer
 #Este script se utiliza para cerrar el panel de notificaciones en cuanto
 #éste aparece
+var timer = Timer.new()
+var cerrar
+
 func _ready():
-	get_parent().get_node("Cerrar").hide()
 	hide()
 	
-	var cerrar = get_parent().get_node("Cerrar")
+	cerrar = get_parent().get_node("Cerrar")
+	cerrar.hide()
+	
+	timer.set_one_shot(true)
+	self.add_child(timer)
 	
 	if cerrar:
 		cerrar.connect("pressed", self, "_cerrar_notificaciones")
 	pass
+#Esta función gestiona la aparición de notificaciones en pantallas
+func notificaciones(text):
+	show()
+	cerrar.show()
+	get_node("Notificacion").set_text(text)
+	timer.set_wait_time(10)
+	timer.start()
+	yield(timer, "timeout")
+	hide()
+	cerrar.hide()
 
 func _cerrar_notificaciones():
 	hide()
 	get_parent().get_node("Cerrar").hide()
-	get_parent().get_parent().get_node("KinematicBody2D").timer.stop()
+	timer.stop()
 	pass
