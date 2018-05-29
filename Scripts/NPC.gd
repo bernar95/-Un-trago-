@@ -300,5 +300,3 @@ func pagar():
 	dinero.set_text(str(dinero_actual))
 	destinos[destinoRuta].set_ocupado(false)
 	destinos[destinoRuta].set_npc(null)
-	
-	
