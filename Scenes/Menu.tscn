@@ -18,7 +18,7 @@ texture = ExtResource( 2 )
 
 [node name="Marco" type="Sprite" parent="."]
 
-transform/pos = Vector2( 480, 110 )
+transform/pos = Vector2( 507.744, 114 )
 transform/scale = Vector2( 4.02725, 1 )
 texture = ExtResource( 3 )
 
@@ -28,10 +28,10 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
-margin/left = 350.0
-margin/top = 80.0
-margin/right = 610.0
-margin/bottom = 137.0
+margin/left = 378.0
+margin/top = 84.0
+margin/right = 638.0
+margin/bottom = 141.0
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -46,9 +46,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 380.0
+margin/left = 410.0
 margin/top = 210.0
-margin/right = 584.0
+margin/right = 614.0
 margin/bottom = 251.0
 custom_fonts/font = ExtResource( 5 )
 toggle_mode = false
