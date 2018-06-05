@@ -49,21 +49,21 @@ func _fixed_process(delta):
 		get_parent().get_node("LibroCompras/PermisoComidas").show()
 		notificaciones.notificaciones("El permiso de comidas está disponible")
 		comida = true
-	elif reputacion == 25 and medallaBronce == false:
+	elif reputacion >= 25 and medallaBronce == false:
 		get_node("Reputacion").add_child(insBronce)
 		notificaciones.notificaciones("Has ganado la medalla de bronce")
 		medallaBronce = true
-	elif reputacion == 50 and medallaPlata == false:
+	elif reputacion >= 50 and medallaPlata == false:
 		get_node("Reputacion").remove_child(insBronce)
 		get_node("Reputacion").add_child(insPlata)
 		notificaciones.notificaciones("Has ganado la medalla de plata")
 		medallaPlata = true
-	elif reputacion == 75 and medallaOro == false:
+	elif reputacion >= 75 and medallaOro == false:
 		get_node("Reputacion").remove_child(insPlata)
 		get_node("Reputacion").add_child(insOro)
 		notificaciones.notificaciones("Has ganado la medalla de oro")
 		medallaOro = true
-	elif reputacion == 100 and medallaPlatino == false:
+	elif reputacion >= 100 and medallaPlatino == false:
 		get_node("Reputacion").remove_child(insOro)
 		get_node("Reputacion").add_child(insPlatino)
 		notificaciones.notificaciones("Has ganado la medalla de platino")
@@ -93,3 +93,14 @@ func menosExperiencia():
 		get_node("Reputacion").set_text(str(reputacion))
 	progresion = (experienciaActual*100)/experienciaObjetivo
 	barraProgresion.set_value(progresion)
+
+func save():
+	var save_dict = {
+		_reputacion=reputacion,
+		experiencia_actual=experienciaActual,
+		experiencia_objetivo=experienciaObjetivo,
+		_cerveceria=cerveceria,
+		_aperitivos=aperitivos,
+		_comida=comida
+	}
+	return save_dict
