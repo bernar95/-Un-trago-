@@ -23,6 +23,14 @@ var compras
 var mapa
 var t
 
+var permiso_cerveceria_comprado = false
+var permiso_aperitivos_comprado = false
+var permiso_comidas_comprado = false
+var receta_quebrantos_comprada = false
+var receta_sopa_comprada = false
+var receta_olla_comprada = false
+var receta_estofado_comprada = false
+
 func _ready():
 	hide()
 
@@ -118,6 +126,7 @@ func _comprar(text, precio, comprado, comprar):
 			get_parent().get_node("LibroPrecios/Cerveza").show()
 			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/JarraCerveza.tscn"] = Rect2(Vector2(230, 363), Vector2(20, 20))
 			get_parent().get_parent().get_node("BarraDetras/Barriles/Barril1").show()
+			permiso_cerveceria_comprado = true
 		elif text == "Aperitivos":
 			get_parent().get_node("Container/LibroPedidos/Pan").show()
 			get_parent().get_node("Container/LibroPedidos/Queso").show()
@@ -127,6 +136,7 @@ func _comprar(text, precio, comprado, comprar):
 			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/queso.tscn"] = Rect2(Vector2(535, 6), Vector2(35, 35))
 			get_parent().get_parent().get_node("BarraDetras/Cajas/CajaPan").show()
 			get_parent().get_parent().get_node("BarraDetras/Cajas/CajaQueso").show()
+			permiso_aperitivos_comprado = true
 		elif text == "Comidas":
 			get_parent().get_node("Container/LibroPedidos/Carne").show()
 			get_parent().get_node("Container/LibroPedidos/Pescado").show()
@@ -150,26 +160,31 @@ func _comprar(text, precio, comprado, comprar):
 			get_parent().get_parent().get_node("BarraDetras/Cajas/CajaPatatas").show()
 			get_parent().get_parent().get_node("BarraDetras/Cajas/CajaHuevos").show()
 			get_parent().get_parent().get_node("BarraDetras/CalderoNode/Caldero").show()
+			permiso_comidas_comprado = true
 		elif text == "Quebrantos":
 			get_parent().get_node("LibroRecetas/Quebrantos").show()
 			get_parent().get_node("LibroPrecios/Quebrantos").show()
 			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/quebrantos.tscn"] = Rect2(Vector2(340, 34), Vector2(32, 32))
 			get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Quebrantos")
+			receta_quebrantos_comprada = true
 		elif text == "Sopa":
 			get_parent().get_node("LibroRecetas/Sopa").show()
 			get_parent().get_node("LibroPrecios/Sopa").show()
 			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/sopa.tscn"] = Rect2(Vector2(70, 68), Vector2(32, 32))
 			get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Sopa")
+			receta_sopa_comprada = true
 		elif text == "Olla":
 			get_parent().get_node("LibroRecetas/Olla").show()
 			get_parent().get_node("LibroPrecios/Olla").show()
 			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/olla.tscn"] = Rect2(Vector2(273, 238), Vector2(32, 32))
 			get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Olla podrida")
+			receta_olla_comprada = true
 		elif text == "Estofado":
 			get_parent().get_node("LibroRecetas/Estofado").show()
 			get_parent().get_node("LibroPrecios/Estofado").show()
 			get_parent().get_parent().get_node("Navegacion").menu["res://Scenes/estofado.tscn"] = Rect2(Vector2(374, 238), Vector2(32, 32))
 			get_parent().get_parent().get_node("Hud/ComidaDia").desplegable.add_item("Estofado")
+			receta_estofado_comprada = true
 	else:
 		insuficiente.show()
 		t.set_wait_time(5)
@@ -177,3 +192,15 @@ func _comprar(text, precio, comprado, comprar):
 		yield(t, "timeout")
 		insuficiente.hide()
 	pass
+
+func save():
+	var save_dict = {
+		_permiso_cerveceria_comprado=permiso_cerveceria_comprado,
+		_permiso_aperitivos_comprado=permiso_aperitivos_comprado,
+		_permiso_comidas_comprado=permiso_comidas_comprado,
+		_receta_quebrantos_comprada=receta_quebrantos_comprada,
+		_receta_sopa_comprada=receta_sopa_comprada,
+		_receta_olla_comprada=receta_olla_comprada,
+		_receta_estofado_comprada=receta_estofado_comprada
+	}
+	return save_dict

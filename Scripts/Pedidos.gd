@@ -148,6 +148,7 @@ func _hacer_pedido():
 				get_node("LibroPedidos/MenosCarne").hide()
 				get_node("LibroPedidos/LabelCarne").set_text("")
 				get_node("LibroPedidos/CantidadCarne").set_text("")
+				get_parent().get_parent().get_node("BarraDetras/Cajas").carne = true
 		
 			if get_node("LibroPedidos").cantidad_pescado > 0:
 				var cantidad = get_node("LibroPedidos").cantidad_pescado
@@ -162,6 +163,7 @@ func _hacer_pedido():
 				get_node("LibroPedidos/MenosPescado").hide()
 				get_node("LibroPedidos/LabelPescado").set_text("")
 				get_node("LibroPedidos/CantidadPescado").set_text("")
+				get_parent().get_parent().get_node("BarraDetras/Cajas").pescado = true
 		
 			if get_node("LibroPedidos").cantidad_queso > 0:
 				var cantidad = 4 * get_node("LibroPedidos").cantidad_queso
@@ -176,6 +178,7 @@ func _hacer_pedido():
 				get_node("LibroPedidos/MenosQueso").hide()
 				get_node("LibroPedidos/LabelQueso").set_text("")
 				get_node("LibroPedidos/CantidadQueso").set_text("")
+				get_parent().get_parent().get_node("BarraDetras/Cajas").queso = true
 		
 			if get_node("LibroPedidos").cantidad_verduras > 0:
 				var cantidad = 10 * get_node("LibroPedidos").cantidad_verduras
@@ -190,6 +193,7 @@ func _hacer_pedido():
 				get_node("LibroPedidos/MenosVerdura").hide()
 				get_node("LibroPedidos/LabelVerduras").set_text("")
 				get_node("LibroPedidos/CantidadVerduras").set_text("")
+				get_parent().get_parent().get_node("BarraDetras/Cajas").verduras = true
 			
 			if get_node("LibroPedidos").cantidad_patatas > 0:
 				var cantidad = 20 * get_node("LibroPedidos").cantidad_patatas
@@ -204,6 +208,7 @@ func _hacer_pedido():
 				get_node("LibroPedidos/MenosPatatas").hide()
 				get_node("LibroPedidos/LabelPatatas").set_text("")
 				get_node("LibroPedidos/CantidadPatatas").set_text("")
+				get_parent().get_parent().get_node("BarraDetras/Cajas").patatas = true
 		
 			if get_node("LibroPedidos").cantidad_pan > 0:
 				var cantidad = 4 * get_node("LibroPedidos").cantidad_pan
@@ -218,6 +223,7 @@ func _hacer_pedido():
 				get_node("LibroPedidos/MenosPan").hide()
 				get_node("LibroPedidos/LabelPan").set_text("")
 				get_node("LibroPedidos/CantidadPan").set_text("")
+				get_parent().get_parent().get_node("BarraDetras/Cajas").pan = true
 		
 			if get_node("LibroPedidos").cantidad_huevos > 0:
 				var cantidad = get_node("LibroPedidos").cantidad_huevos
@@ -232,6 +238,7 @@ func _hacer_pedido():
 				get_node("LibroPedidos/MenosHuevos").hide()
 				get_node("LibroPedidos/LabelHuevo").set_text("")
 				get_node("LibroPedidos/CantidadHuevo").set_text("")
+				get_parent().get_parent().get_node("BarraDetras/Cajas").huevos = true
 		
 			if get_node("LibroPedidos").cantidad_vino > 0:
 				var cantidad = 30 * get_node("LibroPedidos").cantidad_vino
@@ -262,3 +269,17 @@ func _hacer_pedido():
 			yield(t, "timeout")
 			get_node("LibroPedidos/InsuficienteDinero").hide()
 	pass
+
+func save():
+	var save_dict = {
+		_stock_vino=stock_vino,
+		_stock_cerveza=stock_cerveza,
+		_stock_carne=stock_carne,
+		_stock_pescado=stock_pescado,
+		_stock_verduras=stock_verduras,
+		_stock_patatas=stock_patatas,
+		_stock_huevos=stock_huevos,
+		_stock_pan=stock_pan,
+		_stock_queso=stock_queso
+	}
+	return save_dict

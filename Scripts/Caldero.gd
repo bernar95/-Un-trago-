@@ -5,7 +5,7 @@ var notificaciones
 var caldero
 var spriteCaldero = preload("res://Scenes/Caldero.tscn")
 var calderoAnimado = spriteCaldero.instance()
-var timer2 = Timer.new()
+var tiempo = Timer.new()
 var comidaCocinada = false
 var cocina = false
 var pos_caldero = Vector2(592, 48)
@@ -23,8 +23,8 @@ func _ready():
 	calderoAnimado.set_pos(pos_caldero)
 	get_parent().get_parent().get_node("Hud/Cocina").hide()
 	get_parent().get_parent().get_node("Hud/Raciones").hide()
-	timer2.set_one_shot(true)
-	self.add_child(timer2)
+	tiempo.set_one_shot(true)
+	self.add_child(tiempo)
 	caldero.hide()
 	pass
 #Esta función, que es propia de godot y comprueba varias cosas en cada frame
@@ -33,7 +33,7 @@ func _ready():
 #vez que haya terminado, para mostrar el número de raciones que hay en dicho 
 #caldero.
 func _fixed_process(delta):
-	get_parent().get_parent().get_node("Hud/Cocina").set_text(str(int(timer2.get_time_left())))
+	get_parent().get_parent().get_node("Hud/Cocina").set_text(str(int(tiempo.get_time_left())))
 	get_parent().get_parent().get_node("Hud/Raciones").set_text(str(caldero.get_child_count()) + " raciones")
 	if caldero.get_child_count() == 0:
 		get_parent().get_parent().get_node("Hud/Raciones").hide()
@@ -56,32 +56,32 @@ func interaccion_caldero():
 			notificaciones.notificaciones("Necesitas ingredientes")
 		elif caldero.get_child_count() > 0:
 			if contadorCarne == 1 and caldero.get_child_count() == 1:
-				timer2.set_wait_time(20)
+				tiempo.set_wait_time(20)
 				cocina("Carne cocinada")
 			elif caldero.get_child(0).get_filename() == global.spriteCarneCocinada.get_path():
 				cogerComidaCocinada("Carne", "Derecha")
 			elif contadorPescado == 1 and caldero.get_child_count() == 1:
-				timer2.set_wait_time(20)
+				tiempo.set_wait_time(20)
 				cocina("Pescado cocinado")
 			elif caldero.get_child(0).get_filename() == global.spritePescadoCocinado.get_path():
 				cogerComidaCocinada("Pescado", "Derecha")
 			elif contadorCarne == 1 and contadorHuevos == 2:
-				timer2.set_wait_time(30)
+				tiempo.set_wait_time(30)
 				cocina("Quebrantos")
 			elif caldero.get_child(0).get_filename() == global.spriteQuebrantos.get_path():
 				cogerComidaCocinada("Quebrantos", "Derecha")
 			elif contadorPatatas == 5 and contadorVerduras == 5:
-				timer2.set_wait_time(45)
+				tiempo.set_wait_time(45)
 				cocina("Sopa")
 			elif caldero.get_child(0).get_filename() == global.spriteSopa.get_path():
 				cogerComidaCocinada("Sopa", "Derecha")
 			elif contadorVerduras == 5 and contadorCarne == 5:
-				timer2.set_wait_time(60)
+				tiempo.set_wait_time(60)
 				cocina("Olla")
 			elif caldero.get_child(0).get_filename() == global.spriteOlla.get_path():
 				cogerComidaCocinada("Olla", "Derecha")
 			elif contadorPatatas == 5 and contadorCarne == 5:
-				timer2.set_wait_time(60)
+				tiempo.set_wait_time(60)
 				cocina("Estofado")
 			elif caldero.get_child(0).get_filename() == global.spriteEstofado.get_path():
 				cogerComidaCocinada("Estofado", "Derecha")
@@ -287,8 +287,8 @@ func cocina(receta):
 	remove_child(caldero)
 	add_child(calderoAnimado)
 	calderoAnimado.get_node("AnimationPlayer").play("Hervir")
-	timer2.start()
-	yield(timer2, "timeout")
+	tiempo.start()
+	yield(tiempo, "timeout")
 	if receta == "Carne cocinada":
 		for i in range(0,4):
 			var carneCocinada = global.spriteCarneCocinada.instance()

@@ -3,7 +3,6 @@ extends Node
 var diasAbierto = 1
 
 var tiempo = Timer.new()
-var tiempo3 = Timer.new()
 
 var labelDia
 var labelMomento
@@ -25,8 +24,6 @@ func _ready():
 	preciosBoton = get_node("Hud/Precios")
 	tiempo.set_one_shot(true)
 	self.add_child(tiempo)
-	tiempo3.set_one_shot(true)
-	self.add_child(tiempo3)
 	set_fixed_process(true)
 	set_process_input(true)
 	labelDia = get_node("Hud/Dia")
@@ -64,7 +61,7 @@ func _fixed_process(delta):
 func tiempo():
 	labelDia.set_text("Día" + " " + str(diasAbierto))
 	labelDia.show()
-	tiempo.set_wait_time(5)
+	tiempo.set_wait_time(8)
 	tiempo.start()
 	yield(tiempo, "timeout")
 	labelDia.hide()
@@ -125,3 +122,10 @@ func cerrar_Botones():
 	recetas.hide()
 	suministros.hide()
 	preciosBoton.hide()
+
+func save():
+	var save_dict = {
+		dias_abierto=diasAbierto,
+		_servir_comida=servir_comida
+	}
+	return save_dict

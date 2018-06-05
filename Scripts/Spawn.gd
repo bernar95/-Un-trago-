@@ -1,6 +1,6 @@
 extends Node
 
-var tiempo2 = Timer.new()
+var tiempo = Timer.new()
 var destinos
 var menu
 var precios
@@ -9,7 +9,6 @@ var spriteNpc
 var npcIndex = 0
 var npcs
 var espera
-var reputacion
 
 class Destino:
 	var ocupado
@@ -42,9 +41,8 @@ class Destino:
 		return self.npc
 
 func _ready():
-	tiempo2.set_one_shot(true)
-	self.add_child(tiempo2)
-	reputacion = int(get_parent().get_node("Hud/Reputacion/Reputacion").get_text())
+	tiempo.set_one_shot(true)
+	self.add_child(tiempo)
 #Esta variable es un diccionario que se le va pasando a cada uno de los npcs, y
 #que contiene los distintos productos que pueden pedir
 	menu = {
@@ -151,6 +149,8 @@ func _ready():
 	"Silla42":Destino.new(false, Vector2(848.307983, 514.375), 12, null),
 	"Silla43":Destino.new(false, Vector2(880.307983, 514.375), 12, null)}
 	pass
+func set_menu(menu_nuevo):
+	menu = menu_nuevo
 #Esta función es la que se encarga de hacer aparecer a los npcs, tantos como
 #deje la variable "npcs". Primero se elige el sprite del npc, después se 
 #instancia, se le asignan diferentes propiedades(destinos, menu, precios...)
@@ -176,9 +176,9 @@ func aparecer_npcs():
 	if npcIndex == npcs:
 		npcIndex = 0
 	else:
-		tiempo2.set_wait_time(espera)
-		tiempo2.start()
-		yield(tiempo2, "timeout")
+		tiempo.set_wait_time(espera)
+		tiempo.start()
+		yield(tiempo, "timeout")
 		aparecer_npcs()
 #Esta función es la que se encarga de eegir un sprite de npc aleatorio
 func npc_aleatorio():
@@ -209,6 +209,7 @@ func npc_aleatorio():
 #irán apareciendo, en función del momento del día y de la reputación de 
 #la taberna
 func numero_npcs(): 
+	var reputacion = int(get_parent().get_node("Hud/Reputacion/Reputacion").get_text())
 	var bonus
 	if global.labelMomento == "Mañana":
 		if reputacion >= 0 and reputacion <16:

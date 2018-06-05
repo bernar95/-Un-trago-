@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=1]
+[gd_scene load_steps=83 format=1]
 
 [ext_resource path="res://Scripts/Taberna.gd" type="Script" id=1]
 [ext_resource path="res://Tiles/house_inside.png" type="Texture" id=2]
@@ -6,38 +6,42 @@
 [ext_resource path="res://Scripts/Barril.gd" type="Script" id=4]
 [ext_resource path="res://Tiles/woodland_indoor_x3.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/tiempo.fnt" type="BitmapFont" id=6]
-[ext_resource path="res://Scripts/EstanteJarras.gd" type="Script" id=7]
-[ext_resource path="res://Scripts/Caldero.gd" type="Script" id=8]
-[ext_resource path="res://Tiles/dungeonex.png" type="Texture" id=9]
-[ext_resource path="res://Scripts/Caja.gd" type="Script" id=10]
-[ext_resource path="res://Tiles/obj_misk_atlas.png" type="Texture" id=11]
-[ext_resource path="res://Tiles/woodland_indoor.png" type="Texture" id=12]
-[ext_resource path="res://Tiles/build_atlas.png" type="Texture" id=13]
-[ext_resource path="res://Scripts/Papelera.gd" type="Script" id=14]
-[ext_resource path="res://Scripts/Player.gd" type="Script" id=15]
-[ext_resource path="res://Tiles/steampunk_m2.png" type="Texture" id=16]
-[ext_resource path="res://Scripts/Spawn.gd" type="Script" id=17]
-[ext_resource path="res://Scripts/Pedidos.gd" type="Script" id=18]
-[ext_resource path="res://Tiles/spellbookForFlare.png" type="Texture" id=19]
-[ext_resource path="res://Scripts/Suministros.gd" type="Script" id=20]
-[ext_resource path="res://Tiles/barrel.png" type="Texture" id=21]
-[ext_resource path="res://Tiles/Coin1.png" type="Texture" id=22]
-[ext_resource path="res://Fonts/precio.fnt" type="BitmapFont" id=23]
-[ext_resource path="res://Tiles/egg.png" type="Texture" id=24]
-[ext_resource path="res://Tiles/items_food.png" type="Texture" id=25]
-[ext_resource path="res://Fonts/pedido.fnt" type="BitmapFont" id=26]
-[ext_resource path="res://Scripts/LibroSuministros.gd" type="Script" id=27]
-[ext_resource path="res://Scripts/notificaciones.gd" type="Script" id=28]
-[ext_resource path="res://Scripts/LibroRecetas.gd" type="Script" id=29]
-[ext_resource path="res://Tiles/comida.png" type="Texture" id=30]
-[ext_resource path="res://Tiles/foodfromcts1a.png" type="Texture" id=31]
-[ext_resource path="res://Scripts/LibroCompras.gd" type="Script" id=32]
-[ext_resource path="res://Tiles/documentopen.png" type="Texture" id=33]
-[ext_resource path="res://Fonts/titulo.fnt" type="BitmapFont" id=34]
-[ext_resource path="res://Scripts/Reputacion.gd" type="Script" id=35]
-[ext_resource path="res://Scripts/LibroPrecios.gd" type="Script" id=36]
-[ext_resource path="res://Scripts/Pausa.gd" type="Script" id=37]
-[ext_resource path="res://Scripts/PlatoDia.gd" type="Script" id=38]
+[ext_resource path="res://Scripts/Invisible.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/EstanteJarras.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/Caldero.gd" type="Script" id=9]
+[ext_resource path="res://Tiles/dungeonex.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Caja.gd" type="Script" id=11]
+[ext_resource path="res://Tiles/obj_misk_atlas.png" type="Texture" id=12]
+[ext_resource path="res://Tiles/woodland_indoor.png" type="Texture" id=13]
+[ext_resource path="res://Tiles/build_atlas.png" type="Texture" id=14]
+[ext_resource path="res://Scripts/Papelera.gd" type="Script" id=15]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=16]
+[ext_resource path="res://Tiles/steampunk_m2.png" type="Texture" id=17]
+[ext_resource path="res://Scripts/Spawn.gd" type="Script" id=18]
+[ext_resource path="res://Scripts/Guardar.gd" type="Script" id=19]
+[ext_resource path="res://Scripts/Pedidos.gd" type="Script" id=20]
+[ext_resource path="res://Tiles/spellbookForFlare.png" type="Texture" id=21]
+[ext_resource path="res://Scripts/Suministros.gd" type="Script" id=22]
+[ext_resource path="res://Tiles/barrel.png" type="Texture" id=23]
+[ext_resource path="res://Tiles/Coin1.png" type="Texture" id=24]
+[ext_resource path="res://Fonts/precio.fnt" type="BitmapFont" id=25]
+[ext_resource path="res://Tiles/egg.png" type="Texture" id=26]
+[ext_resource path="res://Tiles/items_food.png" type="Texture" id=27]
+[ext_resource path="res://Fonts/pedido.fnt" type="BitmapFont" id=28]
+[ext_resource path="res://Scripts/Texto.gd" type="Script" id=29]
+[ext_resource path="res://Scripts/LibroSuministros.gd" type="Script" id=30]
+[ext_resource path="res://Scripts/notificaciones.gd" type="Script" id=31]
+[ext_resource path="res://Scripts/LibroRecetas.gd" type="Script" id=32]
+[ext_resource path="res://Tiles/comida.png" type="Texture" id=33]
+[ext_resource path="res://Tiles/foodfromcts1a.png" type="Texture" id=34]
+[ext_resource path="res://Scripts/LibroCompras.gd" type="Script" id=35]
+[ext_resource path="res://Tiles/documentopen.png" type="Texture" id=36]
+[ext_resource path="res://Fonts/titulo.fnt" type="BitmapFont" id=37]
+[ext_resource path="res://Scripts/Reputacion.gd" type="Script" id=38]
+[ext_resource path="res://Scripts/Experiencia.gd" type="Script" id=39]
+[ext_resource path="res://Scripts/LibroPrecios.gd" type="Script" id=40]
+[ext_resource path="res://Scripts/Pausa.gd" type="Script" id=41]
+[ext_resource path="res://Scripts/PlatoDia.gd" type="Script" id=42]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -338,7 +342,9 @@ vertices = Vector2Array( 426.557, 388.236, 479.97, 384.275, 506.498, 383.455, 62
 polygons = [ IntArray( 0, 1, 2, 3, 4, 5, 6, 7 ), IntArray( 8, 1, 0 ), IntArray( 9, 10, 11, 12, 13, 14, 15 ), IntArray( 6, 16, 17, 7 ), IntArray( 18, 19, 20 ), IntArray( 21, 19, 18, 22 ), IntArray( 18, 20, 23, 24 ), IntArray( 25, 24, 23 ), IntArray( 26, 8, 27, 28 ), IntArray( 29, 30, 31, 32, 33 ), IntArray( 32, 34, 35, 36, 22 ), IntArray( 27, 8, 0, 37 ), IntArray( 4, 3, 38, 25, 23, 39, 40, 41 ), IntArray( 42, 43, 44, 45 ), IntArray( 9, 45, 44, 46, 47 ), IntArray( 48, 46, 44, 49, 50 ), IntArray( 51, 52, 53, 54, 55 ), IntArray( 56, 27, 37, 57 ), IntArray( 48, 50, 58 ), IntArray( 59, 60, 61, 62 ), IntArray( 22, 38, 3, 33, 32 ), IntArray( 63, 64, 65, 66 ), IntArray( 67, 68, 69, 35, 70 ), IntArray( 71, 72, 73, 74 ), IntArray( 62, 75, 76, 59 ), IntArray( 77, 62, 61, 65 ), IntArray( 9, 15, 45 ), IntArray( 16, 47, 46, 78, 17 ), IntArray( 79, 17, 78, 55, 54 ), IntArray( 80, 81, 82, 83 ), IntArray( 84, 85, 86, 77 ), IntArray( 65, 84, 77 ), IntArray( 87, 88, 21, 36 ), IntArray( 36, 21, 22 ), IntArray( 29, 33, 89, 90 ), IntArray( 90, 89, 91, 92 ), IntArray( 91, 2, 1, 92 ), IntArray( 93, 94, 95, 79, 54 ), IntArray( 71, 74, 39, 23 ), IntArray( 4, 41, 96 ), IntArray( 97, 4, 96, 11 ), IntArray( 98, 56, 57 ), IntArray( 28, 99, 90, 92, 26 ), IntArray( 66, 100, 98, 57, 83 ), IntArray( 70, 35, 34, 31, 30 ), IntArray( 61, 70, 30, 99 ), IntArray( 61, 99, 28, 100 ), IntArray( 65, 61, 100, 66 ), IntArray( 80, 83, 57, 94, 101 ), IntArray( 10, 97, 11 ), IntArray( 10, 9, 6, 5 ), IntArray( 94, 0, 7, 95 ), IntArray( 94, 93, 101 ), IntArray( 80, 101, 102, 103 ), IntArray( 104, 103, 102, 105, 106 ), IntArray( 54, 104, 106, 93 ), IntArray( 51, 55, 48 ), IntArray( 48, 58, 51 ) ]
 outlines = [ Vector2Array( 491.309, 697.761, 498.017, 552.715, 180.091, 558.79, 179.492, 533.044, 330.131, 533.673, 327.904, 460.972, 179.281, 458.636, 177.56, 447.852, 314.392, 447.182, 115.991, 429.608, 118.012, 375.421, 234.779, 349.947, 100.105, 349.947, 100.105, 326.727, 258.266, 325.592, 252.367, 249.05, 100.369, 250.842, 99.6518, 234.71, 244.838, 237.22, 138.222, 189.857, 83.7369, 189.857, 83.7369, 164.71, 179.169, 163.156, 159.031, 89.7825, 80.7804, 88.5909, 81.5748, 69.1275, 153.073, 71.1135, 213.548, 66.3361, 212.356, 162.462, 799.42, 162.16, 859, 153.888, 906.103, 157.868, 910.199, 218.177, 744.568, 219.306, 723.507, 293.977, 908.624, 294.593, 908.624, 318.97, 760.211, 318.97, 921.361, 351.269, 909.128, 423.185, 820.224, 424.619, 821.903, 514.93, 892.166, 518.515, 891.446, 527.901, 798.287, 526.969, 732.294, 439.393, 720.464, 441.186, 685.691, 441.544, 636.96, 447.382, 617.602, 495.419, 716.398, 518.656, 716.398, 538.683, 648.359, 538.33, 579.145, 526.065, 528.719, 537.412, 526.918, 693.864 ), Vector2Array( 328.316, 460.929, 421.901, 485.126, 457.963, 534.475, 330.12, 533.812 ), Vector2Array( 287.839, 318.692, 411.899, 314.049, 426.557, 388.236, 302.434, 406.927 ), Vector2Array( 166.206, 416.511, 159.721, 393.816, 259.078, 374.948, 287.246, 422.996, 167.287, 422.996 ), Vector2Array( 372.154, 442.138, 365.467, 415.151, 424.854, 415.927, 435.145, 441.655 ), Vector2Array( 548.481, 498.996, 577.943, 450.595, 617.602, 428.024, 592.508, 489.325 ), Vector2Array( 696.069, 385.506, 690.073, 329.425, 883.66, 380.927, 852.788, 396.922, 827.539, 396.922 ), Vector2Array( 448.586, 262.361, 455.586, 261.382, 479.97, 384.275, 462.414, 384.275 ), Vector2Array( 652.741, 310.399, 652.453, 222.891, 687.741, 223.399 ), Vector2Array( 472.542, 460.508, 521.216, 445.384, 524.775, 503.62, 470.556, 502.215 ), Vector2Array( 519.977, 300.146, 610.978, 299.207, 622.861, 388.113, 506.498, 383.455, 507.065, 303.045 ), Vector2Array( 353.556, 273.632, 352.676, 219.497, 403.29, 221.257, 415.174, 283.315, 355.317, 285.956 ), Vector2Array( 503.033, 190.462, 567.384, 192.452, 569.375, 260.121, 498.014, 250.165 ) ]
 
-[node name="Mapa" type="Node"]
+[node name="Mapa" type="Node" groups=[
+"Persist",
+]]
 
 script/script = ExtResource( 1 )
 
@@ -5499,9 +5505,10 @@ _update_shape_index = 0
 
 [node name="BarraDetras" type="Node" parent="."]
 
+editor/display_folded = true
+
 [node name="Barriles" type="Node" parent="BarraDetras"]
 
-editor/display_folded = true
 script/script = ExtResource( 4 )
 
 [node name="Barril" type="Sprite" parent="BarraDetras/Barriles"]
@@ -5530,13 +5537,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Barril1" type="Sprite" parent="BarraDetras/Barriles"]
+[node name="Barril1" type="Sprite" parent="BarraDetras/Barriles" groups=[
+"Persist",
+]]
 
 editor/display_folded = true
 transform/pos = Vector2( 448, 32 )
 texture = ExtResource( 5 )
 region = true
 region_rect = Rect2( 352, 0, 64, 80 )
+script/script = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="BarraDetras/Barriles/Barril1"]
 
@@ -5562,7 +5572,7 @@ transform/pos = Vector2( 322, 32 )
 texture = ExtResource( 5 )
 region = true
 region_rect = Rect2( 63.5, 20, 33, 64 )
-script/script = ExtResource( 7 )
+script/script = ExtResource( 8 )
 
 [node name="BarraBotellas" type="Sprite" parent="BarraDetras"]
 
@@ -5573,14 +5583,17 @@ region_rect = Rect2( 96, 12, 64, 40 )
 
 [node name="CalderoNode" type="Node" parent="BarraDetras"]
 
-script/script = ExtResource( 8 )
+script/script = ExtResource( 9 )
 
-[node name="Caldero" type="Sprite" parent="BarraDetras/CalderoNode"]
+[node name="Caldero" type="Sprite" parent="BarraDetras/CalderoNode" groups=[
+"Persist",
+]]
 
 transform/pos = Vector2( 592, 48 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 region = true
 region_rect = Rect2( 32, -2, 32, 32 )
+script/script = ExtResource( 7 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="BarraDetras"]
 
@@ -5611,6 +5624,7 @@ transform/scale = Vector2( 0.5, 1.25 )
 
 [node name="StaticBody2D 2" type="StaticBody2D" parent="BarraDetras"]
 
+editor/display_folded = true
 input/pickable = false
 shapes/0/shape = SubResource( 10 )
 shapes/0/transform = Matrix32( 2.70098, 0, 0, 2.04612, 378, 32 )
@@ -5710,56 +5724,77 @@ transform/scale = Vector2( 0.365558, 0.409156 )
 
 [node name="Cajas" type="Node" parent="BarraDetras"]
 
-script/script = ExtResource( 10 )
+script/script = ExtResource( 11 )
 
-[node name="CajaPescado" type="Sprite" parent="BarraDetras/Cajas"]
+[node name="CajaPescado" type="Sprite" parent="BarraDetras/Cajas" groups=[
+"Persist",
+]]
 
 transform/pos = Vector2( 640, 48 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
+script/script = ExtResource( 7 )
 
-[node name="CajaCarne" type="Sprite" parent="BarraDetras/Cajas"]
+[node name="CajaCarne" type="Sprite" parent="BarraDetras/Cajas" groups=[
+"Persist",
+]]
 
 transform/pos = Vector2( 288, 48 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
+script/script = ExtResource( 7 )
 
-[node name="CajaPan" type="Sprite" parent="BarraDetras/Cajas"]
+[node name="CajaPan" type="Sprite" parent="BarraDetras/Cajas" groups=[
+"Persist",
+]]
 
 transform/pos = Vector2( 512, 32 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
+script/script = ExtResource( 7 )
 
-[node name="CajaHuevos" type="Sprite" parent="BarraDetras/Cajas"]
+[node name="CajaHuevos" type="Sprite" parent="BarraDetras/Cajas" groups=[
+"Persist",
+]]
 
 transform/pos = Vector2( 544, 32 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
+script/script = ExtResource( 7 )
 
-[node name="CajaQueso" type="Sprite" parent="BarraDetras/Cajas"]
+[node name="CajaQueso" type="Sprite" parent="BarraDetras/Cajas" groups=[
+"Persist",
+]]
 
 transform/pos = Vector2( 672, 48 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
+script/script = ExtResource( 7 )
 
-[node name="CajaVerduras" type="Sprite" parent="BarraDetras/Cajas"]
+[node name="CajaVerduras" type="Sprite" parent="BarraDetras/Cajas" groups=[
+"Persist",
+]]
 
 transform/pos = Vector2( 704, 48 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
+script/script = ExtResource( 7 )
 
-[node name="CajaPatatas" type="Sprite" parent="BarraDetras/Cajas"]
+[node name="CajaPatatas" type="Sprite" parent="BarraDetras/Cajas" groups=[
+"Persist",
+]]
 
 transform/pos = Vector2( 736, 48 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 162, 615, 28, 26 )
+script/script = ExtResource( 7 )
 
 [node name="StaticBody2D 6" type="StaticBody2D" parent="BarraDetras"]
 
@@ -5945,6 +5980,8 @@ transform/scale = Vector2( 0.442548, 0.504706 )
 
 [node name="Alimentos" type="Node" parent="BarraDetras"]
 
+editor/display_folded = true
+
 [node name="Carne" type="Node2D" parent="BarraDetras/Alimentos"]
 
 [node name="Pescado" type="Node2D" parent="BarraDetras/Alimentos"]
@@ -5966,77 +6003,77 @@ editor/display_folded = true
 [node name="Sprite" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 208, 512 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite8" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 800, 272 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite6" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 288, 512 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite8 2" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 880, 272 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite1" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 112, 144 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite2" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 125.026, 302.678 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite7" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 204.026, 302.678 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite3" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 352, 368 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite9" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 688, 496 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite4" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 560, 352 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
 [node name="Sprite5" type="Sprite" parent="Mesas"]
 
 transform/pos = Vector2( 864, 480 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 6, 452, 84, 64 )
 
@@ -6215,49 +6252,49 @@ editor/display_folded = true
 [node name="Barril" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 112, 416 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril1" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 928, 384 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril2" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 528, 224 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril5" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 384, 256 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril6" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 912, 160 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril3" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 720, 368 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
 [node name="Barril4" type="Sprite" parent="Barriles"]
 
 transform/pos = Vector2( 496, 480 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 region = true
 region_rect = Rect2( 928, 264, 32, 40 )
 
@@ -8049,12 +8086,12 @@ transform/scale = Vector2( 0.424638, 0.384196 )
 [node name="Papelera " type="Node" parent="."]
 
 editor/display_folded = true
-script/script = ExtResource( 14 )
+script/script = ExtResource( 15 )
 
 [node name="Papelera" type="Sprite" parent="Papelera "]
 
 transform/pos = Vector2( 830.927, 43.0649 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 region = true
 region_rect = Rect2( 992, 415, 32, 32 )
 
@@ -8090,7 +8127,7 @@ input/pickable = false
 collision/layers = 1
 collision/mask = 1
 collision/margin = 0.08
-script/script = ExtResource( 15 )
+script/script = ExtResource( 16 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="KinematicBody2D"]
 
@@ -8114,15 +8151,16 @@ autoplay = ""
 
 transform/pos = Vector2( -6.06653, -27.0443 )
 transform/scale = Vector2( 5.89107, 2.75153 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 vframes = 4
 hframes = 4
+frame = 2
 region_rect = Rect2( 0, 0, 32, 48 )
 
 [node name="Navegacion" type="Node" parent="."]
 
 editor/display_folded = true
-script/script = ExtResource( 17 )
+script/script = ExtResource( 18 )
 
 [node name="Navigation2D" type="Navigation2D" parent="Navegacion"]
 
@@ -8137,6 +8175,8 @@ transform/pos = Vector2( 511.214, 652.043 )
 transform/scale = Vector2( 0.882584, 0.738347 )
 
 [node name="Hud" type="Node" parent="."]
+
+script/script = ExtResource( 19 )
 
 [node name="Pedidos" type="Button" parent="Hud"]
 
@@ -8155,10 +8195,11 @@ shortcut = null
 text = "Pedidos"
 flat = false
 
-[node name="Container" type="Container" parent="Hud"]
+[node name="Container" type="Container" parent="Hud" groups=[
+"Persist",
+]]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -8168,10 +8209,11 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 1024.0
 margin/bottom = 608.0
-script/script = ExtResource( 18 )
+script/script = ExtResource( 20 )
 
 [node name="LibroPedidos" type="Patch9Frame" parent="Hud/Container"]
 
+editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -8180,8 +8222,8 @@ margin/left = 48.0
 margin/top = 48.0
 margin/right = 976.0
 margin/bottom = 560.0
-texture = ExtResource( 19 )
-script/script = ExtResource( 20 )
+texture = ExtResource( 21 )
+script/script = ExtResource( 22 )
 
 [node name="Cerveza" type="Node2D" parent="Hud/Container/LibroPedidos"]
 
@@ -8192,7 +8234,7 @@ editor/display_folded = true
 editor/display_folded = true
 transform/pos = Vector2( 160, 128 )
 transform/scale = Vector2( 0.84375, 0.71875 )
-texture = ExtResource( 21 )
+texture = ExtResource( 23 )
 
 [node name="Label" type="Label" parent="Hud/Container/LibroPedidos/Cerveza/Cerveza"]
 
@@ -8233,7 +8275,7 @@ flat = false
 
 transform/pos = Vector2( 313, 121 )
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Cerveza" type="Label" parent="Hud/Container/LibroPedidos/Cerveza/Precio1"]
 
@@ -8245,7 +8287,7 @@ margin/left = -60.0
 margin/top = -18.0
 margin/right = 4.0
 margin/bottom = 17.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "45"
 percent_visible = 1.0
@@ -8257,7 +8299,7 @@ max_lines_visible = -1
 editor/display_folded = true
 transform/pos = Vector2( 160, 80 )
 transform/scale = Vector2( 0.84375, 0.71875 )
-texture = ExtResource( 21 )
+texture = ExtResource( 23 )
 
 [node name="Label" type="Label" parent="Hud/Container/LibroPedidos/Vino"]
 
@@ -8285,7 +8327,7 @@ transform/pos = Vector2( 0, 76 )
 [node name="Carne" type="Sprite" parent="Hud/Container/LibroPedidos/Carne"]
 
 transform/pos = Vector2( 160, 168 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 0, 625, 32, 32 )
 
@@ -8310,7 +8352,7 @@ flat = false
 
 transform/pos = Vector2( 313, 172 )
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Carne" type="Label" parent="Hud/Container/LibroPedidos/Carne/Precio2"]
 
@@ -8322,7 +8364,7 @@ margin/left = -52.0
 margin/top = -18.0
 margin/right = 12.0
 margin/bottom = 17.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "5"
 percent_visible = 1.0
@@ -8337,7 +8379,7 @@ transform/pos = Vector2( 0, 72 )
 [node name="Pescado" type="Sprite" parent="Hud/Container/LibroPedidos/Pescado"]
 
 transform/pos = Vector2( 160, 208 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 200, 700, 48, 32 )
 
@@ -8362,7 +8404,7 @@ flat = false
 
 transform/pos = Vector2( 313, 212 )
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Pescado" type="Label" parent="Hud/Container/LibroPedidos/Pescado/Precio3"]
 
@@ -8374,7 +8416,7 @@ margin/left = -52.0
 margin/top = -18.0
 margin/right = 12.0
 margin/bottom = 17.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "8"
 percent_visible = 1.0
@@ -8389,7 +8431,7 @@ transform/pos = Vector2( 0, 75 )
 [node name="Verduras" type="Sprite" parent="Hud/Container/LibroPedidos/Verduras"]
 
 transform/pos = Vector2( 160, 256 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 321, 672, 30, 34 )
 
@@ -8414,7 +8456,7 @@ flat = false
 
 transform/pos = Vector2( 313, 255 )
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Verduras" type="Label" parent="Hud/Container/LibroPedidos/Verduras/Precio4"]
 
@@ -8426,7 +8468,7 @@ margin/left = -62.0
 margin/top = -20.0
 margin/right = 2.0
 margin/bottom = 15.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "20"
 percent_visible = 1.0
@@ -8441,7 +8483,7 @@ transform/pos = Vector2( 0, 69 )
 [node name="Patatas" type="Sprite" parent="Hud/Container/LibroPedidos/Patatas"]
 
 transform/pos = Vector2( 160, 304 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 385, 672, 30, 34 )
 
@@ -8466,7 +8508,7 @@ flat = false
 
 transform/pos = Vector2( 313, 302 )
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Patatas" type="Label" parent="Hud/Container/LibroPedidos/Patatas/Precio5"]
 
@@ -8478,7 +8520,7 @@ margin/left = -62.0
 margin/top = -18.0
 margin/right = 2.0
 margin/bottom = 17.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "25"
 percent_visible = 1.0
@@ -8493,7 +8535,7 @@ transform/pos = Vector2( 0, 67 )
 [node name="Huevos" type="Sprite" parent="Hud/Container/LibroPedidos/Huevos"]
 
 transform/pos = Vector2( 160, 345 )
-texture = ExtResource( 24 )
+texture = ExtResource( 26 )
 
 [node name="ComprarHuevos" type="Button" parent="Hud/Container/LibroPedidos/Huevos"]
 
@@ -8516,7 +8558,7 @@ flat = false
 
 transform/pos = Vector2( 313, 344 )
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Huevo" type="Label" parent="Hud/Container/LibroPedidos/Huevos/Precio6"]
 
@@ -8528,7 +8570,7 @@ margin/left = -52.0
 margin/top = -18.0
 margin/right = 12.0
 margin/bottom = 17.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "1"
 percent_visible = 1.0
@@ -8544,7 +8586,7 @@ transform/pos = Vector2( 0, -209 )
 
 transform/pos = Vector2( 160, 383 )
 transform/scale = Vector2( 0.613636, 0.583333 )
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 region = true
 region_rect = Rect2( 626, 2, 44, 48 )
 
@@ -8569,7 +8611,7 @@ flat = false
 
 transform/pos = Vector2( 313, 382 )
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Pan" type="Label" parent="Hud/Container/LibroPedidos/Pan/Precio7"]
 
@@ -8581,7 +8623,7 @@ margin/left = -52.0
 margin/top = -20.0
 margin/right = 12.0
 margin/bottom = 15.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "2"
 percent_visible = 1.0
@@ -8597,7 +8639,7 @@ transform/pos = Vector2( 0, -203 )
 
 transform/pos = Vector2( 160, 413 )
 transform/scale = Vector2( 0.613636, 0.583333 )
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 region = true
 region_rect = Rect2( 530, 2, 44, 48 )
 
@@ -8622,7 +8664,7 @@ flat = false
 
 transform/pos = Vector2( 313, 415 )
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Queso" type="Label" parent="Hud/Container/LibroPedidos/Queso/Precio8"]
 
@@ -8634,7 +8676,7 @@ margin/left = -52.0
 margin/top = -20.0
 margin/right = 12.0
 margin/bottom = 15.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "2"
 percent_visible = 1.0
@@ -8702,7 +8744,7 @@ margin/left = 512.0
 margin/top = 64.0
 margin/right = 624.0
 margin/bottom = 99.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8717,7 +8759,7 @@ margin/left = 642.0
 margin/top = 64.0
 margin/right = 754.0
 margin/bottom = 99.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8732,7 +8774,7 @@ margin/left = 512.0
 margin/top = 112.0
 margin/right = 624.0
 margin/bottom = 135.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8747,7 +8789,7 @@ margin/left = 642.0
 margin/top = 112.0
 margin/right = 754.0
 margin/bottom = 135.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8762,7 +8804,7 @@ margin/left = 512.0
 margin/top = 160.0
 margin/right = 624.0
 margin/bottom = 183.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8777,7 +8819,7 @@ margin/left = 642.0
 margin/top = 160.0
 margin/right = 754.0
 margin/bottom = 183.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8792,7 +8834,7 @@ margin/left = 512.0
 margin/top = 197.0
 margin/right = 624.0
 margin/bottom = 220.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8807,7 +8849,7 @@ margin/left = 642.0
 margin/top = 197.0
 margin/right = 754.0
 margin/bottom = 220.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8822,7 +8864,7 @@ margin/left = 512.0
 margin/top = 235.0
 margin/right = 624.0
 margin/bottom = 258.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8837,7 +8879,7 @@ margin/left = 642.0
 margin/top = 235.0
 margin/right = 754.0
 margin/bottom = 258.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8852,7 +8894,7 @@ margin/left = 512.0
 margin/top = 276.0
 margin/right = 624.0
 margin/bottom = 299.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8867,7 +8909,7 @@ margin/left = 642.0
 margin/top = 276.0
 margin/right = 754.0
 margin/bottom = 299.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8882,7 +8924,7 @@ margin/left = 512.0
 margin/top = 317.0
 margin/right = 624.0
 margin/bottom = 340.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8897,7 +8939,7 @@ margin/left = 642.0
 margin/top = 317.0
 margin/right = 754.0
 margin/bottom = 340.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8912,7 +8954,7 @@ margin/left = 512.0
 margin/top = 358.0
 margin/right = 624.0
 margin/bottom = 381.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8927,7 +8969,7 @@ margin/left = 642.0
 margin/top = 358.0
 margin/right = 754.0
 margin/bottom = 381.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8942,7 +8984,7 @@ margin/left = 512.0
 margin/top = 400.0
 margin/right = 624.0
 margin/bottom = 423.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8957,7 +8999,7 @@ margin/left = 642.0
 margin/top = 400.0
 margin/right = 754.0
 margin/bottom = 423.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = 1
@@ -8967,7 +9009,7 @@ max_lines_visible = 1
 editor/display_folded = true
 transform/pos = Vector2( 313, 75 )
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Vino" type="Label" parent="Hud/Container/LibroPedidos/Precio"]
 
@@ -8979,7 +9021,7 @@ margin/left = -62.0
 margin/top = -18.0
 margin/right = 2.0
 margin/bottom = 17.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "30"
 percent_visible = 1.0
@@ -9159,7 +9201,7 @@ margin/left = 704.0
 margin/top = 42.0
 margin/right = 754.0
 margin/bottom = 65.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Total:"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9175,7 +9217,7 @@ margin/left = 64.0
 margin/top = 0.0
 margin/right = 104.0
 margin/bottom = 23.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "0"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9192,7 +9234,7 @@ margin/left = 576.0
 margin/top = 43.0
 margin/right = 680.0
 margin/bottom = 66.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "Insuficiente"
 percent_visible = 1.0
@@ -9211,7 +9253,7 @@ margin/left = 491.0
 margin/top = 42.0
 margin/right = 754.0
 margin/bottom = 65.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "Has superado el stock"
 percent_visible = 1.0
@@ -9229,7 +9271,7 @@ margin/left = 309.0
 margin/top = 25.0
 margin/right = 349.0
 margin/bottom = 48.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
 percent_visible = 1.0
@@ -9247,7 +9289,7 @@ margin/left = 309.0
 margin/top = 72.0
 margin/right = 349.0
 margin/bottom = 95.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
 percent_visible = 1.0
@@ -9265,7 +9307,7 @@ margin/left = 309.0
 margin/top = 118.0
 margin/right = 349.0
 margin/bottom = 141.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
 percent_visible = 1.0
@@ -9283,7 +9325,7 @@ margin/left = 309.0
 margin/top = 158.0
 margin/right = 349.0
 margin/bottom = 181.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
 percent_visible = 1.0
@@ -9301,7 +9343,7 @@ margin/left = 309.0
 margin/top = 193.0
 margin/right = 349.0
 margin/bottom = 216.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
 percent_visible = 1.0
@@ -9319,7 +9361,7 @@ margin/left = 309.0
 margin/top = 235.0
 margin/right = 349.0
 margin/bottom = 258.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
 percent_visible = 1.0
@@ -9337,7 +9379,7 @@ margin/left = 309.0
 margin/top = 274.0
 margin/right = 349.0
 margin/bottom = 297.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
 percent_visible = 1.0
@@ -9355,7 +9397,7 @@ margin/left = 309.0
 margin/top = 316.0
 margin/right = 349.0
 margin/bottom = 339.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
 percent_visible = 1.0
@@ -9373,14 +9415,16 @@ margin/left = 309.0
 margin/top = 358.0
 margin/right = 349.0
 margin/bottom = 381.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "*"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Dinero" type="Label" parent="Hud"]
+[node name="Dinero" type="Label" parent="Hud" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -9390,16 +9434,17 @@ margin/left = 928.0
 margin/top = -3.0
 margin/right = 1019.0
 margin/bottom = 32.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 25 )
 text = "30"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 29 )
 
 [node name="Monedas" type="Sprite" parent="Hud"]
 
 transform/pos = Vector2( 912, 16 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="LibroSuministros" type="Patch9Frame" parent="Hud"]
 
@@ -9414,11 +9459,12 @@ margin/left = 48.0
 margin/top = 48.0
 margin/right = 976.0
 margin/bottom = 560.0
-texture = ExtResource( 19 )
-script/script = ExtResource( 27 )
+texture = ExtResource( 21 )
+script/script = ExtResource( 30 )
 
 [node name="ContainerVino" type="Container" parent="Hud/LibroSuministros"]
 
+editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -9432,9 +9478,11 @@ margin/bottom = 120.0
 
 transform/pos = Vector2( 96, 16 )
 transform/scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 21 )
+texture = ExtResource( 23 )
 
-[node name="StockVino" type="Label" parent="Hud/LibroSuministros/ContainerVino"]
+[node name="StockVino" type="Label" parent="Hud/LibroSuministros/ContainerVino" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -9444,11 +9492,12 @@ margin/left = 128.0
 margin/top = 0.0
 margin/right = 212.0
 margin/bottom = 64.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "0/90"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 29 )
 
 [node name="NombreVino" type="Label" parent="Hud/LibroSuministros/ContainerVino"]
 
@@ -9460,7 +9509,7 @@ margin/left = 80.0
 margin/top = -32.0
 margin/right = 120.0
 margin/bottom = -9.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Vino"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9481,11 +9530,13 @@ margin/bottom = 744.0
 
 transform/pos = Vector2( 160.625, -527 )
 transform/scale = Vector2( 1.6625, 1.63125 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 230, 363, 20, 20 )
 
-[node name="StockCerveza" type="Label" parent="Hud/LibroSuministros/ContainerCerveza"]
+[node name="StockCerveza" type="Label" parent="Hud/LibroSuministros/ContainerCerveza" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -9495,11 +9546,12 @@ margin/left = 192.0
 margin/top = -544.0
 margin/right = 276.0
 margin/bottom = -509.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "0/90"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 29 )
 
 [node name="NombreCerveza" type="Label" parent="Hud/LibroSuministros/ContainerCerveza"]
 
@@ -9511,7 +9563,7 @@ margin/left = 144.0
 margin/top = -576.0
 margin/right = 217.0
 margin/bottom = -553.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Cerveza"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9548,11 +9600,13 @@ margin/bottom = 120.0
 [node name="Carne" type="Sprite" parent="Hud/LibroSuministros/ContainerCarne"]
 
 transform/pos = Vector2( 160, 176 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 0, 625, 32, 32 )
 
-[node name="StockCarne" type="Label" parent="Hud/LibroSuministros/ContainerCarne"]
+[node name="StockCarne" type="Label" parent="Hud/LibroSuministros/ContainerCarne" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -9562,11 +9616,12 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "0/10"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 29 )
 
 [node name="NombreCarne" type="Label" parent="Hud/LibroSuministros/ContainerCarne"]
 
@@ -9578,7 +9633,7 @@ margin/left = 144.0
 margin/top = 128.0
 margin/right = 217.0
 margin/bottom = 151.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Carne"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9598,11 +9653,13 @@ margin/bottom = 200.0
 [node name="Pescado" type="Sprite" parent="Hud/LibroSuministros/ContainerPescado"]
 
 transform/pos = Vector2( 160, 176 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 200, 700, 48, 32 )
 
-[node name="StockPescado" type="Label" parent="Hud/LibroSuministros/ContainerPescado"]
+[node name="StockPescado" type="Label" parent="Hud/LibroSuministros/ContainerPescado" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -9612,11 +9669,12 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "0/10"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 29 )
 
 [node name="NombrePescado" type="Label" parent="Hud/LibroSuministros/ContainerPescado"]
 
@@ -9628,7 +9686,7 @@ margin/left = 144.0
 margin/top = 128.0
 margin/right = 217.0
 margin/bottom = 151.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Pescado"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9648,11 +9706,13 @@ margin/bottom = 280.0
 [node name="Verduras" type="Sprite" parent="Hud/LibroSuministros/ContainerVerduras"]
 
 transform/pos = Vector2( 160, 176 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 321, 672, 30, 34 )
 
-[node name="StockVerduras" type="Label" parent="Hud/LibroSuministros/ContainerVerduras"]
+[node name="StockVerduras" type="Label" parent="Hud/LibroSuministros/ContainerVerduras" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -9662,11 +9722,12 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "0/60"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 29 )
 
 [node name="NombreVerduras" type="Label" parent="Hud/LibroSuministros/ContainerVerduras"]
 
@@ -9678,7 +9739,7 @@ margin/left = 144.0
 margin/top = 128.0
 margin/right = 217.0
 margin/bottom = 151.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Verduras"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9698,11 +9759,13 @@ margin/bottom = -40.0
 [node name="Patatas" type="Sprite" parent="Hud/LibroSuministros/ContainerPatatas"]
 
 transform/pos = Vector2( 160, 176 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 385, 672, 30, 34 )
 
-[node name="StockPatatas" type="Label" parent="Hud/LibroSuministros/ContainerPatatas"]
+[node name="StockPatatas" type="Label" parent="Hud/LibroSuministros/ContainerPatatas" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -9712,11 +9775,12 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "0/80"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 29 )
 
 [node name="NombrePatatas" type="Label" parent="Hud/LibroSuministros/ContainerPatatas"]
 
@@ -9728,7 +9792,7 @@ margin/left = 144.0
 margin/top = 128.0
 margin/right = 217.0
 margin/bottom = 151.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Patatas"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9748,9 +9812,11 @@ margin/bottom = 40.0
 [node name="Huevos" type="Sprite" parent="Hud/LibroSuministros/ContainerHuevos"]
 
 transform/pos = Vector2( 160, 176 )
-texture = ExtResource( 24 )
+texture = ExtResource( 26 )
 
-[node name="StockHuevos" type="Label" parent="Hud/LibroSuministros/ContainerHuevos"]
+[node name="StockHuevos" type="Label" parent="Hud/LibroSuministros/ContainerHuevos" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -9760,11 +9826,12 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "0/24"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 29 )
 
 [node name="NombreHuevos" type="Label" parent="Hud/LibroSuministros/ContainerHuevos"]
 
@@ -9776,7 +9843,7 @@ margin/left = 144.0
 margin/top = 128.0
 margin/right = 217.0
 margin/bottom = 151.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Huevos"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9797,11 +9864,13 @@ margin/bottom = 120.0
 
 transform/pos = Vector2( 160, 176 )
 transform/scale = Vector2( 0.613636, 0.583333 )
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 region = true
 region_rect = Rect2( 626, 2, 44, 48 )
 
-[node name="StockPan" type="Label" parent="Hud/LibroSuministros/ContainerPan"]
+[node name="StockPan" type="Label" parent="Hud/LibroSuministros/ContainerPan" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -9811,11 +9880,12 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "0/20"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 29 )
 
 [node name="NombrePan" type="Label" parent="Hud/LibroSuministros/ContainerPan"]
 
@@ -9827,7 +9897,7 @@ margin/left = 144.0
 margin/top = 128.0
 margin/right = 217.0
 margin/bottom = 151.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Pan"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9848,11 +9918,13 @@ margin/bottom = 200.0
 
 transform/pos = Vector2( 160, 176 )
 transform/scale = Vector2( 0.613636, 0.583333 )
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 region = true
 region_rect = Rect2( 530, 2, 44, 48 )
 
-[node name="StockQueso" type="Label" parent="Hud/LibroSuministros/ContainerQueso"]
+[node name="StockQueso" type="Label" parent="Hud/LibroSuministros/ContainerQueso" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -9862,11 +9934,12 @@ margin/left = 192.0
 margin/top = 160.0
 margin/right = 276.0
 margin/bottom = 195.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "0/20"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 29 )
 
 [node name="NombreQueso" type="Label" parent="Hud/LibroSuministros/ContainerQueso"]
 
@@ -9878,7 +9951,7 @@ margin/left = 144.0
 margin/top = 128.0
 margin/right = 217.0
 margin/bottom = 151.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Queso"
 percent_visible = 1.0
 lines_skipped = 0
@@ -9913,7 +9986,7 @@ margin/left = 550.0
 margin/top = 537.0
 margin/right = 980.0
 margin/bottom = 574.0
-script/script = ExtResource( 28 )
+script/script = ExtResource( 31 )
 
 [node name="Notificacion" type="Label" parent="Hud/Notificaciones"]
 
@@ -9925,7 +9998,7 @@ margin/left = 7.0
 margin/top = 7.0
 margin/right = 423.0
 margin/bottom = 30.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 0.894118 )
 percent_visible = 1.0
 lines_skipped = 0
@@ -10011,8 +10084,8 @@ margin/left = 48.0
 margin/top = 48.0
 margin/right = 976.0
 margin/bottom = 560.0
-texture = ExtResource( 19 )
-script/script = ExtResource( 29 )
+texture = ExtResource( 21 )
+script/script = ExtResource( 32 )
 
 [node name="CerrarRecetas" type="Button" parent="Hud/LibroRecetas"]
 
@@ -10033,6 +10106,7 @@ flat = false
 
 [node name="Chuletas" type="Node2D" parent="Hud/LibroRecetas"]
 
+editor/display_folded = true
 transform/pos = Vector2( 192, 96 )
 
 [node name="Nombre" type="Label" parent="Hud/LibroRecetas/Chuletas"]
@@ -10045,7 +10119,7 @@ margin/left = -64.0
 margin/top = -32.0
 margin/right = -9.0
 margin/bottom = -18.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Chuletas"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10061,7 +10135,7 @@ margin/left = 16.0
 margin/top = 32.0
 margin/right = 192.0
 margin/bottom = 55.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "1 x        =  4 x "
 percent_visible = 1.0
 lines_skipped = 0
@@ -10070,19 +10144,20 @@ max_lines_visible = -1
 [node name="Ingrediente" type="Sprite" parent="Hud/LibroRecetas/Chuletas/Nombre/Receta"]
 
 transform/pos = Vector2( 50.1512, 10.3269 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 50, 610, 32, 32 )
 
 [node name="Comida" type="Sprite" parent="Hud/LibroRecetas/Chuletas/Nombre/Receta"]
 
 transform/pos = Vector2( 143.725, 9.79271 )
-texture = ExtResource( 30 )
+texture = ExtResource( 33 )
 region = true
 region_rect = Rect2( 50, 610, 32, 32 )
 
 [node name="Bacalao" type="Node2D" parent="Hud/LibroRecetas"]
 
+editor/display_folded = true
 transform/pos = Vector2( 192, 177 )
 
 [node name="Nombre" type="Label" parent="Hud/LibroRecetas/Bacalao"]
@@ -10095,7 +10170,7 @@ margin/left = -64.0
 margin/top = -32.0
 margin/right = -15.0
 margin/bottom = -18.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Bacalao"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10111,7 +10186,7 @@ margin/left = 16.0
 margin/top = 32.0
 margin/right = 192.0
 margin/bottom = 55.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "1 x          =  4 x "
 percent_visible = 1.0
 lines_skipped = 0
@@ -10120,19 +10195,20 @@ max_lines_visible = -1
 [node name="Ingrediente" type="Sprite" parent="Hud/LibroRecetas/Bacalao/Nombre/Receta"]
 
 transform/pos = Vector2( 51.9117, 10.3269 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 200, 702, 48, 32 )
 
 [node name="Comida" type="Sprite" parent="Hud/LibroRecetas/Bacalao/Nombre/Receta"]
 
 transform/pos = Vector2( 161.33, 9.3526 )
-texture = ExtResource( 30 )
+texture = ExtResource( 33 )
 region = true
 region_rect = Rect2( 200, 702, 48, 32 )
 
 [node name="Quebrantos" type="Node2D" parent="Hud/LibroRecetas"]
 
+editor/display_folded = true
 transform/pos = Vector2( 192, 269 )
 
 [node name="Nombre" type="Label" parent="Hud/LibroRecetas/Quebrantos"]
@@ -10145,7 +10221,7 @@ margin/left = -64.0
 margin/top = -32.0
 margin/right = 11.0
 margin/bottom = -18.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Quebrantos"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10161,7 +10237,7 @@ margin/left = 16.0
 margin/top = 32.0
 margin/right = 192.0
 margin/bottom = 55.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "1 x       +  2 x     =  2 x "
 percent_visible = 1.0
 lines_skipped = 0
@@ -10170,7 +10246,7 @@ max_lines_visible = -1
 [node name="Ingrediente" type="Sprite" parent="Hud/LibroRecetas/Quebrantos/Nombre/Receta"]
 
 transform/pos = Vector2( 45.1175, 10.3268 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 50, 610, 32, 32 )
 
@@ -10178,17 +10254,18 @@ region_rect = Rect2( 50, 610, 32, 32 )
 
 transform/pos = Vector2( 131.97, 10.6837 )
 transform/scale = Vector2( 0.634036, 0.596022 )
-texture = ExtResource( 24 )
+texture = ExtResource( 26 )
 
 [node name="Comida" type="Sprite" parent="Hud/LibroRecetas/Quebrantos/Nombre/Receta"]
 
 transform/pos = Vector2( 217.533, 12.2636 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 340, 34, 32, 32 )
 
 [node name="Sopa" type="Node2D" parent="Hud/LibroRecetas"]
 
+editor/display_folded = true
 transform/pos = Vector2( 192, 352 )
 
 [node name="Nombre" type="Label" parent="Hud/LibroRecetas/Sopa"]
@@ -10201,7 +10278,7 @@ margin/left = -64.0
 margin/top = -32.0
 margin/right = -24.0
 margin/bottom = -18.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Sopa"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10217,7 +10294,7 @@ margin/left = 16.0
 margin/top = 32.0
 margin/right = 235.0
 margin/bottom = 55.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "5 x       +  5 x       =  10 x "
 percent_visible = 1.0
 lines_skipped = 0
@@ -10227,7 +10304,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 46.6248, 11.912 )
 transform/scale = Vector2( 0.891999, 0.8362 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 320, 640, 32, 32 )
 
@@ -10235,19 +10312,20 @@ region_rect = Rect2( 320, 640, 32, 32 )
 
 transform/pos = Vector2( 137.715, 9.21375 )
 transform/scale = Vector2( 0.832105, 0.866355 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 385, 640, 32, 32 )
 
 [node name="Comida" type="Sprite" parent="Hud/LibroRecetas/Sopa/Nombre/Receta"]
 
 transform/pos = Vector2( 246.963, 12.9471 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 70, 68, 32, 32 )
 
 [node name="Olla" type="Node2D" parent="Hud/LibroRecetas"]
 
+editor/display_folded = true
 transform/pos = Vector2( 567, 179 )
 
 [node name="Nombre" type="Label" parent="Hud/LibroRecetas/Olla"]
@@ -10260,7 +10338,7 @@ margin/left = -64.0
 margin/top = -32.0
 margin/right = 14.0
 margin/bottom = -18.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Olla podrida"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10276,7 +10354,7 @@ margin/left = 16.0
 margin/top = 32.0
 margin/right = 235.0
 margin/bottom = 55.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "5 x       +  5 x       =  10 x "
 percent_visible = 1.0
 lines_skipped = 0
@@ -10286,7 +10364,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 46.6248, 11.912 )
 transform/scale = Vector2( 0.891999, 0.8362 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 320, 640, 32, 32 )
 
@@ -10294,19 +10372,20 @@ region_rect = Rect2( 320, 640, 32, 32 )
 
 transform/pos = Vector2( 139.467, 10.6737 )
 transform/scale = Vector2( 0.832105, 0.866355 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 50, 610, 32, 32 )
 
 [node name="Comida" type="Sprite" parent="Hud/LibroRecetas/Olla/Nombre/Receta"]
 
 transform/pos = Vector2( 246.529, 11.8664 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 273, 238, 32, 32 )
 
 [node name="Estofado" type="Node2D" parent="Hud/LibroRecetas"]
 
+editor/display_folded = true
 transform/pos = Vector2( 567, 268 )
 
 [node name="Nombre" type="Label" parent="Hud/LibroRecetas/Estofado"]
@@ -10319,7 +10398,7 @@ margin/left = -64.0
 margin/top = -32.0
 margin/right = -10.0
 margin/bottom = -18.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Estofado"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10335,7 +10414,7 @@ margin/left = 16.0
 margin/top = 32.0
 margin/right = 235.0
 margin/bottom = 55.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "5 x       +  5 x       =  10 x "
 percent_visible = 1.0
 lines_skipped = 0
@@ -10345,7 +10424,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 46.6248, 11.912 )
 transform/scale = Vector2( 0.891999, 0.8362 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 385, 640, 32, 32 )
 
@@ -10353,18 +10432,20 @@ region_rect = Rect2( 385, 640, 32, 32 )
 
 transform/pos = Vector2( 139.467, 10.6737 )
 transform/scale = Vector2( 0.832105, 0.866355 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 region = true
 region_rect = Rect2( 50, 610, 32, 32 )
 
 [node name="Comida" type="Sprite" parent="Hud/LibroRecetas/Estofado/Nombre/Receta"]
 
 transform/pos = Vector2( 246.529, 11.8664 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 374, 238, 32, 32 )
 
-[node name="LibroCompras" type="Patch9Frame" parent="Hud"]
+[node name="LibroCompras" type="Patch9Frame" parent="Hud" groups=[
+"Persist",
+]]
 
 process/pause_mode = 2
 editor/display_folded = true
@@ -10377,8 +10458,8 @@ margin/left = 48.0
 margin/top = 48.0
 margin/right = 976.0
 margin/bottom = 560.0
-texture = ExtResource( 19 )
-script/script = ExtResource( 32 )
+texture = ExtResource( 21 )
+script/script = ExtResource( 35 )
 
 [node name="CerrarCompras" type="Button" parent="Hud/LibroCompras"]
 
@@ -10406,7 +10487,7 @@ transform/pos = Vector2( 192, 96 )
 
 transform/pos = Vector2( -32, -16 )
 transform/scale = Vector2( 0.138333, 0.125 )
-texture = ExtResource( 33 )
+texture = ExtResource( 36 )
 
 [node name="Descripcion" type="Label" parent="Hud/LibroCompras/PermisoCerveceria"]
 
@@ -10434,7 +10515,7 @@ margin/left = 16.0
 margin/top = -32.0
 margin/right = 75.0
 margin/bottom = 3.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "100"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10444,7 +10525,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 67.0216, -20.2535 )
 transform/scale = Vector2( 0.576334, 0.542691 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Comprar" type="Button" parent="Hud/LibroCompras/PermisoCerveceria"]
 
@@ -10473,7 +10554,7 @@ margin/left = 112.0
 margin/top = -32.0
 margin/right = 208.0
 margin/bottom = -9.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Comprado"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10488,7 +10569,7 @@ transform/pos = Vector2( 192, 192 )
 
 transform/pos = Vector2( -32, -16 )
 transform/scale = Vector2( 0.138333, 0.125 )
-texture = ExtResource( 33 )
+texture = ExtResource( 36 )
 
 [node name="Descripcion" type="Label" parent="Hud/LibroCompras/PermisoAperitivos"]
 
@@ -10516,7 +10597,7 @@ margin/left = 16.0
 margin/top = -32.0
 margin/right = 75.0
 margin/bottom = 3.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "200"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10526,7 +10607,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 67.0216, -20.2535 )
 transform/scale = Vector2( 0.576334, 0.542691 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Comprar" type="Button" parent="Hud/LibroCompras/PermisoAperitivos"]
 
@@ -10555,7 +10636,7 @@ margin/left = 112.0
 margin/top = -32.0
 margin/right = 208.0
 margin/bottom = -9.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Comprado"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10570,7 +10651,7 @@ transform/pos = Vector2( 192, 272 )
 
 transform/pos = Vector2( -32, -16 )
 transform/scale = Vector2( 0.138333, 0.125 )
-texture = ExtResource( 33 )
+texture = ExtResource( 36 )
 
 [node name="Descripcion" type="Label" parent="Hud/LibroCompras/PermisoComidas"]
 
@@ -10598,7 +10679,7 @@ margin/left = 16.0
 margin/top = -30.0
 margin/right = 75.0
 margin/bottom = 5.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "600"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10608,7 +10689,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 67.0216, -18.2535 )
 transform/scale = Vector2( 0.576334, 0.542691 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Comprar" type="Button" parent="Hud/LibroCompras/PermisoComidas"]
 
@@ -10637,7 +10718,7 @@ margin/left = 112.0
 margin/top = -31.0
 margin/right = 208.0
 margin/bottom = -8.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Comprado"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10651,7 +10732,7 @@ transform/pos = Vector2( 192, 352 )
 [node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaQuebrantos"]
 
 transform/pos = Vector2( -32, -20 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 340, 34, 32, 32 )
 
@@ -10681,7 +10762,7 @@ margin/left = 16.0
 margin/top = -30.0
 margin/right = 75.0
 margin/bottom = 5.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "50"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10691,7 +10772,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 53.0403, -18.4189 )
 transform/scale = Vector2( 0.576334, 0.542691 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Comprar" type="Button" parent="Hud/LibroCompras/RecetaQuebrantos"]
 
@@ -10720,7 +10801,7 @@ margin/left = 112.0
 margin/top = -31.0
 margin/right = 208.0
 margin/bottom = -8.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Comprado"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10734,7 +10815,7 @@ transform/pos = Vector2( 552, 102 )
 [node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaSopa"]
 
 transform/pos = Vector2( -32, -20 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 70, 68, 32, 32 )
 
@@ -10764,7 +10845,7 @@ margin/left = 16.0
 margin/top = -30.0
 margin/right = 75.0
 margin/bottom = 5.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "100"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10774,7 +10855,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 62.6478, -18.7005 )
 transform/scale = Vector2( 0.576334, 0.542691 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Comprar" type="Button" parent="Hud/LibroCompras/RecetaSopa"]
 
@@ -10803,7 +10884,7 @@ margin/left = 112.0
 margin/top = -32.0
 margin/right = 208.0
 margin/bottom = -9.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Comprado"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10817,7 +10898,7 @@ transform/pos = Vector2( 552, 187 )
 [node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaOlla"]
 
 transform/pos = Vector2( -32, -20 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 273, 238, 32, 32 )
 
@@ -10847,7 +10928,7 @@ margin/left = 16.0
 margin/top = -30.0
 margin/right = 75.0
 margin/bottom = 5.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "150"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10857,7 +10938,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 63.6478, -17.7005 )
 transform/scale = Vector2( 0.576334, 0.542691 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Comprar" type="Button" parent="Hud/LibroCompras/RecetaOlla"]
 
@@ -10886,7 +10967,7 @@ margin/left = 111.0
 margin/top = -30.0
 margin/right = 207.0
 margin/bottom = -7.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Comprado"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10900,7 +10981,7 @@ transform/pos = Vector2( 552, 275 )
 [node name="Comida" type="Sprite" parent="Hud/LibroCompras/RecetaEstofado"]
 
 transform/pos = Vector2( -32, -20 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 374, 238, 32, 32 )
 
@@ -10930,7 +11011,7 @@ margin/left = 16.0
 margin/top = -30.0
 margin/right = 75.0
 margin/bottom = 5.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "200"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10940,7 +11021,7 @@ max_lines_visible = -1
 
 transform/pos = Vector2( 63.6478, -17.7005 )
 transform/scale = Vector2( 0.576334, 0.542691 )
-texture = ExtResource( 22 )
+texture = ExtResource( 24 )
 
 [node name="Comprar" type="Button" parent="Hud/LibroCompras/RecetaEstofado"]
 
@@ -10969,7 +11050,7 @@ margin/left = 111.0
 margin/top = -31.0
 margin/right = 207.0
 margin/bottom = -8.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 text = "Comprado"
 percent_visible = 1.0
 lines_skipped = 0
@@ -10985,7 +11066,7 @@ margin/left = 512.0
 margin/top = 400.0
 margin/right = 616.0
 margin/bottom = 423.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
 text = "Insuficiente"
 percent_visible = 1.0
@@ -11019,7 +11100,7 @@ margin/left = 448.0
 margin/top = 240.0
 margin/right = 560.0
 margin/bottom = 297.0
-custom_fonts/font = ExtResource( 34 )
+custom_fonts/font = ExtResource( 37 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -11034,7 +11115,7 @@ margin/left = 80.0
 margin/top = 0.0
 margin/right = 152.0
 margin/bottom = 23.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 percent_visible = 1.0
 lines_skipped = 0
@@ -11050,17 +11131,22 @@ margin/left = 16.0
 margin/top = 0.0
 margin/right = 56.0
 margin/bottom = 23.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Reputacion" type="Node2D" parent="Hud"]
+[node name="Reputacion" type="Node2D" parent="Hud" groups=[
+"Persist",
+]]
 
-script/script = ExtResource( 35 )
+editor/display_folded = true
+script/script = ExtResource( 38 )
 
-[node name="Reputacion" type="Label" parent="Hud/Reputacion"]
+[node name="Reputacion" type="Label" parent="Hud/Reputacion" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -11070,13 +11156,16 @@ margin/left = 840.0
 margin/top = -2.0
 margin/right = 880.0
 margin/bottom = 33.0
-custom_fonts/font = ExtResource( 23 )
+custom_fonts/font = ExtResource( 25 )
 text = "0"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+script/script = ExtResource( 29 )
 
-[node name="Experiencia" type="ProgressBar" parent="Hud/Reputacion"]
+[node name="Experiencia" type="ProgressBar" parent="Hud/Reputacion" groups=[
+"Persist",
+]]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -11086,7 +11175,7 @@ margin/left = 704.0
 margin/top = 0.0
 margin/right = 800.0
 margin/bottom = 32.0
-custom_fonts/font = ExtResource( 26 )
+custom_fonts/font = ExtResource( 28 )
 custom_colors/font_color = Color( 0.03125, 1, 0, 1 )
 range/min = 0.0
 range/max = 100.0
@@ -11096,6 +11185,7 @@ range/value = 0.0
 range/exp_edit = false
 range/rounded = false
 percent/visible = true
+script/script = ExtResource( 39 )
 
 [node name="Precios" type="Button" parent="Hud"]
 
@@ -11126,8 +11216,8 @@ margin/left = 48.0
 margin/top = 48.0
 margin/right = 976.0
 margin/bottom = 560.0
-texture = ExtResource( 19 )
-script/script = ExtResource( 36 )
+texture = ExtResource( 21 )
+script/script = ExtResource( 40 )
 
 [node name="CerrarPrecios" type="Button" parent="Hud/LibroPrecios"]
 
@@ -11155,7 +11245,7 @@ transform/pos = Vector2( -23, -22 )
 
 transform/pos = Vector2( 171, 100 )
 transform/scale = Vector2( 2.1, 2.1 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 197, 337, 20, 20 )
 
@@ -11184,7 +11274,7 @@ transform/pos = Vector2( -23, 38 )
 
 transform/pos = Vector2( 171, 91 )
 transform/scale = Vector2( 2.1, 2.1 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 region = true
 region_rect = Rect2( 230, 363, 20, 20 )
 
@@ -11213,7 +11303,7 @@ transform/pos = Vector2( -23, 105 )
 
 transform/pos = Vector2( 176, 94 )
 transform/scale = Vector2( 0.763636, 0.761905 )
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 region = true
 region_rect = Rect2( 626, 4, 44, 42 )
 
@@ -11242,7 +11332,7 @@ transform/pos = Vector2( -23, 167 )
 
 transform/pos = Vector2( 176, 94 )
 transform/scale = Vector2( 0.763636, 0.761905 )
-texture = ExtResource( 25 )
+texture = ExtResource( 27 )
 region = true
 region_rect = Rect2( 535, 6, 35, 35 )
 
@@ -11271,7 +11361,7 @@ transform/pos = Vector2( -23, 228 )
 
 transform/pos = Vector2( 181, 91 )
 transform/scale = Vector2( 1.19091, 1.23735 )
-texture = ExtResource( 30 )
+texture = ExtResource( 33 )
 region = true
 region_rect = Rect2( 50, 610, 32, 32 )
 
@@ -11300,7 +11390,7 @@ transform/pos = Vector2( -23, 287 )
 
 transform/pos = Vector2( 183.605, 94.8006 )
 transform/scale = Vector2( 1.01648, 0.949962 )
-texture = ExtResource( 30 )
+texture = ExtResource( 33 )
 region = true
 region_rect = Rect2( 200, 702, 48, 32 )
 
@@ -11329,7 +11419,7 @@ transform/pos = Vector2( 346, -22 )
 
 transform/pos = Vector2( 176, 96 )
 transform/scale = Vector2( 1.4581, 1.69996 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 70, 68, 32, 32 )
 
@@ -11358,7 +11448,7 @@ transform/pos = Vector2( 347, 39 )
 
 transform/pos = Vector2( 176, 96 )
 transform/scale = Vector2( 1.4581, 1.69996 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 340, 34, 32, 32 )
 
@@ -11387,7 +11477,7 @@ transform/pos = Vector2( 347, 103 )
 
 transform/pos = Vector2( 176, 96 )
 transform/scale = Vector2( 1.4581, 1.69996 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 273, 238, 32, 32 )
 
@@ -11416,7 +11506,7 @@ transform/pos = Vector2( 347, 169 )
 
 transform/pos = Vector2( 176, 96 )
 transform/scale = Vector2( 1.4581, 1.69996 )
-texture = ExtResource( 31 )
+texture = ExtResource( 34 )
 region = true
 region_rect = Rect2( 374, 238, 32, 32 )
 
@@ -11448,7 +11538,7 @@ margin/left = 420.0
 margin/top = 180.0
 margin/right = 600.0
 margin/bottom = 360.0
-script/script = ExtResource( 37 )
+script/script = ExtResource( 41 )
 
 [node name="Label" type="Label" parent="Hud/Menu_pausa"]
 
@@ -11457,16 +11547,50 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 21.0
-margin/top = 50.0
+margin/top = 11.0
 margin/right = 159.0
-margin/bottom = 107.0
-custom_fonts/font = ExtResource( 34 )
+margin/bottom = 68.0
+custom_fonts/font = ExtResource( 37 )
 text = "Pausa"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
 [node name="Reanudar" type="Button" parent="Hud/Menu_pausa"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 54.0
+margin/top = 80.0
+margin/right = 127.0
+margin/bottom = 103.0
+custom_fonts/font = ExtResource( 6 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Reanudar"
+flat = false
+
+[node name="Guardar" type="Button" parent="Hud/Menu_pausa"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 54.0
+margin/top = 110.0
+margin/right = 127.0
+margin/bottom = 133.0
+custom_fonts/font = ExtResource( 6 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Guardar"
+flat = false
+
+[node name="Cargar" type="Button" parent="Hud/Menu_pausa"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -11480,7 +11604,7 @@ custom_fonts/font = ExtResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Reanudar"
+text = "Cargar"
 flat = false
 
 [node name="PlatoDia" type="Button" parent="Hud"]
@@ -11512,7 +11636,7 @@ margin/left = 390.0
 margin/top = 170.0
 margin/right = 680.0
 margin/bottom = 300.0
-script/script = ExtResource( 38 )
+script/script = ExtResource( 42 )
 
 [node name="Platos" type="OptionButton" parent="Hud/ComidaDia"]
 
