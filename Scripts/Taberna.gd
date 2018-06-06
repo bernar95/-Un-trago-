@@ -3,6 +3,7 @@ extends Node
 var diasAbierto = 1
 
 var tiempo = Timer.new()
+var tiempo2 = Timer.new()
 
 var labelDia
 var labelMomento
@@ -24,6 +25,8 @@ func _ready():
 	preciosBoton = get_node("Hud/Precios")
 	tiempo.set_one_shot(true)
 	self.add_child(tiempo)
+	tiempo2.set_one_shot(true)
+	self.add_child(tiempo2)
 	set_fixed_process(true)
 	set_process_input(true)
 	labelDia = get_node("Hud/Dia")
@@ -31,6 +34,10 @@ func _ready():
 	labelTiempo = get_node("Hud/Tiempo")
 	get_node("Hud/Menu_pausa").hide()
 	spawn = get_node("Navegacion")
+	tiempo2.set_wait_time(1.5)
+	tiempo2.start()
+	get_node("Sonidos/SamplePlayer2D").play("Campana", 8)
+	yield(tiempo2, "timeout")
 	tiempo()
 	pass
 #Esta función es propia de godot, y sirve para comprobar cuando se inserta
@@ -61,7 +68,7 @@ func _fixed_process(delta):
 func tiempo():
 	labelDia.set_text("Día" + " " + str(diasAbierto))
 	labelDia.show()
-	tiempo.set_wait_time(8)
+	tiempo.set_wait_time(6.5)
 	tiempo.start()
 	yield(tiempo, "timeout")
 	labelDia.hide()
@@ -103,6 +110,7 @@ func tiempo():
 	spawn.aparecer_npcs()
 	yield(tiempo, "timeout")
 	
+	get_node("Sonidos/SamplePlayer2D").stop_voice(7)
 	diasAbierto += 1
 	get_node("Hud/Dia").set_text("")
 	labelMomento.set_text("")

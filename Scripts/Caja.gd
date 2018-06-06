@@ -284,30 +284,37 @@ func dejar_alimento(result):
 func cogerComida(comida):
 	personaje.add_child(comida)
 	if comida == global.carne or comida == global.carne2:
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger_2", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_carne -= 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_carne) + "/10"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerCarne/StockCarne").set_text(text)
 	elif comida == global.pescado or comida == global.pescado2:
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger_2", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_pescado -= 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_pescado) + "/10"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerPescado/StockPescado").set_text(text)
 	elif comida == global.verdura or comida == global.verdura2:
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_verduras -= 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_verduras) + "/60"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerVerduras/StockVerduras").set_text(text)
 	elif comida == global.patata or comida == global.patata2:
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_patatas -= 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_patatas) + "/80"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerPatatas/StockPatatas").set_text(text)
 	elif comida == global.pan or comida == global.pan2:
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Crujir", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_pan -= 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_pan) + "/20"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerPan/StockPan").set_text(text)
 	elif comida == global.queso or comida == global.queso2:
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Crujir", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_queso -= 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_queso) + "/20"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerQueso/StockQueso").set_text(text)
 	elif comida == global.huevo or comida == global.huevo2:
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_huevos -= 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_huevos) + "/24"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerHuevos/StockHuevos").set_text(text)
@@ -324,30 +331,37 @@ func dejarComida(comida, hijo):
 		personaje.get_child(1).free()
 	
 	if comida == "Carne":
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger_2", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_carne += 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_carne) + "/10"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerCarne/StockCarne").set_text(text)
 	elif comida == "Pescado":
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger_2", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_pescado += 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_pescado) + "/10"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerPescado/StockPescado").set_text(text)
 	elif comida == "Verdura":
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_verduras += 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_verduras) + "/60"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerVerduras/StockVerduras").set_text(text)
 	elif comida == "Patata":
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_patatas += 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_patatas) + "/80"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerPatatas/StockPatatas").set_text(text)
 	elif comida == "Pan":
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Crujir", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_pan += 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_pan) + "/20"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerPan/StockPan").set_text(text)
 	elif comida == "Queso":
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Crujir", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_queso += 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_queso) + "/20"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerQueso/StockQueso").set_text(text)
 	elif comida == "Huevo":
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger", 1)
 		get_parent().get_parent().get_node("Hud/Container").stock_huevos += 1
 		var text = str(get_parent().get_parent().get_node("Hud/Container").stock_huevos) + "/24"
 		get_parent().get_parent().get_node("Hud/LibroSuministros/ContainerHuevos/StockHuevos").set_text(text)

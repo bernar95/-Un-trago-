@@ -23,6 +23,12 @@ func notificaciones(text):
 	get_node("Notificacion").set_text(text)
 	timer.set_wait_time(10)
 	timer.start()
+	if "Has añadido" in text or text == "La comida se está cocinando":
+		pass
+	elif "El permiso de" in text or "Has ganado" in text or text == "La comida está lista":
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Bien", 9)
+	else:
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Mal", 9)
 	yield(timer, "timeout")
 	hide()
 	cerrar.hide()

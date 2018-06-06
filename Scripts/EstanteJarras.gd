@@ -15,7 +15,9 @@ func _ready():
 func coger_jarra():
 	if personaje.get_child_count() == 0:
 		personaje.add_child(global.jarra)
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger_jarra", 4)
 	elif personaje.get_child_count() == 1:
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger_jarra", 4)
 		if personaje.get_child(0).get_pos() == global.mano_derecha:
 			personaje.add_child(global.jarra2)
 		else:
@@ -27,6 +29,7 @@ func soltar_jarra():
 	if personaje.get_child_count() == 0:
 		notificaciones.notificaciones("No tienes nada que soltar")
 	elif (personaje.get_child_count() == 1 or personaje.get_child_count() == 2) and personaje.get_child(0).get_filename() == global.spriteJarra.get_path():
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger_jarra", 4)
 		if personaje.get_child(0).get_pos() == global.mano_derecha:
 			personaje.get_child(0).free()
 			global.instanciar_jarras("Jarra")
@@ -34,6 +37,7 @@ func soltar_jarra():
 			personaje.get_child(0).free()
 			global.instanciar_jarras("Jarra2")
 	elif personaje.get_child_count() == 2 and personaje.get_child(1).get_filename() == global.spriteJarra.get_path():
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Coger_jarra", 4)
 		if personaje.get_child(1).get_pos() == global.mano_derecha:
 			personaje.get_child(1).free()
 			global.instanciar_jarras("Jarra")

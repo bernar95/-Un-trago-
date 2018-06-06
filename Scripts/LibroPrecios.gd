@@ -5,6 +5,7 @@ extends Patch9Frame
 var precios
 var mostrarPrecios = false
 var mapa
+var tiempo = Timer.new()
 
 func _ready():
 	hide()
@@ -12,6 +13,8 @@ func _ready():
 	precios = get_parent().get_node("Precios")
 	var cerrar = get_node("CerrarPrecios")
 	mapa = get_parent().get_parent()
+	tiempo.set_one_shot(true)
+	self.add_child(tiempo)
 	
 	get_node("Cerveza").hide()
 	get_node("Pan").hide()
@@ -30,6 +33,10 @@ func _ready():
 	pass
 
 func _mostrar_precios():
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Abrir_libro", 10)
+	tiempo.set_wait_time(0.5)
+	tiempo.start()
+	yield(tiempo, "timeout")
 	mostrarPrecios = true
 	show()
 	get_parent().get_node("Dia").set_text("")
@@ -37,6 +44,10 @@ func _mostrar_precios():
 	pass
 
 func _cerrar_precios():
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Cerrar_libro", 10)
+	tiempo.set_wait_time(0.25)
+	tiempo.start()
+	yield(tiempo, "timeout")
 	mostrarPrecios = false
 	hide()
 	mapa.mostrar_botones()

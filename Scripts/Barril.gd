@@ -2,11 +2,15 @@ extends Node
 
 var personaje
 var notificaciones
+var tiempo_verter = Timer.new()
+var servir = false
 
 func _ready():
 	personaje = get_parent().get_parent().get_node("KinematicBody2D/Personaje")
 	notificaciones = get_parent().get_parent().get_node("Hud/Notificaciones")
 	get_node("Barril1").hide()
+	tiempo_verter.set_one_shot(true)
+	self.add_child(tiempo_verter)
 	pass
 #Esta parte gestiona la interracción con los barriles de vino y cerveza, y
 #lo que hace es que sustituya las jarras vacías por jarras llenas,
@@ -116,6 +120,14 @@ func rellenarJarra(bebida, hijo):
 	elif hijo == "1":
 		personaje.get_child(1).free()
 	personaje.add_child(bebida)
+	tiempo_verter.set_wait_time(1.5)
+	tiempo_verter.start()
+	servir = true
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Rellenar_jarra", 1)
+	yield(tiempo_verter, "timeout")
+	servir = false
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").stop_voice(1)
+	
 
 	if bebida == global.cerveza or bebida == global.cerveza2:
 		get_parent().get_parent().get_node("Hud/Container").stock_cerveza -= 1

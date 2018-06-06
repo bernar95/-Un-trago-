@@ -23,6 +23,7 @@ var limite_queso = 20
 var pedidos
 var mostrarPedidos = false
 var mapa
+var tiempo = Timer.new()
 
 func _ready():
 	hide()
@@ -31,6 +32,8 @@ func _ready():
 	var cerrar = get_node("LibroPedidos/CerrarPedidos")
 	var hacer_pedido = get_node("LibroPedidos/HacerPedido")
 	mapa = get_parent().get_parent()
+	tiempo.set_one_shot(true)
+	self.add_child(tiempo)
 	
 	if pedidos:
 		pedidos.connect("pressed", self, "_mostrar_pedidos")
@@ -40,6 +43,10 @@ func _ready():
 		hacer_pedido.connect("pressed", self, "_hacer_pedido")
 
 func _mostrar_pedidos():
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Abrir_libro", 10)
+	tiempo.set_wait_time(0.5)
+	tiempo.start()
+	yield(tiempo, "timeout")
 	mostrarPedidos = true
 	show()
 	get_parent().get_node("Dia").set_text("")
@@ -47,6 +54,10 @@ func _mostrar_pedidos():
 	pass
 
 func _cerrar_pedidos():
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Cerrar_libro", 10)
+	tiempo.set_wait_time(0.25)
+	tiempo.start()
+	yield(tiempo, "timeout")
 	mostrarPedidos = false
 	hide()
 	mapa.mostrar_botones()
@@ -132,9 +143,9 @@ func _hacer_pedido():
 		if pago <= dinero:
 			dinero -= pago
 			get_parent().get_node("Dinero").set_text(str(dinero))
-		
+			
 			get_node("LibroPedidos/TotalPagarLabel/TotalPagar").set_text("0")
-		
+			get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Pagar", 4)
 			if get_node("LibroPedidos").cantidad_carne > 0:
 				var cantidad = get_node("LibroPedidos").cantidad_carne
 				stock_carne += cantidad

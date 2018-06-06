@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=1]
+[gd_scene load_steps=107 format=1]
 
 [ext_resource path="res://Scripts/Taberna.gd" type="Script" id=1]
 [ext_resource path="res://Tiles/house_inside.png" type="Texture" id=2]
@@ -42,6 +42,29 @@
 [ext_resource path="res://Scripts/LibroPrecios.gd" type="Script" id=40]
 [ext_resource path="res://Scripts/Pausa.gd" type="Script" id=41]
 [ext_resource path="res://Scripts/PlatoDia.gd" type="Script" id=42]
+[ext_resource path="res://Sounds/330034__nanashi__book-manipulate.wav" type="Sample" id=43]
+[ext_resource path="res://Sounds/394290__epicwizard__bar-crowd-in-belgrade.wav" type="Sample" id=44]
+[ext_resource path="res://Sounds/345299__scrampunk__okay.wav" type="Sample" id=45]
+[ext_resource path="res://Sounds/238399__amorralteixe__yawn.wav" type="Sample" id=46]
+[ext_resource path="res://Sounds/377639__danarobinsondesignsgmailcom__b15.wav" type="Sample" id=47]
+[ext_resource path="res://Sounds/83239__mlestn1__bookclosing.wav" type="Sample" id=48]
+[ext_resource path="res://Sounds/360739__mattix__coin-dropped-on-table-01.wav" type="Sample" id=49]
+[ext_resource path="res://Sounds/197798__rombart__eau-bouillante1.wav" type="Sample" id=50]
+[ext_resource path="res://Sounds/132025__user1994__take-it.wav" type="Sample" id=51]
+[ext_resource path="res://Sounds/402402__mattleschuck__splatter.wav" type="Sample" id=52]
+[ext_resource path="res://Sounds/219841__qubodup__glass-handling.wav" type="Sample" id=53]
+[ext_resource path="res://Sounds/251484__tristan-lohengrin__chips-eating.wav" type="Sample" id=54]
+[ext_resource path="res://Sounds/321486__dslrguide__plastic-crunch.wav" type="Sample" id=55]
+[ext_resource path="res://Sounds/258244__youandbiscuitme__wooden-object-set-on-table-1.wav" type="Sample" id=56]
+[ext_resource path="res://Sounds/408645__poderarcano__27-hmp.wav" type="Sample" id=57]
+[ext_resource path="res://Sounds/364700__alegemaate__water-splash.wav" type="Sample" id=58]
+[ext_resource path="res://Sounds/167328__willy-ineedthatapp-com__droplet-bad.wav" type="Sample" id=59]
+[ext_resource path="res://Sounds/140382__d-w__coins-01.wav" type="Sample" id=60]
+[ext_resource path="res://Sounds/234263__fewes__footsteps-wood.wav" type="Sample" id=61]
+[ext_resource path="res://Sounds/194253__tobias-sieben__pouring-wine.wav" type="Sample" id=62]
+[ext_resource path="res://Sounds/32579__redjim__swallowing.wav" type="Sample" id=63]
+[ext_resource path="res://Sounds/235779__elliotlp__quick-pour.wav" type="Sample" id=64]
+[ext_resource path="res://Sounds/36 minutes of Tavern music.ogg" type="AudioStream" id=65]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -341,6 +364,141 @@ tracks/0/keys = {
 vertices = Vector2Array( 426.557, 388.236, 479.97, 384.275, 506.498, 383.455, 622.861, 388.113, 617.602, 428.024, 577.943, 450.595, 521.216, 445.384, 424.854, 415.927, 462.414, 384.275, 524.775, 503.62, 548.481, 498.996, 617.602, 495.419, 716.398, 518.656, 716.398, 538.683, 648.359, 538.33, 579.145, 526.065, 472.542, 460.508, 435.145, 441.655, 883.66, 380.927, 921.361, 351.269, 909.128, 423.185, 760.211, 318.97, 690.073, 329.425, 820.224, 424.619, 852.788, 396.922, 827.539, 396.922, 448.586, 262.361, 415.174, 283.315, 403.29, 221.257, 569.375, 260.121, 567.384, 192.452, 652.453, 222.891, 652.741, 310.399, 610.978, 299.207, 687.741, 223.399, 744.568, 219.306, 723.507, 293.977, 411.899, 314.049, 696.069, 385.506, 732.294, 439.393, 720.464, 441.186, 685.691, 441.544, 526.918, 693.864, 491.309, 697.761, 498.017, 552.715, 528.719, 537.412, 457.963, 534.475, 470.556, 502.215, 330.12, 533.812, 180.091, 558.79, 179.492, 533.044, 327.904, 460.972, 179.281, 458.636, 177.56, 447.852, 314.392, 447.182, 328.316, 460.929, 355.317, 285.956, 287.839, 318.692, 330.131, 533.673, 153.073, 71.1135, 213.548, 66.3361, 212.356, 162.462, 159.031, 89.7825, 100.369, 250.842, 99.6518, 234.71, 244.838, 237.22, 252.367, 249.05, 859, 153.888, 906.103, 157.868, 910.199, 218.177, 799.42, 162.16, 821.903, 514.93, 892.166, 518.515, 891.446, 527.901, 798.287, 526.969, 80.7804, 88.5909, 81.5748, 69.1275, 179.169, 163.156, 421.901, 485.126, 372.154, 442.138, 234.779, 349.947, 100.105, 349.947, 100.105, 326.727, 258.266, 325.592, 138.222, 189.857, 83.7369, 189.857, 83.7369, 164.71, 908.624, 294.593, 908.624, 318.97, 519.977, 300.146, 498.014, 250.165, 507.065, 303.045, 455.586, 261.382, 287.246, 422.996, 302.434, 406.927, 365.467, 415.151, 636.96, 447.382, 592.508, 489.325, 353.556, 273.632, 503.033, 190.462, 352.676, 219.497, 259.078, 374.948, 159.721, 393.816, 118.012, 375.421, 115.991, 429.608, 166.206, 416.511, 167.287, 422.996 )
 polygons = [ IntArray( 0, 1, 2, 3, 4, 5, 6, 7 ), IntArray( 8, 1, 0 ), IntArray( 9, 10, 11, 12, 13, 14, 15 ), IntArray( 6, 16, 17, 7 ), IntArray( 18, 19, 20 ), IntArray( 21, 19, 18, 22 ), IntArray( 18, 20, 23, 24 ), IntArray( 25, 24, 23 ), IntArray( 26, 8, 27, 28 ), IntArray( 29, 30, 31, 32, 33 ), IntArray( 32, 34, 35, 36, 22 ), IntArray( 27, 8, 0, 37 ), IntArray( 4, 3, 38, 25, 23, 39, 40, 41 ), IntArray( 42, 43, 44, 45 ), IntArray( 9, 45, 44, 46, 47 ), IntArray( 48, 46, 44, 49, 50 ), IntArray( 51, 52, 53, 54, 55 ), IntArray( 56, 27, 37, 57 ), IntArray( 48, 50, 58 ), IntArray( 59, 60, 61, 62 ), IntArray( 22, 38, 3, 33, 32 ), IntArray( 63, 64, 65, 66 ), IntArray( 67, 68, 69, 35, 70 ), IntArray( 71, 72, 73, 74 ), IntArray( 62, 75, 76, 59 ), IntArray( 77, 62, 61, 65 ), IntArray( 9, 15, 45 ), IntArray( 16, 47, 46, 78, 17 ), IntArray( 79, 17, 78, 55, 54 ), IntArray( 80, 81, 82, 83 ), IntArray( 84, 85, 86, 77 ), IntArray( 65, 84, 77 ), IntArray( 87, 88, 21, 36 ), IntArray( 36, 21, 22 ), IntArray( 29, 33, 89, 90 ), IntArray( 90, 89, 91, 92 ), IntArray( 91, 2, 1, 92 ), IntArray( 93, 94, 95, 79, 54 ), IntArray( 71, 74, 39, 23 ), IntArray( 4, 41, 96 ), IntArray( 97, 4, 96, 11 ), IntArray( 98, 56, 57 ), IntArray( 28, 99, 90, 92, 26 ), IntArray( 66, 100, 98, 57, 83 ), IntArray( 70, 35, 34, 31, 30 ), IntArray( 61, 70, 30, 99 ), IntArray( 61, 99, 28, 100 ), IntArray( 65, 61, 100, 66 ), IntArray( 80, 83, 57, 94, 101 ), IntArray( 10, 97, 11 ), IntArray( 10, 9, 6, 5 ), IntArray( 94, 0, 7, 95 ), IntArray( 94, 93, 101 ), IntArray( 80, 101, 102, 103 ), IntArray( 104, 103, 102, 105, 106 ), IntArray( 54, 104, 106, 93 ), IntArray( 51, 55, 48 ), IntArray( 48, 58, 51 ) ]
 outlines = [ Vector2Array( 491.309, 697.761, 498.017, 552.715, 180.091, 558.79, 179.492, 533.044, 330.131, 533.673, 327.904, 460.972, 179.281, 458.636, 177.56, 447.852, 314.392, 447.182, 115.991, 429.608, 118.012, 375.421, 234.779, 349.947, 100.105, 349.947, 100.105, 326.727, 258.266, 325.592, 252.367, 249.05, 100.369, 250.842, 99.6518, 234.71, 244.838, 237.22, 138.222, 189.857, 83.7369, 189.857, 83.7369, 164.71, 179.169, 163.156, 159.031, 89.7825, 80.7804, 88.5909, 81.5748, 69.1275, 153.073, 71.1135, 213.548, 66.3361, 212.356, 162.462, 799.42, 162.16, 859, 153.888, 906.103, 157.868, 910.199, 218.177, 744.568, 219.306, 723.507, 293.977, 908.624, 294.593, 908.624, 318.97, 760.211, 318.97, 921.361, 351.269, 909.128, 423.185, 820.224, 424.619, 821.903, 514.93, 892.166, 518.515, 891.446, 527.901, 798.287, 526.969, 732.294, 439.393, 720.464, 441.186, 685.691, 441.544, 636.96, 447.382, 617.602, 495.419, 716.398, 518.656, 716.398, 538.683, 648.359, 538.33, 579.145, 526.065, 528.719, 537.412, 526.918, 693.864 ), Vector2Array( 328.316, 460.929, 421.901, 485.126, 457.963, 534.475, 330.12, 533.812 ), Vector2Array( 287.839, 318.692, 411.899, 314.049, 426.557, 388.236, 302.434, 406.927 ), Vector2Array( 166.206, 416.511, 159.721, 393.816, 259.078, 374.948, 287.246, 422.996, 167.287, 422.996 ), Vector2Array( 372.154, 442.138, 365.467, 415.151, 424.854, 415.927, 435.145, 441.655 ), Vector2Array( 548.481, 498.996, 577.943, 450.595, 617.602, 428.024, 592.508, 489.325 ), Vector2Array( 696.069, 385.506, 690.073, 329.425, 883.66, 380.927, 852.788, 396.922, 827.539, 396.922 ), Vector2Array( 448.586, 262.361, 455.586, 261.382, 479.97, 384.275, 462.414, 384.275 ), Vector2Array( 652.741, 310.399, 652.453, 222.891, 687.741, 223.399 ), Vector2Array( 472.542, 460.508, 521.216, 445.384, 524.775, 503.62, 470.556, 502.215 ), Vector2Array( 519.977, 300.146, 610.978, 299.207, 622.861, 388.113, 506.498, 383.455, 507.065, 303.045 ), Vector2Array( 353.556, 273.632, 352.676, 219.497, 403.29, 221.257, 415.174, 283.315, 355.317, 285.956 ), Vector2Array( 503.033, 190.462, 567.384, 192.452, 569.375, 260.121, 498.014, 250.165 ) ]
+
+[sub_resource type="SampleLibrary" id=41]
+
+samples/Abrir_libro = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 43 )
+}
+samples/Ambiente = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 44 )
+}
+samples/Bien = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 45 )
+}
+samples/Bostezo = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 46 )
+}
+samples/Campana = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 47 )
+}
+samples/Cerrar_libro = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 48 )
+}
+samples/Cobrar = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 49 )
+}
+samples/Cocina = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 50 )
+}
+samples/Coger = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 51 )
+}
+samples/Coger_2 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 52 )
+}
+samples/Coger_jarra = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 53 )
+}
+samples/Comer = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 54 )
+}
+samples/Crujir = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 55 )
+}
+samples/Dejar_objeto = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 56 )
+}
+samples/Descontento = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 57 )
+}
+samples/Echar_comida = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 58 )
+}
+samples/Mal = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 59 )
+}
+samples/Pagar = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 60 )
+}
+samples/Pasos = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 61 )
+}
+samples/Rellenar_jarra = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 62 )
+}
+samples/Tragar = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 63 )
+}
+samples/Verter = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 64 )
+}
 
 [node name="Mapa" type="Node" groups=[
 "Persist",
@@ -5504,8 +5662,6 @@ trigger = false
 _update_shape_index = 0
 
 [node name="BarraDetras" type="Node" parent="."]
-
-editor/display_folded = true
 
 [node name="Barriles" type="Node" parent="BarraDetras"]
 
@@ -11673,5 +11829,29 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Atrás"
 flat = false
+
+[node name="Sonidos" type="Node" parent="."]
+
+[node name="SamplePlayer2D" type="SamplePlayer2D" parent="Sonidos"]
+
+params/volume_db = 0.0
+params/pitch_scale = 1.0
+params/attenuation/min_distance = 1.0
+params/attenuation/max_distance = 2048.0
+params/attenuation/distance_exp = 1.0
+config/polyphony = 11
+config/samples = SubResource( 41 )
+config/pitch_random = 0.0
+
+[node name="StreamPlayer" type="StreamPlayer" parent="Sonidos"]
+
+stream/stream = ExtResource( 65 )
+stream/play = false
+stream/loop = true
+stream/volume_db = -7.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
 
 

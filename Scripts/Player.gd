@@ -42,7 +42,7 @@ func _ready():
 #conjunto con alguna de dichas teclas, la tecla SHIFT, lo cual provoca que el
 #personaje corra en la dirección correspondiente
 func _fixed_process(delta):
-	if get_parent().get_node("Hud/Container").mostrarPedidos == false and get_parent().get_node("Hud/LibroSuministros").mostrarSuministros == false and get_parent().get_node("Hud/LibroRecetas").mostrarRecetas == false and get_parent().get_node("Hud/LibroCompras").mostrarCompras == false and get_parent().get_node("Hud/LibroPrecios").mostrarPrecios == false:
+	if get_parent().get_node("Hud/Container").mostrarPedidos == false and get_parent().get_node("Hud/LibroSuministros").mostrarSuministros == false and get_parent().get_node("Hud/LibroRecetas").mostrarRecetas == false and get_parent().get_node("Hud/LibroCompras").mostrarCompras == false and get_parent().get_node("Hud/LibroPrecios").mostrarPrecios == false and get_parent().get_node("BarraDetras/Barriles").servir == false:
 		if !moving:
 			arriba = mapa.intersect_point(get_pos() + Vector2(0, -GRID))
 			abajo = mapa.intersect_point(get_pos() + Vector2(0, GRID))
@@ -56,6 +56,7 @@ func _fixed_process(delta):
 					direction = Vector2(0, -1)
 					startPos = get_pos()
 					animationPlayer.play("Andar arriba")
+					get_parent().get_node("Sonidos/SamplePlayer2D").play("Pasos", 0)
 					if Input.is_key_pressed(KEY_SHIFT):
 						speed = 4
 						animationPlayer.play("Andar arriba rapido")
@@ -68,6 +69,7 @@ func _fixed_process(delta):
 					direction = Vector2(0, 1)
 					startPos = get_pos()
 					animationPlayer.play("Andar abajo")
+					get_parent().get_node("Sonidos/SamplePlayer2D").play("Pasos", 0)
 					if Input.is_key_pressed(KEY_SHIFT):
 						speed = 4
 						animationPlayer.play("Andar abajo rapido")
@@ -80,6 +82,7 @@ func _fixed_process(delta):
 					direction = Vector2(-1, 0)
 					startPos = get_pos()
 					animationPlayer.play("Andar izquierda")
+					get_parent().get_node("Sonidos/SamplePlayer2D").play("Pasos", 0)
 					if Input.is_key_pressed(KEY_SHIFT):
 						speed = 4
 						animationPlayer.play("Andar izquierda rapido")
@@ -92,6 +95,7 @@ func _fixed_process(delta):
 					direction = Vector2(1, 0)
 					startPos = get_pos()
 					animationPlayer.play("Andar derecha")
+					get_parent().get_node("Sonidos/SamplePlayer2D").play("Pasos", 0)
 					if Input.is_key_pressed(KEY_SHIFT):
 						speed = 4
 						animationPlayer.play("Andar derecha rapido")
@@ -99,6 +103,7 @@ func _fixed_process(delta):
 						speed = 1
 		else:
 			move_to(get_pos() + direction * speed)
+			get_parent().get_node("Sonidos/SamplePlayer2D").stop_voice(0)
 			if get_pos() == startPos + Vector2(direction.x * GRID, direction.y * GRID):
 				moving = false
 
@@ -164,6 +169,8 @@ func interaccion(result):
 					elif personaje.get_child(1).get_pos() == global.mano_izquierda and personaje.get_child(1).get_filename() == npc.pedidoRuta:
 						var objeto = personaje.get_child(1)
 						servir(npc, objeto, "izquierda")
+					else:
+						notificaciones.notificaciones("Esto no es lo que he pedido")
 				elif npc.get_child_count() > 5:
 					notificaciones.notificaciones("Ya estoy servido")
 				else:
@@ -190,6 +197,7 @@ func soltar(result):
 #Esta función sirve para entregar un objeto a un npc
 func servir(npc, objeto, mano):
 	var pedido
+	get_parent().get_node("Sonidos/SamplePlayer2D").play("Dejar_objeto", 6)
 	if mano == "derecha":
 		if objeto.get_filename() == global.spriteVino.get_path():
 			pedido = global.spriteVino.instance()

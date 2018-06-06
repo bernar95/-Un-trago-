@@ -229,6 +229,8 @@ func dejar_comida_cocinada(comida, hijo):
 		personaje.get_child(0).free()
 	elif hijo == "1":
 		personaje.get_child(1).free()
+	
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Dejar_objeto", 1)
 		
 	var comidaCocinada
 	if comida == "Carne cocinada":
@@ -258,6 +260,7 @@ func dejar_comida_cocinada(comida, hijo):
 
 #Esta función sirve para echar un alimento al caldero
 func echarIngrediente(ingrediente):
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Echar_comida", 1)
 	personaje.remove_child(ingrediente)
 	caldero.add_child(ingrediente)
 	ingrediente.hide()
@@ -287,6 +290,7 @@ func cocina(receta):
 	remove_child(caldero)
 	add_child(calderoAnimado)
 	calderoAnimado.get_node("AnimationPlayer").play("Hervir")
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Cocina", 2)
 	tiempo.start()
 	yield(tiempo, "timeout")
 	if receta == "Carne cocinada":
@@ -321,6 +325,7 @@ func cocina(receta):
 			estofado.hide()
 	notificaciones.notificaciones("La comida está lista")
 	cocina = false
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").stop_voice(2)
 	contadorCarne = 0
 	contadorPescado = 0
 	contadorVerduras = 0
@@ -335,6 +340,7 @@ func cocina(receta):
 	add_child(caldero)
 #Esta función sirve para coger la comida, una vez cocinada, del caldero
 func cogerComidaCocinada(comida, mano):
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Dejar_objeto", 1)
 	caldero.get_child(0).free()
 	var comidaCocinada
 	if comida == "Carne":

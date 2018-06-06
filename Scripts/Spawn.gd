@@ -158,6 +158,7 @@ func set_menu(menu_nuevo):
 #tiempo de espera hasta que aparezca el siguiente npc. Y así sucesivamente
 #hasta que "npcIndex" sea igual que "npcs"
 func aparecer_npcs():
+	get_parent().get_node("Sonidos/SamplePlayer2D").play("Ambiente", 7)
 	randomize()
 	var num = randi()%3+1
 	for i in range(0, num):
@@ -172,6 +173,7 @@ func aparecer_npcs():
 		npc.get_node("NPC").reputacion = get_parent().get_node("Hud/Reputacion")
 		npc.get_node("NPC").precios = precios
 		npc.get_node("NPC").dinero = get_parent().get_node("Hud/Dinero")
+		npc.get_node("NPC").sonidos = get_parent().get_node("Sonidos/SamplePlayer2D")
 	npcIndex +=1
 	if npcIndex == npcs:
 		npcIndex = 0

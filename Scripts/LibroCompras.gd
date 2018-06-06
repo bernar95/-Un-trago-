@@ -22,6 +22,7 @@ var mostrarCompras = false
 var compras
 var mapa
 var t
+var tiempo = Timer.new()
 
 var permiso_cerveceria_comprado = false
 var permiso_aperitivos_comprado = false
@@ -67,6 +68,8 @@ func _ready():
 	t = Timer.new()
 	t.set_one_shot(true)
 	self.add_child(t)
+	tiempo.set_one_shot(true)
+	self.add_child(tiempo)
 	
 	comprarCerveza = get_node("PermisoCerveceria/Comprar")
 	comprarAperitivos = get_node("PermisoAperitivos/Comprar")
@@ -100,6 +103,10 @@ func _mostrar_compras():
 	#Con esta función lo que hago es que al pulsar el botón "Compras" aparezca
 	#el libro de compras, y oculto el resto de botones para que el jugador
 	#no los pulse y se superpongan los demás libros
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Abrir_libro", 10)
+	tiempo.set_wait_time(0.5)
+	tiempo.start()
+	yield(tiempo, "timeout")
 	mostrarCompras = true
 	show()
 	get_parent().get_node("Dia").set_text("")
@@ -108,6 +115,10 @@ func _mostrar_compras():
 
 func _cerrar_compras():
 	#Esta es igual pero para cerrarlo
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Cerrar_libro", 10)
+	tiempo.set_wait_time(0.25)
+	tiempo.start()
+	yield(tiempo, "timeout")
 	mostrarCompras = false
 	hide()
 	mapa.mostrar_botones()
@@ -118,6 +129,7 @@ func _cerrar_compras():
 func _comprar(text, precio, comprado, comprar):
 	if precio <= dinero:
 		dinero -= precio
+		get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Pagar", 4)
 		get_parent().get_node("Dinero").set_text(str(dinero))
 		comprado.show()
 		comprar.hide()

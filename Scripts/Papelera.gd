@@ -14,6 +14,7 @@ func tirar_papelera():
 			var hijo = personaje.get_child(objeto)
 			if hijo.get_filename() == global.spriteVino.get_path() or hijo.get_filename() == global.spriteCerveza.get_path():
 				personaje.get_child(objeto).queue_free()
+				get_parent().get_node("Sonidos/SamplePlayer2D").play("Verter", 1)
 			else:
 				notificaciones.notificaciones("Esto no se puede tirar aquí")
 		global.instanciar_jarras("JarraVino")

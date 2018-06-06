@@ -11,6 +11,7 @@ var menu = null setget set_menu
 var objeto = null setget set_objeto
 var reputacion = null setget set_reputacion
 var dinero = null setget set_dinero
+var sonidos = null setget set_sonidos
 var destino = null
 var destinoRuta = ""
 var andar = false
@@ -100,6 +101,9 @@ func set_reputacion(reputacion_nueva):
 
 func set_dinero(dinero_nuevo):
 	dinero = dinero_nuevo
+
+func set_sonidos(sonidos_nuevo):
+	sonidos = sonidos_nuevo
 #Esta función sirve para mover al NPC hasta un determinado lugar
 func moverNpc():
 	points = navegacion.get_simple_path(rigidBody.get_global_pos(), destino, true)
@@ -200,9 +204,11 @@ func esperar():
 		get_parent().get_node("Label").show()
 		tiempoEspera2.set_wait_time(30)
 		tiempoEspera2.start()
+		sonidos.play("Bostezo", 3)
 		yield(tiempoEspera2, "timeout")
 		get_parent().get_node("Pedido").hide()
 		get_parent().get_node("Label").hide()
+		sonidos.play("Descontento", 3)
 		reputacion.menosExperiencia()
 		destinos[destinoRuta].set_ocupado(false)
 		destinos[destinoRuta].set_npc(null)
@@ -285,11 +291,16 @@ func beber_comer():
 	get_parent().get_node("Label").hide()
 	tiempoBeberComer.set_wait_time(10)
 	tiempoBeberComer.start()
+	if pedidoRuta == "res://Scenes/JarraVino.tscn" or pedidoRuta == "res://Scenes/JarraCerveza.tscn":
+		sonidos.play("Tragar", 3)
+	else:
+		sonidos.play("Comer", 3)
 	yield(tiempoBeberComer, "timeout")
 	volver = true
 	remove_child(objeto)
 	objeto.free()
 	reputacion.masExperiencia()
+	sonidos.play("Cobrar", 3)
 	pagar()
 #Esta función sirve para añadir el dinero que cuesta el producto
 #que ha consumido al dinero total

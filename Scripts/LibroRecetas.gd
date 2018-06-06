@@ -5,6 +5,7 @@ extends Patch9Frame
 var recetas
 var mapa
 var mostrarRecetas = false
+var tiempo = Timer.new()
 
 func _ready():
 	hide()
@@ -15,6 +16,8 @@ func _ready():
 	get_node("Sopa").hide()
 	get_node("Olla").hide()
 	get_node("Estofado").hide()
+	tiempo.set_one_shot(true)
+	self.add_child(tiempo)
 	
 	recetas = get_parent().get_node("Recetas")
 	var cerrar = get_node("CerrarRecetas")
@@ -27,6 +30,10 @@ func _ready():
 	pass
 
 func _mostrar_recetas():
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Abrir_libro", 10)
+	tiempo.set_wait_time(0.5)
+	tiempo.start()
+	yield(tiempo, "timeout")
 	mostrarRecetas = true
 	show()
 	get_parent().get_node("Dia").set_text("")
@@ -34,6 +41,10 @@ func _mostrar_recetas():
 	pass
 
 func _cerrar_recetas():
+	get_parent().get_parent().get_node("Sonidos/SamplePlayer2D").play("Cerrar_libro", 10)
+	tiempo.set_wait_time(0.25)
+	tiempo.start()
+	yield(tiempo, "timeout")
 	mostrarRecetas = false
 	hide()
 	mapa.mostrar_botones()
