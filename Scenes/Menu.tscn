@@ -57,4 +57,21 @@ shortcut = null
 text = "Nueva partida"
 flat = false
 
+[node name="Salir" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 401.0
+margin/top = 274.0
+margin/right = 624.0
+margin/bottom = 315.0
+custom_fonts/font = ExtResource( 5 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Salir del juego"
+flat = false
+
 
