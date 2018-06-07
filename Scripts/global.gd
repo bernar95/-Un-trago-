@@ -5,6 +5,7 @@ var plato_hoy
 var labelMomento
 var mano_derecha = Vector2(8.841199, 5.105545)
 var mano_izquierda= Vector2(-8.841199, 5.105545)
+var npcs_descontentos
 
 var spriteJarra = preload("res://Scenes/Jarra.tscn")
 var jarra = spriteJarra.instance()
@@ -53,6 +54,7 @@ var spriteEstofado = preload("res://Scenes/estofado.tscn")
 func _ready():
 	plato_hoy = ""
 	labelMomento = ""
+	npcs_descontentos = 0
 	jarra.set_pos(mano_derecha)
 	jarra2.set_pos(mano_izquierda)
 	cerveza.set_pos(mano_derecha)

@@ -112,6 +112,7 @@ func tiempo():
 	
 	get_node("Sonidos/SamplePlayer2D").stop_voice(7)
 	diasAbierto += 1
+	global.npcs_descontentos = 0
 	get_node("Hud/Dia").set_text("")
 	labelMomento.set_text("")
 	aparecer = false

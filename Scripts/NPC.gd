@@ -209,6 +209,7 @@ func esperar():
 		get_parent().get_node("Pedido").hide()
 		get_parent().get_node("Label").hide()
 		sonidos.play("Descontento", 3)
+		global.npcs_descontentos += 1
 		reputacion.menosExperiencia()
 		destinos[destinoRuta].set_ocupado(false)
 		destinos[destinoRuta].set_npc(null)
@@ -227,7 +228,6 @@ func obtener_pedido():
 	var claves = menu.keys()
 	if claves[pedido] == "res://Scenes/JarraVino.tscn":
 		sprite = preload("res://Scenes/JarraVino.tscn")
-		get_parent().get_node("Pedido/Sprite")
 		get_parent().get_node("Pedido/Sprite").set_pos(Vector2(10.84644, 13.2329))
 		pedidoRuta = claves[pedido]
 		get_parent().get_node("Pedido/Sprite").set_region_rect(menu[claves[pedido]])

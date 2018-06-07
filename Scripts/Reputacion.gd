@@ -4,6 +4,7 @@ extends Node2D
 var barraProgresion
 var pos = Vector2(-16, 18)
 var reputacion = 0
+var derrota = false
 var bronce = preload("res://Scenes/bronce.tscn")
 var plata = preload("res://Scenes/plata.tscn")
 var oro = preload("res://Scenes/oro.tscn")
@@ -18,6 +19,7 @@ var medallaPlata = false
 var medallaOro = false
 var medallaPlatino = false
 var notificaciones
+var tiempo = Timer.new()
 
 var insBronce = bronce.instance()
 var insPlata = plata.instance()
@@ -32,12 +34,21 @@ func _ready():
 	insOro.set_pos(pos)
 	insPlatino.set_pos(pos)
 	notificaciones = get_parent().get_node("Notificaciones")
+	tiempo.set_one_shot(true)
+	self.add_child(tiempo)
+	tiempo.set_wait_time(5)
 	pass
 #Esta función, que es propia de godot, va comprobado en cada frame del juego
 #todas las condiciones que se le pasan. En mi caso,se utiliza para notificaciones
 #de permisos disponibles y de medallas ganadas
 func _fixed_process(delta):
-	if reputacion == 5 and cerveceria == false:
+	if (reputacion < 0 or global.npcs_descontentos == 10) and derrota == false:
+		derrota = true
+		tiempo.start()
+		yield(tiempo, "timeout")
+		get_tree().change_scene("res://Scenes/Derrota.tscn")
+		global.npcs_descontentos = 0
+	elif reputacion == 5 and cerveceria == false:
 		get_parent().get_node("LibroCompras/PermisoCerveceria").show()
 		notificaciones.notificaciones("El permiso de cervecería está disponible")
 		cerveceria = true
@@ -68,6 +79,9 @@ func _fixed_process(delta):
 		get_node("Reputacion").add_child(insPlatino)
 		notificaciones.notificaciones("Has ganado la medalla de platino")
 		medallaPlatino = true
+		tiempo.start()
+		yield(tiempo, "timeout")
+		get_tree().change_scene("res://Scenes/Victoria.tscn")
 #Esta función se utiliza para añadir experiencia a la barra de progresión,
 #que se irá rellenando hasta alcanzar el objetivo del nivel actual. Una
 #vez conseguido el objetivo, se resetean la experiencia y la barra de progresión,
