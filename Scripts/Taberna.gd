@@ -68,7 +68,7 @@ func _fixed_process(delta):
 func tiempo():
 	labelDia.set_text("Día" + " " + str(diasAbierto))
 	labelDia.show()
-	tiempo.set_wait_time(6.5)
+	tiempo.set_wait_time(7)
 	tiempo.start()
 	yield(tiempo, "timeout")
 	labelDia.hide()

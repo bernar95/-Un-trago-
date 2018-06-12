@@ -89,7 +89,7 @@ extents = Vector2( 10, 10 )
 [sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 10, 11.5439 )
 
 [sub_resource type="RectangleShape2D" id=6]
 
@@ -4103,8 +4103,6 @@ region_rect = Rect2( 352, 352, 32, 32 )
 
 [node name="Paredes" type="Node" parent="."]
 
-editor/display_folded = true
-
 [node name="Sprite4 2" type="Sprite" parent="Paredes"]
 
 transform/pos = Vector2( 48.5956, 591.845 )
@@ -4837,10 +4835,10 @@ _update_shape_index = 0
 
 input/pickable = false
 shapes/0/shape = SubResource( 4 )
-shapes/0/transform = Matrix32( 22.8389, 0, 0, 1.63184, 770.633, 592.072 )
+shapes/0/transform = Matrix32( 26.4438, 0, 0, 1.63184, 723.769, 592.072 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 2
+collision/mask = 2
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -4848,8 +4846,8 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/StaticBody2D 4"]
 
-transform/pos = Vector2( 770.633, 592.072 )
-transform/scale = Vector2( 22.8389, 1.63184 )
+transform/pos = Vector2( 723.769, 592.072 )
+transform/scale = Vector2( 26.4438, 1.63184 )
 shape = SubResource( 4 )
 trigger = false
 _update_shape_index = 0
@@ -5662,6 +5660,8 @@ trigger = false
 _update_shape_index = 0
 
 [node name="BarraDetras" type="Node" parent="."]
+
+editor/display_folded = true
 
 [node name="Barriles" type="Node" parent="BarraDetras"]
 
@@ -6652,8 +6652,6 @@ transform/pos = Vector2( 411.056, 264.39 )
 transform/scale = Vector2( 0.341997, 0.331556 )
 
 [node name="Sillas" type="Node" parent="."]
-
-editor/display_folded = true
 
 [node name="Silla" type="Sprite" parent="Sillas"]
 
@@ -8276,7 +8274,6 @@ _update_shape_index = 0
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
-editor/display_folded = true
 transform/pos = Vector2( 328.029, 97.829 )
 transform/scale = Vector2( 0.169749, 0.363435 )
 input/pickable = false
@@ -8332,6 +8329,7 @@ transform/scale = Vector2( 0.882584, 0.738347 )
 
 [node name="Hud" type="Node" parent="."]
 
+editor/display_folded = true
 script/script = ExtResource( 19 )
 
 [node name="Pedidos" type="Button" parent="Hud"]
@@ -11685,6 +11683,7 @@ max_lines_visible = -1
 [node name="Menu_pausa" type="Panel" parent="Hud"]
 
 process/pause_mode = 2
+editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -11736,9 +11735,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 54.0
-margin/top = 110.0
+margin/top = 141.0
 margin/right = 127.0
-margin/bottom = 133.0
+margin/bottom = 164.0
 custom_fonts/font = ExtResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -11753,9 +11752,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 54.0
-margin/top = 140.0
+margin/top = 111.0
 margin/right = 127.0
-margin/bottom = 163.0
+margin/bottom = 134.0
 custom_fonts/font = ExtResource( 6 )
 toggle_mode = false
 enabled_focus_mode = 2
@@ -11831,6 +11830,8 @@ text = "Atrás"
 flat = false
 
 [node name="Sonidos" type="Node" parent="."]
+
+editor/display_folded = true
 
 [node name="SamplePlayer2D" type="SamplePlayer2D" parent="Sonidos"]
 
