@@ -101,7 +101,7 @@ func menosExperiencia():
 	var progresion 
 	experienciaActual -= 1
 	if experienciaActual < 0:
-		experienciaActual += experienciaObjetivo - 1
+		experienciaActual += experienciaObjetivo - 2
 		experienciaObjetivo -= 2
 		reputacion -= 1
 		get_node("Reputacion").set_text(str(reputacion))

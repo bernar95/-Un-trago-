@@ -6653,6 +6653,8 @@ transform/scale = Vector2( 0.341997, 0.331556 )
 
 [node name="Sillas" type="Node" parent="."]
 
+editor/display_folded = true
+
 [node name="Silla" type="Sprite" parent="Sillas"]
 
 transform/pos = Vector2( 784, 224 )
@@ -8274,6 +8276,7 @@ _update_shape_index = 0
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 328.029, 97.829 )
 transform/scale = Vector2( 0.169749, 0.363435 )
 input/pickable = false
@@ -11683,7 +11686,6 @@ max_lines_visible = -1
 [node name="Menu_pausa" type="Panel" parent="Hud"]
 
 process/pause_mode = 2
-editor/display_folded = true
 visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
